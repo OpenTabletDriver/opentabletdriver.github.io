@@ -25,13 +25,6 @@ layout: default
   };
 
   function searchInput() {
-    let input = document.getElementById('searchInput');
-    let text = input.value;
-    let action = 'Tablets'
-    if (text.length > 0) {
-      action += '?search=' + encodeURIComponent(text);
-    }
-    window.history.replaceState('', '', action);
     search();
   }
 

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="card mb-4">
+    {{ content }}
+  </div>
+  <div class="form-floating mb-3">
+    <input id="searchInput" type="text" class="form-control" onkeyup="searchInput()" placeholder="Search" />
+    <label for="searchInput">Search</label>
+  </div>
+
+  {% capture tablets %}
+{% include tablets.md %}{: #tablets .table .table-hover }
+  {% endcapture %}
+  {{ tablets | markdownify }}
+
+</div>
+
+<script type="text/javascript">
+  document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+      search();
+    }
+  };
+
+  function searchInput() {
+    let input = document.getElementById('searchInput');
+    let text = input.value;
+    let action = 'Tablets'
+    if (text.length > 0) {
+      action += '?search=' + encodeURIComponent(text);
+    }
+    window.history.replaceState('', '', action);
+    search();
+  }
+
+  function search() {
+    let input = document.getElementById('searchInput');
+    let filter = input.value.toUpperCase();
+    let table = document.getElementById('tablets');
+    let rows = table.getElementsByTagName('tr');
+
+    for (i = 0; i < rows.length; i++) {
+      let row = rows[i];
+      let td = row.getElementsByTagName('td')[0];
+      if (td) {
+        let content = td.textContent || td.innerText;
+        row.style.display = content.toUpperCase().indexOf(filter) >= 0 ? '' : 'none';
+      }
+    }
+  }
+</script>

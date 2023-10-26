@@ -1,0 +1,5 @@
+---
+title: Tablets
+---
+
+Tablets page

@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>{{ page.title | default: site.title }}</title> <!-- TODO: make this `page.title - site.title` when page.title exists -->
+    {%- if page.title -%}
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {%- else -%}
+    <title>{{ site.title }}</title>
+    {%- endif -%}
     {% include styles.html %}
   </head>
   <body data-bs-theme="dark">

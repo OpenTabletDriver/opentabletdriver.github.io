@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ page.title | default: site.title }}</title> <!-- TODO: make this `page.title - site.title` when page.title exists -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/darkly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/hljs.css">
+    <link rel="stylesheet" href="/assets/site.css">
+  </head>
+  <body>
+    <header>
+      {% include header.html %}
+    </header>
+    <div class="container">
+      <main role="main" class="pb-3">
+        {{ content }}
+      </main>
+    </div>
+
+    {% include scripts.html %}
+  </body>
+</html>

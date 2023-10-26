@@ -27,9 +27,16 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+theme: 
 plugins:
   - jekyll-feed
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -39,7 +46,8 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - "README.md"
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

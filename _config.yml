@@ -30,6 +30,9 @@ plugins:
   - jekyll-feed
   - jekyll-toc
 
+toc:
+  max_level: 3
+
 defaults:
   -
     scope:

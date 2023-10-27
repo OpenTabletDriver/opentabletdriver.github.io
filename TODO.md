@@ -4,14 +4,13 @@
 - [x] GitHub link
 - [x] Discord link
 - [x] Changelog (implemented as link)
-- [x] Plugins (partially)
+- [x] Plugins
 - [ ] Wiki
 - [ ] Discuss whether changelog needs to be local, or if the current link is fine
 - [ ] Front Page
 - [ ] Implement OpenTabletDriver/OpenTabletDriver.Web PR's
 - [ ] Fix issues on our own repo
 - [ ] Ensure feature parity on most pages
--- [ ] Plugins does not have matching search results
 - [ ] Hide any "Work in progress" decoration (if any)
 - [ ] Ensure local dev env documentation is usable
 - [ ] Move DNS

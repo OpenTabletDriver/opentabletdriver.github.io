@@ -86,3 +86,11 @@ body {
 #toc a:hover {
   color:#bdc4ca;
 }
+
+div.highlighter-rouge {
+  margin: 1em;
+}
+
+div.highlighter-rouge pre.highlight {
+  padding: 1em;
+}

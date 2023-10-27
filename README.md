@@ -28,6 +28,9 @@ Add or edit the appropriate markdown file in the appropriate `_wiki/` folder.
 
 Single-path URL's are permalinked to files in `_sections`
 
+## How do I update the rouge highlighter style?
+`bundle exec rougify style > assets/rougehl.css`
+
 # Contributors to old OpenTabletDriver.Web
 
 [Link](https://github.com/OpenTabletDriver/OpenTabletDriver.Web/graphs/contributors)

@@ -10,6 +10,7 @@ To export logs, click `Help` -> `Export diagnostics...` in the top menu bar.
 
 Sometimes OpenTabletDriver crashes hard. This is usually caused by a bug in OpenTabletDriver. Due to the crash, it will be impossible to retrieve the logs from GUI. In this case, you can find a partial log in the following locations:
 
+{:.table}
 | OS | Location |
 | --- | --- |
 | Windows | `%appdata%\OpenTabletDriver\daemon.log` |

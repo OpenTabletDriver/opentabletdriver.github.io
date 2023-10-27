@@ -29,9 +29,6 @@ latest_otd_version: v0.6.3.0
 theme: 
 plugins:
 
-toc:
-  max_level: 3
-
 defaults:
   -
     scope:

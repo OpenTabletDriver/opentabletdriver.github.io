@@ -28,7 +28,6 @@ latest_otd_version: v0.6.3.0
 # Build settings
 theme: 
 plugins:
-  - jekyll-toc
 
 toc:
   max_level: 3

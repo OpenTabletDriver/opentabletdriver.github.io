@@ -7,7 +7,7 @@ layout: default
 <div class="row">
   <div class="col-xs-12 col-sm-4 col-md-3">
     <strong>Contents</strong>
-    {{ content | toc_only }}
+    {% include toc.html html=content id="toc" h_max=3 %}
   </div>
   <div class="col">
     {{ content | inject_anchors }}

@@ -15,7 +15,9 @@
 -- [x] `/Release/Download/` path (used in wiki windows install)
 -- [x] Code blocks
 -- [ ] "Driver Version" text clarity on `/Plugins`
+-- [ ] table on /Wiki/Documentation/Logs
 - [ ] Fix absolute links to use Jekyll syntax (`/Tablets` -> `{% link /Tablets %}` or similar)
+-- [ ] `_sections/Wiki.md`
 - [ ] Hide any "Work in progress" decoration (if any)
 - [ ] Ensure local dev env documentation is usable
 - [ ] Move DNS
@@ -23,6 +25,10 @@
 - [ ] Write more documentation
 - [ ] Move this file to GitHub issues
 - [ ] Auto-generate links for /Wiki
+- [ ] Add linting
+-- Stuff like avoiding absolute links (`/Tablets` as opposed to `{% link _section/Tablets.md %}`)
+--- input on this welcome
+-- lint `<table>` to have `{:.table}`
 
 # Important things to also finalize:
 
@@ -34,4 +40,6 @@
 
 - [ ] Bus factor
 - [ ] Discuss Github auto-merge
+
+- Using `{% link %}` for the Release archives results in .html being appended (e.g. Wiki/Install/Linux.md Debian instructions, also MacOS)
 

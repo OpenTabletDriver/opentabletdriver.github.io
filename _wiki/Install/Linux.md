@@ -3,7 +3,7 @@ title: Linux Installation Guide
 ---
 
 ### Ubuntu / Debian {#debian}
- 1. Download the [latest release](/Release/Download/OpenTabletDriver.deb) <small class="text-muted">(OpenTabletDriver.deb)</small>
+ 1. Download the [latest release]({% link Release/Download/OpenTabletDriver.deb.md %}) <small class="text-muted">(OpenTabletDriver.deb)</small>
  2. Run the following commands in a terminal
 
 <small class="ms-3 text-muted">
@@ -70,7 +70,7 @@ systemctl --user enable opentabletdriver --now
 ### Gentoo {#gentoo}
 1. Add Guru overlay\\
 <small class="ms-3 text-muted">
-    This is only required if you don't already have the Guru overlay configured
+This is only required if you don't already have the Guru overlay configured
 </small>
 ```bash
 # Enable guru repository
@@ -94,14 +94,14 @@ sudo emerge OpenTabletDriver-bin
 ### NixOS {#nixos}
 1. Edit `/etc/nixos/configuration.nix` and add this in your configuration\\
 <small class="ms-3 text-muted">
-    More configuration options can be found [here](https://search.nixos.org/options?query=opentabletdriver)
+More configuration options can be found [here](https://search.nixos.org/options?query=opentabletdriver)
 </small>
 ```nix
-    # Enable OpenTabletDriver
-    hardware.opentabletdriver.enable = true;
+# Enable OpenTabletDriver
+hardware.opentabletdriver.enable = true;
 ```
 
 ---
 
 ### Post-Installation {#post-install}
-You're advised to look at the console tab on OpenTabletDriver UX to catch any problems. If necessary, read through the [FAQ](/Wiki/FAQ/Linux).
+You're advised to look at the console tab on OpenTabletDriver UX to catch any problems. If necessary, read through the [FAQ]({% link _wiki/FAQ/Linux.md %}).

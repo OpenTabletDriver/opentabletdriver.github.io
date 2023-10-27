@@ -29,7 +29,15 @@ Add or edit the appropriate markdown file in the appropriate `_wiki/` folder.
 Single-path URL's are permalinked to files in `_sections`
 
 ## How do I update the rouge highlighter style?
+
 `bundle exec rougify style > assets/rougehl.css`
+
+## How can I check if I have internal links that don't use the `{% link %}` paradigm?
+
+```bash
+cd <website root>
+grep -R --exclude-dir vendor --include="*.md" '](' | grep -v '](#' | grep -v ']({%' | grep -v '](http' | grep -v '](//'`
+```
 
 # Contributors to old OpenTabletDriver.Web
 

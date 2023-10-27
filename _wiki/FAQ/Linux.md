@@ -10,15 +10,15 @@ Make sure that the tablet is actually plugged in to your computer properly. Chec
 
 OpenTabletDriver currently has _no support_ for tablets connected via Bluetooth. Make sure that your tablet is connected via USB. There is partial support for tablets connected via wireless dongle.
 
-Once the tablet is connected properly, verify if your tablet is in the list of supported tablets [here](/Tablets). If it is not, you may do one of the following:
+Once the tablet is connected properly, verify if your tablet is in the list of supported tablets [here]({% link _sections/Tablets.md %}). If it is not, you may do one of the following:
 
 - [Create a tablet support request in Github.](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/new?assignees=&labels=configuration&projects=&template=tablet_configuration.yml&title=Add+support+for+)
-- [Create a tablet support thread in #config-creation channel of the Discord server.](/Discord)
-- [Make your own tablet configuration.](/Wiki/Development/AddingTabletSupport)
+- [Create a tablet support thread in #config-creation channel of the Discord server.]({% link _sections/Discord.md %})
+- [Make your own tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
 
 #### Troubleshooting
 
-If your tablet is connected properly and is supported, but is still not detected, [check logs](/Wiki/Documentation/Logs) for any errors or warnings. If you find any, try finding for a match and its accompanying solution below:
+If your tablet is connected properly and is supported, but is still not detected, [check logs]({% link _wiki/Documentation/Logs.md %}) for any errors or warnings. If you find any, try finding for a match and its accompanying solution below:
 
 ##### UCLogic kernel module is loaded {#hid_uclogic}
 
@@ -32,7 +32,7 @@ Another tablet driver found: UC Logic
 ArgumentOutOfRangeException: Value range is [0, 15]. (Parameter 'value)
 ```
 
-[_Solution_](/Wiki/Documentation/UdevRules)
+[_Solution_]({% link _wiki/Documentation/UdevRules.md %})
 
 ##### Insufficient permissions {#udev}
 
@@ -42,7 +42,7 @@ _Symptoms_
 Not permitted to open HID class device at /dev/hidrawX
 ```
 
-[_Solution_](/Wiki/Documentation/UdevRules)
+[_Solution_]({% link _wiki/Documentation/UdevRules.md %})
 
 #### Tablet-specific Troubleshooting
 
@@ -58,7 +58,7 @@ between PC (high LED brightness) and Android mode (low LED brightness).
 
 #### Fresh Install {#fail-virtual-device}
 
-If this is a fresh install and you have not configured your tablet yet, [check logs](/Wiki/Documentation/Logs) for any errors or warnings. If you find any, try finding for a match and its accompanying solution below:
+If this is a fresh install and you have not configured your tablet yet, [check logs]({% link _wiki/Documentation/Logs.md %}) for any errors or warnings. If you find any, try finding for a match and its accompanying solution below:
 
 ##### Missing uinput device
 
@@ -92,7 +92,7 @@ _Symptoms_
 Failed to initialize virtual tablet. (error code EACCES)
 ```
 
-[_Solution_](/Wiki/Documentation/UdevRules)
+[_Solution_]({% link _wiki/Documentation/UdevRules.md %})
 
 #### Non-fresh Install
 
@@ -163,4 +163,4 @@ You should restart the OpenTabletDriver daemon after updating this file.
 ### I have tried these solutions, but my problem still persists! {#discord}
 
 If you are still encountering problems with OpenTabletDriver,
-it will be easier to help you over in our [Discord](/Discord) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.
+it will be easier to help you over in our [Discord]({% link _sections/Discord.md %}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

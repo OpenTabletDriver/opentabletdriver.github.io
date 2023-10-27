@@ -4,8 +4,8 @@ layout: wiki
 ---
 
 ### Frequently Asked Questions
-- [General OpenTabletDriver FAQ](/Wiki/FAQ/General){:.link-light}
+- [General OpenTabletDriver FAQ]({% link _wiki/FAQ/General.md %}){:.link-light}
 
 ### Development
-- [Writing OpenTabletDriver Configurations](/Wiki/Development/Configurations){:.link-light}
-- [Adding Tablet Support](/Wiki/Development/AddingTabletSupport){:.link-light}
+- [Writing OpenTabletDriver Configurations]({% link _wiki/Development/Configurations.md %}){:.link-light}
+- [Adding Tablet Support]({% link _wiki/Development/AddingTabletSupport.md %}){:.link-light}

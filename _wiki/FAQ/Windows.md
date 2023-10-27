@@ -7,7 +7,7 @@ title: Windows FAQ
 Please check that your tablet is actually plugged in to your PC. Windows by default will indicate when a device is plugged in
 with a sound. If you do not get this sound consider replacing the cable (make sure the cable supports both power and data transfer)
 
-Once you are sure that your tablet is connected to your computer, ensure that your specific tablet make and model is supported by checking our list of supported tablets [here](/Tablets).
+Once you are sure that your tablet is connected to your computer, ensure that your specific tablet make and model is supported by checking our list of supported tablets [here]({% link _sections/Tablets.md %}).
 
 We currently do not support tablets that connect directly to a computer via Bluetooth, and there is only limited support for tablets that use wireless USB receivers, so please make sure your tablet is connected via cable.
 
@@ -16,8 +16,8 @@ We currently do not support tablets that connect directly to a computer via Blue
 Please make sure that you have no other tablet drivers on the system.\\
 To ensure your system is clean, follow the instructions for our [Tablet Driver Cleanup Utility](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), then resume here.
 
-Please check if your tablet requires WinUSB [here](/Tablets) (it will say in the notes).\\
-If it does, follow the [instructions](/Wiki/Install/Windows#winusb) and return here. Continue below for troubleshooting instructions if your tablet still isn't detected.
+Please check if your tablet requires WinUSB [here]({% link _sections/Tablets.md %}) (it will say in the notes).\\
+If it does, follow the [instructions]({% link _wiki/Install/Windows.md %}#winusb) and return here. Continue below for troubleshooting instructions if your tablet still isn't detected.
 
 If you are running OpenTabletDriver.UX, navigate from the top to the Console tab, if you are running the daemon standalone, look for a log that resembles the following:
 
@@ -28,7 +28,7 @@ Another tablet driver found: <name>
 ```
 
 If you see this log message you should follow the instructions for [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest) if you haven't already, making sure to say yes to everything.\\
-If the log entry is still there after following the instructions and restarting OTD, try joining our support [Discord](/Discord) for further help.
+If the log entry is still there after following the instructions and restarting OTD, try joining our support [Discord]({% link _sections/Discord.md %}) for further help.
 
 ##### Invalid WinUSB driver installation state
 
@@ -45,7 +45,7 @@ If you still need more help after this, join our Discord and give us a shout in 
 #### It is not a supported tablet, what can I do about that?<
 
 If you want to add support for your tablet on your own, feel free to look at a similar configuration on our GitHub and our configuration documentation.
-If you would like help with supporting your tablet, or would prefer us to do it, join our [Discord](/Discord) and create a post in `#config-creation` or a support channel.
+If you would like help with supporting your tablet, or would prefer us to do it, join our [Discord]({% link _sections/Discord.md %}) and create a post in `#config-creation` or a support channel.
 
 ---
 
@@ -61,7 +61,7 @@ you can remove these by running and following the instructions for [TabletDriver
 If your cursor is teleporting you usually have another driver installed or you have broken settings, you can resolve the former by following the former with
 [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest) and you can solve the latter with `file > reset to defaults` and clicking save.
 
-If the issue is still unresolved after trying the instructions above, please join our [Discord](/Discord) for extra assistance.
+If the issue is still unresolved after trying the instructions above, please join our [Discord]({% link _sections/Discord.md %}) for extra assistance.
 
 ---
 
@@ -103,7 +103,7 @@ This allows OpenTabletDriver to be completely portable, all in one folder.
 
 ### It says it fails to connect to the daemon? {#connecting-to-daemon}
 This can be caused by a few different problems.
-Primarily, this will result from incorrectly following the [installation guide](/Wiki/Install/Windows) on installation.
+Primarily, this will result from incorrectly following the [installation guide]({% link _wiki/Install/Windows.md %}) on installation.
 
 If you are sure that you have followed the installation guide correctly, or this issue just began occurring after an update to OTD,
 then it is likely that you have broken settings or outdated plugins installed. You can remedy this with the below.
@@ -113,7 +113,7 @@ then it is likely that you have broken settings or outdated plugins installed. Y
 
 If you have a `userdata` folder next to the binaries of OpenTabletDriver, you will need to remove the files above from that folder instead.
 
-If you still can't get it working after the solutions above please join our [Discord](/Discord).
+If you still can't get it working after the solutions above please join our [Discord]({% link _sections/Discord.md %}).
 It might be a completely different issue!
 
 ---
@@ -160,7 +160,7 @@ If you use this application, make sure it doesn't hook onto OpenTabletDriver by 
 
  - Open RivaTuner Statistics Server.
  - Click on Add button found in the bottom left corner.
- - Locate OpenTabletDriver.UX.Wpf.exe on your computer then select it. Refer [here](/Wiki/FAQ/General#appdata) for more information.
+ - Locate OpenTabletDriver.UX.Wpf.exe on your computer then select it. Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
  - Click on Application Detection Level then select "None".
 
 ---

@@ -36,7 +36,7 @@ title: "FAQ"
 
 Yes, most Wacom Intuos tablets are supported.
 
-Check the back of your tablet for the model number, then check [here](/Tablets).
+Check the back of your tablet for the model number, then check [here]({% link _sections/Tablets.md %}).
 
 ---
 

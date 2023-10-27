@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-<!--    var pluginVersions = Model.Items.Select(m => m.SupportedDriverVersion)
-  .Distinct()
-  .OrderByDescending(v => v.ToString());
--->
 
 {% assign plugins = "" | split: ',' %}
 <div class="container">
@@ -79,36 +75,4 @@ layout: default
   </div>
 </div>
 
-<script type="text/javascript">
-  document.onreadystatechange = function () {
-    if (document.readyState == "complete") {
-      filter();
-    }
-  };
-
-  function filterInput() {
-    filter();
-  }
-
-  function filter() {
-    let selector = document.getElementById('pluginVersionSelector');
-    let targetVersion = selector.value;
-
-    let searchInput = document.getElementById('searchInput');
-    let searchFilter = searchInput.value.toUpperCase();
-
-    let container = document.getElementById('metadataList');
-    let cards = container.getElementsByClassName('plugin-metadata-card');
-
-    for (let i = 0; i < cards.length; i++) {
-      let card = cards[i];
-      let name = card.getAttribute('data-name').toUpperCase();
-      let version = card.getAttribute('data-version');
-
-      let searchMatches = name.indexOf(searchFilter) >= 0;
-      let versionMatches = targetVersion == '' || targetVersion == version;
-
-      card.style.display = searchMatches && versionMatches ? '' : 'none';
-    }
-  }
-</script>
+{% include filterjs.html %}

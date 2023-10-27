@@ -39,6 +39,10 @@ cd <website root>
 grep -R --exclude-dir vendor --include="*.md" '](' | grep -v '](#' | grep -v ']({%' | grep -v '](http' | grep -v '](//'`
 ```
 
+## How are the Wiki ToC's generated?
+
+With [allejo/jekyll-toc](https://github.com/allejo/jekyll-toc). We are using 1.2.0.
+
 # Contributors to old OpenTabletDriver.Web
 
 [Link](https://github.com/OpenTabletDriver/OpenTabletDriver.Web/graphs/contributors)

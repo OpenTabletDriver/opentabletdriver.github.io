@@ -27,7 +27,6 @@ url: https://opentabletdriver.github.io/ # the base hostname & protocol for your
 # Build settings
 theme: 
 plugins:
-  - jekyll-feed
   - jekyll-toc
 
 toc:

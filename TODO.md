@@ -6,7 +6,7 @@
 - [x] Changelog (implemented as link)
 - [x] Plugins
 - [x] Wiki
-- [ ] Discuss whether changelog needs to be local, or if the current link is fine
+- [x] Discuss whether changelog needs to be local, or if the current link is fine
 - [x] Front Page
 - [ ] Implement OpenTabletDriver/OpenTabletDriver.Web PR's
 - [ ] Fix issues on our own repo

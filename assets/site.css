@@ -77,3 +77,12 @@ body {
 .dropmargins {
   margin: 0;
 }
+
+#toc a {
+  color:#adb5bd;
+}
+
+#toc a:focus,
+#toc a:hover {
+  color:#bdc4ca;
+}

@@ -28,6 +28,7 @@ url: https://opentabletdriver.github.io/ # the base hostname & protocol for your
 theme: 
 plugins:
   - jekyll-feed
+  - jekyll-toc
 
 defaults:
   -
@@ -35,6 +36,12 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      type: "wiki"
+    values:
+      layout: "wikipage"
+      toc: true
 
 collections:
   sections:

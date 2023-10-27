@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
-<partial name="Wiki/_Header"/>
+
+{% include wiki/header.html %}
 
 <div class="pb-2">
-    {% include platformcards.html %}
+  {% include platformcards.html %}
 
-    {{ content }}
+  {{ content }}
 </div>

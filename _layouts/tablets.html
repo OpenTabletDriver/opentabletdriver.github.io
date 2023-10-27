@@ -17,30 +17,5 @@ layout: default
 
 </div>
 
-<script type="text/javascript">
-  document.onreadystatechange = function () {
-    if (document.readyState == "complete") {
-      search();
-    }
-  };
+{% include searchjs.html %}
 
-  function searchInput() {
-    search();
-  }
-
-  function search() {
-    let input = document.getElementById('searchInput');
-    let filter = input.value.toUpperCase();
-    let table = document.getElementById('tablets');
-    let rows = table.getElementsByTagName('tr');
-
-    for (i = 0; i < rows.length; i++) {
-      let row = rows[i];
-      let td = row.getElementsByTagName('td')[0];
-      if (td) {
-        let content = td.textContent || td.innerText;
-        row.style.display = content.toUpperCase().indexOf(filter) >= 0 ? '' : 'none';
-      }
-    }
-  }
-</script>

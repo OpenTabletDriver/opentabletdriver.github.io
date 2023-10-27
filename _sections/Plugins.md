@@ -1,5 +1,6 @@
 ---
 title: Plugins
+layout: plugins
 ---
 
-Plugins page
+Plugins page (delete this content)

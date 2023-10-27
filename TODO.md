@@ -7,7 +7,7 @@
 - [x] Plugins
 - [x] Wiki
 - [ ] Discuss whether changelog needs to be local, or if the current link is fine
-- [ ] Front Page
+- [x] Front Page
 - [ ] Implement OpenTabletDriver/OpenTabletDriver.Web PR's
 - [ ] Fix issues on our own repo
 - [ ] Ensure feature parity on most pages
@@ -28,6 +28,7 @@
 
 - Auto deploy of TABLETS.md (or change to submodule?)
 - Auto update submodules on submodule remote being updated (currently just plugin repo) (via github action?)
+- Auto-versioning of latest release of OTD used on frontpage
 
 # Other stuff:
 

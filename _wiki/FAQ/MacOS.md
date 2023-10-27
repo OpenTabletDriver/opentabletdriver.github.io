@@ -1,5 +1,6 @@
 ---
 title: MacOS FAQ
+hide_from_auto_list: true
 ---
 
 ### Cursor doesn't respond to tablet input {#cursor-not-moving}

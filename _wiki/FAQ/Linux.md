@@ -1,5 +1,6 @@
 ---
 title: "Linux FAQ"
+hide_from_auto_list: true
 ---
 
 ### My tablet is not detected?

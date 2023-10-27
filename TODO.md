@@ -24,7 +24,7 @@
 - [ ] Close OpenTabletDriver.Web
 - [ ] Write more documentation
 - [ ] Move this file to GitHub issues
-- [ ] Auto-generate links for /Wiki
+- [x] Auto-generate links for /Wiki
 - [ ] Add linting
 -- Stuff like avoiding absolute links (`/Tablets` as opposed to `{% link _section/Tablets.md %}`)
 --- input on this welcome

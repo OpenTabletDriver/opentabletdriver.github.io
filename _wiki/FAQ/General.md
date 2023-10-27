@@ -1,5 +1,5 @@
 ---
-title: "FAQ"
+title: General FAQ
 ---
 
 ### Application Data Directory {#appdata}

@@ -1,5 +1,6 @@
 ---
 title: Windows FAQ
+hide_from_auto_list: true
 ---
 
 ### My tablet is not detected? {#tablet-not-detected}

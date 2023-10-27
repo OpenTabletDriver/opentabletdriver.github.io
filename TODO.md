@@ -11,6 +11,9 @@
 - [ ] Implement OpenTabletDriver/OpenTabletDriver.Web PR's
 - [ ] Fix issues on our own repo
 - [ ] Ensure feature parity on most pages
+-- [ ] `/Framework` path (use JS?)
+-- [ ] `/Release/Download/` path (used in wiki windows install)
+-- [ ] Code blocks
 - [ ] Hide any "Work in progress" decoration (if any)
 - [ ] Ensure local dev env documentation is usable
 - [ ] Move DNS

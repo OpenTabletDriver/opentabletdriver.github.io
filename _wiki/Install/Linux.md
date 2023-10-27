@@ -65,6 +65,8 @@ systemctl --user daemon-reload
 systemctl --user enable opentabletdriver --now
 ```
 
+If the systemd user service does not start consistently, consider adding `otd-daemon` to your WM or DE's autostart.
+
 ---
 
 ### Gentoo {#gentoo}

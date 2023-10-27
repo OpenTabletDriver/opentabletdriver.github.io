@@ -14,7 +14,7 @@
   - [x] `/Framework` path (use JS?)
   - [x] `/Release/Download/` path (used in wiki windows install)
   - [x] Code blocks
-  - [ ] "Driver Version" text clarity on `/Plugins`
+  - [x] "Driver Version" text clarity on `/Plugins`
   - [x] table on /Wiki/Documentation/Logs
 - [x] Fix absolute links to use Jekyll syntax (`/Tablets` -> `{% link /Tablets %}` or similar)
   - [x] `_sections/Wiki.md`

@@ -40,6 +40,9 @@ collections:
   sections:
     output: true
     permalink: /:title
+  wiki:
+    output: true
+    permalink: /Wiki/:path
 
 # Exclude from processing.
 # The following items will not be processed, by default.

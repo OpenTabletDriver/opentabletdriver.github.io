@@ -7,6 +7,7 @@ title: Configurations
 Generic device identification information is required for OpenTabletDriver in order for it to be able to differentiate
 tablets.
 
+{:.table}
 |  Property Name   |   Value Type   | Description                                                                                                                                      |
 |:----------------:|:--------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------|
 |       Name       |    `string`    | The name of the device. This is always the device manufacturer's name followed by the device's model number or product name when not applicable. |
@@ -21,6 +22,7 @@ accurately handle the data the tablet device outputs.
 This refers to the graphics tablet's digitizer, which provides coordinates of where the tool is positioned. This is
 always required for the device to function.
 
+{:.table}
 |     Property Name     | Value Type |    Units     | Description                                                 |
 |:---------------------:|:----------:|:------------:|:------------------------------------------------------------|
 |         Width         |  `double`  |      mm      | The physical width of the digitizer in millimeters.         |
@@ -33,6 +35,7 @@ always required for the device to function.
 This refers to the pen tool for the graphics tablet. It is the source of position and typically the source of pressure
 data. This is almost always required.
 
+{:.table}
 |  Property Name  | Value Type | Description                                                                                                                                                                                                                   |
 |:---------------:|:----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  Max Pressure   |   `uint`   | The maximum pressure reported by the pen in device pressure units. This is used to calculate a percentage of pressure. If there are more than pens supported by this tablet, the pen with the highest pressure value is used. |
@@ -43,6 +46,7 @@ data. This is almost always required.
 This refers to any buttons located on the graphics tablet pad. This should only be enabled if there are any auxililary
 buttons.
 
+{:.table}
 | Property Name | Value Type  | Description            |
 |:-------------:|:-----------:|:-----------------------|
 | Button Count  |   `uint`    | The amount of buttons. |
@@ -66,6 +70,7 @@ This has the same properties as the [auxiliary buttons](#auxiliary-buttons)
 Device identifiers are what actually detect the tablet. Anything defined here is used in the detection process to
 pinpoint devices.
 
+{:.table}
 |         Property Name         |         Value Type         | Description                                                                                                                                                                                                                                                                                                                                 |                                                                                                                                                                      
 |:-----------------------------:|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |           Vendor ID           |          `ushort`          | A USB-IF defined identifier that defines which vendor the device is produced by. Since this is assigned by the USB-IF it can be quite reliable for determining the manufacturer.                                                                                                                                                            |

@@ -14,6 +14,7 @@
 -- [ ] `/Framework` path (use JS?)
 -- [ ] `/Release/Download/` path (used in wiki windows install)
 -- [x] Code blocks
+-- [ ] "Driver Version" text clarity on `/Plugins`
 - [ ] Fix absolute links to use Jekyll syntax (`/Tablets` -> `{% link /Tablets %}` or similar)
 - [ ] Hide any "Work in progress" decoration (if any)
 - [ ] Ensure local dev env documentation is usable
@@ -21,6 +22,7 @@
 - [ ] Close OpenTabletDriver.Web
 - [ ] Write more documentation
 - [ ] Move this file to GitHub issues
+- [ ] Auto-generate links for /Wiki
 
 # Important things to also finalize:
 

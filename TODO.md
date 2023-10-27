@@ -11,13 +11,13 @@
 - [ ] Implement OpenTabletDriver/OpenTabletDriver.Web PR's
 - [ ] Fix issues on our own repo
 - [ ] Ensure feature parity on most pages
--- [x] `/Framework` path (use JS?)
--- [x] `/Release/Download/` path (used in wiki windows install)
--- [x] Code blocks
--- [ ] "Driver Version" text clarity on `/Plugins`
--- [ ] table on /Wiki/Documentation/Logs
-- [ ] Fix absolute links to use Jekyll syntax (`/Tablets` -> `{% link /Tablets %}` or similar)
--- [ ] `_sections/Wiki.md`
+  - [x] `/Framework` path (use JS?)
+  - [x] `/Release/Download/` path (used in wiki windows install)
+  - [x] Code blocks
+  - [ ] "Driver Version" text clarity on `/Plugins`
+  - [ ] table on /Wiki/Documentation/Logs
+- [x] Fix absolute links to use Jekyll syntax (`/Tablets` -> `{% link /Tablets %}` or similar)
+  - [x] `_sections/Wiki.md`
 - [ ] Hide any "Work in progress" decoration (if any)
 - [ ] Ensure local dev env documentation is usable
 - [ ] Move DNS

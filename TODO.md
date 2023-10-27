@@ -26,9 +26,10 @@
 - [ ] Move this file to GitHub issues
 - [x] Auto-generate links for /Wiki
 - [ ] Add linting
--- Stuff like avoiding absolute links (`/Tablets` as opposed to `{% link _section/Tablets.md %}`)
---- input on this welcome
--- lint `<table>` to have `{:.table}`
+  - Stuff like avoiding absolute links (`/Tablets` as opposed to `{% link _section/Tablets.md %}`)
+    - input on this welcome
+  - lint `<table>` to have `{:.table}`
+    - or better solution
 
 # Important things to also finalize:
 

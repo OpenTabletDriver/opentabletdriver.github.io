@@ -50,17 +50,17 @@ With [allejo/jekyll-toc](https://github.com/allejo/jekyll-toc). We are using 1.2
 As this site is ported directly from the old repository to Jekyll, the site may contain
 code, assets, information or other contributions by:
 
-@InfinityGhost
-@jamesbt365
-@gonX
-@vedxyz
-@Hypfer
-@TakanashiDavi
-@Sublimelime
-@nerd
-@FlafyDev
-@DanisDGK
-@Zyfarok
-@X9VoiD
-@MicrochipQ
-@vgf89
+[@InfinityGhost](https://github.com/InfinityGhost)\\
+[@jamesbt365](https://github.com/jamesbt365)\\
+[@gonX](https://github.com/gonX)\\
+[@vedxyz](https://github.com/vedxyz)\\
+[@Hypfer](https://github.com/Hypfer)\\
+[@TakanashiDavi](https://github.com/TakanashiDavi)\\
+[@Sublimelime](https://github.com/Sublimelime)\\
+[@nerd](https://github.com/nerd)\\
+[@FlafyDev](https://github.com/FlafyDev)\\
+[@DanisDGK](https://github.com/DanisDGK)\\
+[@Zyfarok](https://github.com/Zyfarok)\\
+[@X9VoiD](https://github.com/X9VoiD)\\
+[@MicrochipQ](https://github.com/MicrochipQ)\\
+[@vgf89](https://github.com/vgf89)

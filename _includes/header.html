@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom border-dark box-shadow mb-3">
   <div class="container">
-    <img class="pr-3" src="/assets/otd.png" height="64">
-    <a class="navbar-brand text-white ms-3" href="/">OpenTabletDriver</a>
+    <img class="pr-3" src="{% link assets/otd.png %}" height="64">
+    <a class="navbar-brand text-white ms-3" href="{% link index.md %}">OpenTabletDriver</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                                                                                                              aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,25 +9,25 @@
     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
       <ul class="navbar-nav flex-grow-1">
         <li class="nav-item">
-          <a class="nav-link text-light" href="/">Home</a>
+          <a class="nav-link text-light" href="{% link index.md %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/Tablets">Tablets</a>
+          <a class="nav-link text-light" href="{% link _sections/Tablets.md %}">Tablets</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/Plugins">Plugins</a>
+          <a class="nav-link text-light" href="{% link _sections/Plugins.md %}">Plugins</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/Wiki">Wiki</a>
+          <a class="nav-link text-light" href="{% link _sections/Wiki.md %}">Wiki</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/Changelog">Changelog</a>
+          <a class="nav-link text-light" href="{% link _sections/Changelog.md %}">Changelog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/GitHub">GitHub</a>
+          <a class="nav-link text-light" href="{% link _sections/GitHub.md %}">GitHub</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/Discord">Discord</a>
+          <a class="nav-link text-light" href="{% link _sections/Discord.md %}">Discord</a>
         </li>
       </ul>
     </div>

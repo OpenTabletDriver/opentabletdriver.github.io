@@ -16,6 +16,9 @@
     let searchInput = document.getElementById('searchInput');
     let searchFilter = searchInput.value.toUpperCase();
 
+    let matchCompatible = document.getElementById('onlyMatchSpecificVersion');
+    let onlyMatchSpecificVersion = matchCompatible.checked;
+
     let container = document.getElementById('metadataList');
     let cards = container.getElementsByClassName('plugin-metadata-card');
 
@@ -25,9 +28,35 @@
       let version = card.getAttribute('data-version');
 
       let searchMatches = name.indexOf(searchFilter) >= 0;
-      let versionMatches = targetVersion == '' || targetVersion == version;
+      let versionMatches = targetVersion == '' || (onlyMatchSpecificVersion ?  version == targetVersion : isCompatible(version, targetVersion) );
 
       card.style.display = searchMatches && versionMatches ? '' : 'none';
     }
+  }
+
+  function isCompatible(pluginVersion, driverVersion) {
+    // support truth table:
+    //  plugin  /  driver
+    // 0.5.3.3 and 0.6.0.0: false
+    // 0.6.0.0 and 0.5.3.3: false
+    // 0.5.2.0 and 0.5.3.3: true
+    // 0.5.3.3 and 0.5.2.0: false
+
+    let pluginSplit = pluginVersion.split('.');
+    let driverSplit = driverVersion.split('.');
+
+    let pluginMajor = pluginSplit.slice(0, 2).join('.');
+    let driverMajor = driverSplit.slice(0, 2).join('.');
+
+    if (pluginMajor != driverMajor)
+      return false;
+
+    let pluginMinor = pluginSplit.slice(2).join('.');
+    let driverMinor = driverSplit.slice(2).join('.');
+
+    if (pluginMinor <= driverMinor)
+      return true;
+
+    return false;
   }
 </script>

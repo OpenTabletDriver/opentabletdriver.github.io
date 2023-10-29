@@ -19,15 +19,66 @@
     let container = document.getElementById('metadataList');
     let cards = container.getElementsByClassName('plugin-metadata-card');
 
+    let versions = {};
+
+    if (targetVersion != '') {
+      for (let i = 0; i < cards.length; i++) {
+        let card = cards[i];
+        let name = card.getAttribute('data-name').toUpperCase();
+        let version = card.getAttribute('data-version');
+
+        if (!isCompatible(version, targetVersion))
+          continue;
+
+        if (name in versions) {
+          if (versions[name] < version) {
+            versions[name] = version;
+          }
+        } else {
+          versions[name] = version;
+        }
+      }
+    }
+
     for (let i = 0; i < cards.length; i++) {
       let card = cards[i];
       let name = card.getAttribute('data-name').toUpperCase();
       let version = card.getAttribute('data-version');
 
       let searchMatches = name.indexOf(searchFilter) >= 0;
-      let versionMatches = targetVersion == '' || targetVersion == version;
+      let versionMatches = targetVersion == '' || isCompatible(version, targetVersion);
+      let isNewest = true;
+      if (name in versions) {
+        isNewest = versions[name] == version;
+      }
 
-      card.style.display = searchMatches && versionMatches ? '' : 'none';
+      card.style.display = searchMatches && versionMatches && isNewest ? '' : 'none';
     }
+  }
+
+  function isCompatible(pluginVersion, driverVersion) {
+    // support truth table:
+    //  plugin  /  driver
+    // 0.5.3.3 and 0.6.0.0: false
+    // 0.6.0.0 and 0.5.3.3: false
+    // 0.5.2.0 and 0.5.3.3: true
+    // 0.5.3.3 and 0.5.2.0: false
+
+    let pluginSplit = pluginVersion.split('.');
+    let driverSplit = driverVersion.split('.');
+
+    let pluginMajor = pluginSplit.slice(0, 2).join('.');
+    let driverMajor = driverSplit.slice(0, 2).join('.');
+
+    if (pluginMajor != driverMajor)
+      return false;
+
+    let pluginMinor = pluginSplit.slice(2).join('.');
+    let driverMinor = driverSplit.slice(2).join('.');
+
+    if (pluginMinor <= driverMinor)
+      return true;
+
+    return false;
   }
 </script>

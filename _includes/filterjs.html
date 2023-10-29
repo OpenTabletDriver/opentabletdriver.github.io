@@ -16,9 +16,6 @@
     let searchInput = document.getElementById('searchInput');
     let searchFilter = searchInput.value.toUpperCase();
 
-    let matchCompatible = document.getElementById('onlyMatchSpecificVersion');
-    let onlyMatchSpecificVersion = matchCompatible.checked;
-
     let container = document.getElementById('metadataList');
     let cards = container.getElementsByClassName('plugin-metadata-card');
 
@@ -28,7 +25,7 @@
       let version = card.getAttribute('data-version');
 
       let searchMatches = name.indexOf(searchFilter) >= 0;
-      let versionMatches = targetVersion == '' || (onlyMatchSpecificVersion ?  version == targetVersion : isCompatible(version, targetVersion) );
+      let versionMatches = targetVersion == '' || isCompatible(version, targetVersion);
 
       card.style.display = searchMatches && versionMatches ? '' : 'none';
     }

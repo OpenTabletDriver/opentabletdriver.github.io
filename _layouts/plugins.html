@@ -43,9 +43,8 @@ layout: default
   </div>
 
   <div id="metadataList">
-    {% assign plugins = plugins | sort: "SupportedDriverVersion" | reverse | group_by: "Name" | sort: 'name' %}
-    {%- for plugin in plugins -%}
-      {% assign metadata = plugin.items | first %}
+    {% assign plugins = plugins | sort: "Name" %}
+    {%- for metadata in plugins -%}
       {% assign maxDriverVersionSplit = metadata.SupportedDriverVersion | split: '.' %}
       {%- capture maxDriverVersion -%}
         {% if maxDriverVersionSplit[0] == "0" %}

@@ -19,6 +19,27 @@
     let container = document.getElementById('metadataList');
     let cards = container.getElementsByClassName('plugin-metadata-card');
 
+    let versions = {};
+
+    if (targetVersion != '') {
+      for (let i = 0; i < cards.length; i++) {
+        let card = cards[i];
+        let name = card.getAttribute('data-name').toUpperCase();
+        let version = card.getAttribute('data-version');
+
+        if (!isCompatible(version, targetVersion))
+          continue;
+
+        if (name in versions) {
+          if (versions[name] < version) {
+            versions[name] = version;
+          }
+        } else {
+          versions[name] = version;
+        }
+      }
+    }
+
     for (let i = 0; i < cards.length; i++) {
       let card = cards[i];
       let name = card.getAttribute('data-name').toUpperCase();
@@ -26,8 +47,12 @@
 
       let searchMatches = name.indexOf(searchFilter) >= 0;
       let versionMatches = targetVersion == '' || isCompatible(version, targetVersion);
+      let isNewest = true;
+      if (name in versions) {
+        isNewest = versions[name] == version;
+      }
 
-      card.style.display = searchMatches && versionMatches ? '' : 'none';
+      card.style.display = searchMatches && versionMatches && isNewest ? '' : 'none';
     }
   }
 

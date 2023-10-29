@@ -55,6 +55,8 @@ between PC (high LED brightness) and Android mode (low LED brightness).
 
 > Note: If you are sure your tablet is in PC mode, please follow the general instructions [here](#my-tablet-is-not-detected).
 
+---
+
 ### Tablet is detected but not working?
 
 #### Fresh Install {#fail-virtual-device}
@@ -99,6 +101,8 @@ Failed to initialize virtual tablet. (error code EACCES)
 
 Try disabling your filters one-by-one and see if input finally works.
 
+---
+
 ### My cursor is stuck in osu!lazer (Wayland) {#osu-lazer-broken-input-wayland}
 
 Make sure you set the `SDL_VIDEODRIVER` to `wayland`. Some examples:
@@ -111,6 +115,8 @@ env SDL_VIDEODRIVER=wayland ./osu.AppImage
 env SDL_VIDEODRIVER=wayland osu-lazer
 ```
 
+---
+
 ### Tablet is working but there is no pressure {#artist-mode}
 
 Pressure support is available by changing the output mode of OpenTabletDriver to Artist Mode:
@@ -120,6 +126,8 @@ Pressure support is available by changing the output mode of OpenTabletDriver to
 - Save your settings and then try drawing in an application that supports pressure.
 
 You will also need to use artist mode mouse bindings in the advanced binding editor instead of regular mouse buttons. Regular mouse buttons are _not_ supported in artist mode.
+
+---
 
 ### The daemon does not start on boot
 
@@ -147,6 +155,8 @@ otd-daemon
 
 > This command should be run as user, not root.
 
+---
+
 ### The cursor feels slow on Artist Mode
 
 Using artist mode will result in some minor smoothing due to libinput's tablet handling.
@@ -160,6 +170,8 @@ AttrTabletSmoothing=0
 ```
 
 You should restart the OpenTabletDriver daemon after updating this file.
+
+---
 
 ### I have tried these solutions, but my problem still persists! {#discord}
 

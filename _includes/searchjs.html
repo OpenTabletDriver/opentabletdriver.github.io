@@ -1,11 +1,24 @@
 <script type="text/javascript">
   document.onreadystatechange = function () {
     if (document.readyState == "complete") {
+      let queryParams = new URLSearchParams(window.location.search);
+      if (queryParams.has("search")) {
+        let input = document.getElementById('searchInput');
+        input.value = queryParams.get("search");
+      }
       search();
     }
   };
 
   function searchInput() {
+    let input = document.getElementById('searchInput');
+    let text = input.value;
+    let action = 'Tablets'
+    if (text.length > 0) {
+        action += '?search=' + encodeURIComponent(text);
+    }
+    window.history.replaceState('', '', action);
+
     search();
   }
 

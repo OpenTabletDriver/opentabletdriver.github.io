@@ -9,8 +9,6 @@
 
 - `rubygems`
 
----
-
 ## Steps
 
 ```bash

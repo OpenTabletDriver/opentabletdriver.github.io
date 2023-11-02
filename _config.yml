@@ -77,3 +77,4 @@ exclude:
   - .github/
   - README.md
   - TODO.md
+  - CNAME

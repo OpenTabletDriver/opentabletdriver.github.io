@@ -23,33 +23,39 @@ description: >- # this means to ignore newlines until "baseurl:"
   OpenTabletdriver is an open source, cross-platform, low latency, user-mode tablet driver.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://opentabletdriver.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
+
+# Site variables
 latest_otd_version: v0.6.3.0
 otd_release_url: https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download # no slash at end
 
 # Build settings
-theme: 
+theme:
 plugins:
 
+# Sets default values according to scope
+# See https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
   -
     scope:
-      path: ""
+      path: "" # apply to everything
     values:
       layout: "default"
   -
     scope:
-      type: "wiki"
+      type: "wiki" # apply to collection: 'wiki' only (see collections array below)
     values:
       layout: "wikipage"
       toc: true
 
+# Assign _folder settings, e.g. _sections, _wiki
+# See: https://jekyllrb.com/docs/collections/#collections
 collections:
   sections:
     output: true
-    permalink: /:title
+    permalink: /:title # use 'title' instead of 'name' to keep capitalization consistent with old site
   wiki:
     output: true
-    permalink: /Wiki/:path
+    permalink: /Wiki/:path # this allows us to use infinitely deep subdirs
 
 # Exclude from processing.
 # The following items will not be processed, by default.

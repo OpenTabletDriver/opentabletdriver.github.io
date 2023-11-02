@@ -29,7 +29,7 @@ Another tablet driver found: <name>
 ```
 
 If you see this log message you should follow the instructions for [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest) if you haven't already, making sure to say yes to everything.\\
-If the log entry is still there after following the instructions and restarting OTD, try joining our support [Discord]({% link _sections/Discord.md %}) for further help.
+If the log entry is still there after following the instructions and restarting OTD, try joining our support [Discord]({{ site.discord_invite_url }}) for further help.
 
 ##### Invalid WinUSB driver installation state
 
@@ -46,7 +46,7 @@ If you still need more help after this, join our Discord and give us a shout in 
 #### It is not a supported tablet, what can I do about that?<
 
 If you want to add support for your tablet on your own, feel free to look at a similar configuration on our GitHub and our configuration documentation.
-If you would like help with supporting your tablet, or would prefer us to do it, join our [Discord]({% link _sections/Discord.md %}) and create a post in `#config-creation` or a support channel.
+If you would like help with supporting your tablet, or would prefer us to do it, join our [Discord]({{ site.discord_invite_url }}) and create a post in `#config-creation` or a support channel.
 
 ---
 
@@ -62,7 +62,7 @@ you can remove these by running and following the instructions for [TabletDriver
 If your cursor is teleporting you usually have another driver installed or you have broken settings, you can resolve the former by following the former with
 [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest) and you can solve the latter with `file > reset to defaults` and clicking save.
 
-If the issue is still unresolved after trying the instructions above, please join our [Discord]({% link _sections/Discord.md %}) for extra assistance.
+If the issue is still unresolved after trying the instructions above, please join our [Discord]({{ site.discord_invite_url }}) for extra assistance.
 
 ---
 
@@ -114,7 +114,7 @@ then it is likely that you have broken settings or outdated plugins installed. Y
 
 If you have a `userdata` folder next to the binaries of OpenTabletDriver, you will need to remove the files above from that folder instead.
 
-If you still can't get it working after the solutions above please join our [Discord]({% link _sections/Discord.md %}).
+If you still can't get it working after the solutions above please join our [Discord]({{ site.discord_invite_url }}).
 It might be a completely different issue!
 
 ---

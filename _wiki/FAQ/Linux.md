@@ -14,7 +14,7 @@ OpenTabletDriver currently has _no support_ for tablets connected via Bluetooth.
 Once the tablet is connected properly, verify if your tablet is in the list of supported tablets [here]({% link _sections/Tablets.md %}). If it is not, you may do one of the following:
 
 - [Create a tablet support request in Github.](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/new?assignees=&labels=configuration&projects=&template=tablet_configuration.yml&title=Add+support+for+)
-- [Create a tablet support thread in #config-creation channel of the Discord server.]({% link _sections/Discord.md %})
+- [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.discord_invite_url }})
 - [Make your own tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
 
 #### Troubleshooting
@@ -176,4 +176,4 @@ You should restart the OpenTabletDriver daemon after updating this file.
 ### I have tried these solutions, but my problem still persists! {#discord}
 
 If you are still encountering problems with OpenTabletDriver,
-it will be easier to help you over in our [Discord]({% link _sections/Discord.md %}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.
+it will be easier to help you over in our [Discord]({{ site.discord_invite_url }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

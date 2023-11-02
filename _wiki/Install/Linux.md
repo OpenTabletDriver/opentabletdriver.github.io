@@ -3,7 +3,7 @@ title: Linux Installation Guide
 ---
 
 ### Ubuntu / Debian {#debian}
- 1. Download the [latest release]({% link Release/Download/OpenTabletDriver.deb.md %}) <small class="text-muted">(OpenTabletDriver.deb)</small>
+ 1. Download the [latest release](https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.deb) <small class="text-muted">(OpenTabletDriver.deb)</small>
  2. Run the following commands in a terminal
 
 <small class="ms-3 text-muted">

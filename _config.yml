@@ -27,6 +27,8 @@ url: https://opentabletdriver.net # the base hostname & protocol for your site, 
 # Site variables
 latest_otd_version: v0.6.3.0
 otd_release_url: https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download # no slash at end
+discord_invite_url: https://discord.gg/9bcMaPkVAR
+github_otd_repo_url: https://github.com/OpenTabletDriver/OpenTabletDriver
 
 # Build settings
 theme:

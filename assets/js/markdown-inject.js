@@ -14,6 +14,16 @@ function injectMarkdownClasses() {
         blockquoteElement.classList.add('small');
         blockquoteElement.classList.add('text-muted');
     });
+
+    // Select all table elements
+    var tableElements = parentElement.querySelectorAll('table');
+    if (tableElements === null)
+        return;
+
+    // Loop through each table element and add the desired classes
+    tableElements.forEach(function (tableElement) {
+        tableElement.classList.add('table');
+    });
 }
 
 injectMarkdownClasses();

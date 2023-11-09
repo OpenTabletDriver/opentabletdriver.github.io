@@ -9,9 +9,8 @@ title: Linux Installation Guide
 > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
 
 ```sh
-# Install the .NET runtime
+# Update the package list
 sudo apt update
-sudo apt install -y dotnet-sdk-6.0
 
 # This will install the package, assuming you are in the correct directory
 sudo apt install ./OpenTabletDriver.deb
@@ -23,7 +22,7 @@ systemctl --user daemon-reload
 systemctl --user enable opentabletdriver --now
 ```
 
-> Note: If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause libhostfxr issues. If you are experiencing these see these solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions).
+If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause libhostfxr issues. If you are experiencing these see these solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions) and remove the Microsoft repositories and packages.
 
 ---
 
@@ -93,4 +92,4 @@ hardware.opentabletdriver.enable = true;
 ---
 
 ### Post-Installation {#post-install}
-You're advised to look at the console tab on OpenTabletDriver UX to catch any problems. If necessary, read through the [FAQ]({% link _wiki/FAQ/Linux.md %}).
+Take a look at the [FAQ]({% link _wiki/FAQ/Linux.md %}) if you encounter any problems.

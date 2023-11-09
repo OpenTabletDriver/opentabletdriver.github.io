@@ -3,21 +3,14 @@ title: "Linux FAQ"
 hide_from_auto_list: true
 ---
 
-### My tablet is not detected?
+**It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
+first before continuing.**
 
-#### Tablet Connection
+Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}) for app-specific instructions.
 
-Make sure that the tablet is actually plugged in to your computer properly. Check this by running `lsusb` in a terminal or by watching the output of `dmesg` or `udevadm monitor` when plugging in the tablet.
+### Troubleshooting {#troubleshooting}
 
-OpenTabletDriver currently has _no support_ for tablets connected via Bluetooth. Make sure that your tablet is connected via USB. There is partial support for tablets connected via wireless dongle.
-
-Once the tablet is connected properly, verify if your tablet is in the list of supported tablets [here]({% link _sections/Tablets.md %}). If it is not, you may do one of the following:
-
-- [Create a tablet support request in Github.](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/new?assignees=&labels=configuration&projects=&template=tablet_configuration.yml&title=Add+support+for+)
-- [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.discord_invite_url }})
-- [Make your own tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
-
-#### Troubleshooting
+#### Common Problems
 
 If your tablet is connected properly and is supported, but is still not detected, [check logs]({% link _wiki/Documentation/Logs.md %}) for any errors or warnings. If you find any, try finding for a match and its accompanying solution below:
 
@@ -47,13 +40,13 @@ Not permitted to open HID class device at /dev/hidrawX
 
 #### Tablet-specific Troubleshooting
 
-##### CTL-x100
+##### Wacom CTL-x100
 
-It is possible for CTL-x100 tablets to boot in Android mode (the mode they use when interfacing with android devices like phones) instead of PC mode in some rare cases. To fix this, press
+It is possible for Wacom CTL-x100 tablets to boot in Android mode (the mode they use when interfacing with android devices like phones) instead of PC mode in some rare cases. To fix this, press
 the outer 2 express keys for 3-4 seconds until the LEDs change brightness. This toggles the tablet's operating mode
 between PC (high LED brightness) and Android mode (low LED brightness).
 
-> Note: If you are sure your tablet is in PC mode, please follow the general instructions [here](#my-tablet-is-not-detected).
+> If you are sure your tablet is in PC mode, proceed [here](#troubleshooting).
 
 ---
 
@@ -101,19 +94,15 @@ Failed to initialize virtual tablet. (error code EACCES)
 
 Try disabling your filters one-by-one and see if input finally works.
 
+#### It doesn't work in a specific application
+
+Visit our wiki page for app-specific instructions [here]({% link _wiki/FAQ/LinuxAppSpecific.md %}).
+
 ---
 
-### My cursor is stuck in osu!lazer (Wayland) {#osu-lazer-broken-input-wayland}
+### My cursor is going crazy! It teleports everywhere!
 
-Make sure you set the `SDL_VIDEODRIVER` to `wayland`. Some examples:
-
-```bash
-env SDL_VIDEODRIVER=wayland ./osu.AppImage
-```
-
-```bash
-env SDL_VIDEODRIVER=wayland osu-lazer
-```
+See [here]({% link _wiki/FAQ/General.md %}#emi-interference).
 
 ---
 
@@ -157,14 +146,14 @@ otd-daemon
 
 ---
 
-### The cursor feels slow on Artist Mode
+### The cursor feels slow on Artist Mode {#libinput-smoothing}
 
 Using artist mode will result in some minor smoothing due to libinput's tablet handling.
 
 To disable this smoothing, add the contents below to `/etc/libinput/local-overrides.quirks`:
 
 ```ini
-[OpenTabletDriver Virtual Tablets]
+[OpenTabletDriver Virtual Tablet]
 MatchName=OpenTabletDriver*
 AttrTabletSmoothing=0
 ```
@@ -173,7 +162,6 @@ You should restart the OpenTabletDriver daemon after updating this file.
 
 ---
 
-### I have tried these solutions, but my problem still persists! {#discord}
+### Still have problems? {#discord}
 
-If you are still encountering problems with OpenTabletDriver,
-it will be easier to help you over in our [Discord]({{ site.discord_invite_url }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.
+If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.discord_invite_url }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

@@ -2,63 +2,144 @@
 title: General FAQ
 ---
 
-### Application Data Directory {#appdata}
+### Is my tablet supported? {#supported-tablets}
+
+Verify if your tablet is in the list of supported tablets [here]({% link _sections/Tablets.md %}). If it is not, you may do one of the following:
+
+- [Create a tablet support request in Github.](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/new?assignees=&labels=configuration&projects=&template=tablet_configuration.yml&title=Add+support+for+)
+- [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.discord_invite_url }})
+- [Write the tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
+
+---
+
+### My tablet is supported but not detected? {#tablet-not-detected}
+
+OpenTabletDriver currently has _no support_ for tablets connected via Bluetooth. Make sure that your tablet is connected via USB. There is partial support for tablets connected via wireless dongle.
+
+Once plugged in, determine if your tablet has good connection to the computer:
+
+- Windows
+    - Windows by default will play a sound when a device is plugged in. If you do not hear this sound, consider using a different port or replacing the cable (make sure the cable supports both power and data transfer).
+- Linux
+    - Check this by running `lsusb` in a terminal or by watching the output of `dmesg` or `udevadm monitor` when plugging in the tablet.
+
+Then check [above](#supported-tablets) if your tablet is supported. If it is and there are still problems, check the troubleshoot sections:
+
+- [Windows]({% link _wiki/FAQ/Windows.md %}#troubleshooting)
+- [Linux]({% link _wiki/FAQ/Linux.md %}#troubleshooting)
+- [macOS]({% link _wiki/FAQ/MacOS.md %}#troubleshooting)
+
+---
+
+### Where is my settings and plugins stored? {#appdata}
+
+The following table describes the location of the default application data directory for each operating system:
 
 | Operating System | Path |
-| :--------------: | ---- |
-| Windows          | `%localappdata%\OpenTabletDriver`                  |
-| Linux            | `~/.config/OpenTabletDriver`                       |
-| macOS            | `~/Library/Application Support/OpenTabletDriver`   |
+| --- | --- |
+| Windows | `%localappdata%\OpenTabletDriver` |
+| Linux | `~/.config/OpenTabletDriver` |
+| macOS | `~/Library/Application Support/OpenTabletDriver` |
+
+Its contents are as follows:
+
+| Entry | Type | Description |
+| --- | --- | --- |
+| `settings.json` | File | Stores the driver settings |
+| `tablet-data.txt` | File | Stores the recorded tablet data from Tablet Debugger |
+| `daemon.log` | File | Contains a stack trace when daemon crashes |
+| Backup | Directory | Contains backups of OpenTabletDriver binaries and settings triggered by updates |
+| Cache | Directory | Contains cached Github data for fast browsing within Plugin Manager |
+| Plugins | Directory | Contains plugins. This should not be manually modified unless you know what you're doing |
+| Presets | Directory | Contains saved presets |
 
 ---
 
-### Command Line Arguments {#command-line-args}
+### My cursor is going crazy! It teleports everywhere! {#emi-interference}
 
-#### UI
+This is caused by electromagnetic interference (EMI) from other devices. Make sure that the tablet is not near any of the following:
 
-| Argument | Description |
-| -------- | ----------- |
-| `--minimized` or `-m` | Starts the application in a minimized state. |
+- Powered cables (e.g. power cables, charging USB cables, etc.)
+- Powered mouse pads
+- Monitor
+- On top of the laptop's keyboard
 
-#### Daemon
-
-| Argument | Description |
-| -------- | ----------- |
-| `--appdata` or `-a` | Specifies the application data directory. |
-| `--config` or `-c`  | Specifies the configurations directory. |
+If certain that the tablet is not near any of the above, try replacing the pen. If the problem persists, replace the tablet. It's broken!
 
 ---
 
-### Are Wacom Intuos tablets supported? {#wacomintuos}
+### How to convert areas to and from OpenTabletDriver? {#area-conversion}
 
-Yes, most Wacom Intuos tablets are supported.
+#### Conversion through the UI
 
-Check the back of your tablet for the model number, then check [here]({% link _sections/Tablets.md %}).
-
----
-
-
-### Proprietary Driver Area Conversions {#area-conversion}
-
-This can be performed from the UI or calculated manually.
-
-#### OpenTabletDriver UI
 - Right click the tablet area editor
 - Click the `convert item` menu item
 - Select the OEM driver and insert your area values
 
-#### Manual Area Conversion
+#### Conversion through manual calculation
 
-Check the configuration file for your tablet [here](https://github.com/OpenTabletDriver/OpenTabletDriver/tree/master/OpenTabletDriver.Configurations)
-or within the driver for properly calculated digitizer dimensions in millimeters.
+| Term | Definition |
+| --- | --- |
+| Width | The width of the area in millimeters |
+| Height | The height of the area in millimeters |
+| TWidth | The width of the tablet's digitizer in millimeters. Can be found in tablet's configuration file |
+| THeight | The height of the tablet's digitizer in millimeters. Can be found in the tablet's configuration file |
+| XOffset | The X offset of the center of the area in millimeters |
+| YOffset | The Y offset of the center of the area in millimeters |
+| LPI | Lines per inch, this is commonly 5080 or 2540 |
 
-> Note: Huion and Gaomon areas use a "percentage area" , which uses a percentage
-of the tablet's maximum area to calculate the area.\\
-> You must know your tablet's digitizer dimensions in millimeters in order to properly convert these areas.
-> This is automatically handled in the UI, for the best results it is recommended to use it for converting from these proprietary drivers.
+Use the following formulas to get values for the area editor's `Width`, `Height`, `XOffset`, and `YOffset` fields.
 
-| Driver | Formulas |
-| :----: | -------- |
-| Wacom, VEIKK | `Width = (Right - Left) / 100`<br/>`Height = (Bottom - Top) / 100`<br/>`X Offset = (Left / 100) + (Width / 2)`<br/>`Y Offset = (Top / 100) + (Height / 2)` |
-| XP-Pen | `Width = W / 3.937`<br/>`Height = H / 3.937`<br/>`X Offset = (Width / 2) + (X / 3.937)`<br/>`Y Offset = (Height / 2) + (Y / 3.937)` |
-| Huion, Gaomon | `Width = (Right - Left) * tabletWidth`<br/>`Height = (Bottom - Top) * tabletHeight`<br/>`X Offset = (Width / 2) + (Left * tabletWidth)`<br/>`Y Offset = (Height / 2) + (Top * tabletHeight)` |
+**Wacom and Veikk**
+
+| Term | Definition |
+| --- | --- |
+| Left | The number of lines from the left side of the tablet to the left side of the area |
+| Top | The number of lines from the top side of the tablet to the top side of the area |
+| Right | The number of lines from the left side of the tablet to the right side of the area |
+| Bottom | The number of lines from the top side of the tablet to the bottom side of the area |
+
+Formula:
+
+```
+Width = (Right - Left) / LPI * 25.4
+Height = (Bottom - Top) / LPI * 25.4
+XOffset = (Left / LPI * 25.4) + (Width / 2)
+YOffset = (Top / LPI * 25.4) + (Height / 2)
+```
+
+**XP-Pen**
+
+| Term | Definition |
+| --- | --- |
+| XPW | The width in XP-Pen units. Denoted as `W` in XP-Pen's official drivers |
+| XPH | The height in XP-Pen units. Denoted as `H` in XP-Pen's official drivers |
+| XPX | The X offset of the top left corner of the area in XP-Pen units. Denoted as `X` in XP-Pen's official drivers |
+| XPY | The Y offset of the top left corner of the area in XP-Pen units. Denoted as `Y` in XP-Pen's official drivers |
+
+Formula:
+
+```
+Width = XPW / 3.937
+Height = XPH / 3.937
+XOffset = (Width / 2) + (XPX / 3.937)
+YOffset = (Height / 2) + (XPY / 3.937)
+```
+
+**Huion and Gaomon**
+
+| Term | Definition |
+| --- | --- |
+| Left | The percentage of the distance from the left side of the tablet to the left side of the area |
+| Top | The percentage of the distance from the top side of the tablet to the top side of the area |
+| Right | The percentage of the distance from the left side of the tablet to the right side of the area |
+| Bottom | The percentage of the distance from the top side of the tablet to the bottom side of the area |
+
+Formula:
+
+```
+Width = (Right - Left) * TWidth
+Height = (Bottom - Top) * THeight
+XOffset = (Width / 2) + (Left * TWidth)
+YOffset = (Height / 2) + (Top * THeight)
+```

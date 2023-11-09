@@ -9,7 +9,7 @@ layout: default
     <strong>Contents</strong>
     {% include toc.html html=content id="toc" h_max=3 %}
   </div>
-  <div class="col">
+  <div class="col markdown-content">
     {{ content | inject_anchors }}
   </div>
 </div>

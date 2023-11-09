@@ -6,9 +6,8 @@ title: Linux Installation Guide
  1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.deb) <small class="text-muted">(OpenTabletDriver.deb)</small>
  2. Run the following commands in a terminal
 
-<small class="ms-3 text-muted">
-This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
-</small>
+> This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
+
 ```sh
 # Install the .NET runtime
 sudo apt update
@@ -24,13 +23,7 @@ systemctl --user daemon-reload
 systemctl --user enable opentabletdriver --now
 ```
 
-<small class="text-muted">
-Note: If you have the Microsoft dotnet repository installed you will have to either make sure you are
-not using any packages from that repository or use everything dotnet based off that. Mixing packages
-from different repositories will cause libhostfxr issues.\\
-If you are experiencing these see these solutions from Microsoft
-[here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions).
-</small>
+> Note: If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause libhostfxr issues. If you are experiencing these see these solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions).
 
 ---
 
@@ -69,9 +62,7 @@ systemctl --user enable opentabletdriver --now
 
 ### Gentoo {#gentoo}
 1. Add Guru overlay\\
-<small class="ms-3 text-muted">
-This is only required if you don't already have the Guru overlay configured
-</small>
+> This is only required if you don't already have the Guru overlay configured
 ```bash
 # Enable guru repository
 sudo eselect repository enable guru
@@ -93,9 +84,7 @@ sudo emerge OpenTabletDriver-bin
 
 ### NixOS {#nixos}
 1. Edit `/etc/nixos/configuration.nix` and add this in your configuration\\
-<small class="ms-3 text-muted">
-More configuration options can be found [here](https://search.nixos.org/options?query=opentabletdriver)
-</small>
+> More configuration options can be found [here](https://search.nixos.org/options?query=opentabletdriver)
 ```nix
 # Enable OpenTabletDriver
 hardware.opentabletdriver.enable = true;

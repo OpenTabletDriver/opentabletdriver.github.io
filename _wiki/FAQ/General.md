@@ -52,13 +52,10 @@ This can be performed from the UI or calculated manually.
 Check the configuration file for your tablet [here](https://github.com/OpenTabletDriver/OpenTabletDriver/tree/master/OpenTabletDriver.Configurations)
 or within the driver for properly calculated digitizer dimensions in millimeters.
 
-{:.text-muted .px-3 .mb-3}
-<small>
-**Note:** Huion and Gaomon areas use a "percentage area" , which uses a percentage
+> Note: Huion and Gaomon areas use a "percentage area" , which uses a percentage
 of the tablet's maximum area to calculate the area.\\
-  You must know your tablet's digitizer dimensions in millimeters in order to properly convert these areas.\\
-  This is automatically handled in the UI, for the best results it is recommended to use it for converting from these proprietary drivers.
-</small>
+> You must know your tablet's digitizer dimensions in millimeters in order to properly convert these areas.
+> This is automatically handled in the UI, for the best results it is recommended to use it for converting from these proprietary drivers.
 
 | Driver | Formulas |
 | :----: | -------- |

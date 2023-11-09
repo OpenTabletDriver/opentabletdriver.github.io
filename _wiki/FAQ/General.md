@@ -4,7 +4,6 @@ title: General FAQ
 
 ### Application Data Directory {#appdata}
 
-{:.table}
 | Operating System | Path |
 | :--------------: | ---- |
 | Windows          | `%localappdata%\OpenTabletDriver`                  |
@@ -17,14 +16,12 @@ title: General FAQ
 
 #### UI
 
-{:.table}
 | Argument | Description |
 | -------- | ----------- |
 | `--minimized` or `-m` | Starts the application in a minimized state. |
 
 #### Daemon
 
-{:.table}
 | Argument | Description |
 | -------- | ----------- |
 | `--appdata` or `-a` | Specifies the application data directory. |
@@ -63,7 +60,6 @@ of the tablet's maximum area to calculate the area.\\
   This is automatically handled in the UI, for the best results it is recommended to use it for converting from these proprietary drivers.
 </small>
 
-{:.table}
 | Driver | Formulas |
 | :----: | -------- |
 | Wacom, VEIKK | `Width = (Right - Left) / 100`<br/>`Height = (Bottom - Top) / 100`<br/>`X Offset = (Left / 100) + (Width / 2)`<br/>`Y Offset = (Top / 100) + (Height / 2)` |

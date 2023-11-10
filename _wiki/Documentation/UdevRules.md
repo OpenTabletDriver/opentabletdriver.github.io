@@ -35,7 +35,6 @@ udevadm control --reload-rules && udevadm trigger
 
 Then update the initramfs:
 
-{:.table}
 | Distro | Command |
 | --- | --- |
 | Arch Linux | `sudo mkinitcpio -P` |

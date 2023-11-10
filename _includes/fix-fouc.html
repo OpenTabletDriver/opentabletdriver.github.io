@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    let showElement = () => {
+        let element = document.querySelector('.fix-fouc');
+        if (element === null)
+            return;
+
+        element.style.visibility = 'visible';
+    };
+
+    document.readyState === 'interactive' || document.readyState === 'complete'
+        ? showElement()
+        : document.addEventListener('DOMContentLoaded', showElement);
+</script>
+
+<noscript><style>.fix-fouc { visibility: visible; }</style></noscript>

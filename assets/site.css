@@ -94,3 +94,13 @@ div.highlighter-rouge {
 div.highlighter-rouge pre.highlight {
   padding: 1em;
 }
+
+.markdown-content > h5,
+.markdown-content > h4,
+.markdown-content > h3 {
+  margin-bottom: 1rem;
+}
+
+.markdown-content > blockquote {
+  margin-left: 1rem;
+}

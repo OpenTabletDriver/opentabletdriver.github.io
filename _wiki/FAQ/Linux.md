@@ -104,7 +104,13 @@ Pressure support is available by changing the output mode of OpenTabletDriver to
 - Remove Tip Binding in the Pen Settings panel by opening advanced binding editor (press '...' next to the binding), then press "Clear".
 - Save your settings and then try drawing in an application that supports pressure.
 
-You will also need to use artist mode mouse bindings in the advanced binding editor instead of regular mouse buttons. Regular mouse buttons are _not_ supported in artist mode.
+See [here](#artist-mode-bindings) for setting up bindings for Artist Mode.
+
+---
+
+### Mouse button bindings are not working when using Artist Mode {#artist-mode-bindings}
+
+Artist mode does not support regular mouse buttons. You will need to use artist mode pen bindings in the advanced binding editor instead of regular mouse buttons.
 
 ---
 

@@ -94,16 +94,6 @@ Failed to initialize virtual tablet. (error code EACCES)
 
 Try disabling your filters one-by-one and see if input finally works.
 
-#### It doesn't work in a specific application
-
-Visit our wiki page for app-specific instructions [here]({% link _wiki/FAQ/LinuxAppSpecific.md %}).
-
----
-
-### My cursor is going crazy! It teleports everywhere!
-
-See [here]({% link _wiki/FAQ/General.md %}#emi-interference).
-
 ---
 
 ### Tablet is working but there is no pressure {#artist-mode}

@@ -65,10 +65,6 @@ OpenTabletDriver has no built-in support for pressure on Windows due to external
 - Install and follow instructions from [WindowsInk wiki](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk).
 - [Make sure that the application you are trying to draw with is configured to work with Windows Ink API]({% link _wiki/Documentation/WindowsInk.md %}#configure-apps)
 
-#### It doesn't work in a specific application
-
-Make sure that the application is not running as Administrator. Visit our wiki page for [app-specific instructions here]({% link _wiki/FAQ/WindowsAppSpecific.md %}).
-
 ---
 
 ### What is convert_to_portable.bat? {#userdata}

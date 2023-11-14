@@ -82,7 +82,7 @@ Check if `OpenTabletDriver.Daemon` and `OpenTabletDriver.UX.Wpf` is in the same 
 If both files are in the same folder, the daemon may have crashed during launch.
 
 - Press <kbd>Win</kbd> + <kbd>R</kbd> to open the Run dialog.
-- Type `%localappdata%\OpenTabletDriver` then press <kbd>Enter</kbd>.\\
+- Type `%localappdata%\OpenTabletDriver` then press <kbd>Enter</kbd>.
 - Delete or rename `settings.json` to `settings.json.bak`.
 - If problem persists, try also renaming `Plugins` folder to `Plugins.bak`.
 

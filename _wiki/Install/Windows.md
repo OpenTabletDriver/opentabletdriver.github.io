@@ -18,12 +18,12 @@ install it on top of the old version and instead clean up the old directory or i
 directory.
 
 1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.win-x64.zip). <small class="text-muted">(OpenTabletDriver.win-x64.zip)</small>
-2. Extract the downloaded file into a folder of its own.\\
+2. Extract the downloaded file into a folder of its own.
 > Replace `<username>` with your username in the example below.
 ```
 C:\Users\<username>\OpenTabletDriver
 ```
-3. Run `OpenTabletDriver.UX.Wpf.exe` in the extracted directory.\\
+3. Run `OpenTabletDriver.UX.Wpf.exe` in the extracted directory.
 > You can create a shortcut to this file, just make sure that the working directory points
 to the extracted directory.
 

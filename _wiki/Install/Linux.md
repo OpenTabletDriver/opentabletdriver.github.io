@@ -60,7 +60,7 @@ systemctl --user enable opentabletdriver --now
 ---
 
 ### Gentoo {#gentoo}
-1. Add Guru overlay\\
+1. Add Guru overlay
 > This is only required if you don't already have the Guru overlay configured
 ```bash
 # Enable guru repository
@@ -82,7 +82,7 @@ sudo emerge OpenTabletDriver-bin
 ---
 
 ### NixOS {#nixos}
-1. Edit `/etc/nixos/configuration.nix` and add this in your configuration\\
+1. Edit `/etc/nixos/configuration.nix` and add this in your configuration
 > More configuration options can be found [here](https://search.nixos.org/options?query=opentabletdriver)
 ```nix
 # Enable OpenTabletDriver

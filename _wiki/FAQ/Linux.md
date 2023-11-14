@@ -26,7 +26,9 @@ Another tablet driver found: UC Logic
 ArgumentOutOfRangeException: Value range is [0, 15]. (Parameter 'value)
 ```
 
-[_Solution_]({% link _wiki/Documentation/UdevRules.md %})
+_Solution_
+
+[Click here]({% link _wiki/Documentation/UdevRules.md %}).
 
 ##### Insufficient permissions {#udev}
 
@@ -36,7 +38,9 @@ _Symptoms_
 Not permitted to open HID class device at /dev/hidrawX
 ```
 
-[_Solution_]({% link _wiki/Documentation/UdevRules.md %})
+_Solution_
+
+[Click here]({% link _wiki/Documentation/UdevRules.md %}).
 
 #### Tablet-specific Troubleshooting
 
@@ -88,7 +92,9 @@ _Symptoms_
 Failed to initialize virtual tablet. (error code EACCES)
 ```
 
-[_Solution_]({% link _wiki/Documentation/UdevRules.md %})
+_Solution_
+
+[Click here]({% link _wiki/Documentation/UdevRules.md %}).
 
 #### Non-fresh Install
 

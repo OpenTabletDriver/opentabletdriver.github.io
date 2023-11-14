@@ -29,6 +29,8 @@ Then check [above](#supported-tablets) if your tablet is supported. If it is and
 - [Linux]({% link _wiki/FAQ/Linux.md %}#troubleshooting)
 - [macOS]({% link _wiki/FAQ/MacOS.md %}#troubleshooting)
 
+or alternatively, see if there is a [tablet specific FAQ]({% link _wiki/FAQ/TabletSpecific.md %}) for your tablet.
+
 ---
 
 ### Where is my settings and plugins stored? {#appdata}

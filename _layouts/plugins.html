@@ -65,25 +65,27 @@ layout: default
               {{ metadata.Description }}
             </div>
           </div>
-          <div class="mt-auto text-end">
-            <div class="flex-sm-fill mb-2">
-              <span class="text-muted">Driver Compatibility: <span>&gt;= {{ metadata.SupportedDriverVersion }}</span>, <span>&lt; {{ maxDriverVersion }}</span></span>
+          <div class="d-flex flex-column p-2 text-end">
+            <div class="mb-1">
+              <span class="text-muted">Driver Compatibility: &gt;= {{ metadata.SupportedDriverVersion }}, &lt; {{ maxDriverVersion }}</span>
             </div>
-            {%- if metadata.DownloadUrl != "" -%}
-            <a role="button" class="btn btn-primary me-1 w-10" href="{{ metadata.DownloadUrl }}">
-              Download
-            </a>
-            {%- endif -%}
-            {%- if metadata.WikiUrl != "" -%}
-            <a role="button" class="btn btn-info me-1" href="{{ metadata.WikiUrl }}">
-              Wiki
-            </a>
-            {%- endif -%}
-            {%- if metadata.RepositoryUrl != "" -%}
-            <a role="button" class="btn btn-info" href="{{ metadata.RepositoryUrl }}">
-              Source
-            </a>
-            {%- endif -%}
+            <div class="mt-auto">
+              {%- if metadata.DownloadUrl != "" -%}
+              <a role="button" class="btn btn-primary me-1 w-10" href="{{ metadata.DownloadUrl }}">
+                Download
+              </a>
+              {%- endif -%}
+              {%- if metadata.WikiUrl != "" -%}
+              <a role="button" class="btn btn-info me-1" href="{{ metadata.WikiUrl }}">
+                Wiki
+              </a>
+              {%- endif -%}
+              {%- if metadata.RepositoryUrl != "" -%}
+              <a role="button" class="btn btn-info" href="{{ metadata.RepositoryUrl }}">
+                Source
+              </a>
+              {%- endif -%}
+            </div>
           </div>
         </div>
       </div>

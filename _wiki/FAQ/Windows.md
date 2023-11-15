@@ -134,7 +134,7 @@ It is likely because you are running OpenTabletDriver with the Administrator acc
 
 If you are experiencing random crashes with no warning, or the interface is completely blank and/or not accepting input, and you have RiverTuner Statistics Server installed, it may be hooking into OpenTabletDriver and prevents OpenTabletDriver.UX.Wpf from functioning correctly.
 
-If you are using RiverTuner Statistics, make sure it doesn't hook onto OpenTabletDriver by blacklisting it in its settings.
+If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTabletDriver by blacklisting it in its settings.
 
  - Open RivaTuner Statistics Server.
  - Click on Add button found in the bottom left corner.

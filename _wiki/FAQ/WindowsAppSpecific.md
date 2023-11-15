@@ -2,7 +2,7 @@
 title: Windows App-specific FAQ
 ---
 
-### osu!stable {#osu}
+### osu!stable {#osustable}
 
 #### No input from my tablet is detected
 

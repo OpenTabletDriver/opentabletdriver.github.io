@@ -51,7 +51,7 @@ Restart your computer.
 
 ---
 
-### Tablet is detected but not working?
+### Tablet is detected but not working? {#tablet-not-functioning-correctly}
 
 #### No input
 

@@ -33,7 +33,7 @@ or alternatively, see if there is a [tablet specific FAQ]({% link _wiki/FAQ/Tabl
 
 ---
 
-### Where is my settings and plugins stored? {#appdata}
+### Where are my settings and plugins stored? {#appdata}
 
 The following table describes the location of the default application data directory for each operating system:
 

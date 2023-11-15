@@ -124,7 +124,7 @@ If you need to interact with a program that runs with Administrator privileges, 
 
 ---
 
-### Plugin manager is not showing up
+### Plugin manager is not showing up {#plugin-manager-broken}
 
 It is likely because you are running OpenTabletDriver with the Administrator account. See [above](#administrator).
 

@@ -46,7 +46,7 @@ For other distros, refer to your distro's documentation on how to update the ini
 
 Refer to your distro's documentation on how to remove udev rules of the name `90-opentabletdriver.rules` or `99-opentabletdriver.rules`.
 
-#### Legacy package
+#### Legacy package {#legacy-package}
 
 If you're using a version of OpenTabletDriver below 0.6.3.0, run the script in the [Standard FHS distro](#standard-fhs-distro) section and then run the following script:
 

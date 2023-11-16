@@ -60,6 +60,10 @@ sudo cp ./eng/linux/Generic/usr/lib/modules-load.d/opentabletdriver.conf /etc/mo
 
 cd ..
 rm -rf OpenTabletDriver
+
+sudo modprobe uinput
+sudo modprobe -r wacom
+sudo modprobe -r hid_uclogic
 ```
 
 ### Built from source

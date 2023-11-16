@@ -46,6 +46,22 @@ For other distros, refer to your distro's documentation on how to update the ini
 
 Refer to your distro's documentation on how to remove udev rules of the name `90-opentabletdriver.rules` or `99-opentabletdriver.rules`.
 
+#### Legacy package
+
+If you're using a version of OpenTabletDriver below 0.6.3.0, run the script in the [Standard FHS distro](#standard-fhs-distro) section and then run the following script:
+
+```bash
+git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git
+cd OpenTabletDriver
+
+./generate-udev-rules.sh | sudo tee /etc/udev/rules.d/70-opentabletdriver.rules
+sudo cp ./eng/linux/Generic/usr/lib/modprobe.d/99-opentabletdriver.conf /etc/modprobe.d/99-opentabletdriver.conf
+sudo cp ./eng/linux/Generic/usr/lib/modules-load.d/opentabletdriver.conf /etc/modules-load.d/opentabletdriver.conf
+
+cd ..
+rm -rf OpenTabletDriver
+```
+
 ### Built from source
 
 Make sure you built OpenTabletDriver via [these instructions](https://github.com/OpenTabletDriver/OpenTabletDriver#linux) and extracted the generic binary tarball correctly.

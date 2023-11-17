@@ -5,44 +5,59 @@ title: Linux Installation Guide
 ### Ubuntu / Debian {#debian}
  1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.deb) <small class="text-muted">(OpenTabletDriver.deb)</small>
  2. Run the following commands in a terminal
+    ```bash
+    # Update the package list
+    sudo apt update
 
-> This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
+    # This will install the package
+    sudo apt install ./OpenTabletDriver.deb
+    ```
+    > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
+ 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
-```sh
-# Update the package list
-sudo apt update
+If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause `libhostfxr` issues.
 
-# This will install the package, assuming you are in the correct directory
-sudo apt install ./OpenTabletDriver.deb
+See solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions) and remove the Microsoft repositories and packages if you're experiencing `libhostfxr` issues.
 
-# Reload the systemd user unit daemon
-systemctl --user daemon-reload
+---
 
-# Enable and start the user service
-systemctl --user enable opentabletdriver --now
-```
+### Fedora {#rpm}
 
-If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause libhostfxr issues. If you are experiencing these see these solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions) and remove the Microsoft repositories and packages.
+ 1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.rpm) <small class="text-muted">(OpenTabletDriver.rpm)</small>
+ 2. Run the following commands in a terminal
+    ```bash
+    # This will install the package
+    sudo dnf install ./OpenTabletDriver.rpm
+    ```
+    > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
+ 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ---
 
 ### Arch Linux {#arch}
+
+You can install OpenTabletDriver from the AUR. There are two ways to do this.
+
+- via [AUR helper](#aur-helper-method)
+- manually via [makepkg](#manual-makepkg-method)
+
+Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+
+#### AUR helper method {#aur-helper-method}
+
  1. Use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers) to install the `opentabletdriver` AUR package.
  2. Run the following commands in a terminal
-
 ```sh
-# Reload the systemd user unit daemon
-systemctl --user daemon-reload
-# Enable and start the user service
-systemctl --user enable opentabletdriver --now
+# Regenerate initramfs
+sudo mkinitcpio -P
+# Unload kernel modules
+sudo rmmod wacom
+sudo rmmod hid_uclogic
 ```
 
-Alternatively, you can install `opentabletdriver` without an AUR helper.
+#### `makepkg` method {#manual-makepkg-method}
 
-#### Enabling the OpenTabletDriver service
-
-- Run the following commands in a terminal to install and enable the OpenTabletDriver service.
-
+ 1. Run the following commands
 ```sh
 # Downloads the pkgbuild from the AUR.
 git clone https://aur.archlinux.org/opentabletdriver.git
@@ -51,10 +66,11 @@ cd opentabletdriver && makepkg -si
 # Clean up leftovers
 cd ..
 rm -rf opentabletdriver
-# Reload the systemd user unit daemon
-systemctl --user daemon-reload
-# Enable and start the user service
-systemctl --user enable opentabletdriver --now
+# Regenerate initramfs
+sudo mkinitcpio -P
+# Unload kernel modules
+sudo rmmod wacom
+sudo rmmod hid_uclogic
 ```
 
 ---
@@ -78,6 +94,8 @@ x11-drivers/OpenTabletDriver-bin ~amd64
 # Install the OpenTabletDriver package
 sudo emerge OpenTabletDriver-bin
 ```
+
+4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ---
 

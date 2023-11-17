@@ -26,7 +26,7 @@ echo "Finding old kernel blacklist rules..."
 if [ -f /etc/modprobe.d/blacklist.conf ]; then
   echo "Deleting /etc/modprobe.d/blacklist.conf"
   rm /etc/modprobe.d/blacklist.conf
-done
+fi
 
 udevadm control --reload-rules && udevadm trigger
 ```
@@ -64,6 +64,8 @@ rm -rf OpenTabletDriver
 sudo modprobe uinput
 sudo rmmod wacom
 sudo rmmod hid_uclogic
+
+udevadm control --reload-rules && udevadm trigger
 ```
 
 ### Built from source

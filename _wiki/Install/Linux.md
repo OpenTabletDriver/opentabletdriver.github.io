@@ -46,10 +46,13 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 #### AUR helper method {#aur-helper-method}
 
  1. Use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers) to install the `opentabletdriver` AUR package.
- 2. Run the following command in a terminal
+ 2. Run the following commands in a terminal
 ```sh
 # Regenerate initramfs
 sudo mkinitcpio -P
+# Unload kernel modules
+sudo rmmod wacom
+sudo rmmod hid_uclogic
 ```
 
 #### `makepkg` method {#manual-makepkg-method}
@@ -65,6 +68,9 @@ cd ..
 rm -rf opentabletdriver
 # Regenerate initramfs
 sudo mkinitcpio -P
+# Unload kernel modules
+sudo rmmod wacom
+sudo rmmod hid_uclogic
 ```
 
 ---

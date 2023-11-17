@@ -54,7 +54,7 @@ If you're using a version of OpenTabletDriver below 0.6.3.0, run the script in t
 git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git
 cd OpenTabletDriver
 
-./generate-udev-rules.sh | sudo tee /etc/udev/rules.d/70-opentabletdriver.rules
+./generate-rules.sh | sudo tee /etc/udev/rules.d/70-opentabletdriver.rules
 sudo cp ./eng/linux/Generic/usr/lib/modprobe.d/99-opentabletdriver.conf /etc/modprobe.d/99-opentabletdriver.conf
 sudo cp ./eng/linux/Generic/usr/lib/modules-load.d/opentabletdriver.conf /etc/modules-load.d/opentabletdriver.conf
 

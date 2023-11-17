@@ -110,7 +110,7 @@ Artist mode does not support regular mouse buttons. You will need to use artist 
 
 ---
 
-### The daemon does not start on boot
+### How to autostart daemon on boot? {#autostart}
 
 #### systemd {#systemd-autostart}
 

@@ -13,7 +13,7 @@ title: Linux Installation Guide
     sudo apt install ./OpenTabletDriver.deb
     ```
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
- 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#systemd-autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+ 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause `libhostfxr` issues.
 
@@ -30,7 +30,7 @@ See solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/cor
     sudo dnf install ./OpenTabletDriver.rpm
     ```
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
- 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#systemd-autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+ 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ---
 
@@ -41,7 +41,7 @@ You can install OpenTabletDriver from the AUR. There are two ways to do this.
 - via [AUR helper](#aur-helper-method)
 - manually via [makepkg](#manual-makepkg-method)
 
-Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#systemd-autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 #### AUR helper method {#aur-helper-method}
 
@@ -89,7 +89,7 @@ x11-drivers/OpenTabletDriver-bin ~amd64
 sudo emerge OpenTabletDriver-bin
 ```
 
-4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#systemd-autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ---
 

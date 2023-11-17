@@ -62,8 +62,8 @@ cd ..
 rm -rf OpenTabletDriver
 
 sudo modprobe uinput
-sudo rmmod wacom
-sudo rmmod hid_uclogic
+sudo rmmod wacom > /dev/null 2>&1
+sudo rmmod hid_uclogic > /dev/null 2>&1
 
 udevadm control --reload-rules && udevadm trigger
 ```

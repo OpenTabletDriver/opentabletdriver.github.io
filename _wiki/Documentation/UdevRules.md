@@ -62,8 +62,8 @@ cd ..
 rm -rf OpenTabletDriver
 
 sudo modprobe uinput
-sudo modprobe -r wacom
-sudo modprobe -r hid_uclogic
+sudo rmmod wacom
+sudo rmmod hid_uclogic
 ```
 
 ### Built from source

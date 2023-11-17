@@ -29,6 +29,7 @@ See solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/cor
     # This will install the package
     sudo dnf install ./OpenTabletDriver.rpm
     ```
+    > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
  3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#systemd-autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ---

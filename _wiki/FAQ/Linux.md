@@ -117,7 +117,7 @@ Artist mode does not support regular mouse buttons. You will need to use artist 
 Make sure that you have enabled the systemd service:
 
 ```bash
-systemctl user enable opentabletdriver.service --now
+systemctl --user enable opentabletdriver.service --now
 ```
 
 If daemon doesn't start on boot, this means that the desktop environment is not configured correctly to integrate with systemd. In such case, refer to your desktop environment's documentation on how to autostart processes on login. The command to execute on login is:

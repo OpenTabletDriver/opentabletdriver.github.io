@@ -14,21 +14,17 @@ Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}
 
 If your tablet is connected properly and is supported, but is still not detected, [check logs]({% link _wiki/Documentation/Logs.md %}) for any errors or warnings. If you find any, try finding for a match and its accompanying solution below:
 
-##### UCLogic kernel module is loaded {#hid_uclogic}
+##### Another driver is found {#hid_uclogic}
 
 _Symptoms_
 
 ```
-Another tablet driver found: UC Logic
-```
-
-```
-ArgumentOutOfRangeException: Value range is [0, 15]. (Parameter 'value)
+Another tablet driver found: <driver>
 ```
 
 _Solution_
 
-[Click here]({% link _wiki/Documentation/UdevRules.md %}).
+[Click here]({% link _wiki/Documentation/RequiredPermissions.md %}#setup-linux).
 
 ##### Insufficient permissions {#udev}
 
@@ -40,7 +36,7 @@ Not permitted to open HID class device at /dev/hidrawX
 
 _Solution_
 
-[Click here]({% link _wiki/Documentation/UdevRules.md %}).
+[Click here]({% link _wiki/Documentation/RequiredPermissions.md %}).
 
 ---
 
@@ -84,7 +80,7 @@ Failed to initialize virtual tablet. (error code EACCES)
 
 _Solution_
 
-[Click here]({% link _wiki/Documentation/UdevRules.md %}).
+[Click here]({% link _wiki/Documentation/RequiredPermissions.md %}).
 
 #### Non-fresh Install
 

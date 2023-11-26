@@ -90,7 +90,7 @@ If both files are in the same folder, the daemon may have crashed during launch.
 
 ---
 
-### How do I make OpenTabletDriver to start automatically when I turn on my computer? {#startup}
+### How to autostart OpenTabletDriver on boot? {#startup}
 
 The following is just one of the multiple ways that you may launch OTD at startup.
 

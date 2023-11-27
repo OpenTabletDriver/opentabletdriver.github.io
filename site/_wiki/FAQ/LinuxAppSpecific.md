@@ -34,3 +34,18 @@ You can confirm the setting is applied by running the following command and veri
 ```bash
 libinput list-devices | grep -i OpenTabletDriver
 ```
+
+If your program still does not work after ensuring the output mode has been set in the driver, please read on.
+
+#### GIMP {#gimp}
+
+1. Go to 'Edit -> Input Devices' in the GIMP Toolbar
+2. Make sure any of the devices matching the following settings are set to 'Mode: Screen' in the right hand panel
+    - `Core Pointer`
+    - `xwayland-tablet eraser`, if present
+    - `xwayland-tablet stylus`, if present
+    - `OpenTabletDriver Virtual Artist Tablet` (FIXME: verify this is correct for X11)
+    > Any devices not in the list above should have their Mode set to Disabled
+3. Ensure your chosen tool supports pressure
+    - Most tools support this by using the 'Basic Dynamics' Dynamic profile in the Tool Options Dialog
+    > If you can't find the tool options, they can be found in 'Windows -> Dockable Dialogs -> Tool Options' in the GIMP Toolbar

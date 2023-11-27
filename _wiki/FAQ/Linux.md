@@ -3,12 +3,15 @@ title: "Linux FAQ"
 hide_from_auto_list: true
 ---
 
-**It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
+- **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
 first before continuing.**
+- Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}) for app-specific instructions.
 
-Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}) for app-specific instructions.
+---
 
-### Troubleshooting {#troubleshooting}
+### My tablet is supported but not detected? {#troubleshooting}
+
+Read [General]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
 
 #### Common Problems
 
@@ -28,7 +31,7 @@ ArgumentOutOfRangeException: Value range is [0, 15]. (Parameter 'value)
 
 _Solution_
 
-[Click here]({% link _wiki/Documentation/UdevRules.md %}).
+- [See here]({% link _wiki/Documentation/UdevRules.md %})
 
 ##### Insufficient permissions {#udev}
 
@@ -40,7 +43,7 @@ Not permitted to open HID class device at /dev/hidrawX
 
 _Solution_
 
-[Click here]({% link _wiki/Documentation/UdevRules.md %}).
+- [See here]({% link _wiki/Documentation/UdevRules.md %})
 
 ---
 
@@ -60,7 +63,7 @@ Failed to initialize virtual tablet. (error code ENODEV)
 
 _Solution_
 
-Reboot your computer.
+- Reboot your computer.
 
 ##### Missing uinput device support
 
@@ -72,7 +75,7 @@ Failed to initialize virtual tablet. (error code ENOENT)
 
 _Solution_
 
-Make sure that your kernel has uinput support. If you are using a custom kernel or builds kernel from source, make sure that you have enabled `CONFIG_INPUT_UINPUT` in your kernel configuration. Refer to your distro's documentation regarding kernel configuration.
+- Make sure that your kernel has uinput support. If you are using a custom kernel or builds kernel from source, make sure that you have enabled `CONFIG_INPUT_UINPUT` in your kernel configuration. Refer to your distro's documentation regarding kernel configuration.
 
 ##### Missing uinput device permissions
 
@@ -84,7 +87,7 @@ Failed to initialize virtual tablet. (error code EACCES)
 
 _Solution_
 
-[Click here]({% link _wiki/Documentation/UdevRules.md %}).
+- [See here]({% link _wiki/Documentation/UdevRules.md %})
 
 #### Non-fresh Install
 

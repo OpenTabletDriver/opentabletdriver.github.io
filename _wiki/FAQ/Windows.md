@@ -3,12 +3,15 @@ title: Windows FAQ
 hide_from_auto_list: true
 ---
 
-**It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
+- **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
 first before continuing.**
+- Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
 
-Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
+---
 
-### Troubleshooting {#troubleshooting}
+### My tablet is supported but not detected? {#troubleshooting}
+
+Read [General]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
 
 #### Driver Cleanup
 
@@ -32,9 +35,8 @@ Another tablet driver found: <driver>
 
 _Solution_
 
-Follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), and make sure to type `y` for every driver found by the utility. Then, restart OTD.
-
-If the log entry is still present, try joining our support [Discord]({{ site.discord_invite_url }}) and asking for help in one of the #support channels.
+- Follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), and make sure to type `y` for every driver found by the utility. Then, restart OTD.
+- If the log entry is still present, try joining our support [Discord]({{ site.discord_invite_url }}) and asking for help in one of the #support channels.
 
 ##### Invalid WinUSB driver state
 
@@ -47,7 +49,7 @@ SafeHandle cannot be null. (Parameter 'pHandle')
 
 _Solution_
 
-Restart your computer.
+- Restart your computer.
 
 ---
 

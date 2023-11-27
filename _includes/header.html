@@ -1,13 +1,15 @@
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom border-dark box-shadow mb-3">
-  <div class="container">
-    <img class="pr-3" src="{% link assets/otd.png %}" height="64">
-    <a class="navbar-brand text-white ms-3" href="{% link index.md %}">OpenTabletDriver</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                                                                                                             aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-      <ul class="navbar-nav flex-grow-1">
+  <div class="container d-flex flex-wrap">
+    <div class="d-flex flex-row align-items-center flex-grow-1 flex-sm-grow-0 justify-content-between justify-content-sm-start">
+      <img src="{% link assets/otd.png %}" height="64">
+      <a class="navbar-brand text-white ms-3" href="{% link index.md %}">OpenTabletDriver</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                                                                                              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link text-light" href="{% link index.md %}">Home</a>
         </li>

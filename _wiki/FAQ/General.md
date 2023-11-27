@@ -70,6 +70,26 @@ If certain that the tablet is not near any of the above, try replacing the pen. 
 
 ---
 
+### I see two moving cursors when hovering my pen! {#two-cursors}
+
+This is caused by another tablet driver running in the background. Make sure that you have
+uninstalled all other tablet drivers before using OpenTabletDriver.
+
+#### Windows
+
+Run [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest) to remove
+all other tablet drivers.
+
+#### Linux
+
+See [here]({% link _wiki/Documentation/RequiredPermissions.md %}#setup-linux).
+
+#### macOS
+
+Uninstall any other tablet drivers you have installed.
+
+---
+
 ### How to convert areas to and from OpenTabletDriver? {#area-conversion}
 
 #### Conversion through the UI

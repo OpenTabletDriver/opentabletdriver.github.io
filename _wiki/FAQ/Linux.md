@@ -7,8 +7,6 @@ hide_from_auto_list: true
 first before continuing.**
 - Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}) for app-specific instructions.
 
----
-
 ### My tablet is supported but not detected? {#troubleshooting}
 
 Read [General]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
@@ -40,8 +38,6 @@ Not permitted to open HID class device at /dev/hidrawX
 _Solution_
 
 - [See here]({% link _wiki/Documentation/RequiredPermissions.md %})
-
----
 
 ### Tablet is detected but not working?
 
@@ -89,8 +85,6 @@ _Solution_
 
 Try disabling your filters one-by-one and see if input finally works.
 
----
-
 ### Tablet is working but there is no pressure {#artist-mode}
 
 Pressure support is available by changing the output mode of OpenTabletDriver to Artist Mode:
@@ -101,13 +95,9 @@ Pressure support is available by changing the output mode of OpenTabletDriver to
 
 See [here](#artist-mode-bindings) for setting up bindings for Artist Mode.
 
----
-
 ### Mouse button bindings are not working when using Artist Mode {#artist-mode-bindings}
 
 Artist mode does not support regular mouse buttons. You will need to use artist mode pen bindings in the advanced binding editor instead of regular mouse buttons.
-
----
 
 ### How to autostart daemon on boot? {#autostart}
 
@@ -135,8 +125,6 @@ otd-daemon
 
 > This command should be run as user, not root.
 
----
-
 ### The cursor feels slow on Artist Mode {#libinput-smoothing}
 
 Using artist mode will result in some minor smoothing due to libinput's tablet handling.
@@ -150,8 +138,6 @@ AttrTabletSmoothing=0
 ```
 
 You should restart the OpenTabletDriver daemon after updating this file.
-
----
 
 ### Still have problems? {#discord}
 

@@ -19,8 +19,6 @@ If you have the Microsoft dotnet repository installed you will have to either ma
 
 See solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions) and remove the Microsoft repositories and packages if you're experiencing `libhostfxr` issues.
 
----
-
 ### Fedora {#rpm}
 
 1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.rpm) <small class="text-muted">(OpenTabletDriver.rpm)</small>
@@ -31,8 +29,6 @@ See solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/cor
     ```
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
-
----
 
 ### Arch Linux {#arch}
 
@@ -73,8 +69,6 @@ sudo rmmod wacom
 sudo rmmod hid_uclogic
 ```
 
----
-
 ### Gentoo {#gentoo}
 1. Add Guru overlay
 > This is only required if you don't already have the Guru overlay configured
@@ -97,8 +91,6 @@ sudo emerge OpenTabletDriver-bin
 
 4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
----
-
 ### NixOS {#nixos}
 1. Edit `/etc/nixos/configuration.nix` and add this in your configuration
 > More configuration options can be found [here](https://search.nixos.org/options?query=opentabletdriver)
@@ -106,8 +98,6 @@ sudo emerge OpenTabletDriver-bin
 # Enable OpenTabletDriver
 hardware.opentabletdriver.enable = true;
 ```
-
----
 
 ### Post-Installation {#post-install}
 Take a look at the [FAQ]({% link _wiki/FAQ/Linux.md %}) if you encounter any problems.

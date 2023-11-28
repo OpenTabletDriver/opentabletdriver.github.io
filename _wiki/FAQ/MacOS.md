@@ -6,8 +6,6 @@ hide_from_auto_list: true
 - **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
 first before continuing.**
 
----
-
 ### Cursor doesn't respond to tablet input {#cursor-not-moving}
 
 See [here]({% link _wiki/Documentation/RequiredPermissions.md %}#macos).

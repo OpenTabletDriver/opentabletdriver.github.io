@@ -1,3 +1,10 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "markdown-mixins";
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -92,12 +99,11 @@ div.highlighter-rouge pre.highlight {
   padding: 1em;
 }
 
-.markdown-content > h5,
-.markdown-content > h4,
-.markdown-content > h3 {
-  margin-bottom: 1rem;
+#page-title {
+  @include markdown-header;
 }
 
-.markdown-content > blockquote {
-  margin-left: 1rem;
+.markdown-content > h2,
+.markdown-content > h3 {
+  @include markdown-header;
 }

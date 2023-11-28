@@ -1,0 +1,8 @@
+# Remove UTF-8 BOMs
+d164e359f6b1d6d3aee3eebe8d27d671d0804152
+
+# Lint all files with EditorConfig
+eb1579be0bf7eca895ca2c28d4e2bb6b9ecef24f
+
+# Fix Markdown indentation
+5063653d7158f261136ac931ac019719f590049e

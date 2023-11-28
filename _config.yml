@@ -84,3 +84,4 @@ exclude:
   - CNAME
   - .editorconfig
   - .gitattributes
+  - .git-blame-ignore-revs

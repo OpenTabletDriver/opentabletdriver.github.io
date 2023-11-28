@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     '.markdown-content h5',
   ]
 
+  anchors.options = {
+    placement: 'left'
+  };
+
   targets.forEach((target) => {
     anchors.add(target);
   });

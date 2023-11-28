@@ -26,3 +26,4 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # needed so that it can write more detailed status checks
           FILTER_REGEX_EXCLUDE: _includes/tablets.md # upstream file
+          VALIDATE_HTML: false # most of our HTML are fragments or contains Liquid code

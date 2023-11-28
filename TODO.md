@@ -1,4 +1,6 @@
-# Roadmap (rough order)
+# TODO
+
+## Roadmap (rough order)
 
 - [x] Tablets
 - [x] GitHub link
@@ -18,7 +20,6 @@
 - [ ] Move DNS
 - [ ] Close OpenTabletDriver.Web
 
-# Other stuff:
+## Other stuff
 
 - [ ] Bus factor
-

@@ -7,7 +7,6 @@ hide_from_auto_list: true
 first before continuing.**
 - Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
 
-
 ### My tablet is supported but not detected? {#troubleshooting}
 
 Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
@@ -26,27 +25,27 @@ Please check if your tablet requires WinUSB [here]({% link _sections/Tablets.md 
 
 ##### Tablet driver interference
 
-_Symptoms_
+*Symptoms*:
 
-```
+```log
 Another tablet driver found: <driver>
 ```
 
-_Solution_
+*Solution*:
 
-- Follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), and make sure to type `y` for every driver found by the utility. Then, restart OTD.
+- Follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), and make sure to type <kbd>Y</kbd> for every driver found by the utility. Then, restart OTD.
 - If the log entry is still present, try joining our support [Discord]({{ site.discord_invite_url }}) and asking for help in one of the #support channels.
 
 ##### Invalid WinUSB driver state
 
-_Symptoms_
+*Symptoms*:
 
-```sh
-Failed to open file handle to WinUSB interface
+```log
+Failed to open file handle to WinUSB interface\
 SafeHandle cannot be null. (Parameter 'pHandle')
 ```
 
-_Solution_
+*Solution*:
 
 - Restart your computer.
 

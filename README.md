@@ -1,5 +1,6 @@
 # [opentabletdriver.github.io](https://opentabletdriver.github.io)
-*The next version of OpenTabletDriver.Web*
+
+The next version of OpenTabletDriver.Web
 
 ## Local Development
 
@@ -10,13 +11,13 @@
 ## Steps
 
 ```bash
-$ git submodule update --init # submodules contain plugin metadata
-$ cd site/
-$ bundle install
-$ bundle exec jekyll serve --livereload
+git submodule update --init # submodules contain plugin metadata
+cd site/
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
-# FAQ
+## FAQ
 
 ### **How do I add a wiki entry?**
 
@@ -45,7 +46,7 @@ cd <website root>
 markdownlint --ignore site/vendor/ --ignore site/_data/plugin-repository/ --ignore site/_includes/tablets.md . 2>&1 | less
 ```
 
-# Contributors to Old OpenTabletDriver.Web
+## Contributors to Old OpenTabletDriver.Web
 
 [View Contributors](https://github.com/OpenTabletDriver/OpenTabletDriver.Web/graphs/contributors)
 

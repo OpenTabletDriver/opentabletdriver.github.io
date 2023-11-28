@@ -18,16 +18,18 @@ directory.
 
 1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.win-x64.zip). <small class="text-muted">(OpenTabletDriver.win-x64.zip)</small>
 2. Extract the downloaded file into a folder of its own.
-> Replace `<username>` with your username in the example below.
-```
-C:\Users\<username>\OpenTabletDriver
-```
+
+    > Replace `<username>` with your username in the example below.
+
+    `C:\Users\<username>\OpenTabletDriver`
+
 3. Run `OpenTabletDriver.UX.Wpf.exe` in the extracted directory.
-> You can create a shortcut to this file, just make sure that the working directory points
+
+    > You can create a shortcut to this file, just make sure that the working directory points
 to the extracted directory.
 
-
 ### Installation of WinUSB {#winusb}
+
 Some tablets require Zadig's WinUSB installed on a device interface to interact with the tablet correctly. To figure out if your
 tablet requires WinUSB, and if it does, which interface to install it on, carefully check the notes on [the supported list of tablets here]({% link _sections/Tablets.md %}).
 
@@ -40,4 +42,5 @@ tablet requires WinUSB, and if it does, which interface to install it on, carefu
 5. Click `Replace Driver.`
 
 ### Post-Installation {#post-install}
+
 Take a look at the [FAQ]({% link _wiki/FAQ/Windows.md %}) if you encounter any problems.

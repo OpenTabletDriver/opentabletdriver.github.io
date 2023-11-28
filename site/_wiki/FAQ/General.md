@@ -12,7 +12,7 @@ Verify if your tablet is in the list of supported tablets [here]({% link _sectio
 
 ### My tablet is supported but not detected? {#tablet-not-detected}
 
-OpenTabletDriver currently has _no support_ for tablets connected via Bluetooth. Make sure that your tablet is connected via USB. There is partial support for tablets connected via wireless dongle.
+OpenTabletDriver currently has *no support* for tablets connected via Bluetooth. Make sure that your tablet is connected via USB. There is partial support for tablets connected via wireless dongle.
 
 Once plugged in, determine if your tablet has good connection to the computer:
 
@@ -102,7 +102,7 @@ Uninstall any other tablet drivers you have installed.
 
 Use the following formulas to get values for the area editor's `Width`, `Height`, `XOffset`, and `YOffset` fields.
 
-**Wacom and Veikk**
+##### Wacom and Veikk
 
 | Term | Definition |
 | --- | --- |
@@ -113,14 +113,14 @@ Use the following formulas to get values for the area editor's `Width`, `Height`
 
 Formula:
 
-```
+```py
 Width = (Right - Left) / LPI * 25.4
 Height = (Bottom - Top) / LPI * 25.4
 XOffset = (Left / LPI * 25.4) + (Width / 2)
 YOffset = (Top / LPI * 25.4) + (Height / 2)
 ```
 
-**XP-Pen**
+##### XP-Pen
 
 | Term | Definition |
 | --- | --- |
@@ -131,14 +131,14 @@ YOffset = (Top / LPI * 25.4) + (Height / 2)
 
 Formula:
 
-```
+```py
 Width = XPW / 3.937
 Height = XPH / 3.937
 XOffset = (Width / 2) + (XPX / 3.937)
 YOffset = (Height / 2) + (XPY / 3.937)
 ```
 
-**Huion and Gaomon**
+##### Huion and Gaomon
 
 | Term | Definition |
 | --- | --- |
@@ -149,7 +149,7 @@ YOffset = (Height / 2) + (XPY / 3.937)
 
 Formula:
 
-```
+```py
 Width = (Right - Left) * TWidth
 Height = (Bottom - Top) * THeight
 XOffset = (Width / 2) + (Left * TWidth)

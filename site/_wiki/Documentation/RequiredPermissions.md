@@ -37,7 +37,7 @@ latest version, refer to the instructions below depending on if you installed Op
 - [Package manager](#package-manager), or
 - [Built from source](#built-from-source)
 
-However if you're using a version of OpenTabletDriver _below_ **0.6.3.0** and somehow cannot update
+However if you're using a version of OpenTabletDriver *below* **0.6.3.0** and somehow cannot update
 to the latest version, refer to the [Legacy package](#legacy-package) section.
 
 ### Package manager
@@ -134,7 +134,7 @@ Refer to your distro's documentation on how to remove udev rules of the name
 `90-opentabletdriver.rules` or `99-opentabletdriver.rules` and a kernel module blacklist named
 `blacklist.conf` containing:
 
-```
+```conf
 blacklist wacom
 blacklist hid_uclogic
 ```

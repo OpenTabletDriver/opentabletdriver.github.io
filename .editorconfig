@@ -1,0 +1,37 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 100
+
+[*.md]
+# not having this results in readability-vs-presentation confusion
+max_line_length = unset
+# without this, lists can render unpredictably
+# see https://docs.newrelic.com/docs/style-guide/structure/styleguide-markup-indentation/#two-space
+indent_size = 4
+
+[*.html]
+# as with markdown, not having this results in readability-vs-presentation confusion
+max_line_length = unset
+
+### UPSTREAM/GENERATED FILES ###
+[{_includes/toc.html,LICENSE,Gemfile.lock,.gitmodules,CNAME,assets/rougehl.css}]
+max_line_length = unset
+indent_style = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+
+# has to be defined separately as the {} token does not consistently support regex
+[*.svg]
+max_line_length = unset
+indent_style = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+

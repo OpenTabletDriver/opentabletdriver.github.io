@@ -1,0 +1,9 @@
+*       text=auto
+*.md    text
+*.css   text
+*.html  text
+*.yml   text
+*.json  text
+Gemfile text
+*.png   binary
+*.jpg   binary

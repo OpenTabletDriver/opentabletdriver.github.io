@@ -14,7 +14,7 @@
 - [x] Move this file to GitHub issues
 - [x] Auto-generate links for /Wiki
 - [ ] Write more documentation
-  - Find something missing? [Open an issue](https://github.com/OpenTabletDriver/opentabletdriver.github.io/issues/new/choose)
+    - Find something missing? [Open an issue](https://github.com/OpenTabletDriver/opentabletdriver.github.io/issues/new/choose)
 - [ ] Move DNS
 - [ ] Close OpenTabletDriver.Web
 

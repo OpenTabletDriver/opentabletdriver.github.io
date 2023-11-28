@@ -138,10 +138,10 @@ If you are experiencing random crashes with no warning, or the interface is comp
 
 If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTabletDriver by blacklisting it in its settings.
 
- - Open RivaTuner Statistics Server.
- - Click on Add button found in the bottom left corner.
- - Locate OpenTabletDriver.UX.Wpf.exe on your computer then select it. Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
- - Click on "Application Detection Level" then select "None".
+- Open RivaTuner Statistics Server.
+- Click on Add button found in the bottom left corner.
+- Locate OpenTabletDriver.UX.Wpf.exe on your computer then select it. Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
+- Click on "Application Detection Level" then select "None".
 
 ---
 

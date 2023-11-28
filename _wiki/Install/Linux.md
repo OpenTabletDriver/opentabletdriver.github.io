@@ -3,8 +3,8 @@ title: Linux Installation Guide
 ---
 
 ### Ubuntu / Debian {#debian}
- 1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.deb) <small class="text-muted">(OpenTabletDriver.deb)</small>
- 2. Run the following commands in a terminal
+1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.deb) <small class="text-muted">(OpenTabletDriver.deb)</small>
+2. Run the following commands in a terminal
     ```bash
     # Update the package list
     sudo apt update
@@ -13,7 +13,7 @@ title: Linux Installation Guide
     sudo apt install ./OpenTabletDriver.deb
     ```
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
- 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause `libhostfxr` issues.
 
@@ -23,14 +23,14 @@ See solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/cor
 
 ### Fedora {#rpm}
 
- 1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.rpm) <small class="text-muted">(OpenTabletDriver.rpm)</small>
- 2. Run the following commands in a terminal
+1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.rpm) <small class="text-muted">(OpenTabletDriver.rpm)</small>
+2. Run the following commands in a terminal
     ```bash
     # This will install the package
     sudo dnf install ./OpenTabletDriver.rpm
     ```
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
- 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ---
 
@@ -45,8 +45,8 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 
 #### AUR helper method {#aur-helper-method}
 
- 1. Use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers) to install the `opentabletdriver` AUR package.
- 2. Run the following commands in a terminal
+1. Use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers) to install the `opentabletdriver` AUR package.
+2. Run the following commands in a terminal
 ```sh
 # Regenerate initramfs
 sudo mkinitcpio -P
@@ -57,7 +57,7 @@ sudo rmmod hid_uclogic
 
 #### `makepkg` method {#manual-makepkg-method}
 
- 1. Run the following commands
+1. Run the following commands
 ```sh
 # Downloads the pkgbuild from the AUR.
 git clone https://aur.archlinux.org/opentabletdriver.git

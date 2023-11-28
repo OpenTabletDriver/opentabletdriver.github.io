@@ -13,6 +13,9 @@ max_line_length = 100
 [*.md]
 # not having this results in readability-vs-presentation confusion
 max_line_length = unset
+# without this, lists can render unpredictably
+# see https://docs.newrelic.com/docs/style-guide/structure/styleguide-markup-indentation/#two-space
+indent_size = 4
 
 [*.html]
 # as with markdown, not having this results in readability-vs-presentation confusion

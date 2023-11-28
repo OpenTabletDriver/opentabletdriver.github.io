@@ -21,12 +21,14 @@
 title: OpenTabletDriver
 description: >- # this means to ignore newlines until "baseurl:"
   OpenTabletDriver is an open source, cross-platform, low latency, user-mode tablet driver.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: https://opentabletdriver.net # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # webserver path, blank for GitHub pages
+url: https://opentabletdriver.net # full URI to website
 
 # Site variables
 latest_otd_version: v0.6.3.0
-otd_release_url: https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download # no slash at end
+
+otd_release_url:
+  https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download # no slash at end
 discord_invite_url: https://discord.gg/9bcMaPkVAR
 github_otd_repo_url: https://github.com/OpenTabletDriver/OpenTabletDriver
 
@@ -53,7 +55,7 @@ defaults:
 collections:
   sections:
     output: true
-    permalink: /:title # use 'title' instead of 'name' to keep capitalization consistent with old site
+    permalink: /:title # intentional uppercase permalink to keep compatility with old website
   wiki:
     output: true
     permalink: /Wiki/:path # this allows us to use infinitely deep subdirs

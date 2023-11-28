@@ -19,3 +19,18 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Get site artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+
+      - name: Extract site
+        run: |
+          tar xf artifact.tar || exit 1
+          rm artifact.tar
+          ls

@@ -1,24 +1,22 @@
-<div class="container mb-3">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
-        {% capture platformImage %}
-          {% link assets/images/platform/Windows_logo_-_2012_derivative.svg %}
-        {% endcapture %}
-        {% include platformcard.html
-            platform="Windows"
-            platformImage=platformImage %}
+<div class="container d-flex flex-wrap mb-3 justify-content-center">
+  {% capture platformImage %}
+  {% link assets/images/platform/Windows_logo_-_2012_derivative.svg %}
+  {% endcapture %}
+  {% include platformcard.html
+    platform="Windows"
+    platformImage=platformImage %}
 
-        {% capture platformImage %}
-          {% link assets/images/platform/TuxFlat.svg %}
-        {% endcapture %}
-        {% include platformcard.html
-            platform="Linux"
-            platformImage=platformImage %}
+  {% capture platformImage %}
+  {% link assets/images/platform/TuxFlat.svg %}
+  {% endcapture %}
+  {% include platformcard.html
+    platform="Linux"
+    platformImage=platformImage %}
 
-        {% capture platformImage %}
-          {% link assets/images/platform/Apple_Computer_Logo_rainbow.svg %}
-        {% endcapture %}
-        {% include platformcard.html
-            platform="MacOS"
-            platformImage=platformImage %}
-    </div>
+  {% capture platformImage %}
+  {% link assets/images/platform/Apple_Computer_Logo_rainbow.svg %}
+  {% endcapture %}
+  {% include platformcard.html
+    platform="MacOS"
+    platformImage=platformImage %}
 </div>

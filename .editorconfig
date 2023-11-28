@@ -22,7 +22,7 @@ indent_size = 4
 max_line_length = unset
 
 ### UPSTREAM/GENERATED FILES ###
-[{_includes/toc.html,LICENSE,Gemfile.lock,.gitmodules,CNAME,assets/rougehl.css}]
+[{_includes/toc.html,LICENSE,Gemfile.lock,.gitmodules,CNAME,assets/css/rougehl.css}]
 max_line_length = unset
 indent_style = unset
 insert_final_newline = unset
@@ -34,4 +34,3 @@ max_line_length = unset
 indent_style = unset
 insert_final_newline = unset
 trim_trailing_whitespace = unset
-

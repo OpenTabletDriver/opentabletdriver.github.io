@@ -33,7 +33,7 @@ For pages with single-path URLs (e.g., site/Wiki), they are permalinked to files
 To update the Rouge highlighter style, use the following command:
 
 ```bash
-bundle exec rougify style > assets/rougehl.css
+bundle exec rougify style > assets/css/rougehl.css
 ```
 
 ### **How can I check if I have internal links that don't use the `{% link %}` paradigm?**

@@ -8,8 +8,6 @@ title: macOS Installation Guide
 2. Extract it and drag `OpenTabletDriver.app` into your Applications folder
 3. Run the OpenTabletDriver app.
 
----
-
 ### Post-installation {#post-install}
 
 Take a look at the [FAQ]({% link _wiki/FAQ/MacOS.md %}) if you encounter any problems.

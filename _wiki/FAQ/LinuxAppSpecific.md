@@ -10,8 +10,6 @@ Do not use `Absolute Mode` as your output mode. Use `Artist Mode` instead. Wine 
 
 Please do note that libinput adds smoothing on top of `Artist Mode` by default. See [here]({% link _wiki/FAQ/Linux.md %}#libinput-smoothing) for more information on how to remove the smoothing.
 
----
-
 ### osu!Lazer
 
 #### My cursor is stuck (Wayland) {#osu-lazer-broken-input-wayland}

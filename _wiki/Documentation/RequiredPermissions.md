@@ -15,8 +15,6 @@ Check the [list of supported tablets]({% link _sections/Tablets.md %}) to see if
 WinUSB allows OpenTabletDriver to access the tablet by bypassing the default Windows HID driver
 that takes exclusive access of the tablet.
 
----
-
 ## Linux {#linux}
 
 OpenTabletDriver needs to be able to access `/dev/uinput` and several other sys paths related to
@@ -147,8 +145,6 @@ your distro's documentation on how to "install" the resulting generic binary tar
 ### Built from source
 
 Make sure you built OpenTabletDriver via [these instructions](https://github.com/OpenTabletDriver/OpenTabletDriver#linux) and extracted the generic binary tarball correctly.
-
----
 
 ## macOS {#macos}
 

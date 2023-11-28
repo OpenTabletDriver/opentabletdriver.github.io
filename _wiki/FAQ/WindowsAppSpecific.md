@@ -26,8 +26,6 @@ That's perfectly normal unless it's going really crazy and teleports everywhere.
 
 If it is not an EMI issue and you still wanna remove the shakiness, try one of the many smoothing plugins that OpenTabletDriver and its community has to offer.
 
----
-
 ### Valorant
 
 #### Valorant is not detecting input from my tablet

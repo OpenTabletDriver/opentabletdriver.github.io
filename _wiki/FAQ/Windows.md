@@ -7,7 +7,6 @@ hide_from_auto_list: true
 first before continuing.**
 - Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
 
----
 
 ### My tablet is supported but not detected? {#troubleshooting}
 
@@ -51,8 +50,6 @@ _Solution_
 
 - Restart your computer.
 
----
-
 ### Tablet is detected but not working? {#tablet-not-functioning-correctly}
 
 #### No input
@@ -67,15 +64,11 @@ OpenTabletDriver has no built-in support for pressure on Windows due to external
 - Install and follow instructions from [WindowsInk wiki](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk).
 - [Make sure that the application you are trying to draw with is configured to work with Windows Ink API]({% link _wiki/Documentation/WindowsInk.md %}#configure-apps)
 
----
-
 ### What is convert_to_portable.bat? {#userdata}
 
 This file moves OpenTabletDriver's settings to a folder called `userdata` next to OpenTabletDriver itself rather than being stored in `%localappdata%\OpenTabletDriver`.
 
 This allows OpenTabletDriver to be completely portable, all in one folder.
-
----
 
 ### How to fix "Connecting to daemon has timed out" error? {#no-daemon}
 
@@ -90,8 +83,6 @@ If both files are in the same folder, the daemon may have crashed during launch.
 
 > If you converted OpenTabletDriver to a portable install, go inside the `userdata` folder instead.
 
----
-
 ### How to autostart OpenTabletDriver on boot? {#startup}
 
 The following is just one of the multiple ways that you may launch OTD at startup.
@@ -105,8 +96,6 @@ To start OpenTabletDriver minimised, continue below:
 
 - Right click the shortcut and select `Properties`.
 - In the `Run` dropdown, select `Minimized`.
-
----
 
 ### I get a warning about not running it as Administrator on startup? {#administrator}
 
@@ -124,13 +113,9 @@ If you are still getting the warning, make sure that you are not using the accou
 
 If you need to interact with a program that runs with Administrator privileges, use [VMultiMode](https://github.com/X9VoiD/VoiDPlugins/wiki/VMultiMode).
 
----
-
 ### Plugin manager is not showing up {#plugin-manager-broken}
 
 It is likely because you are running OpenTabletDriver with the Administrator account. See [above](#administrator).
-
----
 
 ### OpenTabletDriver is completely blank {#rtss}
 
@@ -142,8 +127,6 @@ If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTablet
 - Click on Add button found in the bottom left corner.
 - Locate OpenTabletDriver.UX.Wpf.exe on your computer then select it. Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
 - Click on "Application Detection Level" then select "None".
-
----
 
 ### Still have problems? {#discord}
 

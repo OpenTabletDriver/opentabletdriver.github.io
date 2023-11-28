@@ -1,8 +1,6 @@
 # [opentabletdriver.github.io](https://opentabletdriver.github.io)
 *The next version of OpenTabletDriver.Web*
 
----
-
 ## Local Development
 
 ### Requirements
@@ -19,7 +17,6 @@ $ git submodule update
 $ bundle install
 $ bundle exec jekyll serve --livereload
 ```
----
 
 # FAQ
 
@@ -47,7 +44,6 @@ You can check for internal links without the `{% link %}` paradigm using the fol
 cd <website root>
 grep -R --exclude-dir vendor --include="*.md" '](' | grep -v '](#' | grep -v ']({%' | grep -v '](http' | grep -v '](//'
 ```
----
 
 # Contributors to Old OpenTabletDriver.Web
 
@@ -69,4 +65,3 @@ This site has been ported directly from the old repository to Jekyll and may con
 - [@X9VoiD](https://github.com/X9VoiD)
 - [@MicrochipQ](https://github.com/MicrochipQ)
 - [@vgf89](https://github.com/vgf89)
-

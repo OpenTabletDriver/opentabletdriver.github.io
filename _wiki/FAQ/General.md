@@ -10,8 +10,6 @@ Verify if your tablet is in the list of supported tablets [here]({% link _sectio
 - [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.discord_invite_url }})
 - [Write the tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
 
----
-
 ### My tablet is supported but not detected? {#tablet-not-detected}
 
 OpenTabletDriver currently has _no support_ for tablets connected via Bluetooth. Make sure that your tablet is connected via USB. There is partial support for tablets connected via wireless dongle.
@@ -30,8 +28,6 @@ Then check [above](#supported-tablets) if your tablet is supported. If it is and
 - [macOS]({% link _wiki/FAQ/MacOS.md %}#troubleshooting)
 
 or alternatively, see if there is a [tablet specific FAQ]({% link _wiki/FAQ/TabletSpecific.md %}) for your tablet.
-
----
 
 ### Where are my settings and plugins stored? {#appdata}
 
@@ -55,8 +51,6 @@ Its contents are as follows:
 | Plugins | Directory | Contains plugins. This should not be manually modified unless you know what you're doing |
 | Presets | Directory | Contains saved presets |
 
----
-
 ### My cursor is going crazy! It teleports everywhere! {#emi-interference}
 
 This is caused by electromagnetic interference (EMI) from other devices. Make sure that the tablet is not near any of the following:
@@ -67,8 +61,6 @@ This is caused by electromagnetic interference (EMI) from other devices. Make su
 - On top of the laptop's keyboard
 
 If certain that the tablet is not near any of the above, try replacing the pen. If the problem persists, replace the tablet. It's broken!
-
----
 
 ### I see two moving cursors when hovering my pen! {#two-cursors}
 
@@ -87,8 +79,6 @@ See [here]({% link _wiki/Documentation/RequiredPermissions.md %}#setup-linux).
 #### macOS
 
 Uninstall any other tablet drivers you have installed.
-
----
 
 ### How to convert areas to and from OpenTabletDriver? {#area-conversion}
 

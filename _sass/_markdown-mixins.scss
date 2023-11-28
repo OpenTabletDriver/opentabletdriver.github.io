@@ -1,0 +1,10 @@
+@mixin markdown-header {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding-bottom: .3em;
+  border-bottom: 1px solid var(--bs-border-color);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

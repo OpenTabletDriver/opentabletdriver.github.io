@@ -60,6 +60,9 @@ collections:
     output: true
     permalink: /Wiki/:path # this allows us to use infinitely deep subdirs
 
+sass:
+  sass_dir: _sass
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

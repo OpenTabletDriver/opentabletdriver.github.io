@@ -80,3 +80,4 @@ exclude:
   - README.md
   - TODO.md
   - CNAME
+  - .editorconfig

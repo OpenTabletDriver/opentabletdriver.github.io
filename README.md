@@ -34,6 +34,17 @@ To update the Rouge highlighter style, use the following command:
 bundle exec rougify style > site/assets/css/rougehl.css
 ```
 
+### **How do I lint the project?**
+
+Any [EditorConfig](https://editorconfig.org/) compliant linter like [editorconfig-checker](https://github.com/editorconfig-checker/editorconfig-checker)
+
+For Markdown specifically we use `markdownlint-cli`. Example command:
+
+```bash
+cd <website root>
+markdownlint --ignore site/vendor/ --ignore site/_data/plugin-repository/ --ignore site/_includes/tablets.md . 2>&1 | less
+```
+
 # Contributors to Old OpenTabletDriver.Web
 
 [View Contributors](https://github.com/OpenTabletDriver/OpenTabletDriver.Web/graphs/contributors)

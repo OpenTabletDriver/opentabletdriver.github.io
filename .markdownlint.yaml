@@ -1,0 +1,163 @@
+# Configuration for markdownlint-cli (mdl-cli)
+# See https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md for rules
+# Template: https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/.markdownlint.yaml
+# Unspecified rules are enabled by default, but they are commented for clarity
+
+default: true
+
+# MD001: Ensure incremental headings, e.g. always h3 -> h4 -> h5, never h3 -> h5
+
+# MD003: Heading style, atx is '# H1 Title', '### H3 Title', etc.
+MD003:
+  style: "atx"
+
+# MD004: <ul> style
+MD004:
+  style: "dash" # e.g. '- This is text inside of a <li> inside of an <ul>'
+
+# MD005: general list indentation consistency
+
+# MD007: <ul> indentation
+MD007:
+  indent: 4
+
+# MD009: trailing spaces
+MD009:
+  br_spaces: 0 # use a backslash to break your line instead
+  strict: true
+
+# MD010: hard tabs (whitespace)
+MD010:
+  spaces_per_tab: 2
+
+# MD011: Reversed link syntax
+
+# MD012: Multiple consecutive blank lines
+
+# MD013: Max line length
+#        Disable for now, this needs consideration before enabling
+MD013: false
+
+# MD014: No Dollar signs in shell code unless output is included
+
+# MD018: No space after hash on atx style heading, avoids '#Heading'
+
+# MD019: Multiple spaces after hash, counterpart to MD018
+
+# MD020: Closed atx equivalent of MD018
+
+# MD021: Closed atx equivalent of MD019
+
+# MD022: Headings should be surround by blank lines
+
+# MD023: Headings must start at the beginning of the line
+
+# MD024: Headings with the same content
+#     Can be disabled when we can handle multiple headings with same name
+
+# MD025: Multiple top-level headings in same document (H1's)
+
+# MD026: Trailing punctuation in heading
+
+# MD027: Multiple spaces after blockquote
+
+# MD028: Blank line inside blockquote
+
+# MD029: Ordered list item prefix
+MD029:
+  style: "ordered" # can be changed eventually
+
+# MD030: Spaces after list markers
+
+# MD031: Fenced code blocks (```) should be surrounded by blank lines
+
+# MD032: Lists should be surrounded by blank lines
+
+# MD033: Inline HTML
+MD033:
+  allowed_elements:
+    - "small" # no good alternative in markdown
+    - "u" # no good alternative in markdown
+    - "kbd" # keyboard icons
+
+# MD034: Disallow Bare URLs
+
+# MD035: Horizontal rule style
+MD035:
+  string: "---"
+
+# MD036: Emphasis used instead of a heading
+
+# MD037: Spaces inside emphasis markers
+#        TODO: disabled because liquid tags causes false positives with this
+MD037: false
+
+# MD038: Spaces inside code span elements
+
+# MD039: Spaces inside link text
+
+# MD040: Fenced code blocks (```) should have a language specified
+
+# MD041: First line should be a top heading, posts excluded
+MD041:
+  front_matter_title: "^\\s*(title|no_MD041)\\s*[:=]" # Allow front matter to opt out with no_MD041
+
+# MD042: No empty links
+
+# MD043: Required heading structure
+#        Not used if not defined, and it's too specific for us to use
+
+# MD044: Names should have the correct capitalization
+#        Disabled for now because liquid tags confuses linting
+MD044: false
+#  # we have some instances of lowercase being relevant
+#  code_blocks: false
+#  html_elements: false
+#  # any sort of capitalization sometimes qualifies it to also have a space at end
+#  names:
+#    - "OpenTabletDriver "
+#    - "opentabletdriver.github.io"
+#    - "OpenTabletDriver.Web"
+#    - "Plugin-Repository"
+#    - "Linux"
+#    - "udev"
+#    - "AUR"
+#    - "makepkg"
+#    - "Eto"
+#    - "Avalonia"
+#    - "Krita"
+#    - "GIMP"
+#    - "Windows"
+#    - "Discord"
+#    - "GitHub"
+
+# MD045: Images should have alt text
+
+# MD046: Code block style (fenced or indented)
+MD046:
+  style: "fenced"
+
+# MD047: Files should end with a single newline character
+
+# MD048: Code fence style (``` or ~~~)
+MD048:
+  style: "backtick"
+
+# MD049: Emphasis style (*Italics* or _Italics_)
+MD049:
+  style: "asterisk"
+
+# MD050: Strong style (**Bold** or __Bold__)
+MD050:
+  style: "asterisk"
+
+# MD051: Link fragments should be valid
+
+# MD052: Reference links and images should use a label that is defined
+
+# MD053: Link and image reference definitions should be needed
+
+# MD054: Link and image style
+MD054:
+  autolinks: false # no raw URLs
+  url_inline: false # no URLs with same title as URL, instead remove http(s) from your title

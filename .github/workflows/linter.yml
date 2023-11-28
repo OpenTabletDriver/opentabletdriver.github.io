@@ -14,3 +14,18 @@ jobs:
       - name: Linting with editorconfig-checker
         run: |
           docker run --rm --volume=${{ github.workspace }}:/check mstruebing/editorconfig-checker
+
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Linting with markdownlint-cli
+        # uses: nosborn/github-action-markdown-cli@v3.3.0
+        # using our own package until MD051 isn't falsely triggered
+        uses: gonX/github-action-markdown-cli@e088220481709c8ff1fbff0fc21addf027b95dc1
+        with:
+          files: .
+          dot: true
+          ignore_files: site/_includes/tablets.md # upstream file

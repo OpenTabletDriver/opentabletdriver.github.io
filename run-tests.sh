@@ -2,7 +2,7 @@
 
 TESTSDIR="tests"
 
-cd $(dirname "${BASH_SOURCE[0]}")
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
 declare -A testParams # [testName]=>"testArgs"
 

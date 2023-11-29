@@ -88,3 +88,5 @@ exclude:
   - .editorconfig
   - .gitattributes
   - .git-blame-ignore-revs
+  - tests/
+  - run-tests.sh

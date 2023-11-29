@@ -55,7 +55,7 @@ defaults:
 collections:
   sections:
     output: true
-    permalink: /:title # intentional uppercase permalink to keep compatility with old website
+    permalink: /:path
   wiki:
     output: true
     permalink: /Wiki/:path # this allows us to use infinitely deep subdirs

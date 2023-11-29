@@ -42,7 +42,7 @@ jobs:
         run: ./run-tests.sh || exit 1
 
       - name: Check for internal absolute links
-        run: ! grep -REi 'https?://(www.)?opentabletdriver.net' _site || exit 1
+        run: bash -c "! grep -REi 'https?://(www.)?opentabletdriver.net' _site || exit 1"
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

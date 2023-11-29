@@ -6,6 +6,7 @@ on:
   pull_request:
 jobs:
   tests:
+    runs-on: ubuntu-latest
     steps:
       - name: Prepare site
         uses: ./.github/workflows/site-workflow.yml
@@ -15,6 +16,7 @@ jobs:
 
   internal-links:
     name: "Absolute Internal Links"
+    runs-on: ubuntu-latest
     steps:
       - name: Prepare site
         uses: ./.github/workflows/site-workflow.yml
@@ -24,6 +26,7 @@ jobs:
 
   html-validation:
     name: "Validate HTML"
+    runs-on: ubuntu-latest
     steps:
       - name: Prepare site
         uses: ./.github/workflows/site-workflow.yml

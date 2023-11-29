@@ -1,0 +1,7 @@
+$anchor-blink-color: #88844a;
+
+@keyframes anchor-blink {
+  100% {
+    background-color: rgba($anchor-blink-color, 1);
+  }
+}

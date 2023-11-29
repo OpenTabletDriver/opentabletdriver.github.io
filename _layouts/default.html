@@ -11,14 +11,12 @@
     {% include styles.html %}
   </head>
   <body data-bs-theme="dark">
-    <header>
+    <header class="mb-3">
       {% include header.html %}
     </header>
-    <div class="container">
-      <main role="main" class="pb-3">
-        {{ content }}
-      </main>
-    </div>
+    <main role="main" class="container mb-5">
+      {{ content }}
+    </main>
 
     {% include scripts.html %}
     {% include fix-fouc.html %}

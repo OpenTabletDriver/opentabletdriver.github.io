@@ -41,6 +41,9 @@ jobs:
       - name: Run tests
         run: ./run-tests.sh || exit 1
 
+      - name: Check for internal absolute links
+        run: ! grep -REi 'https?://(www.)?opentabletdriver.net' _site || exit 1
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0' # Not needed with a .ruby-version file

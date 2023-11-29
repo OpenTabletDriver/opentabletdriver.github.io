@@ -8,6 +8,9 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Prepare site
         uses: ./.github/workflows/site-workflow.yml
 
@@ -18,6 +21,9 @@ jobs:
     name: "Absolute Internal Links"
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Prepare site
         uses: ./.github/workflows/site-workflow.yml
 
@@ -28,6 +34,9 @@ jobs:
     name: "Validate HTML"
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Prepare site
         uses: ./.github/workflows/site-workflow.yml
 

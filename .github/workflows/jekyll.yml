@@ -5,44 +5,28 @@ on:
   push:
   pull_request:
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Build
-        uses: actions/jekyll-build-pages@v1
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-
   tests:
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Get site artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: github-pages
-
-      - name: Extract site
-        run: |
-          mkdir _site || exit 1
-          tar -C _site -xf artifact.tar || exit 1
-          rm artifact.tar
+      - name: Prepare site
+        uses: ./.github/workflows/site-workflow.yml
 
       - name: Run tests
         run: ./run-tests.sh || exit 1
 
+  internal-links:
+    name: "Absolute Internal Links"
+    steps:
+      - name: Prepare site
+        uses: ./.github/workflows/site-workflow.yml
+
       - name: Check for internal absolute links
         run: bash -c "! grep -REi 'https?://(www.)?opentabletdriver.net' _site || exit 1"
+
+  html-validation:
+    name: "Validate HTML"
+    steps:
+      - name: Prepare site
+        uses: ./.github/workflows/site-workflow.yml
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

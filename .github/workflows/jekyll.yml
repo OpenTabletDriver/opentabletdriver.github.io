@@ -37,4 +37,4 @@ jobs:
           mkdir _site || exit 1
           tar -C _site -xf artifact.tar || exit 1
           rm artifact.tar
-          run-tests.sh || exit 1
+          ./run-tests.sh || exit 1

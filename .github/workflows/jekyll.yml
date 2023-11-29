@@ -5,40 +5,41 @@ on:
   push:
   pull_request:
 jobs:
+  build:
+    uses: ./.github/workflows/jekyll-build-workflow.yml
   tests:
+    needs: build
     runs-on: ubuntu-latest
-    steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare site
-        uses: ./.github/workflows/site-workflow.yml
+      - uses: ./.github/workflows/site-workflow
 
       - name: Run tests
         run: ./run-tests.sh || exit 1
 
   internal-links:
     name: "Absolute Internal Links"
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare site
-        uses: ./.github/workflows/site-workflow.yml
+      - uses: ./.github/workflows/site-workflow
 
       - name: Check for internal absolute links
         run: bash -c "! grep -REi 'https?://(www.)?opentabletdriver.net' _site || exit 1"
 
   html-validation:
     name: "Validate HTML"
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare site
-        uses: ./.github/workflows/site-workflow.yml
+      - uses: ./.github/workflows/site-workflow
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

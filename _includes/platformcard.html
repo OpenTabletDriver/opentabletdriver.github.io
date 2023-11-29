@@ -1,12 +1,8 @@
 {% assign imageSize = 175 %}
 
-{% capture platformInstall %}
-  Wiki/Install/{{ include.platform }}
-{% endcapture %}
+{% capture platformInstall %}Wiki/Install/{{ include.platform }}{% endcapture %}
 
-{% capture platformFAQ %}
-  Wiki/FAQ/{{ include.platform }}
-{% endcapture %}
+{% capture platformFAQ %}Wiki/FAQ/{{ include.platform }}{% endcapture %}
 
 <div class="card m-3" style="max-width: 20em; flex: 1 0 100%">
   <div class="card-header">
@@ -16,10 +12,10 @@
     <img class="pt-4 pb-2" height="{{ imageSize }}" src="{{ include.platformImage }}"/>
   </div>
   <div class="card-body d-flex flex-column mx-1">
-    <a class="btn btn-primary my-1" href="{{ platformInstall }}">
+    <a class="btn btn-primary my-1" href="{{ platformInstall | absolute_url }}">
       Installation Guide
     </a>
-    <a class="btn btn-secondary my-1" href="{{ platformFAQ }}">
+    <a class="btn btn-secondary my-1" href="{{ platformFAQ | absolute_url }}">
       FAQ
     </a>
   </div>

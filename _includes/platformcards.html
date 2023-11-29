@@ -1,21 +1,15 @@
 <div class="container d-flex flex-wrap mb-3 justify-content-center">
-  {% capture platformImage %}
-  {% link assets/images/platform/Windows_logo_-_2012_derivative.svg %}
-  {% endcapture %}
+  {% capture platformImage %}{% link assets/images/platform/Windows_logo_-_2012_derivative.svg %}{% endcapture %}
   {% include platformcard.html
     platform="Windows"
     platformImage=platformImage %}
 
-  {% capture platformImage %}
-  {% link assets/images/platform/TuxFlat.svg %}
-  {% endcapture %}
+  {% capture platformImage %}{% link assets/images/platform/TuxFlat.svg %}{% endcapture %}
   {% include platformcard.html
     platform="Linux"
     platformImage=platformImage %}
 
-  {% capture platformImage %}
-  {% link assets/images/platform/Apple_Computer_Logo_rainbow.svg %}
-  {% endcapture %}
+  {% capture platformImage %}{% link assets/images/platform/Apple_Computer_Logo_rainbow.svg %}{% endcapture %}
   {% include platformcard.html
     platform="MacOS"
     platformImage=platformImage %}

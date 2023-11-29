@@ -8,6 +8,7 @@ runs:
         name: github-pages
 
     - name: Extract site
+      shell: bash
       run: |
         mkdir _site || exit 1
         tar -C _site -xf artifact.tar || exit 1

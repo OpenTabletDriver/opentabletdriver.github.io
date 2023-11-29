@@ -40,3 +40,9 @@ jobs:
 
       - name: Run tests
         run: ./run-tests.sh || exit 1
+
+      - name: hyperlink HTML Verification
+        uses: untitaker/hyperlink@0.1.31
+        with:
+          args:
+            _site --check-anchors --sources .

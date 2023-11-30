@@ -1,9 +1,9 @@
-compiledSite = "./_site"
+compiledSitePath = "./_site"
 
 task :htmlproofer do
   require "html-proofer"
 
-  raise "You must build the site before running this task" unless Dir.exist?(compiledSite)
+  raise "You must build the site before running this task" unless Dir.exist?(compiledSitePath)
 
   options = {
     cache: {
@@ -13,5 +13,5 @@ task :htmlproofer do
     }
   }
 
-  HTMLProofer.check_directory(compiledSite, options).run
+  HTMLProofer.check_directory(compiledSitePath, options).run
 end

@@ -25,7 +25,7 @@ Then check [above](#supported-tablets) if your tablet is supported. If it is and
 
 - [Windows]({% link _wiki/FAQ/Windows.md %}#troubleshooting)
 - [Linux]({% link _wiki/FAQ/Linux.md %}#troubleshooting)
-- [macOS]({% link _wiki/FAQ/MacOS.md %}#troubleshooting)
+- [macOS]({% link _wiki/FAQ/MacOS.md %})
 
 or alternatively, see if there is a [tablet specific FAQ]({% link _wiki/FAQ/TabletSpecific.md %}) for your tablet.
 

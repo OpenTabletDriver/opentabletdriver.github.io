@@ -12,10 +12,10 @@
     <img class="pt-4 pb-2" height="{{ imageSize }}" src="{{ include.platformImage }}"/>
   </div>
   <div class="card-body d-flex flex-column mx-1">
-    <a class="btn btn-primary my-1" href="{{ platformInstall | absolute_url }}">
+    <a class="btn btn-primary my-1" href="{{ platformInstall | relative_url }}">
       Installation Guide
     </a>
-    <a class="btn btn-secondary my-1" href="{{ platformFAQ | absolute_url }}">
+    <a class="btn btn-secondary my-1" href="{{ platformFAQ | relative_url }}">
       FAQ
     </a>
   </div>

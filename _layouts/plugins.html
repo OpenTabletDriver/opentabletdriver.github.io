@@ -70,17 +70,17 @@ layout: default
               <span class="text-muted">Driver Compatibility: &gt;= {{ metadata.SupportedDriverVersion }}, &lt; {{ maxDriverVersion }}</span>
             </div>
             <div class="mt-auto">
-              {%- if metadata.DownloadUrl != "" -%}
+              {%- if metadata.DownloadUrl -%}
               <a role="button" class="btn btn-primary me-1 w-10" href="{{ metadata.DownloadUrl }}">
                 Download
               </a>
               {%- endif -%}
-              {%- if metadata.WikiUrl != "" -%}
+              {%- if metadata.WikiUrl -%}
               <a role="button" class="btn btn-info me-1" href="{{ metadata.WikiUrl }}">
                 Wiki
               </a>
               {%- endif -%}
-              {%- if metadata.RepositoryUrl != "" -%}
+              {%- if metadata.RepositoryUrl -%}
               <a role="button" class="btn btn-info" href="{{ metadata.RepositoryUrl }}">
                 Source
               </a>

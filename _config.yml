@@ -90,3 +90,5 @@ exclude:
   - .git-blame-ignore-revs
   - tests/
   - run-tests.sh
+  - Rakefile
+  - .gitignore

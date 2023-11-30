@@ -36,15 +36,6 @@ To update the Rouge highlighter style, use the following command:
 bundle exec rougify style > assets/css/rougehl.css
 ```
 
-### **How can I check if I have internal links that don't use the `{% link %}` paradigm?**
-
-You can check for internal links without the `{% link %}` paradigm using the following command:
-
-```bash
-cd <website root>
-grep -R --exclude-dir vendor --include="*.md" '](' | grep -v '](#' | grep -v ']({%' | grep -v '](http' | grep -v '](//'
-```
-
 # Contributors to Old OpenTabletDriver.Web
 
 [View Contributors](https://github.com/OpenTabletDriver/OpenTabletDriver.Web/graphs/contributors)

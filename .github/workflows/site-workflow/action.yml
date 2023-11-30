@@ -1,0 +1,15 @@
+name: Extract Jekyll site
+runs:
+  using: "composite"
+  steps:
+    - name: Get site artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: github-pages
+
+    - name: Extract site
+      shell: bash
+      run: |
+        mkdir _site || exit 1
+        tar -C _site -xf artifact.tar || exit 1
+        rm artifact.tar

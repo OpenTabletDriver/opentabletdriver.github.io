@@ -57,5 +57,5 @@ jobs:
 
       - name: Check final HTML with html-proofer
         run: |
-        gem install html-proofer
-        rake htmlproofer
+          gem install html-proofer
+          rake htmlproofer

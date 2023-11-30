@@ -91,4 +91,3 @@ exclude:
   - tests/
   - run-tests.sh
   - Rakefile
-  - rubylib/

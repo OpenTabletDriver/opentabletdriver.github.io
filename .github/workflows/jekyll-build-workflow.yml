@@ -15,10 +15,18 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Build
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: "./site"
+          working-directory: "site/"
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Upload artifact
+      - name: Build site
+        run: |
+          bundle exec jekyll build
+
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: "site/_site/"

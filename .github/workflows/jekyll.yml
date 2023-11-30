@@ -48,21 +48,7 @@ jobs:
           ruby-version: '3.0' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Load Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache/restore@v3
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-htmlproofer
-
       - name: Check final HTML with html-proofer
         run: |
           gem install html-proofer
           rake htmlproofer
-
-      - name: Save Cache HTMLProofer
-        uses: actions/cache/save@v3
-        if: always()
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-htmlproofer

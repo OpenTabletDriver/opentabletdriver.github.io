@@ -5,5 +5,5 @@ task :htmlproofer do
 
   raise "You must build the site before running this task" unless Dir.exist?(compiledSite)
 
-  HTMLProofer.check_directory(compiledSite, nil).run
+  HTMLProofer.check_directory(compiledSite, {}).run
 end

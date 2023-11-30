@@ -1,4 +1,4 @@
-name: Jekyll CI
+name: Deploy Site
 
 on:
   push:

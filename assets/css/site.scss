@@ -103,6 +103,16 @@ div.highlighter-rouge pre.highlight {
   @include markdown-header;
 }
 
+#toc-container {
+  visibility: collapse;
+}
+
+@media (min-width: 576px) {
+  #toc-container {
+    visibility: visible;
+  }
+}
+
 @media (min-width: 576px) {
   .markdown-content {
     padding-left: 2em;

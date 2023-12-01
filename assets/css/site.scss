@@ -103,6 +103,12 @@ div.highlighter-rouge pre.highlight {
   @include markdown-header;
 }
 
+@media (min-width: 576px) {
+  .markdown-content {
+    padding-left: 2em;
+  }
+}
+
 .markdown-content > h2,
 .markdown-content > h3 {
   @include markdown-header;

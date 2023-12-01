@@ -82,6 +82,15 @@ html {
   color:#bdc4ca;
 }
 
+#toc {
+  padding-left: 1em;
+}
+
+li {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
 div.highlighter-rouge {
   margin: 1em;
 }
@@ -92,6 +101,27 @@ div.highlighter-rouge pre.highlight {
 
 #page-title {
   @include markdown-header;
+}
+
+#toc-container {
+  visibility: collapse;
+}
+
+#toc-container > div {
+  position: sticky;
+  top: 1.5em;
+}
+
+@media (min-width: 576px) {
+  #toc-container {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 576px) {
+  .markdown-content {
+    padding-left: 2em;
+  }
 }
 
 .markdown-content > h2,

@@ -5,11 +5,13 @@ layout: default
 {% include wiki/header.html %}
 
 <div class="row">
-  <div class="col-xs col-sm-4 col-md-3">
-    <strong>Contents</strong>
-    {% include toc.html html=content id="toc" h_max=3 %}
+  <div id="toc-container" class="col-xs col-sm-3">
+    <div>
+      <strong id="toc-title">Contents</strong>
+      {% include toc.html html=content id="toc" h_max=3 %}
+    </div>
   </div>
-  <div class="col-xs col-sm-8 col-md-9 markdown-content fix-fouc">
+  <div class="col-xs col-sm-9 markdown-content fix-fouc">
     {{ content }}
   </div>
 </div>

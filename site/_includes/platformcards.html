@@ -1,16 +1,21 @@
 <div class="container d-flex flex-wrap mb-3 justify-content-center">
-  {% capture platformImage %}{% link assets/images/platform/Windows_logo_-_2012_derivative.svg %}{% endcapture %}
-  {% include platformcard.html
-    platform="Windows"
-    platformImage=platformImage %}
-
-  {% capture platformImage %}{% link assets/images/platform/TuxFlat.svg %}{% endcapture %}
-  {% include platformcard.html
-    platform="Linux"
-    platformImage=platformImage %}
-
-  {% capture platformImage %}{% link assets/images/platform/Apple_Computer_Logo_rainbow.svg %}{% endcapture %}
-  {% include platformcard.html
-    platform="MacOS"
-    platformImage=platformImage %}
+  {% assign imageSize = 175 %}
+  {% for os in site.data.operating-systems %}
+    <div class="card m-3" style="max-width: 20em; flex: 1 0 100%">
+      <div class="card-header">
+        <h4 class="pt-2 text-center">{{ os.Name }}</h4>
+      </div>
+      <div class="d-flex justify-content-center">
+        <img class="pt-4 pb-2" height="{{ imageSize }}" alt="{{ os.Name }} Icon" src="{% link {{ os.LogoPath }} %}"/>
+      </div>
+      <div class="card-body d-flex flex-column mx-1">
+        <a class="btn btn-primary my-1" href="{% link _wiki/Install/{{os.Name}}.md %}">
+          Installation Guide
+        </a>
+        <a class="btn btn-secondary my-1" href="{% link _wiki/FAQ/{{os.Name}}.md %}">
+          FAQ
+        </a>
+      </div>
+    </div>
+  {% endfor %}
 </div>

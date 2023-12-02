@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "Windows",
+    "LogoPath": "assets/images/platform/Windows_logo_-_2012_derivative.svg"
+  },
+  {
+    "Name": "Linux",
+    "LogoPath": "assets/images/platform/TuxFlat.svg"
+  },
+  {
+    "Name": "MacOS",
+    "LogoPath": "assets/images/platform/Apple_Computer_Logo_rainbow.svg"
+  }
+]

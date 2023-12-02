@@ -5,15 +5,13 @@
 
 ### Requirements
 
-- `rubygems`
+- Ruby's [`bundler`](https://bundler.io/)
 
 ## Steps
 
 ```bash
-$ gem install jekyll bundler
+$ git submodule update --init # submodules contain plugin metadata
 $ cd site/
-$ git submodule init # submodules contain plugin data
-$ git submodule update
 $ bundle install
 $ bundle exec jekyll serve --livereload
 ```

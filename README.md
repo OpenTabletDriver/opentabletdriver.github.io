@@ -11,7 +11,7 @@
 
 ```bash
 $ gem install jekyll bundler
-$ cd <website root> # (currently git root)
+$ cd site/
 $ git submodule init # submodules contain plugin data
 $ git submodule update
 $ bundle install
@@ -33,7 +33,7 @@ For pages with single-path URLs (e.g., site/Wiki), they are permalinked to files
 To update the Rouge highlighter style, use the following command:
 
 ```bash
-bundle exec rougify style > assets/css/rougehl.css
+bundle exec rougify style > site/assets/css/rougehl.css
 ```
 
 # Contributors to Old OpenTabletDriver.Web

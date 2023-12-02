@@ -9,7 +9,7 @@ first before continuing.**
 
 ### My tablet is supported but not detected? {#troubleshooting}
 
-Read [General]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
+Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
 
 #### Common Problems
 

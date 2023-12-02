@@ -2,10 +2,10 @@
 layout: default
 ---
 
-{% include wiki/header.html %}
+{%- include wiki/header.html -%}
 
 <div class="pb-2">
-  {% include platformcards.html %}
+  {%- include platformcards.html -%}
 
   {% assign wikifiles = site.collections | where: "label", "wiki" | first %}
   {% assign folders = site.wiki |
@@ -14,11 +14,11 @@ layout: default
                 reverse %}
 
   {%- for folder in folders -%}
-    {% if folder.name[0] == "FAQ" %} <!-- FIXME: use data file for remapping names -->
-      {% assign folderTitle = "Frequently Asked Questions" %}
-    {% else %}
-      {% assign folderTitle = folder.name[0] %}
-    {% endif %}
+    {% assign folderTitle = site.data.wiki.title-remaps |
+                  where: "OldTitle", folder.name[0] |
+                  map: "NewTitle" | first |
+                  default: folder.name[0] %}
+
     <h3 id="{{ folderTitle | slugify }}">{{ folderTitle }}</h3>
     <ul>
       {% assign sortedItems = folder.items | sort: "title" %}
@@ -28,7 +28,7 @@ layout: default
         </li>
       {%- endfor -%}
     </ul>
-
   {%- endfor -%}
+
   {{ content }}
 </div>

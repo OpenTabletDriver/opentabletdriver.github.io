@@ -10,6 +10,6 @@ runs:
     - name: Extract site
       shell: bash
       run: |
-        mkdir _site || exit 1
-        tar -C _site -xf artifact.tar || exit 1
+        mkdir -p site/_site || exit 1
+        tar -C site/_site -xf artifact.tar || exit 1
         rm artifact.tar

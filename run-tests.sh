@@ -6,7 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 declare -A testParams # [testName]=>"testArgs"
 
-testParams["check-site-paths"]="${PWD} ${PWD}/_site"
+testParams["check-site-paths"]="${PWD}/site ${PWD}/site/_site"
 
 for testName in "$TESTSDIR"/*; do
   name="$(basename "$testName")"

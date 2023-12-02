@@ -30,7 +30,7 @@ jobs:
       - uses: ./.github/workflows/site-workflow
 
       - name: Check for internal absolute links
-        run: bash -c "! grep -REi 'https?://(www.)?opentabletdriver.net' _site || exit 1"
+        run: bash -c "! grep -REi 'https?://(www.)?opentabletdriver.net' site/_site || exit 1"
 
   html-validation:
     name: "Validate HTML"

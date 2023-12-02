@@ -1,4 +1,4 @@
-compiledSitePath = "./_site"
+compiledSitePath = "./site/_site"
 
 task :htmlproofer do
   require "html-proofer"

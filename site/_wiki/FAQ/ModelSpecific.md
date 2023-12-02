@@ -16,4 +16,4 @@ OpenTabletDriver can only talk to the tablet in PC mode.
 
 ### I am still having problems
 
-If your tablet model is supported, please see the [General FAQ]({% link _wiki/FAQ/General.md %})
+See [General FAQ]({% link _wiki/FAQ/General.md %}).

@@ -5,7 +5,7 @@
 
 ### Requirements
 
-- Ruby's [`bundler`](https://bundler.io/)
+- [Ruby](https://www.ruby-lang.org/en/downloads/)
 
 ## Steps
 

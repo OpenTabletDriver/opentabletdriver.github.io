@@ -8,16 +8,13 @@ layout: default
   {% include platformcards.html %}
 
   {% assign wikifiles = site.collections | where: "label", "wiki" | first %}
-  {% assign folders = site.wiki | group_by_exp: "item", "item.path | split: '/' | slice: 1" | reverse %}
+  {% assign folders = site.wiki |
+                where_exp: "item", "item.hide_from_auto_list == false" |
+                group_by_exp: "item", "item.path | split: '/' | slice: 1" |
+                reverse %}
 
   {%- for folder in folders -%}
-    {% if folder.name[0] == "Install" %}
-      {% comment %}
-        Install guides should only be referenced by platform cards, for now
-      {% endcomment %}
-      {% continue %}
-    {% endif %}
-    {% if folder.name[0] == "FAQ" %}
+    {% if folder.name[0] == "FAQ" %} <!-- FIXME: use data file for remapping names -->
       {% assign folderTitle = "Frequently Asked Questions" %}
     {% else %}
       {% assign folderTitle = folder.name[0] %}
@@ -26,9 +23,6 @@ layout: default
     <ul>
       {% assign sortedItems = folder.items | sort: "title" %}
       {%- for file in sortedItems -%}
-        {% if file.hide_from_auto_list %}
-          {% continue %}
-        {% endif %}
         <li>
           <a class="link-light" href="{{ file.url }}">{{ file.title }}</a>
         </li>

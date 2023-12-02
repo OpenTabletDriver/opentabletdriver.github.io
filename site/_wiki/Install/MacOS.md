@@ -1,5 +1,6 @@
 ---
 title: macOS Installation Guide
+hide_from_auto_list: true
 ---
 
 ### App {#app}

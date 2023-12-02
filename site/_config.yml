@@ -48,6 +48,7 @@ defaults:
       type: "wiki" # apply to collection: 'wiki' only (see collections array below)
     values:
       layout: "wikipage"
+      hide_from_auto_list: false # automatically add page to Wiki listing
 
 # Assign _folder settings, e.g. _sections, _wiki
 # See: https://jekyllrb.com/docs/collections/#collections

@@ -1,5 +1,6 @@
 ---
 title: Linux Installation Guide
+hide_from_auto_list: true
 ---
 
 ### Ubuntu / Debian {#debian}

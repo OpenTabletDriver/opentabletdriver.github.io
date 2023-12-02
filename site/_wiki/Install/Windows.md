@@ -1,5 +1,6 @@
 ---
 title: Windows Installation Guide
+hide_from_auto_list: true
 ---
 
 ### Dependencies {#dependencies}

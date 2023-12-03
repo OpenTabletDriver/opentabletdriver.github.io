@@ -69,7 +69,7 @@ Make sure that your kernel has uinput support. If you are using a custom kernel 
 
 ##### Missing uinput device permissions
 
-Symptoms:
+*Symptoms*:
 
 ```otdlog
 Failed to initialize virtual tablet. (error code EACCES)

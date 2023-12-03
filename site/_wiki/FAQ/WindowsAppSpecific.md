@@ -130,7 +130,7 @@ for more information.
 #### Configure for Windows Ink
 
 1. Open MediBang Paint
-2. Go to `File > Brush Environment Setting`
+2. Go to `File > Brush Environment Settings`
 3. Enable `Validate native OS pen pressure detection`
 4. Click `OK`
 
@@ -162,8 +162,8 @@ No need to restart the application.
 1. Open Affinity Photo / Designer
 2. Go to `Edit > Settings`
 3. Click `Tools`
-3. Under `Tablet Input Method`, select `Windows Ink`
-4. Click `OK`, then restart Affinity Photo / Designer
+4. For `Tablet Input Method`, select `Windows Ink`
+5. Click `OK`, then restart Affinity Photo / Designer
 
 ### ArtRage
 

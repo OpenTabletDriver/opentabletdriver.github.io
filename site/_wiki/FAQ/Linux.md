@@ -19,7 +19,7 @@ If your tablet is connected properly and is supported, but is still not detected
 
 *Symptoms*:
 
-```log
+```otdlog
 Another tablet driver found: <driver>
 ```
 
@@ -31,7 +31,7 @@ Another tablet driver found: <driver>
 
 *Symptoms*:
 
-```log
+```otdlog
 Not permitted to open HID class device at /dev/hidrawX
 ```
 
@@ -49,7 +49,7 @@ If this is a fresh install and you have not configured your tablet yet, [check l
 
 *Symptoms*:
 
-```log
+```otdlog
 Failed to initialize virtual tablet. (error code ENODEV)
 ```
 
@@ -61,7 +61,7 @@ Failed to initialize virtual tablet. (error code ENODEV)
 
 *Symptoms*:
 
-```log
+```otdlog
 Failed to initialize virtual tablet. (error code ENOENT)
 ```
 
@@ -71,7 +71,7 @@ Make sure that your kernel has uinput support. If you are using a custom kernel 
 
 Symptoms:
 
-```log
+```otdlog
 Failed to initialize virtual tablet. (error code EACCES)
 ```
 

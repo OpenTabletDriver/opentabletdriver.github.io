@@ -27,7 +27,7 @@ Please check if your tablet requires WinUSB [here]({% link _sections/Tablets.md 
 
 *Symptoms*:
 
-```log
+```otdlog
 Another tablet driver found: <driver>
 ```
 
@@ -40,8 +40,8 @@ Another tablet driver found: <driver>
 
 *Symptoms*:
 
-```log
-Failed to open file handle to WinUSB interface\
+```otdlog
+Failed to open file handle to WinUSB interface
 SafeHandle cannot be null. (Parameter 'pHandle')
 ```
 

@@ -75,7 +75,7 @@ Symptoms:
 Failed to initialize virtual tablet. (error code EACCES)
 ```
 
-###### Solution
+*Solution*:
 
 - [See here]({% link _wiki/Documentation/RequiredPermissions.md %})
 

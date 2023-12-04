@@ -30,9 +30,6 @@ sass:
 liquid:
   strict_filters: true
 
-# Site variables
-latest_otd_version: v0.6.3.0
-
 # Sets default values according to scope
 # See https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:

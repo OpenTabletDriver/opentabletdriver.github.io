@@ -63,11 +63,22 @@ OpenTabletDriver has no built-in support for pressure on Windows due to external
 - Install and follow instructions from [WindowsInk plugin wiki](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk).
 - Configure your application to use Windows Ink API. See [here]({% link _wiki/FAQ/WindowsAppSpecific.md %}#art-programs) for app-specific configuration instructions.
 
-### What is convert_to_portable.bat? {#userdata}
+### How do I make a portable install? {#userdata}
 
-This file moves OpenTabletDriver's settings to a folder called `userdata` next to OpenTabletDriver itself rather than being stored in `%localappdata%\OpenTabletDriver`.
+By having a folder called `userdata` next to the OpenTabletDriver files, anything related to
+OpenTabletDriver is instead stored in this folder.
 
-This allows OpenTabletDriver to be completely portable, all in one folder.
+Having a portable install is useful for testing new releases without them affecting your existing
+settings and plugins, or for having the driver available with your preferred settings and
+plugins you can send to friends, or bring with you.
+
+**It is particularly important to use this feature when testing pre-releases, as cross-version
+configuration compatibility is not guaranteed.**
+
+The default location is described in the
+General FAQ's [appdata section]({% link _wiki/FAQ/General.md %}#appdata)
+
+If you wish to convert your existing install to a portable install, the `convert_to_portable.bat` script moves OpenTabletDriver's settings to the `userdata` folder.
 
 ### How to fix "Connecting to daemon has timed out" error? {#no-daemon}
 

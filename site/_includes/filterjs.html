@@ -80,18 +80,15 @@
     let pluginSplit = pluginVersion.split('.');
     let driverSplit = driverVersion.split('.');
 
-    let pluginMajor = pluginSplit.slice(0, 2).join('.');
-    let driverMajor = driverSplit.slice(0, 2).join('.');
-
-    if (pluginMajor != driverMajor)
+    if (pluginSplit[0] != driverSplit[0])
       return false;
 
-    let pluginMinor = pluginSplit.slice(2).join('.');
-    let driverMinor = driverSplit.slice(2).join('.');
+    if (pluginSplit[1] != driverSplit[1])
+      return false;
 
-    if (pluginMinor <= driverMinor)
-      return true;
+    if (pluginSplit[2] > driverSplit[2])
+      return false;
 
-    return false;
+    return true;
   }
 </script>

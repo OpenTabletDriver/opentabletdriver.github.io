@@ -16,8 +16,12 @@ class GetOTDExecutableTag < Liquid::Tag
 
     # nil/console/daemon/ui, the OpenTabletDriver executable without extension
     @exeBase = hybridTmp[1]
-    raise "exebase-less not supported for Windows and Linux" if (@exeBase == nil || @exeBase == "") && @os != "macos"
-    raise "exebase is not supported for MacOS" if @exeBase != nil && @exeBase != "" && @os == "macos"
+    if (@exeBase == nil || @exeBase == "") && @os != "macos"
+      raise "exebase-less not supported for Windows and Linux"
+    end
+    if @exeBase != nil && @exeBase != "" && @os == "macos"
+      raise "exebase is not supported for MacOS"
+    end
   end
 
   def render(context)
@@ -45,7 +49,9 @@ class GetOTDExecutableTag < Liquid::Tag
           overrides[@os].has_key?(@exeBase)
         rv = ".%s" % overrides[@os][@exeBase]
       else
-        raise "Missing key '%s' in executables data" % @exeBase unless executables.has_key?(@exeBase)
+        unless executables.has_key?(@exeBase)
+          raise "Missing key '%s' in executables data" % @exeBase
+        end
         rv = ".%s" % executables[@exeBase]
       end
     end

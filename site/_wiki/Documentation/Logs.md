@@ -8,16 +8,25 @@ To view logs, click on the `Console` tab. Optionally, change filter from `Inform
 
 To export logs, click `Help` -> `Export diagnostics...` in the top menu bar.
 
-Sometimes OpenTabletDriver crashes hard. This is usually caused by a bug in OpenTabletDriver. Due to the crash, it will be impossible to retrieve the logs from GUI. In this case, you can find a partial log in the following locations:
-
-| OS | Location |
-| --- | --- |
-| Windows | `%appdata%\OpenTabletDriver\daemon.log` |
-| Linux | `~/.local/share/OpenTabletDriver/daemon.log` |
-| macOS | `~/Library/Application Support/OpenTabletDriver/daemon.log` |
+Sometimes, the OpenTabletDriver daemon can crash hard enough that the errors can't be
+sent to the GUI. In this case, you can find a
+partial log in the [Exception Log Location](#daemon-log).
 
 ### Daemon
 
 The output from daemon is the log.
 
-On Linux when running daemon via systemd service, the log for daemon is recorded by systemd. To view the log, run `journalctl --user-unit opentabletdriver.service`.
+On Linux when running daemon via systemd service, the log for the daemon is recorded by systemd.
+To view that log, run the following command as your user:
+
+```bash
+journalctl --user-unit opentabletdriver.service
+```
+
+#### Exception Log Location {#daemon-log}
+
+If the daemon crashes from an "unrecoverable" exception, the `daemon.log` file will
+include a stack trace defining where the error happened, which is useful for debugging.
+
+The `daemon.log` file is in the application data folder of OpenTabletDriver.
+The location of which is specified [here]({% link _wiki/FAQ/General.md %}#appdata)

@@ -1,5 +1,5 @@
 ---
-title: Command Line
+title: Command Line Arguments
 ---
 
 ### UI
@@ -17,4 +17,7 @@ title: Command Line
 
 ### Console
 
-WIP
+|          Argument        | Description |
+| :----------------------: | ----------- |
+|        `--version`       | Shows the compatible OpenTabletDriver daemon version
+| `--help` or `-h` or `-?` | Shows the available commands for use with the console application

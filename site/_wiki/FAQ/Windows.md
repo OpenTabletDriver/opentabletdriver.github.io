@@ -7,7 +7,6 @@ hide_from_auto_list: true
 first before continuing.**
 - Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
 
-
 ### My tablet is supported but not detected? {#troubleshooting}
 
 Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
@@ -61,8 +60,8 @@ This is most likely due to some firmware variation. Try joining our support [Dis
 OpenTabletDriver has no built-in support for pressure on Windows due to external dependencies that cannot be bundled with the driver. Follow the instructions below to enable pressure support:
 
 - Install [VMulti Driver](https://github.com/X9VoiD/vmulti-bin/releases/latest).
-- Install and follow instructions from [WindowsInk wiki](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk).
-- [Make sure that the application you are trying to draw with is configured to work with Windows Ink API]({% link _wiki/Documentation/WindowsInk.md %}#configure-apps)
+- Install and follow instructions from [WindowsInk plugin wiki](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk).
+- Configure your application to use Windows Ink API. See [here]({% link _wiki/FAQ/WindowsAppSpecific.md %}#art-programs) for app-specific configuration instructions.
 
 ### What is convert_to_portable.bat? {#userdata}
 

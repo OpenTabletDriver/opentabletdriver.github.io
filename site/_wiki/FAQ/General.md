@@ -82,11 +82,11 @@ Uninstall any other tablet drivers you have installed.
 
 ### How to convert areas to and from OpenTabletDriver? {#area-conversion}
 
-#### Conversion through the UI
+#### Conversion through the OpenTabletDriver UI
 
-- Right click the tablet area editor
-- Click the `convert item` menu item
-- Select the OEM driver and insert your area values
+- Right click the Tablet Area Editor
+- Click the `Convert Item` menu item
+- Select your target OEM driver, and insert the appropriate values
 
 #### Conversion through manual calculation
 
@@ -104,7 +104,7 @@ Use this reference chart for the upcoming formulas:
 
 `TWidth` and `THeight` can be found in the tablet's configuration file.
 
-Use the following formulas to get values for the area editor's `Width`, `Height`, `XOffset`, and `YOffset` fields.
+Use the following formulas to get values for OpenTabletDriver's area editor's `Width`, `Height`, `XOffset`, and `YOffset` fields:
 
 ##### Wacom and Veikk
 
@@ -115,13 +115,13 @@ Use the following formulas to get values for the area editor's `Width`, `Height`
 | Right  | The number of lines from the left side of the tablet to the right side of the area
 | Bottom | The number of lines from the top side of the tablet to the bottom side of the area
 
-Formula:
+**Formula**:
 
 ```py
-Width = (Right - Left) / LPI * 25.4
-Height = (Bottom - Top) / LPI * 25.4
-XOffset = (Left / LPI * 25.4) + (Width / 2)
-YOffset = (Top / LPI * 25.4) + (Height / 2)
+Width   = (Right - Left) / LPI * 25.4
+Height  = (Bottom - Top) / LPI * 25.4
+XOffset = (Width  / 2) + (Left / LPI * 25.4)
+YOffset = (Height / 2) + (Top  / LPI * 25.4)
 ```
 
 ##### XP-Pen
@@ -133,12 +133,12 @@ YOffset = (Top / LPI * 25.4) + (Height / 2)
 | XPX  | The X offset of the top left corner of the area in XP-Pen units. Denoted as `X` in XP-Pen's official drivers.
 | XPY  | The Y offset of the top left corner of the area in XP-Pen units. Denoted as `Y` in XP-Pen's official drivers.
 
-Formula:
+**Formula**:
 
 ```py
-Width = XPW / 3.937
-Height = XPH / 3.937
-XOffset = (Width / 2) + (XPX / 3.937)
+Width   = XPW / 3.937
+Height  = XPH / 3.937
+XOffset = (Width  / 2) + (XPX / 3.937)
 YOffset = (Height / 2) + (XPY / 3.937)
 ```
 
@@ -151,11 +151,11 @@ YOffset = (Height / 2) + (XPY / 3.937)
 | Right  | The percentage of the distance from the left side of the tablet to the right side of the area
 | Bottom | The percentage of the distance from the top side of the tablet to the bottom side of the area
 
-Formula:
+**Formula**:
 
 ```py
-Width = (Right - Left) * TWidth
-Height = (Bottom - Top) * THeight
-XOffset = (Width / 2) + (Left * TWidth)
+Width   = (Right - Left) * TWidth
+Height  = (Bottom - Top) * THeight
+XOffset = (Width  / 2) + (Left * TWidth)
 YOffset = (Height / 2) + (Top * THeight)
 ```

@@ -1,5 +1,5 @@
 ---
-title: macOS Installation Guide
+title: Intel macOS Installation Guide
 hide_from_auto_list: true
 ---
 

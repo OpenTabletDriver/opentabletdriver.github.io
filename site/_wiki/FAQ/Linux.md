@@ -4,7 +4,7 @@ hide_from_auto_list: true
 ---
 
 - **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
-first before continuing.**
+  first before continuing.**
 - Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}) for app-specific instructions.
 
 ### My tablet is supported but not detected? {#troubleshooting}
@@ -87,9 +87,9 @@ Try disabling your filters one-by-one and see if input finally works.
 
 Pressure support is available by changing the output mode of OpenTabletDriver to Artist Mode:
 
-- Change output mode (at the bottom left of OpenTabletDriver) to Artist Mode.
-- Remove Tip Binding in the Pen Settings panel by opening advanced binding editor (press '...' next to the binding), then press "Clear".
-- Save your settings and then try drawing in an application that supports pressure.
+- Change output mode (at the bottom left of OpenTabletDriver) to `Artist Mode`.
+- Remove the tip binding in the Pen Settings panel by opening the advanced binding editor (press `...` next to the binding), then press "Clear"
+- Save or apply your settings, and then try drawing in an application that supports pressure.
 
 See [here](#artist-mode-bindings) for setting up bindings for Artist Mode.
 
@@ -107,13 +107,13 @@ Make sure that you have enabled the systemd service:
 systemctl --user enable opentabletdriver.service --now
 ```
 
-If daemon doesn't start on boot, this means that the desktop environment is not configured correctly to integrate with systemd. In such case, refer to your desktop environment's documentation on how to autostart processes on login. The command to execute on login is:
+If the daemon doesn't reliably autostart on boot, then the desktop environment is not
+configured correctly to integrate with systemd.
 
-```bash
-otd-daemon
-```
+In such case, refer to your desktop environment's documentation on how to autostart processes on
+login using the instructions [below](#other-inits)
 
-#### Other init systems
+#### Other init systems {#other-inits}
 
 OpenTabletDriver offers no official support for other init systems. Refer to your init system's documentation on how to autostart processes on login. The command to execute on login is:
 
@@ -125,7 +125,7 @@ otd-daemon
 
 ### The cursor feels slow on Artist Mode {#libinput-smoothing}
 
-Using artist mode will result in some minor smoothing due to libinput's tablet handling.
+Using Artist Mode will result in some minor smoothing due to libinput's tablet handling.
 
 To disable this smoothing, add the contents below to `/etc/libinput/local-overrides.quirks`:
 

@@ -12,7 +12,7 @@ hide_from_auto_list: true
     # Update the package list
     sudo apt update
 
-    # This will install the package
+    # Install the package
     sudo apt install ./OpenTabletDriver.deb
     ```
 
@@ -21,15 +21,14 @@ hide_from_auto_list: true
 
 If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause `libhostfxr` issues.
 
-See solutions from Microsoft [here]({{ site.data.links.external.Microsoft.DotnetLinuxPackageMixup }})and remove the Microsoft repositories and packages if you're experiencing `libhostfxr` issues.
+If you're experiencing `libhostfxr` issues, please see the solutions from Microsoft [here]({{ site.data.links.external.Microsoft.DotnetLinuxPackageMixup }}).
 
 ### Fedora {#rpm}
 
 1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
-2. Run the following commands in a terminal
+2. Install the package with the following command:
 
     ```bash
-    # This will install the package
     sudo dnf install ./OpenTabletDriver.rpm
     ```
 
@@ -44,6 +43,9 @@ You can install OpenTabletDriver from the AUR. There are two ways to do this.
 - manually via [makepkg](#manual-makepkg-method)
 
 Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+
+> If you are using a ramdisk environment that isn't `mkinitcpio`, consult its documentation
+  for how to regenerate or rebuild your existing ramdisk images with the new blacklist.
 
 #### AUR helper method {#aur-helper-method}
 
@@ -60,12 +62,12 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 
 #### `makepkg` method {#manual-makepkg-method}
 
-1. Run the following commands
+1. Run the following commands in a terminal
 
     ```sh
     # Downloads the pkgbuild from the AUR.
     git clone https://aur.archlinux.org/opentabletdriver.git
-    # Changes into the correct directory and installs OpenTabletDriver
+    # Changes into the correct directory, pulls needed dependencies, then installs OpenTabletDriver
     cd opentabletdriver && makepkg -si
     # Clean up leftovers
     cd ..
@@ -95,10 +97,9 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
     x11-drivers/OpenTabletDriver-bin ~amd64
     ```
 
-3. Run the following command
+3. Install the package with the following command
 
     ```bash
-    # Install the OpenTabletDriver package
     sudo emerge OpenTabletDriver-bin
     ```
 
@@ -108,12 +109,14 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 
 1. Edit `/etc/nixos/configuration.nix` and add this in your configuration
 
-    > More configuration options can be found [here](https://search.nixos.org/options?query=opentabletdriver)
-
     ```nix
     # Enable OpenTabletDriver
     hardware.opentabletdriver.enable = true;
     ```
+
+    > More configuration options can be found [here][NixOS Package Options]
+
+[NixOS Package Options]: https://search.nixos.org/options?query=opentabletdriver
 
 ### Post-Installation {#post-install}
 

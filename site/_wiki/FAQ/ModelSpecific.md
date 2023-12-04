@@ -12,8 +12,6 @@ This toggles the tablet's operating mode between PC (high LED brightness) and An
 
 OpenTabletDriver can only talk to the tablet in PC mode.
 
----
-
 ### I am still having problems
 
 See [General FAQ]({% link _wiki/FAQ/General.md %}).

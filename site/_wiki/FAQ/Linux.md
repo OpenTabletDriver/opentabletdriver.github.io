@@ -17,25 +17,25 @@ If your tablet is connected properly and is supported, but is still not detected
 
 ##### Another driver is found {#hid_uclogic}
 
-_Symptoms_
+*Symptoms*:
 
-```
+```otdlog
 Another tablet driver found: <driver>
 ```
 
-_Solution_
+*Solution*:
 
 - [See here]({% link _wiki/Documentation/RequiredPermissions.md %}#setup-linux)
 
 ##### Insufficient permissions {#udev}
 
-_Symptoms_
+*Symptoms*:
 
-```
+```otdlog
 Not permitted to open HID class device at /dev/hidrawX
 ```
 
-_Solution_
+*Solution*:
 
 - [See here]({% link _wiki/Documentation/RequiredPermissions.md %})
 
@@ -47,37 +47,35 @@ If this is a fresh install and you have not configured your tablet yet, [check l
 
 ##### Missing uinput device
 
-_Symptoms_
+*Symptoms*:
 
-```
+```otdlog
 Failed to initialize virtual tablet. (error code ENODEV)
 ```
 
-_Solution_
+*Solution*:
 
 - Reboot your computer.
 
 ##### Missing uinput device support
 
-_Symptoms_
+*Symptoms*:
 
-```
+```otdlog
 Failed to initialize virtual tablet. (error code ENOENT)
 ```
 
-_Solution_
-
-- Make sure that your kernel has uinput support. If you are using a custom kernel or builds kernel from source, make sure that you have enabled `CONFIG_INPUT_UINPUT` in your kernel configuration. Refer to your distro's documentation regarding kernel configuration.
+Make sure that your kernel has uinput support. If you are using a custom kernel or builds kernel from source, make sure that you have enabled `CONFIG_INPUT_UINPUT` in your kernel configuration. Refer to your distro's documentation regarding kernel configuration.
 
 ##### Missing uinput device permissions
 
-_Symptoms_
+*Symptoms*:
 
-```
+```otdlog
 Failed to initialize virtual tablet. (error code EACCES)
 ```
 
-_Solution_
+*Solution*:
 
 - [See here]({% link _wiki/Documentation/RequiredPermissions.md %})
 

@@ -22,7 +22,7 @@ See [above](#raw-input).
 
 Do not use Windows Ink.
 
-#### My cursor is shaky!
+#### My cursor is shaky
 
 That's perfectly normal unless it's going really crazy and teleports everywhere. In that case, see this section about resolving [EMI issues]({% link _wiki/FAQ/General.md %}#emi-interference).
 

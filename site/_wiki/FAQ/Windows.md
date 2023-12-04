@@ -25,27 +25,27 @@ Please check if your tablet requires WinUSB [here]({% link _sections/Tablets.md 
 
 ##### Tablet driver interference
 
-_Symptoms_
+*Symptoms*:
 
-```
+```otdlog
 Another tablet driver found: <driver>
 ```
 
-_Solution_
+*Solution*:
 
-- Follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), and make sure to type `y` for every driver found by the utility. Then, restart OTD.
+- Follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), and make sure to type <kbd>Y</kbd> for every driver found by the utility. Then, restart OTD.
 - If the log entry is still present, try joining our support [Discord]({{ site.discord_invite_url }}) and asking for help in one of the #support channels.
 
 ##### Invalid WinUSB driver state
 
-_Symptoms_
+*Symptoms*:
 
-```sh
+```otdlog
 Failed to open file handle to WinUSB interface
 SafeHandle cannot be null. (Parameter 'pHandle')
 ```
 
-_Solution_
+*Solution*:
 
 - Restart your computer.
 

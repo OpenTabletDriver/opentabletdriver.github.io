@@ -10,6 +10,7 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 max_line_length = 100
 
+# markdown is also linted with markdownlint-cli, see .markdownlint.yaml in project root
 [*.md]
 # not having this results in readability-vs-presentation confusion
 max_line_length = unset

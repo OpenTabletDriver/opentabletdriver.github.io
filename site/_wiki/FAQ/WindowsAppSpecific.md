@@ -54,8 +54,6 @@ Use [Windows Ink](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk) plugin 
 
 ### Clip Studio Paint
 
-#### Configure for Windows Ink
-
 Clip Studio Paint should be using Windows Ink by default. If you are still experiencing lack of pen
 pressure, do the following:
 
@@ -67,13 +65,12 @@ No need to restart the application.
 
 ### Photoshop CC
 
-#### Configure for Windows Ink
-
 If Photoshop CC is not detecting pressure, try the following:
 
 1. Go to `%appdata%\Adobe\Adobe Photoshop 2023\Adobe Photoshop 2023 Settings`
 2. Check if there is a file called `PSUserConfig.txt`. If there is, open it. If not, create it.
 3. Add the following lines to the file:
+
 ```sh
 # Use Windows Ink for tablet input
 UseSystemStylus 1
@@ -82,8 +79,6 @@ UseSystemStylus 1
 Replace `2023` with your version number if you're using a different version of Photoshop CC.
 
 ### Krita
-
-#### Configure for Windows Ink
 
 1. Open Krita
 2. Go to `Settings > Configure Krita...`
@@ -94,21 +89,15 @@ Replace `2023` with your version number if you're using a different version of P
 
 ### GIMP
 
-#### Configure for Windows Ink
-
 Use GIMP 2.99 to have Windows Ink support. GIMP 2.10 and below does not support Windows Ink.
 
 ### FireAlpaca
-
-#### Configure for Windows Ink
 
 1. Open FireAlpaca
 2. Go to `File > Brush Environment Settings`
 3. For `Select Pen Pressure API`, select any option that includes `TabletPC`
 
 ### Paint Tool SAI
-
-#### Configure for Windows Ink
 
 This program does not support Windows Ink. Use Paint Tool SAI 2 instead if you wish to remain using
 Paint Tool SAI programs. If you have a license already for SAI 1, you may use it to upgrade to SAI
@@ -117,8 +106,6 @@ for more information.
 
 ### Paint Tool SAI 2
 
-#### Configure for Windows Ink
-
 1. Open Paint Tool SAI 2
 2. Go to `Other > Options`
 3. Click `Pen Tablet`
@@ -126,8 +113,6 @@ for more information.
 5. Click `Ok`, then restart Paint Tool SAI 2
 
 ### MediBang Paint
-
-#### Configure for Windows Ink
 
 1. Open MediBang Paint
 2. Go to `File > Brush Environment Settings`
@@ -138,16 +123,12 @@ No need to restart the application.
 
 ### Corel Painter
 
-#### Configure for Windows Ink
-
 1. Open Corel Painter
 2. Go to `Edit > Preferences > Tablet...`
 3. Click `RTS-compatible device (Real-Time Stylus)`
 4. Click `OK`, then restart Corel Painter
 
 ### Rebelle
-
-#### Configure for Windows Ink
 
 1. Open Rebelle
 2. Go to `Edit > Preferences`
@@ -157,8 +138,6 @@ No need to restart the application.
 
 ### Affinity Photo / Designer
 
-#### Configure for Windows Ink
-
 1. Open Affinity Photo / Designer
 2. Go to `Edit > Settings`
 3. Click `Tools`
@@ -166,8 +145,6 @@ No need to restart the application.
 5. Click `OK`, then restart Affinity Photo / Designer
 
 ### ArtRage
-
-#### Configure for Windows Ink
 
 1. Open ArtRage
 2. Go to `Edit > ArtRage Preferences > Input Device`

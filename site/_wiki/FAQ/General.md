@@ -69,7 +69,7 @@ uninstalled all other tablet drivers before using OpenTabletDriver.
 
 #### Windows
 
-Run [TabletDriverCleanup]({{ site.data.links.external.TabletDriverCleanup.latestUrl }}) to remove
+Run [TabletDriverCleanup]({{ site.data.links.external.TabletDriverCleanup.latest }}) to remove
 all other tablet drivers.
 
 #### Linux

@@ -15,7 +15,7 @@ Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first be
 
 If your tablet is connected properly and is supported but is still not detected, please make sure that you have no other tablet drivers on the system.
 
-To ensure your system is clean, follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), then resume here.
+To ensure your system is clean, follow the instructions in [TabletDriverCleanup]({{ site.data.links.external.TabletDriverCleanup.latest }}), then resume here.
 
 Please check if your tablet requires WinUSB [here]({% link _sections/Tablets.md %}) (it will say in the Notes column). If it does, follow the [instructions]({% link _wiki/Install/Windows.md %}#winusb) and return here. Continue below for troubleshooting instructions if your tablet still isn't detected.
 
@@ -33,8 +33,8 @@ Another tablet driver found: <driver>
 
 *Solution*:
 
-- Follow the instructions in [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest), and make sure to type <kbd>Y</kbd> for every driver found by the utility. Then, restart OTD.
-- If the log entry is still present, try joining our support [Discord]({{ site.discord_invite_url }}) and asking for help in one of the #support channels.
+- Follow the instructions in [TabletDriverCleanup]({{ site.data.links.external.TabletDriverCleanup.latest }}), and make sure to type <kbd>Y</kbd> for every driver found by the utility. Then, restart OTD.
+- If the log entry is still present, try joining our support [Discord]({{ site.data.links.project.DiscordInvite }}) and asking for help in the #support-windows channel.
 
 ##### Invalid WinUSB driver state
 
@@ -53,14 +53,14 @@ SafeHandle cannot be null. (Parameter 'pHandle')
 
 #### No input
 
-This is most likely due to some firmware variation. Try joining our support [Discord]({{ site.discord_invite_url }}) and asking for help in one of the #support channels, or submit a [bug report](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/new) in Github.
+This is most likely due to some firmware variation. Try joining our support [Discord]({{ site.data.project.links.DiscordInvite }}) and asking for help in one of the #support channels, or submit a [bug report]({{ site.data.project.links.OpenNewIssue }}) in GitHub.
 
 #### No pressure {#win-ink}
 
 OpenTabletDriver has no built-in support for pressure on Windows due to external dependencies that cannot be bundled with the driver. Follow the instructions below to enable pressure support:
 
-- Install [VMulti Driver](https://github.com/X9VoiD/vmulti-bin/releases/latest).
-- Install and follow instructions from [WindowsInk plugin wiki](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk).
+- Install [VMulti Driver]({{ site.data.links.external.VMultiDriver.latest }}).
+- Install and follow instructions from [WindowsInk wiki]({{ site.data.links.external.WindowsInkPlugin.wiki }}).
 - Configure your application to use Windows Ink API. See [here]({% link _wiki/FAQ/WindowsAppSpecific.md %}#art-programs) for app-specific configuration instructions.
 
 ### How do I make a portable install? {#userdata}
@@ -111,7 +111,7 @@ To start OpenTabletDriver minimised, continue below:
 
 OpenTabletDriver should *NEVER* be run as Administrator, and there is never a need to run as Administrator.
 
-Follow the [instructions](https://learn.microsoft.com/en-us/mem/intune/user-help/you-need-to-enable-uac-windows#adjust-protection-level) provided by Windows and adjust protection level to at least:
+Follow the [instructions]({{ site.data.links.external.Microsoft.AdjustUAC }}) provided by Windows and adjust protection level to at least:
 
 - Notify me when apps try to make changes to my computer.
 
@@ -121,7 +121,7 @@ If you are still getting the warning, make sure that you are not using the accou
 
 > We are aware that most custom ISOs use the Administrator account. Due to the nature of custom ISOs, we *do not* provide official support to them.
 
-If you need to interact with a program that runs with Administrator privileges, use [VMultiMode](https://github.com/X9VoiD/VoiDPlugins/wiki/VMultiMode).
+If you need to interact with a program that runs with Administrator privileges, use [VMultiMode]({{ site.data.links.external.VMultiModePlugin.wiki }}).
 
 ### Plugin manager is not showing up {#plugin-manager-broken}
 
@@ -140,4 +140,4 @@ If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTablet
 
 ### Still have problems? {#discord}
 
-If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.discord_invite_url }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.
+If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.data.project.links.DiscordInvite }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

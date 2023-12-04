@@ -74,10 +74,10 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 
 Then update the initramfs:
 
-| Distro | Command |
-| --- | --- |
-| Arch Linux | `sudo mkinitcpio -P` |
-| Debian/Ubuntu | `sudo update-initramfs -u` |
+|    Distro     | Command |
+| :-----------: | :------ |
+|  Arch Linux   | `sudo mkinitcpio -P`
+| Debian/Ubuntu | `sudo update-initramfs -u`
 
 For other distros, refer to your distro's documentation on how to update the initramfs.
 
@@ -121,10 +121,10 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 
 Then update the initramfs:
 
-| Distro | Command |
-| --- | --- |
-| Arch Linux | `sudo mkinitcpio -P` |
-| Debian/Ubuntu | `sudo update-initramfs -u` |
+|    Distro     | Command |
+| :-----------: | :------ |
+|  Arch Linux   | `sudo mkinitcpio -P`
+| Debian/Ubuntu | `sudo update-initramfs -u`
 
 For other distros, refer to your distro's documentation on how to update the initramfs.
 

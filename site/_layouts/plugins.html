@@ -49,17 +49,21 @@ layout: default
       {% assign maxSupportedDriverVersion = "" %}
       {% assign otd_versions = site.data.otd-versions | reverse %}
       {%- capture maxSupportedDriverVersion -%}
-        {% for driverVersion in otd_versions %}
-          {% assign driverVersionSplit = driverVersion | split: '.' %}
-          {% if driverVersionSplit[0] == supportedDriverVersionSplit[0] %}
-            {% if driverVersionSplit[1] == supportedDriverVersionSplit[1] %}
-              {% if driverVersionSplit[2] >= supportedDriverVersionSplit[2] %}
-                {{ driverVersion }}
-                {% break %}
+        {% if metadata.MaxSupportedDriverVersion != nil %}
+          {{ metadata.MaxSupportedDriverVersion }}
+        {% else %}
+          {% for driverVersion in otd_versions %}
+            {% assign driverVersionSplit = driverVersion | split: '.' %}
+            {% if driverVersionSplit[0] == supportedDriverVersionSplit[0] %}
+              {% if driverVersionSplit[1] == supportedDriverVersionSplit[1] %}
+                {% if driverVersionSplit[2] >= supportedDriverVersionSplit[2] %}
+                  {{ driverVersion }}
+                  {% break %}
+                {% endif %}
               {% endif %}
             {% endif %}
-          {% endif %}
-        {% endfor %}
+          {% endfor %}
+        {% endif %}
       {%- endcapture -%}
       <div class="card mb-2 plugin-metadata-card"
           data-name="{{ metadata.Name }}" data-version="{{ metadata.SupportedDriverVersion }}">

@@ -51,6 +51,7 @@ As a workaround, do not use "Left Click" as your binding to "Fire" action. Inste
 ## Art Programs
 
 Use [Windows Ink](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk) plugin to enable pressure support.
+OpenTabletDriver does not support the WinTab API.
 
 ### Clip Studio Paint
 

@@ -1,14 +1,10 @@
 {
   "project": {
     "latestRelease": {
-      "deb":
-        "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.deb",
-      "rpm":
-        "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm",
-      "osx-x64":
-        "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.osx-x64.tar.gz",
-      "win-x64":
-        "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.win-x64.zip"
+      "deb": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.deb",
+      "rpm": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm",
+      "osx-x64": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.osx-x64.tar.gz",
+      "win-x64": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.win-x64.zip"
     },
     "buildInstructions": {
       "linux": "https://github.com/OpenTabletDriver/OpenTabletDriver#linux"
@@ -33,10 +29,8 @@
       "wiki": "https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk"
     },
     "Microsoft": {
-      "AdjustUAC":
-        "https://learn.microsoft.com/en-us/mem/intune/user-help/you-need-to-enable-uac-windows#adjust-protection-level",
-      "DotnetLinuxPackageMixup":
-        "https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions"
+      "AdjustUAC": "https://learn.microsoft.com/en-us/mem/intune/user-help/you-need-to-enable-uac-windows#adjust-protection-level",
+      "DotnetLinuxPackageMixup": "https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions"
     },
     "WinUSB": {
       "zadig": "https://github.com/pbatard/libwdi/releases/download/v1.5.0/zadig-2.8.exe"

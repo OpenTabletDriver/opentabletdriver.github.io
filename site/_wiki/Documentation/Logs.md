@@ -4,9 +4,9 @@ title: Logs
 
 ### GUI
 
-To view logs, click on the `Console` tab. Optionally, change filter from `Information` to `Debug` for more detailed logs.
+To view logs, click on the <kbd>Console</kbd> tab. Optionally, change filter from <kbd>Information</kbd> to <kbd>Debug</kbd> for more detailed logs.
 
-To export logs, click `Help` -> `Export diagnostics...` in the top menu bar.
+To export logs, click <kbd>Help</kbd> ⇒ <kbd>Export diagnostics</kbd> in the top menu bar.
 
 Sometimes, the OpenTabletDriver daemon can crash hard enough that the errors can't be
 sent to the GUI. In this case, you can find a

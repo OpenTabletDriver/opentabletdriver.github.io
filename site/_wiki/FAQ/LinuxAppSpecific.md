@@ -6,7 +6,7 @@ title: Linux App-specific FAQ
 
 #### osu! is not detecting input from my tablet (Wayland)
 
-Do not use `Absolute Mode` as your output mode. Use `Artist Mode` instead. Wine and XWayland currently has issues with parsing absolute mouse input.
+Do not use <kbd>Absolute Mode</kbd> as your output mode. Use <kbd>Artist Mode</kbd> instead. Wine and XWayland currently has issues with parsing absolute mouse input.
 
 Please note that libinput adds smoothing on top of this output mode by default. See [here]({% link _wiki/FAQ/Linux.md %}#libinput-smoothing) for more information on how to remove the smoothing from Artist Mode.
 

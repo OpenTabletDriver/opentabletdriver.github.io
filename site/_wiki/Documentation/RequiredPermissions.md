@@ -155,6 +155,6 @@ OpenTabletDriver requires the following permissions:
 |  Accessibility   | To move the cursor
 | Input Monitoring | To read the current cursor position and properly send relative movements (relative mode)
 
-To grant this, navigate to `Settings -> System Preferences -> Security and Privacy -> Privacy`, then check the permissions required.
+To grant this, navigate to <kbd>Settings</kbd> ⇒ <kbd>System Preferences</kbd> ⇒ <kbd>Security and Privacy</kbd> ⇒ <kbd>Privacy</kbd>, then check the permissions required.
 
 If they are already checked and problems persist, try unchecking and then rechecking them again.

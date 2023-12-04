@@ -34,22 +34,22 @@ or alternatively, see if there is a [tablet model specific FAQ]({% link _wiki/FA
 The following table describes the location of the default application data directory for each operating system:
 
 | Operating System | Path |
-| --- | --- |
-| Windows | `%localappdata%\OpenTabletDriver` |
-| Linux | `~/.config/OpenTabletDriver` |
-| macOS | `~/Library/Application Support/OpenTabletDriver` |
+| :--------------: | :--- |
+|      Windows     | `%localappdata%\OpenTabletDriver`
+|       Linux      | `~/.config/OpenTabletDriver`
+|       macOS      | `~/Library/Application Support/OpenTabletDriver`
 
-Its contents are as follows:
+The application data directory contents are as follows:
 
-| Entry | Type | Description |
-| --- | --- | --- |
-| `settings.json` | File | Stores the driver settings |
-| `tablet-data.txt` | File | Stores the recorded tablet data from Tablet Debugger |
-| `daemon.log` | File | Contains a stack trace when daemon crashes |
-| Backup | Directory | Contains backups of OpenTabletDriver binaries and settings triggered by updates |
-| Cache | Directory | Contains cached Github data for fast browsing within Plugin Manager |
-| Plugins | Directory | Contains plugins. This should not be manually modified unless you know what you're doing |
-| Presets | Directory | Contains saved presets |
+|       Entry       |  Type  | Description |
+| :---------------: | :----: | :---------- |
+|  `settings.json`  |  File  | Stores the driver settings
+| `tablet-data.txt` |  File  | Stores the recorded tablet data from Tablet Debugger
+|   `daemon.log`    |  File  | Contains a stack trace if the daemon has crashed
+|      Backup       | Folder | Contains old versions of OpenTabletDriver and its settings
+|       Cache       | Folder | Contains cached metadata for the Plugin Manager
+|      Plugins      | Folder | Contains installed plugins (`.dll` files). This folder should not be modified manually.
+|      Presets      | Folder | Contains saved presets
 
 ### My cursor is going crazy! It teleports everywhere! {#emi-interference}
 
@@ -90,26 +90,30 @@ Uninstall any other tablet drivers you have installed.
 
 #### Conversion through manual calculation
 
-| Term | Definition |
-| --- | --- |
-| Width | The width of the area in millimeters |
-| Height | The height of the area in millimeters |
-| TWidth | The width of the tablet's digitizer in millimeters. Can be found in tablet's configuration file |
-| THeight | The height of the tablet's digitizer in millimeters. Can be found in the tablet's configuration file |
-| XOffset | The X offset of the center of the area in millimeters |
-| YOffset | The Y offset of the center of the area in millimeters |
-| LPI | Lines per inch, this is commonly 5080 or 2540 |
+Use this reference chart for the upcoming formulas:
+
+|  Term   | Definition |
+| :-----: | :--------- |
+|  Width  | The width of the area in millimeters
+| Height  | The height of the area in millimeters
+| TWidth  | The width of the tablet's digitizer in millimeters. Can be found in the tablet's configuration file.
+| THeight | The height of the tablet's digitizer in millimeters. Can be found in the tablet's configuration file.
+| XOffset | The X offset of the center of the area in millimeters
+| YOffset | The Y offset of the center of the area in millimeters
+|   LPI   | Lines per inch, this is commonly 5080 or 2540
+
+`TWidth` and `THeight` can be found in the tablet's configuration file.
 
 Use the following formulas to get values for the area editor's `Width`, `Height`, `XOffset`, and `YOffset` fields.
 
 ##### Wacom and Veikk
 
-| Term | Definition |
-| --- | --- |
-| Left | The number of lines from the left side of the tablet to the left side of the area |
-| Top | The number of lines from the top side of the tablet to the top side of the area |
-| Right | The number of lines from the left side of the tablet to the right side of the area |
-| Bottom | The number of lines from the top side of the tablet to the bottom side of the area |
+|  Term  | Definition |
+| :----: | :--------- |
+|  Left  | The number of lines from the left side of the tablet to the left side of the area
+|  Top   | The number of lines from the top side of the tablet to the top side of the area
+| Right  | The number of lines from the left side of the tablet to the right side of the area
+| Bottom | The number of lines from the top side of the tablet to the bottom side of the area
 
 Formula:
 
@@ -123,11 +127,11 @@ YOffset = (Top / LPI * 25.4) + (Height / 2)
 ##### XP-Pen
 
 | Term | Definition |
-| --- | --- |
-| XPW | The width in XP-Pen units. Denoted as `W` in XP-Pen's official drivers |
-| XPH | The height in XP-Pen units. Denoted as `H` in XP-Pen's official drivers |
-| XPX | The X offset of the top left corner of the area in XP-Pen units. Denoted as `X` in XP-Pen's official drivers |
-| XPY | The Y offset of the top left corner of the area in XP-Pen units. Denoted as `Y` in XP-Pen's official drivers |
+| :--: | :--------- |
+| XPW  | The width in XP-Pen units. Denoted as `W` in XP-Pen's official drivers.
+| XPH  | The height in XP-Pen units. Denoted as `H` in XP-Pen's official drivers.
+| XPX  | The X offset of the top left corner of the area in XP-Pen units. Denoted as `X` in XP-Pen's official drivers.
+| XPY  | The Y offset of the top left corner of the area in XP-Pen units. Denoted as `Y` in XP-Pen's official drivers.
 
 Formula:
 
@@ -140,12 +144,12 @@ YOffset = (Height / 2) + (XPY / 3.937)
 
 ##### Huion and Gaomon
 
-| Term | Definition |
-| --- | --- |
-| Left | The percentage of the distance from the left side of the tablet to the left side of the area |
-| Top | The percentage of the distance from the top side of the tablet to the top side of the area |
-| Right | The percentage of the distance from the left side of the tablet to the right side of the area |
-| Bottom | The percentage of the distance from the top side of the tablet to the bottom side of the area |
+|  Term  | Definition |
+| :----: | --- |
+|  Left  | The percentage of the distance from the left side of the tablet to the left side of the area
+|  Top   | The percentage of the distance from the top side of the tablet to the top side of the area
+| Right  | The percentage of the distance from the left side of the tablet to the right side of the area
+| Bottom | The percentage of the distance from the top side of the tablet to the bottom side of the area
 
 Formula:
 

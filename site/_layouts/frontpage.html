@@ -3,7 +3,7 @@ layout: default
 ---
 <section class="py-5 text-center">
     <h1 class="col-lg-6 col-md-8 mx-auto">{{ site.title }}</h1>
-    <h5 class="my-2 text-center">v{{ site.otd_versions | reverse | first }}</h5>
+    <h5 class="my-2 text-center">v{{ site.data.otd-versions | reverse | first }}</h5>
     {{ content }}
 </section>
 {% include platformcards.html %}

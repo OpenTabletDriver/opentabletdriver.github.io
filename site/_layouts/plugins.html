@@ -47,7 +47,7 @@ layout: default
     {%- for metadata in plugins -%}
       {% assign supportedDriverVersionSplit = metadata.SupportedDriverVersion | split: '.' %}
       {% assign maxSupportedDriverVersion = "" %}
-      {% assign otd_versions = site.otd_versions | reverse %}
+      {% assign otd_versions = site.data.otd-versions | reverse %}
       {%- capture maxSupportedDriverVersion -%}
         {% for driverVersion in otd_versions %}
           {% assign driverVersionSplit = driverVersion | split: '.' %}

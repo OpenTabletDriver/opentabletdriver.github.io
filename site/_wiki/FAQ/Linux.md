@@ -139,4 +139,4 @@ You should restart the OpenTabletDriver daemon after updating this file.
 
 ### Still have problems? {#discord}
 
-If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.discord_invite_url }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.
+If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.data.links.project.DiscordInvite }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

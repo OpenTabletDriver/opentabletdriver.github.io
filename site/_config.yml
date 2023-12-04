@@ -30,12 +30,6 @@ sass:
 liquid:
   strict_filters: true
 
-# Site variables
-otd_release_url:
-  https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download # no slash at end
-discord_invite_url: https://discord.gg/9bcMaPkVAR
-github_otd_repo_url: https://github.com/OpenTabletDriver/OpenTabletDriver
-
 # Sets default values according to scope
 # See https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:

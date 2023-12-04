@@ -32,7 +32,7 @@ If it is not an EMI issue and you still wanna remove the shakiness, try one of t
 
 #### Valorant is not detecting input from my tablet
 
-Use the [`VMultiMode` plugin's](https://github.com/X9VoiD/VoiDPlugins/wiki/VMultiMode) `VMulti Relative Mode` as OpenTabletDriver's output mode.
+Use the [`VMultiMode` plugin's]({{ site.data.links.external.VMultiModePlugin.wiki }}) `VMulti Relative Mode` as OpenTabletDriver's output mode.
 
 **Make sure to read the following text before running Valorant.**
 
@@ -50,7 +50,7 @@ As a workaround, do not use "Left Click" as your binding to "Fire" action. Inste
 
 ## Art Programs
 
-Use [Windows Ink](https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk) plugin to enable pressure support.
+Use [Windows Ink]({{ site.data.links.external.WindowsInkPlugin.wiki }}) plugin to enable pressure support.
 OpenTabletDriver does not support the WinTab API.
 
 ### Clip Studio Paint

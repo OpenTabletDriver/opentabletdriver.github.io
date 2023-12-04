@@ -102,7 +102,7 @@ if [ -f /etc/modprobe.d/blacklist.conf ]; then
   sudo rm /etc/modprobe.d/blacklist.conf
 fi
 
-git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git
+git clone {{ site.data.links.project.GitRepo }}
 cd OpenTabletDriver
 
 ./generate-rules.sh | sudo tee /etc/udev/rules.d/70-opentabletdriver.rules
@@ -144,7 +144,7 @@ your distro's documentation on how to "install" the resulting generic binary tar
 
 ### Built from source
 
-Make sure you built OpenTabletDriver via [these instructions](https://github.com/OpenTabletDriver/OpenTabletDriver#linux) and extracted the generic binary tarball correctly.
+Make sure you built OpenTabletDriver via [these instructions]({{ site.data.links.project.buildInstructions.linux }}) and extracted the generic binary tarball correctly.
 
 ## macOS {#macos}
 

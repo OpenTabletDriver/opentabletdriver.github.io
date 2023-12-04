@@ -22,6 +22,10 @@ indent_size = 4
 # as with markdown, not having this results in readability-vs-presentation confusion
 max_line_length = unset
 
+[*.json]
+# can't really "wrap lines" in json
+max_line_length = unset
+
 ### UPSTREAM/GENERATED FILES ###
 [{_includes/toc.html,LICENSE,Gemfile.lock,.gitmodules,CNAME,assets/css/rougehl.css}]
 max_line_length = unset

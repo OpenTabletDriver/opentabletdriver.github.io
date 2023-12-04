@@ -7,7 +7,7 @@ title: General FAQ
 Verify if your tablet is in the list of supported tablets [here]({% link _sections/Tablets.md %}). If it is not, you may do one of the following:
 
 - [Create a tablet support request in Github.](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/new?assignees=&labels=configuration&projects=&template=tablet_configuration.yml&title=Add+support+for+)
-- [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.discord_invite_url }})
+- [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.data.links.project.DiscordInvite }})
 - [Write the tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
 
 ### My tablet is supported but not detected? {#tablet-not-detected}
@@ -69,7 +69,7 @@ uninstalled all other tablet drivers before using OpenTabletDriver.
 
 #### Windows
 
-Run [TabletDriverCleanup](https://github.com/X9VoiD/TabletDriverCleanup/releases/latest) to remove
+Run [TabletDriverCleanup]({{ site.data.links.external.TabletDriverCleanup.latest }}) to remove
 all other tablet drivers.
 
 #### Linux

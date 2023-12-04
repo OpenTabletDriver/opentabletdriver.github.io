@@ -5,7 +5,7 @@ hide_from_auto_list: true
 
 ### Ubuntu / Debian {#debian}
 
-1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.deb) <small class="text-muted">(OpenTabletDriver.deb)</small>
+1. Download the [latest release]({{ site.data.links.project.latestRelease.deb }}) <small class="text-muted">(OpenTabletDriver.deb)</small>
 2. Run the following commands in a terminal
 
     ```bash
@@ -21,11 +21,11 @@ hide_from_auto_list: true
 
 If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause `libhostfxr` issues.
 
-See solutions from Microsoft [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup#solutions) and remove the Microsoft repositories and packages if you're experiencing `libhostfxr` issues.
+See solutions from Microsoft [here]({{ site.data.links.external.Microsoft.DotnetLinuxPackageMixup }})and remove the Microsoft repositories and packages if you're experiencing `libhostfxr` issues.
 
 ### Fedora {#rpm}
 
-1. Download the [latest release]({{ site.otd_release_url }}/OpenTabletDriver.rpm) <small class="text-muted">(OpenTabletDriver.rpm)</small>
+1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
 2. Run the following commands in a terminal
 
     ```bash

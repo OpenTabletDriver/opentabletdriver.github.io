@@ -23,7 +23,7 @@ Alternatively you can install it to a new directory.
 
     `C:\Users\<username>\OpenTabletDriver-{{ site.data.otd-versions | last }}`
 
-3. Run `OpenTabletDriver.UX.Wpf.exe` in the extracted directory.
+3. Run `{% otdexe windows-ui %}` in the extracted directory.
 
     > You can create a shortcut to this file, just make sure that the working directory points
       to the extracted directory.

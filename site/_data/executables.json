@@ -1,0 +1,14 @@
+{
+  "_overrides": {
+    "windows": {
+      "ui": "UX.Wpf"
+    },
+    "linux": {
+      "ui": "UX.Gtk"
+    }
+  },
+  "_base": "OpenTabletDriver",
+  "console": "Console",
+  "daemon": "Daemon",
+  "ui": "UI"
+}

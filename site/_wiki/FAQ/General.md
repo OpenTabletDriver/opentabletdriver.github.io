@@ -86,7 +86,7 @@ Uninstall any other tablet drivers you have installed.
 
 - Right click the Tablet Area Editor
 - Click the `Convert Item` menu item
-- Select your target OEM driver, and insert the appropriate values
+- Select the OEM driver to convert from, then input the appropriate values to the converter
 
 #### Conversion through manual calculation
 

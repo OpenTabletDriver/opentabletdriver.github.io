@@ -45,38 +45,54 @@ layout: default
   <div id="metadataList">
     {% assign plugins = plugins | sort: "Name" %}
     {%- for metadata in plugins -%}
-      {% assign maxDriverVersionSplit = metadata.SupportedDriverVersion | split: '.' %}
-      {%- capture maxDriverVersion -%}
-        {% if maxDriverVersionSplit[0] == "0" %}
-          {% assign nextMinor = maxDriverVersionSplit[1] | plus: 1 %}
-          0.{{ nextMinor }}.0.0
-        {% else %}
-          {% assign nextMajor = maxDriverVersionSplit[0] | plus: 1 %}
-          {{ nextMajor }}.0.0.0
-        {% endif %}
+      {% assign supportedDriverVersionSplit = metadata.SupportedDriverVersion | split: '.' %}
+      {% assign maxSupportedDriverVersion = "" %}
+      {% assign otd_versions = site.data.otd-versions | reverse %}
+      {%- capture maxSupportedDriverVersion -%}
+        {% for driverVersion in otd_versions %}
+          {% assign driverVersionSplit = driverVersion | split: '.' %}
+          {% if driverVersionSplit[0] == supportedDriverVersionSplit[0] %}
+            {% if driverVersionSplit[1] == supportedDriverVersionSplit[1] %}
+              {% if driverVersionSplit[2] >= supportedDriverVersionSplit[2] %}
+                {{ driverVersion }}
+                {% break %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
       {%- endcapture -%}
       <div class="card mb-2 plugin-metadata-card"
           data-name="{{ metadata.Name }}" data-version="{{ metadata.SupportedDriverVersion }}">
-        <div class="card-body d-flex flex-sm-row flex-column">
-          <div class="flex-sm-fill p-2">
-            <span class="h4">{{ metadata.Name }}</span>
-            <span class="text-sm text-muted"> - {{ metadata.Owner }} - {{ metadata.PluginVersion }}</span><br/>
-            <div class="mt-2">
+        <div class="card-body d-flex flex-lg-row flex-column flex-wrap p-4 justify-content-end">
+          <div class="flex-fill">
+            <!-- version badges -->
+            <div class="d-flex flex-row mb-2">
+              <span class="badge bg-primary me-2"
+                  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Version of this plugin">{{ metadata.PluginVersion }}</span>
+              <span class="badge bg-success me-2"
+                  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Oldest compatible OpenTabletDriver version">{{ metadata.SupportedDriverVersion }}</span>
+              <span class="badge bg-success"
+                  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Newest compatible OpenTabletDriver version">{{ maxSupportedDriverVersion }}</span>
+            </div>
+            <!-- plugin name -->
+            <span class="h4" style="margin-bottom: 0px; display: block;">{{ metadata.Name }}</span>
+            <!-- plugin author -->
+            <span class="small" style="margin-top: -2px; display: block">by {{ metadata.Owner }}</span>
+            <!-- plugin body -->
+            <div class="my-2">
               {{ metadata.Description }}
             </div>
           </div>
-          <div class="d-flex flex-column p-2 text-end">
-            <div class="mb-1">
-              <span class="text-muted">Driver Compatibility: &gt;= {{ metadata.SupportedDriverVersion }}, &lt; {{ maxDriverVersion }}</span>
-            </div>
-            <div class="mt-auto">
+          <div class="align-self-end">
+            <!-- buttons -->
+            <div class="btn-group">
               {%- if metadata.DownloadUrl -%}
-              <a role="button" class="btn btn-primary me-1 w-10" href="{{ metadata.DownloadUrl }}">
+              <a role="button" class="btn btn-primary" href="{{ metadata.DownloadUrl }}">
                 Download
               </a>
               {%- endif -%}
               {%- if metadata.WikiUrl -%}
-              <a role="button" class="btn btn-info me-1" href="{{ metadata.WikiUrl }}">
+              <a role="button" class="btn btn-info" href="{{ metadata.WikiUrl }}">
                 Wiki
               </a>
               {%- endif -%}

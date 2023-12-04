@@ -96,7 +96,7 @@ Use GIMP 2.99 to have Windows Ink support. GIMP 2.10 and below does not support 
 
 1. Open FireAlpaca
 2. Go to <kbd>File</kbd> ⇒ <kbd>Brush Environment Settings</kbd>
-3. For <kbd>Select Pen Pressure API</kbd>, select any option that includes <kbd>TabletPC</kbd>
+3. For <kbd>Select Pen Pressure API</kbd>, select any option that includes `TabletPC`
 
 ### Paint Tool SAI
 

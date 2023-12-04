@@ -27,6 +27,9 @@ url: https://opentabletdriver.net # full URI to website
 sass:
   sass_dir: _sass
 
+liquid:
+  strict_filters: true
+
 # Site variables
 latest_otd_version: v0.6.3.0
 

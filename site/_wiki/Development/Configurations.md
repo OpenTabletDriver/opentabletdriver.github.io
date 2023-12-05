@@ -85,7 +85,7 @@ pinpoint devices.
 
 ### Attributes
 
-Attributes are used as platform specific properties to be used within utilities or tools.
+Attributes are used to provide additional optional information, commonly used within utilities or tools, or within OpenTabletDriver to help with device detection.
 
 The type of the object is `Dictionary<string, string>`, e.g. `{ "FeatureInitDelayMs": "150", "libinputoverride": "1" }`.
 
@@ -94,9 +94,9 @@ Some example attributes include:
 |       Key Name       |      String Value     | Description |
 | :------------------: | :-------------------: | :---------- |
 |  `libinputoverride`  |          `1`          | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
-|    `MacInterface`    | non-negative integer  | *(MacOS only)* Which interface the correct tablet endpoint exists on. This helps with "randomly incorrect" detection. See the [MacInterface PR].
-|    `WinInterface`    | regex-friendly string | *(Windows only)* Similar to `MacInterface`, but matches file system path of the device with the regex `&mi_{s}`, where `{s}` is your string.
-|      `WinUsage`      | regex-friendly string | *(Windows only)* Similar to `WinInterface`, but instead checks with the regex `&col{s}`, where `{s}` is your string.
+|    `MacInterface`    | non-negative integer  | *(MacOS only)* Specifies the USB device interface to use. For example: `0`
+|    `WinInterface`    | non-negative integer (digits: 2) | *(Windows only)* Similar to `MacInterface`. String should have exactly two digits, e.g., `01`
+|      `WinUsage`      | non-negative integer (digits: 2) | *(Windows only)* Specifies the HID usage collection to use. String should have exactly two digits, e.g., `01`
 | `FeatureInitDelayMs` |      milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
 
 [MacInterface PR]: https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1734 "github.com OpenTabletDriver Pull Request #1734: Fix device interface matching for uc-logic/tablet 1060n on macos"

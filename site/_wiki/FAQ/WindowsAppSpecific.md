@@ -77,7 +77,7 @@ If Photoshop CC is not detecting pressure, try the following:
 UseSystemStylus 1
 ```
 
-Replace `2023` with your version number if you're using a different version of Photoshop CC.
+> Replace `2023` with your version number if you're using a different version of Photoshop CC.
 
 ### Krita
 

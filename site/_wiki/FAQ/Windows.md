@@ -4,7 +4,7 @@ hide_from_auto_list: true
 ---
 
 - **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
-first before continuing.**
+  first before continuing.**
 - Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
 
 ### My tablet is supported but not detected? {#troubleshooting}
@@ -134,8 +134,9 @@ If you are experiencing random crashes with no warning, or the interface is comp
 If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTabletDriver by blacklisting it in its settings.
 
 - Open RivaTuner Statistics Server.
-- Click on Add button found in the bottom left corner.
-- Locate OpenTabletDriver.UX.Wpf.exe on your computer then select it. Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
+- Click on the Add button, found in the bottom left corner.
+- Locate `OpenTabletDriver.UX.Wpf.exe` on your computer, then select it.
+  > Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
 - Click on "Application Detection Level" then select "None".
 
 ### Still have problems? {#discord}

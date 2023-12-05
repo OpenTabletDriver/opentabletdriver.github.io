@@ -32,7 +32,7 @@ If it is not an EMI issue and you still wanna remove the shakiness, try one of t
 
 #### Valorant is not detecting input from my tablet
 
-Use the [`VMultiMode` plugin's]({{ site.data.links.external.VMultiModePlugin.wiki }}) <kbd>VMulti Relative Mode</kbd> as OpenTabletDriver's output mode.
+Use the [`VMultiMode` plugin's]({{ site.data.links.external.VMultiModePlugin.wiki }}) `VMulti Relative Mode` as OpenTabletDriver's output mode.
 
 **Make sure to read the following text before running Valorant.**
 

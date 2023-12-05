@@ -28,4 +28,4 @@ jobs:
         with:
           files: .
           dot: true
-          ignore_files: site/_includes/tablets.md # upstream file
+          ignore_files: site/_includes/ # needs special treatment, ignore for now

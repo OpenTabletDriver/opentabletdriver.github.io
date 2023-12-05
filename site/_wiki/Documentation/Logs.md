@@ -28,5 +28,9 @@ journalctl --user-unit opentabletdriver.service
 If the daemon crashes from an "unrecoverable" exception, the `daemon.log` file will
 include a stack trace defining where the error happened, which is useful for debugging.
 
-The `daemon.log` file is in the application data folder of OpenTabletDriver.
-The location of which is specified [here]({% link _wiki/FAQ/General.md %}#appdata)
+The `daemon.log` file is in the application data folder, located here:
+
+{% include appdata-location.md %}
+
+> For more details on what else is contained in OpenTabletDriver's application data,
+  see [here]({% link _wiki/FAQ/General.md %}#appdata)

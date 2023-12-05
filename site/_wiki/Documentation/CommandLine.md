@@ -17,6 +17,11 @@ title: Command Line Arguments
 
 ### Console
 
+This is a very limited list of the available commands in the console app, since the command names
+can vary between driver versions.
+
+Use the `--help` argument to see the list of supported commands in your specific version.
+
 |          Argument        | Description |
 | :----------------------: | ----------- |
 |        `--version`       | Shows the compatible OpenTabletDriver daemon version

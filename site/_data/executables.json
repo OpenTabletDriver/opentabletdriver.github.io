@@ -3,6 +3,10 @@
     "windows": {
       "ui": "UX.Wpf"
     },
+    "macos": {
+      "ui": "UX.MacOS",
+      "extractor": "app"
+    },
     "linux": {
       "ui": "UX.Gtk"
     }
@@ -10,5 +14,6 @@
   "_base": "OpenTabletDriver",
   "console": "Console",
   "daemon": "Daemon",
-  "ui": "UI"
+  "ui": "UI",
+  "extractor": ""
 }

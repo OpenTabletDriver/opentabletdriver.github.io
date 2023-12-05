@@ -10,7 +10,7 @@ To export logs, click `Help` -> `Export diagnostics...` in the top menu bar.
 
 Sometimes, the OpenTabletDriver daemon can crash hard enough that the errors can't be
 sent to the GUI. In this case, you can find a
-partial log in the [Exception Log Location](#daemon-log).
+partial log in the location specified [here](#daemon-log).
 
 ### Daemon
 

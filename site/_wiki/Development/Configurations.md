@@ -91,14 +91,13 @@ The type of the object is `Dictionary<string, string>`, e.g. `{ "FeatureInitDela
 
 Some example attributes include:
 
-|       Key Name       |      String Value     | Description |
-| :------------------: | :-------------------: | :---------- |
-|  `libinputoverride`  |          `1`          | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
-|    `MacInterface`    | non-negative integer  | *(MacOS only)* Specifies the USB device interface to use. For example: `0`
-|    `WinInterface`    | non-negative integer (digits: 2) | *(Windows only)* Similar to `MacInterface`. String should have exactly two digits, e.g., `01`
-|      `WinUsage`      | non-negative integer (digits: 2) | *(Windows only)* Specifies the HID usage collection to use. String should have exactly two digits, e.g., `01`
-| `FeatureInitDelayMs` |      milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
+|       Key Name       |     String Value     | Description |
+| :------------------: | :------------------: | :---------- |
+|  `libinputoverride`  |         `1`          | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
+|    `MacInterface`    | non-negative integer | *(MacOS only)* Specifies the USB device interface to use. For example: `0`
+|    `WinInterface`    |       [00..99]       | *(Windows only)* Similar to `MacInterface`. String must have exactly two digits, (e.g. `"01"`)
+|      `WinUsage`      |       [00..99]       | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
+| `FeatureInitDelayMs` |     milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
 
-[MacInterface PR]: https://github.com/OpenTabletDriver/OpenTabletDriver/pull/1734 "github.com OpenTabletDriver Pull Request #1734: Fix device interface matching for uc-logic/tablet 1060n on macos"
 [libinput]: https://www.freedesktop.org/wiki/Software/libinput/ "freedesktop.org's site on libinput"
 [udev]: https://wiki.debian.org/udev

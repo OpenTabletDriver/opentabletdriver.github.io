@@ -21,7 +21,7 @@ Alternatively you can install it to a new directory.
 
     > Replace `<username>` with your username in the example below.
 
-    `C:\Users\<username>\OpenTabletDriver-{{ site.latest_otd_version }}`
+    `C:\Users\<username>\OpenTabletDriver-{{ site.data.otd-versions | last }}`
 
 3. Run `OpenTabletDriver.UX.Wpf.exe` in the extracted directory.
 

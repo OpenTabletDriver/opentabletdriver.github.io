@@ -82,7 +82,7 @@ If you wish to convert your existing install to a portable install, the `convert
 
 ### How to fix "Connecting to daemon has timed out" error? {#no-daemon}
 
-Check if `OpenTabletDriver.Daemon` and `OpenTabletDriver.UX.Wpf` is in the same folder. This should be the case if the [Installation]({% link _wiki/Install/Windows.md %}) instructions were followed correctly.
+Check if `{% otdexe windows-daemon %}` and `{% otdexe windows-ui %}` is in the same folder. This should be the case if the [Installation]({% link _wiki/Install/Windows.md %}) instructions were followed correctly.
 
 If both files are in the same folder, the daemon may have crashed during launch.
 
@@ -97,7 +97,7 @@ If both files are in the same folder, the daemon may have crashed during launch.
 
 The following is just one of the multiple ways that you may launch OTD at startup.
 
-- Right click `OpenTabletDriver.UX.Wpf.exe` and select `Create shortcut`.
+- Right click `{% otdexe windows-ui %}` and select `Create shortcut`.
 - Press <kbd>Win</kbd> + <kbd>R</kbd> to open the Run dialog.
 - Type `shell:startup` then press <kbd>Enter</kbd>.
 - Move the shortcut you created earlier to the folder that opened.
@@ -129,13 +129,13 @@ It is likely because you are running OpenTabletDriver with the Administrator acc
 
 ### OpenTabletDriver is completely blank {#rtss}
 
-If you are experiencing random crashes with no warning, or the interface is completely blank and/or not accepting input, and you have RivaTuner Statistics Server installed, it may be hooking into OpenTabletDriver and prevents OpenTabletDriver.UX.Wpf from functioning correctly.
+If you are experiencing random crashes with no warning, or the interface is completely blank and/or not accepting input, and you have RivaTuner Statistics Server installed, it may be hooking into OpenTabletDriver and therefore prevents {% otdexe windows-ui %} from functioning correctly.
 
 If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTabletDriver by blacklisting it in its settings.
 
 - Open RivaTuner Statistics Server.
 - Click on the Add button, found in the bottom left corner.
-- Locate `OpenTabletDriver.UX.Wpf.exe` on your computer, then select it.
+- Locate `{% otdexe windows-ui %}` on your computer, then select it.
   > Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
 - Click on "Application Detection Level" then select "None".
 

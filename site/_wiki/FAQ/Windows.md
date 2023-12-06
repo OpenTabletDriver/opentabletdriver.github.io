@@ -97,7 +97,7 @@ If both files are in the same folder, the daemon may have crashed during launch.
 
 The following is just one of the multiple ways that you may launch OTD at startup.
 
-- Right click `{% otdexe windows-ui %}` and select `Create shortcut`.
+- Right click `{% otdexe windows-ui %}` and select <kbd>Create shortcut</kbd>.
 - Press <kbd>Win</kbd> + <kbd>R</kbd> to open the Run dialog.
 - Type `shell:startup` then press <kbd>Enter</kbd>.
 - Move the shortcut you created earlier to the folder that opened.
@@ -137,7 +137,7 @@ If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTablet
 - Click on the Add button, found in the bottom left corner.
 - Locate `{% otdexe windows-ui %}` on your computer, then select it.
   > Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
-- Click on "Application Detection Level" then select "None".
+- Click on <kbd>Application Detection Level</kbd> then select <kbd>None</kbd>.
 
 ### Still have problems? {#discord}
 

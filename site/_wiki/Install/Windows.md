@@ -42,9 +42,9 @@ Only install WinUSB if it is explicitly listed for your tablet.</u>**
 1. If your tablet requires WinUSB, download it
    from [here]({{ site.data.links.external.WinUSB.zadig }}).
 2. Start Zadig.
-3. Go to `Options > show all devices`.
+3. Go to <kbd>Options</kbd> ⇒ <kbd>Show All Devices</kbd>.
 4. Find your tablet with the correct interface number on the device list.
-5. Click `Replace Driver.`
+5. Click <kbd>Replace Driver</kbd>
 
 ### Post-Installation {#post-install}
 

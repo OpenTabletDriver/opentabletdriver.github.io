@@ -81,7 +81,7 @@ Uninstall any other tablet drivers you have installed.
 #### Conversion through the OpenTabletDriver UI
 
 - Right click the Tablet Area Editor
-- Click the `Convert Item` menu item
+- Click the <kbd>Convert Item</kbd> menu item
 - Select the OEM driver to convert from, then input the appropriate values to the converter
 
 #### Conversion through manual calculation

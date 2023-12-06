@@ -87,8 +87,8 @@ Try disabling your filters one-by-one and see if input finally works.
 
 Pressure support is available by changing the output mode of OpenTabletDriver to Artist Mode:
 
-- Change output mode (at the bottom left of OpenTabletDriver) to `Artist Mode`.
-- Remove the tip binding in the Pen Settings panel by opening the advanced binding editor (press `...` next to the binding), then press "Clear"
+- Change output mode (at the bottom left of OpenTabletDriver) to <kbd>Artist Mode</kbd>.
+- Remove the tip binding in the Pen Settings panel by opening the advanced binding editor (press <kbd>...</kbd> next to the binding), then press <kbd>Clear</kbd>
 - Save or apply your settings, and then try drawing in an application that supports pressure.
 
 See [here](#artist-mode-bindings) for setting up bindings for Artist Mode.

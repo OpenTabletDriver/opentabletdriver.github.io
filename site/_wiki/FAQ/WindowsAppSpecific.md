@@ -59,8 +59,8 @@ Clip Studio Paint should be using Windows Ink by default. If you are still exper
 pressure, do the following:
 
 1. Open Clip Studio Paint
-2. Go to `File > Preferences > Tablet`
-3. Under `Tablet Service`, select `Tablet PC`
+2. Go to <kbd>File</kbd> ⇒ <kbd>Preferences</kbd> ⇒ <kbd>Tablet</kbd>
+3. Under <kbd>Tablet Service</kbd>, select <kbd>Tablet PC</kbd>
 
 No need to restart the application.
 
@@ -82,10 +82,10 @@ UseSystemStylus 1
 ### Krita
 
 1. Open Krita
-2. Go to `Settings > Configure Krita...`
-3. Go to `Tablet Settings`
-4. Under Tablet Input API, select `Windows 8+ Pointer Input (Windows Ink)`
-5. Click `OK`
+2. Go to <kbd>Settings</kbd> ⇒ <kbd>Configure Krita...</kbd>
+3. Go to <kbd>Tablet Settings</kbd>
+4. Under Tablet Input API, select <kbd>Windows 8+ Pointer Input (Windows Ink)</kbd>
+5. Click <kbd>OK</kbd>
 6. Restart Krita
 
 ### GIMP
@@ -95,8 +95,8 @@ Use GIMP 2.99 to have Windows Ink support. GIMP 2.10 and below does not support 
 ### FireAlpaca
 
 1. Open FireAlpaca
-2. Go to `File > Brush Environment Settings`
-3. For `Select Pen Pressure API`, select any option that includes `TabletPC`
+2. Go to <kbd>File</kbd> ⇒ <kbd>Brush Environment Settings</kbd>
+3. For <kbd>Select Pen Pressure API</kbd>, select any option that includes `TabletPC`
 
 ### Paint Tool SAI
 
@@ -108,46 +108,46 @@ for more information.
 ### Paint Tool SAI 2
 
 1. Open Paint Tool SAI 2
-2. Go to `Other > Options`
-3. Click `Pen Tablet`
-4. Select `Use Windows API (For Windows Vista or later)`
-5. Click `Ok`, then restart Paint Tool SAI 2
+2. Go to <kbd>Other</kbd> ⇒ <kbd>Options</kbd>
+3. Click <kbd>Pen Tablet</kbd>
+4. Select <kbd>Use Windows API (For Windows Vista or later)</kbd>
+5. Click <kbd>OK</kbd>, then restart Paint Tool SAI 2
 
 ### MediBang Paint
 
 1. Open MediBang Paint
-2. Go to `File > Brush Environment Settings`
-3. Enable `Validate native OS pen pressure detection`
-4. Click `OK`
+2. Go to <kbd>File</kbd> ⇒ <kbd>Brush Environment Settings</kbd>
+3. Enable <kbd>Validate native OS pen pressure detection</kbd>
+4. Click <kbd>OK</kbd>
 
 No need to restart the application.
 
 ### Corel Painter
 
 1. Open Corel Painter
-2. Go to `Edit > Preferences > Tablet...`
-3. Click `RTS-compatible device (Real-Time Stylus)`
-4. Click `OK`, then restart Corel Painter
+2. Go to <kbd>Edit</kbd> ⇒ <kbd>Preferences</kbd> ⇒ <kbd>Tablet...</kbd>
+3. Click <kbd>RTS-compatible device (Real-Time Stylus)</kbd>
+4. Click <kbd>OK</kbd>, then restart Corel Painter
 
 ### Rebelle
 
 1. Open Rebelle
-2. Go to `Edit > Preferences`
-3. Click `Tablet`
-4. Select `Windows 8+ Pointer Input` or `Windows Ink Compatible`
-5. Click `OK`, then restart Rebelle
+2. Go to <kbd>Edit</kbd> ⇒ <kbd>Preferences</kbd>
+3. Click <kbd>Tablet</kbd>
+4. Select <kbd>Windows 8+ Pointer Input</kbd> or <kbd>Windows Ink Compatible</kbd>
+5. Click <kbd>OK</kbd>, then restart Rebelle
 
 ### Affinity Photo / Designer
 
 1. Open Affinity Photo / Designer
-2. Go to `Edit > Settings`
-3. Click `Tools`
-4. For `Tablet Input Method`, select `Windows Ink`
-5. Click `OK`, then restart Affinity Photo / Designer
+2. Go to <kbd>Edit</kbd> ⇒ <kbd>Settings</kbd>
+3. Click <kbd>Tools</kbd>
+4. For <kbd>Tablet Input Method</kbd>, select <kbd>Windows Ink</kbd>
+5. Click <kbd>OK</kbd>, then restart Affinity Photo / Designer
 
 ### ArtRage
 
 1. Open ArtRage
-2. Go to `Edit > ArtRage Preferences > Input Device`
-3. Uncheck `Use WinTab`
-4. Click `OK`, then restart ArtRage
+2. Go to <kbd>Edit</kbd> ⇒ <kbd>ArtRage Preferences</kbd> ⇒ <kbd>Input Device</kbd>
+3. Uncheck <kbd>Use WinTab</kbd>
+4. Click <kbd>OK</kbd>, then restart ArtRage

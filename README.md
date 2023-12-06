@@ -43,7 +43,7 @@ For Markdown specifically we use `markdownlint-cli`. Example command:
 
 ```bash
 cd <website root>
-markdownlint --ignore site/vendor/ --ignore site/_data/plugin-repository/ --ignore site/_includes/tablets.md . 2>&1 | less
+markdownlint --ignore site/vendor/ --ignore site/_data/plugin-repository/ --ignore site/_includes/ . 2>&1 | less
 ```
 
 ## Contributors to Old OpenTabletDriver.Web

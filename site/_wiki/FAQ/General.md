@@ -33,11 +33,7 @@ or alternatively, see if there is a [tablet model specific FAQ]({% link _wiki/FA
 
 The following table describes the location of the default application data directory for each operating system:
 
-| Operating System | Path |
-| :--------------: | :--- |
-|      Windows     | `%localappdata%\OpenTabletDriver`
-|       Linux      | `~/.config/OpenTabletDriver`
-|       macOS      | `~/Library/Application Support/OpenTabletDriver`
+{% include appdata-location.md %}
 
 The application data directory contents are as follows:
 

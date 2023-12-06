@@ -85,4 +85,19 @@ pinpoint devices.
 
 ### Attributes
 
-Attributes are used as platform specific properties to be used within utilties or tools.
+Attributes are used to provide additional optional information, commonly used within utilities or tools, or within OpenTabletDriver to help with device detection.
+
+The type of the object is `Dictionary<string, string>`, e.g. `{ "FeatureInitDelayMs": "150", "libinputoverride": "1" }`.
+
+Some example attributes include:
+
+|       Key Name       |     String Value     | Description |
+| :------------------: | :------------------: | :---------- |
+|  `libinputoverride`  |         `1`          | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
+|    `MacInterface`    | non-negative integer | *(MacOS only)* Specifies the USB device interface to use. For example: `0`
+|    `WinInterface`    |       [00..99]       | *(Windows only)* Similar to `MacInterface`. String must have exactly two digits, (e.g. `"01"`)
+|      `WinUsage`      |       [00..99]       | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
+| `FeatureInitDelayMs` |     milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
+
+[libinput]: https://www.freedesktop.org/wiki/Software/libinput/ "freedesktop.org's site on libinput"
+[udev]: https://wiki.debian.org/udev

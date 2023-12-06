@@ -1,9 +1,12 @@
-document.addEventListener('DOMContentLoaded', function(event) {
-  // highlight header first before injecting anchor links to prevent the anchor
-  // links from being destroyed by the highlight function
+document.addEventListener('DOMContentLoaded', injectHandler);
+window.addEventListener('hashchange', injectHandler);
+
+let __InjectedAnchors = false;
+
+function injectHandler(event) {
   highlightHeader();
   injectAnchorLinks();
-});
+}
 
 function getAnchor() {
   let urlParts = document.URL.split('#');
@@ -11,20 +14,30 @@ function getAnchor() {
 }
 
 function highlightHeader() {
+  let duration = 0.25; // animation duration in seconds
+  let iterations = 4; // number of times animation is run
+
   let anchor = getAnchor();
   if (anchor !== null) {
     let element = document.getElementById(anchor);
     if (element !== null) {
-      let span = document.createElement('span');
-      span.textContent = element.textContent;
-      span.style.animation = 'anchor-blink 0.25s ease-in-out 0s 4 alternate'
-      element.textContent = '';
-      element.appendChild(span);
+      element.style.animation = 'anchor-blink ' + duration + 's ease-in-out 0s ' +
+        iterations + ' alternate';
+
+      // unset after animation has run to allow multiple animations per page visit
+      setTimeout(function() {
+        element.style.animation = '';
+      }, duration * iterations * 1000);
     }
   }
 }
 
 function injectAnchorLinks() {
+  if (__InjectedAnchors)
+    return;
+
+  __InjectedAnchors = true;
+
   let targets = [
     '.markdown-content h2',
     '.markdown-content h3',

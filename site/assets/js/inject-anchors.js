@@ -1,12 +1,11 @@
-document.addEventListener('DOMContentLoaded', injectHandler);
-window.addEventListener('hashchange', injectHandler);
-
-let __InjectedAnchors = false;
-
-function injectHandler(event) {
-  highlightHeader();
+document.addEventListener('DOMContentLoaded', (event) => {
   injectAnchorLinks();
-}
+  highlightHeader();
+});
+
+window.addEventListener('hashchange', (event) => {
+  highlightHeader();
+});
 
 function getAnchor() {
   let urlParts = document.URL.split('#');
@@ -33,11 +32,6 @@ function highlightHeader() {
 }
 
 function injectAnchorLinks() {
-  if (__InjectedAnchors)
-    return;
-
-  __InjectedAnchors = true;
-
   let targets = [
     '.markdown-content h2',
     '.markdown-content h3',

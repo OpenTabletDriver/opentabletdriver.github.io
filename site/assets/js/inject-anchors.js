@@ -18,7 +18,7 @@ function highlightHeader() {
 
   let anchor = getAnchor();
   if (anchor !== null) {
-    let element = document.getElementById(anchor);
+    let element = document.querySelector('#' + anchor + ' > span');
     if (element !== null) {
       element.style.animation = 'anchor-blink ' + duration + 's ease-in-out 0s ' +
         iterations + ' alternate';
@@ -44,6 +44,27 @@ function injectAnchorLinks() {
   };
 
   targets.forEach((target) => {
+    // add anchor links
     anchors.add(target);
+
+    // rewrite header's child nodes to wrap the textContent inside a span block.
+    // this is to run the animation on the text without the header's padding
+    document.querySelectorAll(target).forEach((target) => {
+      let headerAnchor = target.querySelector("a.anchorjs-link");
+      let span = document.createElement('span');
+      span.textContent = target.textContent;
+      span.style.display = 'block';
+
+      removeAllChildNodes(target);
+
+      target.appendChild(headerAnchor);
+      target.appendChild(span);
+    });
   });
+}
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }

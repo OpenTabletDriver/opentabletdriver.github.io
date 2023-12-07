@@ -76,7 +76,7 @@ See [here]({% link _wiki/Documentation/RequiredPermissions.md %}#setup-linux).
 
 Uninstall any other tablet drivers you have installed.
 
-### Does OpenTabletDriver support pen pressure?
+### Does OpenTabletDriver support pen pressure? {#pressure}
 
 All of our supported tablets has full pen pressure support unless otherwise noted on
 the [Tablets]({% link _sections/Tablets.md %}) page.

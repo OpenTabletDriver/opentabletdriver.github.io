@@ -1,33 +1,27 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   injectAnchorLinks();
-  highlightHeader();
+
+  // blink on load when an anchor exists in URL
+  highlightHeader(getAnchor(document.URL));
 });
 
-window.addEventListener('hashchange', (event) => {
-  highlightHeader();
-});
-
-function getAnchor() {
-  let urlParts = document.URL.split('#');
-  return urlParts.length > 1 ? urlParts[1] : null;
-}
-
-function highlightHeader() {
+function highlightHeader(anchor) {
   let duration = 0.25; // animation duration in seconds
   let iterations = 4; // number of times animation is run
 
-  let anchor = getAnchor();
-  if (anchor !== null) {
-    let element = document.querySelector('#' + anchor + ' > span');
-    if (element !== null) {
-      element.style.animation = 'anchor-blink ' + duration + 's ease-in-out 0s ' +
-        iterations + ' alternate';
+  if (anchor === null) {
+    return;
+  }
 
-      // unset after animation has run to allow multiple animations per page visit
-      setTimeout(function() {
-        element.style.animation = '';
-      }, duration * iterations * 1000);
-    }
+  let element = document.querySelector('#' + anchor + ' > span');
+  if (element !== null) {
+    element.style.animation = 'anchor-blink ' + duration + 's ease-in-out 0s ' +
+      iterations + ' alternate';
+
+    // unset after animation has run to allow multiple animations per page visit
+    setTimeout(function() {
+      element.style.animation = '';
+    }, duration * iterations * 1000);
   }
 }
 
@@ -43,8 +37,8 @@ function injectAnchorLinks() {
     placement: 'left'
   };
 
+  // add anchor links for each headers
   targets.forEach((target) => {
-    // add anchor links
     anchors.add(target);
 
     // rewrite header's child nodes to wrap the textContent inside a span block.
@@ -61,6 +55,20 @@ function injectAnchorLinks() {
       target.appendChild(span);
     });
   });
+
+  // blink on click on toc
+  let toc = document.getElementById('toc');
+  toc.querySelectorAll('li > a').forEach((tocEntry) => {
+    tocEntry.addEventListener('click', (event) => {
+      let anchor = getAnchor(tocEntry.getAttribute('href'));
+      highlightHeader(anchor);
+    });
+  });
+}
+
+function getAnchor(input) {
+  let parts = input.split('#');
+  return parts.length > 1 ? parts[1] : null;
 }
 
 function removeAllChildNodes(parent) {

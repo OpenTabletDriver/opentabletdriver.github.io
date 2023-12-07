@@ -76,6 +76,22 @@ See [here]({% link _wiki/Documentation/RequiredPermissions.md %}#setup-linux).
 
 Uninstall any other tablet drivers you have installed.
 
+### Does OpenTabletDriver support pen pressure? {#pressure}
+
+All of our supported tablets has full pen pressure support unless otherwise noted on
+the [Tablets]({% link _sections/Tablets.md %}) page.
+
+However, to make the driver output the pressure to your operating system, you may need to perform some changes:
+
+| Operating System |   Wiki Link   | Notes |
+| :--------------: | :-----------: | :---- |
+|      Windows     | [Windows Ink] | A virtual device driver (VMulti) and the Windows Ink plugin is needed
+|       Linux      | [Artist Mode] | Built-in, simply change the output mode of OpenTabletDriver
+|       MacOS      |  unsupported  | This is a work in progress, and is expected with the 0.7 release of OpenTabletDriver
+
+[Windows Ink]: {% link _wiki/FAQ/Windows.md %}#win-ink
+[Artist Mode]: {% link _wiki/FAQ/Linux.md %}#artist-mode
+
 ### How to convert areas to and from OpenTabletDriver? {#area-conversion}
 
 #### Conversion through the OpenTabletDriver UI

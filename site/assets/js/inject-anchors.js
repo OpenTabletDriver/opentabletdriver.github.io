@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   highlightHeader(getAnchor(document.URL));
 });
 
+let __animatingElement = null;
+
 function highlightHeader(anchor) {
   let duration = 0.25; // animation duration in seconds
   let iterations = 4; // number of times animation is run
@@ -15,6 +17,12 @@ function highlightHeader(anchor) {
 
   let element = document.querySelector('#' + anchor + ' > span');
   if (element !== null && element.style.animation === '') {
+    // stop animating previous element
+    if (__animatingElement !== null && __animatingElement !== element) {
+      __animatingElement.style.animation = null;
+    }
+    __animatingElement = element;
+
     element.style.animation = 'anchor-blink ' + duration + 's ease-in-out 0s ' +
       iterations + ' alternate';
 

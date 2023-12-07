@@ -14,7 +14,7 @@ function highlightHeader(anchor) {
   }
 
   let element = document.querySelector('#' + anchor + ' > span');
-  if (element !== null) {
+  if (element !== null && element.style.animation === '') {
     element.style.animation = 'anchor-blink ' + duration + 's ease-in-out 0s ' +
       iterations + ' alternate';
 

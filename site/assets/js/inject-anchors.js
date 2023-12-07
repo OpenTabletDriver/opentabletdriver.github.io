@@ -66,7 +66,7 @@ function injectAnchorLinks() {
 
   // blink on click on toc
   let toc = document.getElementById('toc');
-  toc.querySelectorAll('li > a').forEach((tocEntry) => {
+  toc?.querySelectorAll('li > a').forEach((tocEntry) => {
     tocEntry.addEventListener('click', (event) => {
       let anchor = getAnchor(tocEntry.getAttribute('href'));
       highlightHeader(anchor);

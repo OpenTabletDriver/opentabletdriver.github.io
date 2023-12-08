@@ -74,7 +74,8 @@ html {
 }
 
 #toc a {
-  color:#adb5bd;
+  color:#c4cfda;
+  text-decoration: none;
 }
 
 #toc a:focus,
@@ -84,6 +85,14 @@ html {
 
 #toc {
   padding-left: 1em;
+}
+
+#toc ul {
+  padding-left: 1.5em;
+}
+
+#toc li {
+  padding-left: 1ex;
 }
 
 li {
@@ -180,5 +189,32 @@ div.highlighter-rouge pre.highlight {
     color:#c0c0c0;
     font-style: italic;
     margin-right: 1ex;
+  }
+}
+
+#toc > li {
+  counter-increment: h2-section;
+  &::marker {
+    content: counter(h2-section) ".";
+  }
+}
+
+#toc > li > ul > li {
+  counter-increment: h3-section;
+  &::marker {
+    content: counter(h2-section) "." counter(h3-section) ".";
+  }
+  &:last-child {
+    counter-reset: h3-section;
+  }
+}
+
+#toc > li > ul > li > ul > li {
+  counter-increment: h4-section;
+  &::marker {
+    content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) ".";
+  }
+  &:last-child {
+    counter-reset: h4-section;
   }
 }

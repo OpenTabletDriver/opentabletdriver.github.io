@@ -30,7 +30,7 @@ function injectMarkdownClasses() {
 
   injectMarkdownClass('blockquote', ['alert']);
   injectMarkdownClassConditional('blockquote', hasNoClass(alertTypes), ['alert-secondary']);
-  injectMarkdownClass('& > * blockquote', ['alert-compact', 'small']); // blockquotes that are not an immediate children
+  injectMarkdownClass('& > * blockquote', ['alert-compact', 'small']);
   injectMarkdownClass('blockquote a', ['alert-link']);
   injectMarkdownClass('table', ['table']);
 }

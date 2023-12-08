@@ -62,6 +62,7 @@ MD013: false
 # MD027: Multiple spaces after blockquote
 
 # MD028: Blank line inside blockquote
+MD028: false
 
 # MD029: Ordered list item prefix
 MD029:

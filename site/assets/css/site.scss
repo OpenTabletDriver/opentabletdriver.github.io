@@ -101,6 +101,13 @@ div.highlighter-rouge pre.highlight {
 
 #page-title {
   @include markdown-header;
+  font-size: calc(1.375em + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  #page-title {
+    font-size: 2.5rem;
+  }
 }
 
 #toc-container {

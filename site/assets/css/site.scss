@@ -92,7 +92,8 @@ li {
 }
 
 div.highlighter-rouge {
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 div.highlighter-rouge pre.highlight {
@@ -127,4 +128,14 @@ div.highlighter-rouge pre.highlight {
 .markdown-content > h2,
 .markdown-content > h3 {
   @include markdown-header;
+}
+
+.markdown-content blockquote > p:last-child {
+  margin-bottom: 0px;
+}
+
+.alert-compact {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  border-radius: 4px;
 }

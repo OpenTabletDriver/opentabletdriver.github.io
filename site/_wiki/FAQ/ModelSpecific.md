@@ -2,7 +2,7 @@
 title: Model-specific FAQ
 ---
 
-### Wacom CTL-x100
+## Wacom CTL-x100
 
 It is possible for Wacom CTL-x100 tablets to boot in Android mode (the mode they use when interfacing with android devices like phones) instead of PC mode in some rare cases.
 
@@ -12,6 +12,6 @@ This toggles the tablet's operating mode between PC (high LED brightness) and An
 
 OpenTabletDriver can only talk to the tablet in PC mode.
 
-### I am still having problems
+## I am still having problems
 
 See [General FAQ]({% link _wiki/FAQ/General.md %}).

@@ -2,7 +2,7 @@
 title: General FAQ
 ---
 
-### Is my tablet supported? {#supported-tablets}
+## Is my tablet supported? {#supported-tablets}
 
 Verify if your tablet is in the list of supported tablets [here]({% link _sections/Tablets.md %}). If it is not, you may do one of the following:
 
@@ -10,7 +10,7 @@ Verify if your tablet is in the list of supported tablets [here]({% link _sectio
 - [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.data.links.project.DiscordInvite }})
 - [Write the tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
 
-### My tablet is supported but not detected? {#tablet-not-detected}
+## My tablet is supported but not detected? {#tablet-not-detected}
 
 OpenTabletDriver currently has *no support* for tablets connected via Bluetooth. Make sure that your tablet is connected via USB. There is partial support for tablets connected via wireless dongle.
 
@@ -29,7 +29,7 @@ Then check [above](#supported-tablets) if your tablet is supported. If it is and
 
 or alternatively, see if there is a [tablet model specific FAQ]({% link _wiki/FAQ/ModelSpecific.md %}) for your tablet.
 
-### Where are my settings and plugins stored? {#appdata}
+## Where are my settings and plugins stored? {#appdata}
 
 The following table describes the location of the default application data directory for each operating system:
 
@@ -47,7 +47,7 @@ The application data directory contents are as follows:
 |      Plugins      | Folder | Contains installed plugins (`.dll` files). This folder should not be modified manually.
 |      Presets      | Folder | Contains saved presets
 
-### My cursor is going crazy! It teleports everywhere! {#emi-interference}
+## My cursor is going crazy! It teleports everywhere! {#emi-interference}
 
 This is caused by electromagnetic interference (EMI) from other devices. Make sure that the tablet is not near any of the following:
 
@@ -58,25 +58,25 @@ This is caused by electromagnetic interference (EMI) from other devices. Make su
 
 If certain that the tablet is not near any of the above, try replacing the pen. If the problem persists, replace the tablet. It's broken!
 
-### I see two moving cursors when hovering my pen! {#two-cursors}
+## I see two moving cursors when hovering my pen! {#two-cursors}
 
 This is caused by another tablet driver running in the background. Make sure that you have
 uninstalled all other tablet drivers before using OpenTabletDriver.
 
-#### Windows
+### Windows
 
 Run [TabletDriverCleanup]({{ site.data.links.external.TabletDriverCleanup.latest }}) to remove
 all other tablet drivers.
 
-#### Linux
+### Linux
 
 See [here]({% link _wiki/Documentation/RequiredPermissions.md %}#setup-linux).
 
-#### macOS
+### macOS
 
 Uninstall any other tablet drivers you have installed.
 
-### Does OpenTabletDriver support pen pressure? {#pressure}
+## Does OpenTabletDriver support pen pressure? {#pressure}
 
 All of our supported tablets has full pen pressure support unless otherwise noted on
 the [Tablets]({% link _sections/Tablets.md %}) page.
@@ -92,15 +92,15 @@ However, to make the driver output the pressure to your operating system, you ma
 [Windows Ink]: {% link _wiki/FAQ/Windows.md %}#win-ink
 [Artist Mode]: {% link _wiki/FAQ/Linux.md %}#artist-mode
 
-### How to convert areas to and from OpenTabletDriver? {#area-conversion}
+## How to convert areas to and from OpenTabletDriver? {#area-conversion}
 
-#### Conversion through the OpenTabletDriver UI
+### Conversion through the OpenTabletDriver UI
 
 - Right click the Tablet Area Editor
 - Click the <kbd>Convert Item</kbd> menu item
 - Select the OEM driver to convert from, then input the appropriate values to the converter
 
-#### Conversion through manual calculation
+### Conversion through manual calculation
 
 Use this reference chart for the upcoming formulas:
 
@@ -118,7 +118,7 @@ Use this reference chart for the upcoming formulas:
 
 Use the following formulas to get values for OpenTabletDriver's area editor's `Width`, `Height`, `XOffset`, and `YOffset` fields:
 
-##### Wacom and Veikk
+#### Wacom and Veikk
 
 |  Term  | Definition |
 | :----: | :--------- |
@@ -136,7 +136,7 @@ XOffset = (Width  / 2) + (Left / LPI * 25.4)
 YOffset = (Height / 2) + (Top  / LPI * 25.4)
 ```
 
-##### XP-Pen
+#### XP-Pen
 
 | Term | Definition |
 | :--: | :--------- |
@@ -154,7 +154,7 @@ XOffset = (Width  / 2) + (XPX / 3.937)
 YOffset = (Height / 2) + (XPY / 3.937)
 ```
 
-##### Huion and Gaomon
+#### Huion and Gaomon
 
 |  Term  | Definition |
 | :----: | --- |

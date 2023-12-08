@@ -2,7 +2,7 @@
 title: Logs
 ---
 
-### GUI
+## GUI
 
 To view logs, click on the <kbd>Console</kbd> tab. Optionally, change filter from <kbd>Information</kbd> to <kbd>Debug</kbd> for more detailed logs.
 
@@ -12,7 +12,7 @@ Sometimes, the OpenTabletDriver daemon can crash hard enough that the errors can
 sent to the GUI. In this case, you can find a
 partial log in the location specified [here](#daemon-log).
 
-### Daemon
+## Daemon
 
 The output from daemon is the log.
 
@@ -23,7 +23,7 @@ To view that log, run the following command as your user:
 journalctl --user-unit opentabletdriver.service
 ```
 
-#### Exception Log Location {#daemon-log}
+### Exception Log Location {#daemon-log}
 
 If the daemon crashes from an "unrecoverable" exception, the `daemon.log` file will
 include a stack trace defining where the error happened, which is useful for debugging.

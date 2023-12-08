@@ -3,14 +3,14 @@ title: Windows Installation Guide
 hide_from_auto_list: true
 ---
 
-### Dependencies {#dependencies}
+## Dependencies {#dependencies}
 
 1. Install the [.NET 6 Desktop Runtime x64]({% link _sections/Framework.md %})
 
 If you were previously using the standalone installer/updater (before v0.6), it is highly suggested that you switch
 to the new method for installing OpenTabletDriver below.
 
-### Installation {#installation}
+## Installation {#installation}
 
 If you are upgrading from an older version of OpenTabletDriver, it is important that you do not
 install it on top of the old version and instead clean up the old directory.
@@ -28,7 +28,7 @@ Alternatively you can install it to a new directory.
     > You can create a shortcut to this file, just make sure that the working directory points
       to the extracted directory.
 
-### Installation of WinUSB {#winusb}
+## Installation of WinUSB {#winusb}
 
 Some tablets require Zadig's WinUSB installed on a device interface to interact with the tablet correctly. To figure out if your
 tablet requires WinUSB, carefully check the notes on [the supported list of tablets here]({% link _sections/Tablets.md %}).
@@ -46,6 +46,6 @@ Only install WinUSB if it is explicitly listed for your tablet.</u>**
 4. Find your tablet with the correct interface number on the device list.
 5. Click <kbd>Replace Driver</kbd>
 
-### Post-Installation {#post-install}
+## Post-Installation {#post-install}
 
 Take a look at the [FAQ]({% link _wiki/FAQ/Windows.md %}) if you encounter any problems.

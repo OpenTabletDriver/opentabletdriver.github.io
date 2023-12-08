@@ -3,13 +3,15 @@ title: Windows FAQ
 hide_from_auto_list: true
 ---
 
-- **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
-  first before continuing.**
-- Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
+> It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %}) first before continuing.
+{:.alert-primary}
+
+> Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
 
 ### My tablet is supported but not detected? {#troubleshooting}
 
-Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
+> Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
+{:.alert-warning}
 
 #### Driver Cleanup
 
@@ -72,8 +74,9 @@ Having a portable install is useful for testing new releases without them affect
 settings and plugins, or for having the driver available with your preferred settings and
 plugins you can send to friends, or bring with you.
 
-**It is particularly important to use this feature when testing pre-releases, as cross-version
-configuration compatibility is not guaranteed.**
+> It is particularly important to use this feature when testing pre-releases, as cross-version
+configuration compatibility is not guaranteed.
+{:.alert-primary}
 
 The default location is described in the
 General FAQ's [appdata section]({% link _wiki/FAQ/General.md %}#appdata)
@@ -119,7 +122,8 @@ Then restart your computer to apply.
 
 If you are still getting the warning, make sure that you are not using the account called `Administrator`. This is *NEVER* meant to be used as a normal account for daily use. Create a new normal account with administrator privileges and use that instead.
 
-> We are aware that most custom ISOs use the Administrator account. Due to the nature of custom ISOs, we *do not* provide official support to them.
+> We are aware that most custom ISOs use the Administrator account. Due to the nature of custom ISOs, we **do NOT** provide official support to them.
+{:.alert-danger}
 
 If you need to interact with a program that runs with Administrator privileges, use [VMultiMode]({{ site.data.links.external.VMultiModePlugin.wiki }}).
 
@@ -135,8 +139,7 @@ If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTablet
 
 - Open RivaTuner Statistics Server.
 - Click on the Add button, found in the bottom left corner.
-- Locate `{% otdexe windows-ui %}` on your computer, then select it.
-  > Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.
+- Locate `{% otdexe windows-ui %}` on your computer, then select it. <small class="text-muted">Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.</small>
 - Click on <kbd>Application Detection Level</kbd> then select <kbd>None</kbd>.
 
 ### Still have problems? {#discord}

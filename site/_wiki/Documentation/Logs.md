@@ -34,3 +34,4 @@ The `daemon.log` file is in the application data folder, located here:
 
 > For more details on what else is contained in OpenTabletDriver's application data,
   see [here]({% link _wiki/FAQ/General.md %}#appdata)
+  {:.alert-primary}

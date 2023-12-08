@@ -34,7 +34,8 @@ If it is not an EMI issue and you still wanna remove the shakiness, try one of t
 
 Use the [`VMultiMode` plugin's]({{ site.data.links.external.VMultiModePlugin.wiki }}) `VMulti Relative Mode` as OpenTabletDriver's output mode.
 
-**Make sure to read the following text before running Valorant.**
+> Make sure to read the following text before running Valorant.
+{:.alert-danger}
 
 Vanguard (Valorant's anti-cheat software) blocks input from certain sources. This includes `SendInput` API which OpenTabletDriver uses in its `Absolute Mode`. VMulti is a *kernel-level* driver, which means that it is not affected by Vanguard. However, there are still some restrictions:
 
@@ -46,12 +47,14 @@ Vanguard (Valorant's anti-cheat software) blocks input from certain sources. Thi
 
 There is **NO** fix for this. All other drivers that rely on VMulti to send input are also affected without exception. This includes the original TabletDriver (Hawku, Devocub, etc.), XP-Pen, Huion, Gaomon, Veikk, etc.
 
-As a workaround, do not use "Left Click" as your binding to "Fire" action. Instead, use an unused keyboard key then go to OpenTabletDriver and change your "Left Click" binding to that unused keyboard key.
+> As a workaround, do not use "Left Click" as your binding to "Fire" action. Instead, use an unused keyboard key then go to OpenTabletDriver and change your "Left Click" binding to that unused keyboard key.
+{:.alert-primary}
 
 ## Art Programs
 
-Use [Windows Ink]({{ site.data.links.external.WindowsInkPlugin.wiki }}) plugin to enable pressure support.
-OpenTabletDriver does not support the WinTab API.
+> Use [Windows Ink]({{ site.data.links.external.WindowsInkPlugin.wiki }}) plugin to
+enable pressure support. OpenTabletDriver does not support the WinTab API.
+{:.alert-warning}
 
 ### Clip Studio Paint
 

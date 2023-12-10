@@ -8,12 +8,12 @@ hide_from_auto_list: true
 
 > Also check out [Windows App Specific FAQ]({% link _wiki/FAQ/WindowsAppSpecific.md %}) for app-specific instructions.
 
-### My tablet is supported but not detected? {#troubleshooting}
+## My tablet is supported but not detected? {#troubleshooting}
 
 > Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
 {:.alert-warning}
 
-#### Driver Cleanup
+### Driver Cleanup
 
 If your tablet is connected properly and is supported but is still not detected, please make sure that you have no other tablet drivers on the system.
 
@@ -21,11 +21,11 @@ To ensure your system is clean, follow the instructions in [TabletDriverCleanup]
 
 Please check if your tablet requires WinUSB [here]({% link _sections/Tablets.md %}) (it will say in the Notes column). If it does, follow the [instructions]({% link _wiki/Install/Windows.md %}#winusb) and return here. Continue below for troubleshooting instructions if your tablet still isn't detected.
 
-#### Common Problems
+### Common Problems
 
 [Check logs]({% link _wiki/Documentation/Logs.md %}) for any errors or warnings. If you find any, try finding for a match and its accompanying solution below:
 
-##### Tablet driver interference
+#### Tablet driver interference
 
 *Symptoms*:
 
@@ -38,7 +38,7 @@ Another tablet driver found: <driver>
 - Follow the instructions in [TabletDriverCleanup]({{ site.data.links.external.TabletDriverCleanup.latest }}), and make sure to type <kbd>Y</kbd> for every driver found by the utility. Then, restart OTD.
 - If the log entry is still present, try joining our support [Discord]({{ site.data.links.project.DiscordInvite }}) and asking for help in the #support-windows channel.
 
-##### Invalid WinUSB driver state
+#### Invalid WinUSB driver state
 
 *Symptoms*:
 
@@ -51,13 +51,13 @@ SafeHandle cannot be null. (Parameter 'pHandle')
 
 - Restart your computer.
 
-### Tablet is detected but not working? {#tablet-not-functioning-correctly}
+## Tablet is detected but not working? {#tablet-not-functioning-correctly}
 
-#### No input
+### No input
 
 This is most likely due to some firmware variation. Try joining our support [Discord]({{ site.data.links.project.DiscordInvite }}) and asking for help in one of the #support channels, or submit a [bug report]({{ site.data.links.project.OpenNewIssue }}) in GitHub.
 
-#### No pressure {#win-ink}
+### No pressure {#win-ink}
 
 OpenTabletDriver has no built-in support for pressure on Windows due to external dependencies that cannot be bundled with the driver. Follow the instructions below to enable pressure support:
 
@@ -65,7 +65,7 @@ OpenTabletDriver has no built-in support for pressure on Windows due to external
 - Install and follow instructions from [WindowsInk wiki]({{ site.data.links.external.WindowsInkPlugin.wiki }}).
 - Configure your application to use Windows Ink API. See [here]({% link _wiki/FAQ/WindowsAppSpecific.md %}#art-programs) for app-specific configuration instructions.
 
-### How do I make a portable install? {#userdata}
+## How do I make a portable install? {#userdata}
 
 By having a folder called `userdata` next to the OpenTabletDriver files, anything related to
 OpenTabletDriver is instead stored in this folder.
@@ -83,7 +83,7 @@ General FAQ's [appdata section]({% link _wiki/FAQ/General.md %}#appdata)
 
 If you wish to convert your existing install to a portable install, the `convert_to_portable.bat` script moves OpenTabletDriver's settings to the `userdata` folder.
 
-### How to fix "Connecting to daemon has timed out" error? {#no-daemon}
+## How to fix "Connecting to daemon has timed out" error? {#no-daemon}
 
 Check if `{% otdexe windows-daemon %}` and `{% otdexe windows-ui %}` is in the same folder. This should be the case if the [Installation]({% link _wiki/Install/Windows.md %}) instructions were followed correctly.
 
@@ -96,7 +96,7 @@ If both files are in the same folder, the daemon may have crashed during launch.
 
 > If you converted OpenTabletDriver to a portable install, go inside the `userdata` folder instead.
 
-### How to autostart OpenTabletDriver on boot? {#startup}
+## How to autostart OpenTabletDriver on boot? {#startup}
 
 The following is just one of the multiple ways that you may launch OTD at startup.
 
@@ -110,7 +110,7 @@ To start OpenTabletDriver minimised, continue below:
 - Right click the shortcut and select `Properties`.
 - In the `Run` dropdown, select `Minimized`.
 
-### I get a warning about not running it as Administrator on startup? {#administrator}
+## I get a warning about not running it as Administrator on startup? {#administrator}
 
 OpenTabletDriver should *NEVER* be run as Administrator, and there is never a need to run as Administrator.
 
@@ -127,11 +127,11 @@ If you are still getting the warning, make sure that you are not using the accou
 
 If you need to interact with a program that runs with Administrator privileges, use [VMultiMode]({{ site.data.links.external.VMultiModePlugin.wiki }}).
 
-### Plugin manager is not showing up {#plugin-manager-broken}
+## Plugin manager is not showing up {#plugin-manager-broken}
 
 It is likely because you are running OpenTabletDriver with the Administrator account. See [above](#administrator).
 
-### OpenTabletDriver is completely blank {#rtss}
+## OpenTabletDriver is completely blank {#rtss}
 
 If you are experiencing random crashes with no warning, or the interface is completely blank and/or not accepting input, and you have RivaTuner Statistics Server installed, it may be hooking into OpenTabletDriver and therefore prevents {% otdexe windows-ui %} from functioning correctly.
 
@@ -142,6 +142,6 @@ If you are using RivaTuner Statistics, make sure it doesn't hook onto OpenTablet
 - Locate `{% otdexe windows-ui %}` on your computer, then select it. <small class="text-muted">Refer [here]({% link _wiki/FAQ/General.md %}#appdata) for more information.</small>
 - Click on <kbd>Application Detection Level</kbd> then select <kbd>None</kbd>.
 
-### Still have problems? {#discord}
+## Still have problems? {#discord}
 
 If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.data.links.project.DiscordInvite }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

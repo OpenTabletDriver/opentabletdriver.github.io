@@ -2,20 +2,20 @@
 title: Command Line Arguments
 ---
 
-### UI
+## UI
 
 |        Argument       | Description |
 | :-------------------: | ----------- |
 | `--minimized` or `-m` | Starts the application in a minimized state
 
-### Daemon
+## Daemon
 
 |       Argument      | Description |
 | :-----------------: | ----------- |
 | `--appdata` or `-a` | Uses the specified directory for application data
 | `--config` or `-c`  | Uses the specified directory for searching of tablet configuration overrides
 
-### Console
+## Console
 
 This is a very limited list of the available commands in the console app, since the command names
 can vary between driver versions.

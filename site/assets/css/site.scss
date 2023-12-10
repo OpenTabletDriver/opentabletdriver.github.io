@@ -74,7 +74,8 @@ html {
 }
 
 #toc a {
-  color:#adb5bd;
+  color:#c4cfda;
+  text-decoration: none;
 }
 
 #toc a:focus,
@@ -83,7 +84,16 @@ html {
 }
 
 #toc {
+  margin-top: 0.8em;
   padding-left: 1em;
+}
+
+#toc ul {
+  padding-left: 1.5em;
+}
+
+#toc li {
+  padding-left: 1ex;
 }
 
 li {
@@ -102,6 +112,13 @@ div.highlighter-rouge pre.highlight {
 
 #page-title {
   @include markdown-header;
+  font-size: calc(1.375em + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  #page-title {
+    font-size: 2.5rem;
+  }
 }
 
 #toc-container {
@@ -125,9 +142,83 @@ div.highlighter-rouge pre.highlight {
   }
 }
 
-.markdown-content > h2,
-.markdown-content > h3 {
-  @include markdown-header;
+.markdown-content {
+  h2 {
+    font-size: 1.55em;
+    counter-increment: h2-section;
+  }
+  h3 {
+    font-size: 1.45em;
+    counter-increment: h3-section;
+    ~ h2 {
+      counter-reset: h3-section;
+    }
+  }
+  h4 {
+    font-size: 1.28em;
+    counter-increment: h4-section;
+    ~ h3 {
+      counter-reset: h4-section;
+    }
+  }
+  h5 {
+    font-size: 1.16em;
+  }
+  h6 {
+    font-size: 1em;
+  }
+
+  h2 > span::before {
+    content: counter(h2-section) "."
+  }
+
+  h3 > span::before {
+    content: counter(h2-section) "." counter(h3-section) "."
+  }
+
+  h4 > span::before {
+    content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "."
+  }
+
+  h2, h3 {
+    @include markdown-header
+  }
+
+  h2 > span::before,
+  h3 > span::before,
+  h4 > span::before,
+  h5 > span::before {
+    color:#c0c0c0;
+    font-style: italic;
+    margin-right: 1ex;
+  }
+}
+
+#toc > li {
+  counter-increment: h2-section;
+  &::marker {
+    content: counter(h2-section) ".";
+  }
+}
+
+#toc > li > ul > li {
+  counter-increment: h3-section;
+  &::marker {
+    content: counter(h2-section) "." counter(h3-section) ".";
+  }
+  &:last-child {
+    counter-reset: h3-section;
+  }
+}
+
+#toc > li > ul > li > ul > li {
+  counter-increment: h4-section;
+  &::marker {
+    content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) ".";
+  }
+  &:last-child {
+    counter-reset: h4-section;
+  }
 }
 
 .markdown-content blockquote > p:last-child {

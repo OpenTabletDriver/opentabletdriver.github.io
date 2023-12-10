@@ -2,7 +2,7 @@
 title: Writing OpenTabletDriver Configurations
 ---
 
-### Device Information
+## Device Information
 
 Generic device identification information is required for OpenTabletDriver in order for it to be able to differentiate
 tablets.
@@ -11,12 +11,12 @@ tablets.
 | :--------------: | :------------: | :---------- |
 |       Name       |    `string`    | The name of the device. This is always the device manufacturer's name followed by the device's model number or product name when not applicable.
 
-### Specifications
+## Specifications
 
 Tablet configuration specifications provide OpenTabletDriver with information it needs in order to correctly and
 accurately handle the data the tablet device outputs.
 
-#### Digitizer
+### Digitizer
 
 This refers to the graphics tablet's digitizer, which provides coordinates of where the tool is positioned. This is
 always required for the device to function.
@@ -28,7 +28,7 @@ always required for the device to function.
 | Horizontal Resolution |  `double`  | Device Units | The horizontal resolution of the digitizer in device units
 |  Vertical Resolution  |  `double`  | Device Units | The vertical resolution of the digitizer in device units
 
-#### Pen
+### Pen
 
 This refers to the pen tool for the graphics tablet. It is the source of position and typically the source of pressure
 data. This is almost always required.
@@ -38,7 +38,7 @@ data. This is almost always required.
 |  Max Pressure   |   `uint`   | The maximum pressure reported by the pen in device pressure units. This is used to calculate a percentage of pressure. If there are more than pens supported by this tablet, the pen with the highest pressure value is used.
 |  Button Count   |   `uint`   | The amount of buttons on the pen. This does not include the eraser, if applicable. If there are more than one pens supported by this tablet, use the number of buttons on the pen with the most.
 
-#### Auxiliary Buttons
+### Auxiliary Buttons
 
 This refers to any buttons located on the graphics tablet pad. This should only be enabled if there are any auxililary
 buttons.
@@ -47,7 +47,7 @@ buttons.
 | :-----------: | :---------: | :---------- |
 | Button Count  |   `uint`    | The amount of buttons
 
-#### Touch
+### Touch
 
 This refers to the touch digitizer, which may be built into the pen digitizer. This exists as the resolution of the
 touch digitizer can be different than the pen digitizer. This should only be enabled if the graphics tablet supports
@@ -55,13 +55,13 @@ touch input.
 
 This has the same properties as the [digitizer](#digitizer)
 
-#### Mouse
+### Mouse
 
 This refers to an absolute positioning mouse tool. This should only be enabled if the graphics tablet supports a mouse.
 
 This has the same properties as the [auxiliary buttons](#auxiliary-buttons)
 
-### Identifiers
+## Identifiers
 
 Device identifiers are what actually detect the tablet. Anything defined here is used in the detection process to
 pinpoint devices.

@@ -79,6 +79,7 @@ pinpoint devices.
 | Initialization String Indexes |          `byte[]`          | A list of indexes to be retrieved from the device as part of the device's initialization sequence. This is optional, and very infrequently used.
 
 > Byte arrays (`byte[]`) are serialized as Base64 in JSON.NET, the library that serializes and deserializes configurations.
+{:.alert-primary}
 
 [USB-IF]: https://en.wikipedia.org/wiki/USB_Implementers_Forum "USB Implementers Forum"
 [parsers]: https://github.com/OpenTabletDriver/OpenTabletDriver/tree/HEAD/OpenTabletDriver.Configurations/Parsers

@@ -17,6 +17,7 @@ hide_from_auto_list: true
     ```
 
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
+
 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause `libhostfxr` issues.
@@ -33,6 +34,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
     ```
 
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
+
 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ### Arch Linux {#arch}
@@ -45,7 +47,8 @@ You can install OpenTabletDriver from the AUR. There are two ways to do this.
 Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 > If you are using a ramdisk environment that isn't `mkinitcpio`, consult its documentation
-  for how to regenerate or rebuild your existing ramdisk images with the new blacklist.
+  for how to regenerate or rebuild your existing ramdisk images.
+  {:.alert-primary}
 
 #### AUR helper method {#aur-helper-method}
 
@@ -114,7 +117,8 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
     hardware.opentabletdriver.enable = true;
     ```
 
-    > More configuration options can be found [here][NixOS Package Options]
+    > More configuration options can be found [here][NixOS Package Options].
+    {:.alert-primary}
 
 [NixOS Package Options]: https://search.nixos.org/options?query=opentabletdriver
 

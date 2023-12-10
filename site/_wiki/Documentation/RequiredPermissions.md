@@ -45,6 +45,7 @@ to the latest version, refer to the [Legacy package](#legacy-package) section.
 #### FHS distro
 
 > Most distros follow the [FHS standard](https://refspecs.linuxfoundation.org/fhs.shtml), if you don't know if your distro follows this standard, it most likely does.
+{:.alert-primary}
 
 Run the following script in bash:
 
@@ -86,6 +87,7 @@ For other distros, refer to your distro's documentation on how to update the ini
 If you're using a version of OpenTabletDriver *below* 0.6.3.0 on an FHS distro, run the following script:
 
 > Most distros follow the [FHS standard](https://refspecs.linuxfoundation.org/fhs.shtml), if you don't know if your distro follows this standard, it most likely does.
+{:.alert-primary}
 
 ```bash
 echo "Finding old udev rules..."

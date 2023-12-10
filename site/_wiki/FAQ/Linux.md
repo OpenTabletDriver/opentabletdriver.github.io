@@ -3,13 +3,17 @@ title: "Linux FAQ"
 hide_from_auto_list: true
 ---
 
-- **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
-  first before continuing.**
-- Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}) for app-specific instructions.
+> It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %}) first
+before continuing.
+{:.alert-primary}
+
+> Also check out [Linux App Specific FAQ]({% link _wiki/FAQ/LinuxAppSpecific.md %}) for
+app-specific instructions.
 
 ### My tablet is supported but not detected? {#troubleshooting}
 
-Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
+> Read [General FAQ]({% link _wiki/FAQ/General.md %}#tablet-not-detected) first before continuing below if you haven't already.
+{:.alert-warning}
 
 #### Common Problems
 

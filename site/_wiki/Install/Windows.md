@@ -7,8 +7,8 @@ hide_from_auto_list: true
 
 1. Install the [.NET 6 Desktop Runtime x64]({% link _sections/Framework.md %})
 
-If you were previously using the standalone installer/updater (before v0.6), it is highly suggested that you switch
-to the new method for installing OpenTabletDriver below.
+If you were previously using the standalone installer/updater (before v0.6), switch to the new
+method for installing OpenTabletDriver below.
 
 ### Installation {#installation}
 
@@ -17,27 +17,29 @@ install it on top of the old version and instead clean up the old directory.
 Alternatively you can install it to a new directory.
 
 1. Download the [latest release]({{ site.data.links.project.latestRelease.win-x64 }}). <small class="text-muted">(OpenTabletDriver.win-x64.zip)</small>
-2. Extract the downloaded file into a folder of its own.
+2. Extract the downloaded file into a folder of its own. For example:
 
-    > Replace `<username>` with your username in the example below.
+    ```otdlog
+    C:\Users\<username>\OpenTabletDriver-{{ site.data.otd-versions | last }}
+    ```
 
-    `C:\Users\<username>\OpenTabletDriver-{{ site.data.otd-versions | last }}`
+    > Replace `<username>` with your username.
 
 3. Run `{% otdexe windows-ui %}` in the extracted directory.
 
-    > You can create a shortcut to this file, just make sure that the working directory points
-      to the extracted directory.
+    > You can create a shortcut to this file, just make sure that the working directory points to the extracted directory.
 
 ### Installation of WinUSB {#winusb}
 
-Some tablets require Zadig's WinUSB installed on a device interface to interact with the tablet correctly. To figure out if your
-tablet requires WinUSB, carefully check the notes on [the supported list of tablets here]({% link _sections/Tablets.md %}).
+Some tablets require Zadig's WinUSB installed on a device interface to interact with the tablet
+correctly. To figure out if your tablet requires WinUSB, carefully check the notes on
+[the supported list of tablets here]({% link _sections/Tablets.md %}).
 
 Some WinUSB-requiring tablets require a specific interface to be chosen.
 This is also noted in the list of tablets, if relevant.
 
-**<u>Most tablets do not require WinUSB!
-Only install WinUSB if it is explicitly listed for your tablet.</u>**
+> Most tablets **DO NOT** need WinUSB! Only install WinUSB if it is explicitly listed for your tablet.
+{:.alert-danger}
 
 1. If your tablet requires WinUSB, download it
    from [here]({{ site.data.links.external.WinUSB.zadig }}).

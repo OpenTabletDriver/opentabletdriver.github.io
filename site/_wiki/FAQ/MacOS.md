@@ -3,8 +3,9 @@ title: MacOS FAQ
 hide_from_auto_list: true
 ---
 
-- **It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
-first before continuing.**
+> It is recommended that you check [General FAQ]({% link _wiki/FAQ/General.md %})
+first before continuing.
+{:.alert-primary}
 
 ### Cursor doesn't respond to tablet input {#cursor-not-moving}
 

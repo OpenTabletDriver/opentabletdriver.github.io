@@ -3,7 +3,9 @@
 | Acepen AP 1060                |     Supported     |
 | Adesso Cybertablet K8         |     Supported     |
 | Gaomon 1060 Pro               |     Supported     |
+| Gaomon GM116HD                |     Supported     |
 | Gaomon GM156HD                |     Supported     |
+| Gaomon M106K                  |     Supported     |
 | Gaomon M106K Pro              |     Supported     |
 | Gaomon PD1161                 |     Supported     |
 | Gaomon PD1560                 |     Supported     |
@@ -32,6 +34,7 @@
 | Huion Kamvas 16               |     Supported     |
 | Huion Kamvas 16 (2021)        |     Supported     |
 | Huion Kamvas 20               |     Supported     |
+| Huion Kamvas 22               |     Supported     |
 | Huion Kamvas 22 Plus          |     Supported     |
 | Huion Kamvas 24 Plus          |     Supported     |
 | Huion Kamvas Pro 13 (2.5k)    |     Supported     |
@@ -64,6 +67,8 @@
 | VEIKK VK430                   |     Supported     |
 | VEIKK VK640                   |     Supported     |
 | ViewSonic WoodPad PF0730      |     Supported     |
+| Wacom CTC-4110WL              |     Supported     |
+| Wacom CTC-6110WL              |     Supported     |
 | Wacom CTE-430                 |     Supported     |
 | Wacom CTE-440                 |     Supported     |
 | Wacom CTE-460                 |     Supported     |
@@ -123,6 +128,7 @@
 | XP-Pen Deco Fun L (CT1060)    |     Supported     |
 | XP-Pen Deco Fun S (CT640)     |     Supported     |
 | XP-Pen Deco Fun XS (CT430)    |     Supported     |
+| XP-Pen Deco M                 |     Supported     |
 | XP-Pen Deco L                 |     Supported     |
 | XP-Pen Deco mini4             |     Supported     |
 | XP-Pen Deco mini7             |     Supported     |
@@ -154,6 +160,7 @@
 | Parblo Ninos M                |    Has Quirks     | Aux buttons are not in order.
 | Parblo Ninos S                |    Has Quirks     | Aux buttons are not in order.
 | UGTABLET M708                 |    Has Quirks     | Windows: Might need Zadig's WinUSB to be installed on interface 0
+| Wacom PTU-600U                |    Has Quirks     | Windows: Requires Zadig's WinUSB to be installed
 | XP-Pen Artist 22HD            |    Has Quirks     | Windows: Requires Zadig's WinUSB to be installed on interface 0
 | XP-Pen Star G430              |    Has Quirks     | Windows: Might need Zadig's WinUSB to be installed on interface 1
 | Artisul A1201                 |  Missing Features | Touch bar is not yet supported.
@@ -180,6 +187,7 @@
 | Huion Kamvas Pro 20           |  Missing Features | Touch bar is not yet supported.
 | Huion Kamvas Pro 24           |  Missing Features | Touch bar is not yet supported.
 | Huion Q620M                   |  Missing Features | Wheel is not yet supported.
+| Huion Q630M                   |  Missing Features | Dials/Wheels are not yet supported.
 | Huion RTM-500                 |  Missing Features | Touch bar is not yet supported.
 | Lifetec LT9570                |  Missing Features | Aux buttons and tilt is not yet supported.
 | Monoprice MP1060-HA60         |  Missing Features | Tablet buttons are not yet supported. Windows: Requires Zadig's WinUSB to be installed on interface 0
@@ -193,11 +201,13 @@
 | VEIKK A50                     |  Missing Features | Touchpad is not yet supported.
 | VEIKK A50 V2                  |  Missing Features | Touchpad is not yet supported.
 | VEIKK Viola (VO1060)          |  Missing Features | Wheel is not yet supported.
+| VEIKK VK1060PRO               |  Missing Features | Wheels not yet supported.
 | Wacom CTE-450                 |  Missing Features | Wheel is not yet supported.
 | Wacom CTE-650                 |  Missing Features | Wheel is not yet supported.
 | Wacom CTH-301                 |  Missing Features | Touch is not yet supported.
 | Wacom CTH-461                 |  Missing Features | Tablet buttons and touch are not yet supported.
 | Wacom CTL-6100WL              |  Missing Features | Wireless is not yet supported.
+| Wacom DTH-1320                |  Missing Features | Touch is not yet supported.
 | Wacom DTK-1300                |  Missing Features | Center button is not yet supported.
 | Wacom DTZ-1200W               |  Missing Features | Touch bars and top side buttons are not yet supported.
 | Wacom MTE-450                 |  Missing Features | Wheel is not yet supported.

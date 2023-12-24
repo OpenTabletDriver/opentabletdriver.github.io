@@ -53,7 +53,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
     sudo zypper refresh
 
     # Install the package
-    sudo zypper --no-gpg-check install ./OpenTabletDriver.rpm
+    sudo zypper --no-gpg-checks install ./OpenTabletDriver.rpm
     ```
 
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.

@@ -24,7 +24,9 @@ If you have the Microsoft dotnet repository installed you will have to either ma
 
 If you're experiencing `libhostfxr` issues, please see the solutions from Microsoft [here]({{ site.data.links.external.Microsoft.DotnetLinuxPackageMixup }}).
 
-## Fedora {#rpm}
+## RPM-based distributions {#rpm}
+
+### Fedora {#fedora}
 
 1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
 2. Install the package with the following command:
@@ -36,6 +38,27 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
 
 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+
+### openSUSE (#opensuse}
+
+1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
+2. Run commands from [this guide]({{ site.data.links.external.Microsoft.AddMicrosoftRepoOpenSUSE }}) to add the Microsoft package repository.
+
+    > You don't need to install .NET runtime at this point as zypper will install it as a dependency of OpenTabletDriver.
+
+3. Run the following commands in a terminal
+
+    ```bash
+    # Update the package list
+    sudo zypper refresh
+
+    # Install the package
+    sudo zypper --no-gpg-checks install ./OpenTabletDriver.rpm
+    ```
+
+    > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
+
+4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ## Arch Linux {#arch}
 

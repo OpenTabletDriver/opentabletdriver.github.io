@@ -46,7 +46,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
     > You don't need to install .NET runtime at this point as zypper will install it as a dependency of OpenTabletDriver.
 
-3. Install the package with the following command:
+3. Run the following commands in a terminal
 
     ```bash
     # Update the package list

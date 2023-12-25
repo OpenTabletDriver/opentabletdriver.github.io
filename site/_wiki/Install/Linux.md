@@ -39,7 +39,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
-### openSUSE (#opensuse}
+### openSUSE {#opensuse}
 
 1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
 2. Run commands from [this guide]({{ site.data.links.external.Microsoft.AddMicrosoftRepoOpenSUSE }}) to add the Microsoft package repository.

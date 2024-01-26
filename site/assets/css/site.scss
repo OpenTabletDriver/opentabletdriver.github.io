@@ -206,7 +206,7 @@ div.highlighter-rouge pre.highlight {
   &::marker {
     content: counter(h2-section) "." counter(h3-section) ".";
   }
-  &:last-child {
+  &:first-child {
     counter-reset: h3-section;
   }
 }
@@ -216,7 +216,7 @@ div.highlighter-rouge pre.highlight {
   &::marker {
     content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) ".";
   }
-  &:last-child {
+  &:first-child {
     counter-reset: h4-section;
   }
 }

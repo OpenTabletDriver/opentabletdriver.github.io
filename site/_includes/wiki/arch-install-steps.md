@@ -3,8 +3,8 @@
 {% assign includeMakepkgSteps = include.makepkg | default: false %}
 
     ```sh
-    {% if includeMakepkgSteps -%}
-        {% include wiki/arch-makepkg-steps.txt %}
-    {%- endif -%}
-    {% include wiki/arch-regen-commands.txt -%}
+   {% if includeMakepkgSteps -%}
+       {% include wiki/arch-makepkg-commands.txt %}
+   {%- endif -%}
+   {% include wiki/arch-regen-commands.txt -%}
     ```

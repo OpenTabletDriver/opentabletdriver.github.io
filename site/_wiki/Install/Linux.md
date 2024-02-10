@@ -120,13 +120,13 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 2. Edit `/etc/portage/package.accept_keywords` and add this line
 
     ```conf
-    x11-drivers/OpenTabletDriver-bin ~amd64
+    x11-drivers/OpenTabletDriver ~amd64
     ```
 
 3. Install the package with the following command
 
     ```bash
-    sudo emerge OpenTabletDriver-bin
+    sudo emerge OpenTabletDriver
     ```
 
 4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.

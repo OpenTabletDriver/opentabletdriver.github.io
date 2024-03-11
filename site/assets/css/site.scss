@@ -3,131 +3,75 @@
 # only Main files contain this front matter, not partials.
 ---
 
+@import "darkly/variables";
+$color-mode-type: media-query;
+@import "_bootstrap";
+@import "darkly/bootswatch";
+
 @import "markdown-mixins";
 @import "anchor-blink";
 
+// nav title ("OpenTabletDriver")
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
+// used in <nav>
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-.table {
-  --bs-table-accent-bg: #303030;
-}
-
+// used with Tablets table description
 .dropmargins {
   margin: 0;
 }
 
-#toc a {
-  color:#c4cfda;
-  text-decoration: none;
-}
-
-#toc a:focus,
-#toc a:hover {
-  color:#bdc4ca;
-}
-
+// Table of Contents, e.g. on Wiki pages
 #toc {
   margin-top: 0.8em;
   padding-left: 1em;
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    padding-left: 1.5em;
+  }
+
+  li {
+    padding-left: 1ex;
+  }
 }
 
-#toc ul {
-  padding-left: 1.5em;
-}
-
-#toc li {
-  padding-left: 1ex;
-}
-
+// <li>'s get too packed without this
 li {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
+// parsed code blocks that has syntax highlighting
 div.highlighter-rouge {
   margin-top: 1em;
   margin-bottom: 1em;
-}
 
-div.highlighter-rouge pre.highlight {
-  padding: 1em;
+  pre.highlight {
+    padding: 1em;
+  }
 }
 
 #page-title {
   @include markdown-header;
-  font-size: calc(1.375em + 1.5vw);
-}
-
-@media (min-width: 1200px) {
-  #page-title {
-    font-size: 2.5rem;
-  }
 }
 
 #toc-container {
-  visibility: collapse;
-}
-
-#toc-container > div {
-  position: sticky;
-  top: 1.5em;
+  visibility: collapse; // hide on smaller devices (see later media rules)
+  > div {
+    position: sticky; // always keep in view
+    top: 1.5em; // spacing from top when sticky is acting
+  }
 }
 
 @media (min-width: 576px) {
@@ -136,61 +80,44 @@ div.highlighter-rouge pre.highlight {
   }
 }
 
-@media (min-width: 576px) {
-  .markdown-content {
-    padding-left: 2em;
-  }
-}
-
 .markdown-content {
   h2 {
-    font-size: 1.55em;
     counter-increment: h2-section;
+    > span::before {
+      content: counter(h2-section) ".";
+    }
   }
+
   h3 {
-    font-size: 1.45em;
     counter-increment: h3-section;
     ~ h2 {
       counter-reset: h3-section;
     }
+    > span::before {
+      content: counter(h2-section) "." counter(h3-section) ".";
+    }
   }
+
   h4 {
-    font-size: 1.28em;
     counter-increment: h4-section;
     ~ h3 {
       counter-reset: h4-section;
     }
-  }
-  h5 {
-    font-size: 1.16em;
-  }
-  h6 {
-    font-size: 1em;
-  }
-
-  h2 > span::before {
-    content: counter(h2-section) "."
-  }
-
-  h3 > span::before {
-    content: counter(h2-section) "." counter(h3-section) "."
-  }
-
-  h4 > span::before {
-    content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "."
+    > span::before {
+      content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) ".";
+    }
   }
 
   h2, h3 {
-    @include markdown-header
+    @include markdown-header;
   }
 
-  h2 > span::before,
-  h3 > span::before,
-  h4 > span::before,
-  h5 > span::before {
-    color:#c0c0c0;
-    font-style: italic;
-    margin-right: 1ex;
+  h2, h3, h4, h5 {
+    // counter display
+    > span::before {
+      font-style: italic;
+      margin-right: 1ex;
+    }
   }
 }
 
@@ -199,30 +126,30 @@ div.highlighter-rouge pre.highlight {
   &::marker {
     content: counter(h2-section) ".";
   }
-}
 
-#toc > li > ul > li {
-  counter-increment: h3-section;
-  &::marker {
-    content: counter(h2-section) "." counter(h3-section) ".";
-  }
-  &:last-child {
-    counter-reset: h3-section;
-  }
-}
+  > ul > li {
+    counter-increment: h3-section;
+    &::marker {
+      content: counter(h2-section) "." counter(h3-section) ".";
+    }
+    &:first-child {
+      counter-reset: h3-section;
+    }
 
-#toc > li > ul > li > ul > li {
-  counter-increment: h4-section;
-  &::marker {
-    content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) ".";
-  }
-  &:last-child {
-    counter-reset: h4-section;
+    > ul > li {
+      counter-increment: h4-section;
+      &::marker {
+        content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) ".";
+      }
+      &:first-child {
+        counter-reset: h4-section;
+      }
+    }
   }
 }
 
 .markdown-content blockquote > p:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .alert-compact {

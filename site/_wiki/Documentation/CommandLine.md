@@ -7,6 +7,7 @@ title: Command Line Arguments
 |        Argument       | Description |
 | :-------------------: | ----------- |
 | `--minimized` or `-m` | Starts the application in a minimized state
+{: .table .table-dark }
 
 ## Daemon
 
@@ -14,6 +15,7 @@ title: Command Line Arguments
 | :-----------------: | ----------- |
 | `--appdata` or `-a` | Uses the specified directory for application data
 | `--config` or `-c`  | Uses the specified directory for searching of tablet configuration overrides
+{: .table .table-dark }
 
 ## Console
 
@@ -26,3 +28,4 @@ Use the `--help` argument to see the list of supported commands in your specific
 | :----------------------: | ----------- |
 |        `--version`       | Shows the compatible OpenTabletDriver daemon version
 | `--help` or `-h` or `-?` | Shows the available commands for use with the console application
+{: .table .table-dark }

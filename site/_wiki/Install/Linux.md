@@ -37,7 +37,13 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.
 
-3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+3. Update your initramfs:
+
+    ```bash
+    sudo dracut --regenerate-all --force
+    ```
+
+4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ### openSUSE {#opensuse}
 

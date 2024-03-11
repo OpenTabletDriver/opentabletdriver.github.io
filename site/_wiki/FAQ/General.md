@@ -46,6 +46,7 @@ The application data directory contents are as follows:
 |       Cache       | Folder | Contains cached metadata for the Plugin Manager
 |      Plugins      | Folder | Contains installed plugins (`.dll` files). This folder should not be modified manually.
 |      Presets      | Folder | Contains saved presets
+{: .table .table-dark }
 
 ## My cursor is going crazy! It teleports everywhere! {#emi-interference}
 
@@ -88,6 +89,7 @@ However, to make the driver output the pressure to your operating system, you ma
 |      Windows     | [Windows Ink] | A virtual device driver (VMulti) and the Windows Ink plugin is needed
 |       Linux      | [Artist Mode] | Built-in, simply change the output mode of OpenTabletDriver
 |       MacOS      |  unsupported  | This is a work in progress, and is expected with the 0.7 release of OpenTabletDriver
+{: .table .table-dark }
 
 [Windows Ink]: {% link _wiki/FAQ/Windows.md %}#win-ink
 [Artist Mode]: {% link _wiki/FAQ/Linux.md %}#artist-mode
@@ -113,6 +115,7 @@ Use this reference chart for the upcoming formulas:
 | XOffset | The X offset of the center of the area in millimeters
 | YOffset | The Y offset of the center of the area in millimeters
 |   LPI   | Lines per inch, this is commonly 5080 or 2540
+{: .table .table-dark }
 
 `TWidth` and `THeight` can be found in the tablet's configuration file.
 
@@ -126,6 +129,7 @@ Use the following formulas to get values for OpenTabletDriver's area editor's `W
 |  Top   | The number of lines from the top side of the tablet to the top side of the area
 | Right  | The number of lines from the left side of the tablet to the right side of the area
 | Bottom | The number of lines from the top side of the tablet to the bottom side of the area
+{: .table .table-dark }
 
 **Formula**:
 
@@ -144,6 +148,7 @@ YOffset = (Height / 2) + (Top  / LPI * 25.4)
 | XPH  | The height in XP-Pen units. Denoted as `H` in XP-Pen's official drivers.
 | XPX  | The X offset of the top left corner of the area in XP-Pen units. Denoted as `X` in XP-Pen's official drivers.
 | XPY  | The Y offset of the top left corner of the area in XP-Pen units. Denoted as `Y` in XP-Pen's official drivers.
+{: .table .table-dark }
 
 **Formula**:
 
@@ -162,6 +167,7 @@ YOffset = (Height / 2) + (XPY / 3.937)
 |  Top   | The percentage of the distance from the top side of the tablet to the top side of the area
 | Right  | The percentage of the distance from the left side of the tablet to the right side of the area
 | Bottom | The percentage of the distance from the top side of the tablet to the bottom side of the area
+{: .table .table-dark }
 
 **Formula**:
 

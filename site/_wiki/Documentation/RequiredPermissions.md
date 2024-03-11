@@ -87,6 +87,7 @@ Then update the initramfs:
 | :-----------: | :------ |
 |  Arch Linux   | `sudo mkinitcpio -P`
 | Debian/Ubuntu | `sudo update-initramfs -u`
+{: .table .table-dark }
 
 For other distros, refer to your distro's documentation on how to update the initramfs.
 
@@ -135,6 +136,7 @@ Then update the initramfs:
 | :-----------: | :------ |
 |  Arch Linux   | `sudo mkinitcpio -P`
 | Debian/Ubuntu | `sudo update-initramfs -u`
+{: .table .table-dark }
 
 For other distros, refer to your distro's documentation on how to update the initramfs.
 
@@ -164,6 +166,7 @@ OpenTabletDriver requires the following permissions:
 | :--------------: | :----------------- |
 |  Accessibility   | To move the cursor
 | Input Monitoring | To read the current cursor position and properly send relative movements (relative mode)
+{: .table .table-dark }
 
 To grant this, navigate to <kbd>Settings</kbd> ⇒ <kbd>System Preferences</kbd> ⇒ <kbd>Security and Privacy</kbd> ⇒ <kbd>Privacy</kbd>, then check the permissions required.
 

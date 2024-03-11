@@ -10,6 +10,7 @@ tablets.
 |  Property Name   |   Value Type   | Description |
 | :--------------: | :------------: | :---------- |
 |       Name       |    `string`    | The name of the device. This is always the device manufacturer's name followed by the device's model number or product name when not applicable.
+{: .table .table-dark }
 
 ## Specifications
 
@@ -27,6 +28,7 @@ always required for the device to function.
 |        Height         |  `double`  |      mm      | The physical height of the digitizer in millimeters
 | Horizontal Resolution |  `double`  | Device Units | The horizontal resolution of the digitizer in device units
 |  Vertical Resolution  |  `double`  | Device Units | The vertical resolution of the digitizer in device units
+{: .table .table-dark }
 
 ### Pen
 
@@ -37,6 +39,7 @@ data. This is almost always required.
 | :-------------: | :--------: | :---------- |
 |  Max Pressure   |   `uint`   | The maximum pressure reported by the pen in device pressure units. This is used to calculate a percentage of pressure. If there are more than pens supported by this tablet, the pen with the highest pressure value is used.
 |  Button Count   |   `uint`   | The amount of buttons on the pen. This does not include the eraser, if applicable. If there are more than one pens supported by this tablet, use the number of buttons on the pen with the most.
+{: .table .table-dark }
 
 ### Auxiliary Buttons
 
@@ -46,6 +49,7 @@ buttons.
 | Property Name | Value Type  | Description |
 | :-----------: | :---------: | :---------- |
 | Button Count  |   `uint`    | The amount of buttons
+{: .table .table-dark }
 
 ### Touch
 
@@ -77,6 +81,7 @@ pinpoint devices.
 | Output Initialization Report  |       `List<byte[]>`       | A list of output reports to be sent to the device to perform the device's initialization sequence.
 |        Device Strings         | `Dictionary<byte, string>` | A list of regular expressions to be matched against specific indexes of strings contained within the device's firmware. They can be retrieved via the device string reader. This is optional, however it is commonly used to improve detection precision.
 | Initialization String Indexes |          `byte[]`          | A list of indexes to be retrieved from the device as part of the device's initialization sequence. This is optional, and very infrequently used.
+{: .table .table-dark }
 
 > Byte arrays (`byte[]`) are serialized as Base64 in JSON.NET, the library that serializes and deserializes configurations.
 {:.alert-primary}
@@ -99,6 +104,7 @@ Some example attributes include:
 |    `WinInterface`    |       [00..99]       | *(Windows only)* Similar to `MacInterface`. String must have exactly two digits, (e.g. `"01"`)
 |      `WinUsage`      |       [00..99]       | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
 | `FeatureInitDelayMs` |     milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
+{: .table .table-dark }
 
 [libinput]: https://www.freedesktop.org/wiki/Software/libinput/ "freedesktop.org's site on libinput"
 [udev]: https://wiki.debian.org/udev

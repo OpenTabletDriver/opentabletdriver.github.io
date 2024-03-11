@@ -39,7 +39,7 @@ libinput list-devices | grep -i OpenTabletDriver
 
 If your program still does not work after ensuring the output mode has been set in the driver, please read on.
 
-### GIMP {#gimp}
+### GIMP 2 {#gimp2}
 
 1. Go to 'Edit -> Input Devices' in the GIMP Toolbar
 2. Make sure any of the devices matching the following settings are set to 'Mode: Screen' in the right hand panel

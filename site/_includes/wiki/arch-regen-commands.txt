@@ -1,0 +1,5 @@
+ # Regenerate initramfs
+ {{ elevateCommand }} {{ ramdiskUpdateCommand }}
+ # Unload kernel modules
+ {{ elevateCommand }} rmmod wacom
+ {{ elevateCommand }} rmmod hid_uclogic

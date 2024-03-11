@@ -1,3 +1,8 @@
 {
-  "Exclude": ["\\.md$", "Gemfile.lock$", "assets/css/rougehl.css$"]
+  "Exclude": [ "\\.md$",
+    "Gemfile.lock$",
+    "assets/css/rougehl.css$",
+    "_includes/wiki/arch-makepkg-commands.txt",
+    "_includes/wiki/arch-regen-commands.txt"
+  ]
 }

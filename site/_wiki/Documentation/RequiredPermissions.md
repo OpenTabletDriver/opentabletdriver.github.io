@@ -28,6 +28,14 @@ Currently, two kernel modules are also unloaded as they interfere with OpenTable
 
 A kernel module blacklist is used to prevent these modules from loading on boot.
 
+If you've just installed OpenTabletDriver, make sure these
+modules aren't loaded by running the following commands:
+
+```sh
+sudo rmmod wacom
+sudo rmmod hid_uclogic
+```
+
 ### Set up udev rules and kernel module blacklist {#setup-linux}
 
 If for some reason the udev rules and the kernel module blacklist is not working, make sure that

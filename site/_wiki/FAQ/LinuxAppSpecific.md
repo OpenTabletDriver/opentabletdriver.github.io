@@ -28,7 +28,7 @@ env SDL_VIDEODRIVER=wayland osu-lazer
 
 ## Art Programs {#art}
 
-Firstly, make sure your output mode is [set to Artist Mode]({% link _wiki/FAQ/Linux.md %}#artist-mode %})
+Firstly, make sure your output mode is [set to Artist Mode]({% link _wiki/FAQ/Linux.md %}#artist-mode)
 
 You can confirm the setting is applied by running the following command and
 verifying that at least 1 listed device contains 'Artist' in the name:

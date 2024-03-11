@@ -94,6 +94,34 @@ However, to make the driver output the pressure to your operating system, you ma
 [Windows Ink]: {% link _wiki/FAQ/Windows.md %}#win-ink
 [Artist Mode]: {% link _wiki/FAQ/Linux.md %}#artist-mode
 
+## My area feels off after changing my monitor settings {#sensitive-monitor-layout}
+
+With absolute outputs modes, OpenTabletDriver has to use your monitor layout to
+determine how to map your tablet to your monitor.
+
+However, OpenTabletDriver does not currently get monitor layout updates
+dynamically, so any changes to the working dimensions of your monitor layout
+will require a daemon restart.
+
+This means that doing any of the following will require you to restart
+OpenTabletDriver for the driver to function correctly with absolute output modes:
+
+- Plugging in or enabling a monitor
+- Unplugging or disabling a monitor
+- Changing the resolution of any of your monitors
+  - Some applications (such as games) can change your resolution when the
+    application uses exclusive fullscreen mode.
+    Use a 'borderless windowed' mode instead.
+- Moving monitors around in the monitor layout
+- Rotating monitors in the monitor layout
+
+After restarting the daemon, you should double check that the mapped tablet
+area is still set as intended.
+
+This is a bug that is planned to be fixed.
+You can see the progress on GitHub here:
+[OpenTabletDriver#1143](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1143)
+
 ## How to convert areas to and from OpenTabletDriver? {#area-conversion}
 
 ### Conversion through the OpenTabletDriver UI

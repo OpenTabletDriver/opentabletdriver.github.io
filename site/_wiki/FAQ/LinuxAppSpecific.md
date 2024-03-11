@@ -44,7 +44,7 @@ If your program still does not work after ensuring the output mode has been set 
     - `Core Pointer`
     - `xwayland-tablet eraser`, if present
     - `xwayland-tablet stylus`, if present
-    - `OpenTabletDriver Virtual Artist Tablet` (FIXME: verify this is correct for X11)
+    - `OpenTabletDriver Virtual Artist Tablet Pen`, if present and on X11
     > Any devices not in the list above should have their Mode set to Disabled
 3. Ensure your chosen tool supports pressure
     - Most tools support this by using the 'Basic Dynamics' Dynamic profile in the Tool Options Dialog

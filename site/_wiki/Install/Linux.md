@@ -82,8 +82,7 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
     # Regenerate initramfs
     sudo mkinitcpio -P
     # Unload kernel modules
-    sudo rmmod wacom
-    sudo rmmod hid_uclogic
+    sudo rmmod wacom hid_uclogic
     ```
 
 ### `makepkg` method {#manual-makepkg-method}
@@ -101,8 +100,7 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
     # Regenerate initramfs
     sudo mkinitcpio -P
     # Unload kernel modules
-    sudo rmmod wacom
-    sudo rmmod hid_uclogic
+    sudo rmmod wacom hid_uclogic
     ```
 
 ## Gentoo {#gentoo}

@@ -109,9 +109,9 @@ OpenTabletDriver for the driver to function correctly with absolute output modes
 - Plugging in or enabling a monitor
 - Unplugging or disabling a monitor
 - Changing the resolution of any of your monitors
-  - Some applications (such as games) can change your resolution when the
-    application uses exclusive fullscreen mode.
-    Use a 'borderless windowed' mode instead.
+    - Some applications (such as games) can change your resolution when the
+      application uses exclusive fullscreen mode.
+      Use a 'borderless windowed' mode instead.
 - Moving monitors around in the monitor layout
 - Rotating monitors in the monitor layout
 

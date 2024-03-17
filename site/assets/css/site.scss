@@ -64,6 +64,13 @@ div.highlighter-rouge {
 
 #page-title {
   @include markdown-header;
+  font-size: calc(1.375em + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  #page-title {
+    font-size: 2.5em;
+  }
 }
 
 #toc-container {
@@ -82,6 +89,7 @@ div.highlighter-rouge {
 
 .markdown-content {
   h2 {
+    font-size: 1.55em;
     counter-increment: h2-section;
     > span::before {
       content: counter(h2-section) ".";
@@ -89,6 +97,7 @@ div.highlighter-rouge {
   }
 
   h3 {
+    font-size: 1.45em;
     counter-increment: h3-section;
     ~ h2 {
       counter-reset: h3-section;
@@ -99,6 +108,7 @@ div.highlighter-rouge {
   }
 
   h4 {
+    font-size: 1.28em;
     counter-increment: h4-section;
     ~ h3 {
       counter-reset: h4-section;
@@ -106,6 +116,12 @@ div.highlighter-rouge {
     > span::before {
       content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) ".";
     }
+  }
+  h5 {
+    font-size: 1.16em;
+  }
+  h6 {
+    font-size: 1em;
   }
 
   h2, h3 {
@@ -119,6 +135,10 @@ div.highlighter-rouge {
       margin-right: 1ex;
     }
   }
+}
+
+#toc {
+  font-size: 0.95em;
 }
 
 #toc > li {

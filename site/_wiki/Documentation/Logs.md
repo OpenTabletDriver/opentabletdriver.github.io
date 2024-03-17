@@ -4,31 +4,35 @@ title: Logs
 
 ## GUI
 
-To view logs, click on the <kbd>Console</kbd> tab. Optionally, change filter from <kbd>Information</kbd> to <kbd>Debug</kbd> for more detailed logs.
+To view the current logs, click on the <kbd>Console</kbd> tab. Optionally, change filter from <kbd>Information</kbd> to <kbd>Debug</kbd> for more detailed logs.
+
+You can also find previous logs in the `Logs/` folder of the application data location.
+See more in the [Daemon log](#daemon-log) section.
 
 To export logs, click <kbd>Help</kbd> ⇒ <kbd>Export diagnostics</kbd> in the top menu bar.
 
-Sometimes, the OpenTabletDriver daemon can crash hard enough that the errors can't be
-sent to the GUI. In this case, you can find a
-partial log in the location specified [here](#daemon-log).
-
 ## Daemon
 
-The output from daemon is the log.
+The output from daemon is logged to the `Logs/` folder.
 
-On Linux when running daemon via systemd service, the log for the daemon is recorded by systemd.
+On Linux when running daemon via systemd service, the log for the daemon is also recorded by systemd.
 To view that log, run the following command as your user:
 
 ```bash
 journalctl --user-unit opentabletdriver.service
 ```
 
-### Exception Log Location {#daemon-log}
+### Daemon Log Location {#daemon-log}
 
-If the daemon crashes from an "unrecoverable" exception, the `daemon.log` file will
-include a stack trace defining where the error happened, which is useful for debugging.
+If the daemon crashes from an "unrecoverable" exception, the error is appended to the log file.
+It contains a stack trace defining where the error happened, which is useful for debugging.
 
-The `daemon.log` file is in the application data folder, located here:
+Up to 20 log files will be stored in the `Logs/` folder, using the date of when the daemon started as a file name.
+
+The log files are formatted in an almost-JSON format. It is likely they are missing the array end (`]`) which
+some JSON parsers do not like. However, the format remains mostly human-readable.
+
+The `Logs/` folder is in the application data folder, located here:
 
 {% include appdata-location.md %}
 

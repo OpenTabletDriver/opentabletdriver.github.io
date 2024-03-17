@@ -41,7 +41,7 @@ The application data directory contents are as follows:
 | :---------------: | :----: | :---------- |
 |  `settings.json`  |  File  | Stores the driver settings
 | `tablet-data.txt` |  File  | Stores the recorded tablet data from Tablet Debugger
-|   `daemon.log`    |  File  | Contains a stack trace if the daemon has crashed
+|       Logs        | Folder | Contains up to 20 daemon logs in near-JSON format ([more info]({% link _wiki/Documentation/Logs.md %}#daemon-log))
 |      Backup       | Folder | Contains old versions of OpenTabletDriver and its settings
 |       Cache       | Folder | Contains cached metadata for the Plugin Manager
 |      Plugins      | Folder | Contains installed plugins (`.dll` files). This folder should not be modified manually.

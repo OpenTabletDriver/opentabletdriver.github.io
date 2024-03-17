@@ -19,15 +19,15 @@ accurately handle the data the tablet device outputs.
 
 ### Digitizer
 
-This refers to the graphics tablet's digitizer, which provides coordinates of where the tool is positioned. This is
-always required for the device to function.
+This refers to the graphics tablet's digitizer, which provides coordinates of where the tool is positioned.
+This is always required for the device to function.
 
-|     Property Name     | Value Type |    Units     | Description |
-| :-------------------: | :--------: | :----------: | :---------- |
-|         Width         |  `double`  |      mm      | The physical width of the digitizer in millimeters
-|        Height         |  `double`  |      mm      | The physical height of the digitizer in millimeters
-| Horizontal Resolution |  `double`  | Device Units | The horizontal resolution of the digitizer in device units
-|  Vertical Resolution  |  `double`  | Device Units | The vertical resolution of the digitizer in device units
+| Property Name | Value Type |    Units     | Description |
+| :-----------: | :--------: | :----------: | :---------- |
+|     Width     |  `double`  |      mm      | The physical width of the digitizer in millimeters
+|     Height    |  `double`  |      mm      | The physical height of the digitizer in millimeters
+|     `MaxX`    |  `double`  | Device Units | The horizontal resolution of the digitizer in device units
+|     `MaxY`    |  `double`  | Device Units | The vertical resolution of the digitizer in device units
 {: .table .table-dark }
 
 ### Pen

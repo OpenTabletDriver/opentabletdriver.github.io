@@ -1,5 +1,5 @@
 ---
-title: Writing OpenTabletDriver Configurations
+title: Tablet configuration reference
 ---
 
 ## Device Information

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/thomaspark/bootswatch.git
-  revision: 0b64b984923ed0eb373aed9cf1bb8e697c30847a
+  revision: 41356c5c49010b5f80d1075e8865ba017ddba097
   branch: v5
   specs:
     bootswatch (5.3.3)

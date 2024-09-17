@@ -10,9 +10,9 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    autoprefixer-rails (10.4.16.0)
+    autoprefixer-rails (10.4.19.0)
       execjs (~> 2)
-    bootstrap (5.3.2)
+    bootstrap (5.3.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
     colorator (1.1.0)
@@ -141,7 +141,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  bootstrap (~> 5.3.2)
+  bootstrap (~> 5.3.3)
   bootswatch!
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3)

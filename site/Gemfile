@@ -19,7 +19,7 @@ end
 
 gem 'json'
 gem "bootswatch", github: "thomaspark/bootswatch", branch: "v5"
-gem "bootstrap", "~> 5.3.2"
+gem "bootstrap", "~> 5.3.3"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

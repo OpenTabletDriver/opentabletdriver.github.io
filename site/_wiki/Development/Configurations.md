@@ -100,8 +100,7 @@ Some example attributes include:
 |       Key Name       |     String Value     | Description |
 | :------------------: | :------------------: | :---------- |
 |  `libinputoverride`  |         `1`          | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
-|    `MacInterface`    | non-negative integer | *(MacOS only)* Specifies the USB device interface to use. For example: `0`
-|    `WinInterface`    |       [00..99]       | *(Windows only)* Similar to `MacInterface`. String must have exactly two digits, (e.g. `"01"`)
+|      `Interface`     | non-negative integer | Specifies the USB device interface to use. For example: `0`. Should be used when the identifiers might be ambiguous, or if the tablet has multiple interfaces matching the used identifiers, but only has one of them usable.
 |      `WinUsage`      |       [00..99]       | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
 | `FeatureInitDelayMs` |     milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
 {: .table .table-dark }

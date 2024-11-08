@@ -81,6 +81,7 @@ pinpoint devices.
 | Output Initialization Report  |       `List<byte[]>`       | A list of output reports to be sent to the device to perform the device's initialization sequence.
 |        Device Strings         | `Dictionary<byte, string>` | A list of regular expressions to be matched against specific indexes of strings contained within the device's firmware. They can be retrieved via the device string reader. This is optional, however it is commonly used to improve detection precision.
 | Initialization String Indexes |          `byte[]`          | A list of indexes to be retrieved from the device as part of the device's initialization sequence. This is optional, and very infrequently used.
+|         `Interface`           |    non-negative integer    | Specifies the USB device interface to use. For example: `0`. Should be used when the identifier might be ambiguous, or if the tablet has multiple interfaces matching the used identifiers, but only has one of them usable.
 {: .table .table-dark }
 
 > Byte arrays (`byte[]`) are serialized as Base64 in JSON.NET, the library that serializes and deserializes configurations.
@@ -100,9 +101,9 @@ Some example attributes include:
 |       Key Name       |     String Value     | Description |
 | :------------------: | :------------------: | :---------- |
 |  `libinputoverride`  |         `1`          | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
-|      `Interface`     | non-negative integer | Specifies the USB device interface to use. For example: `0`. Should be used when the identifiers might be ambiguous, or if the tablet has multiple interfaces matching the used identifiers, but only has one of them usable.
 |      `WinUsage`      |       [00..99]       | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
 | `FeatureInitDelayMs` |     milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
+|      `Interface`     | non-negative integer | Specifies the USB device interface to use. For example: `0`. Should be used when the identifiers might be ambiguous, or if the tablet has multiple interfaces matching the used identifiers, but only has one of them usable. We suggest using the digitizer-specific `Interface` attribute instead, if possible.
 {: .table .table-dark }
 
 [libinput]: https://www.freedesktop.org/wiki/Software/libinput/ "freedesktop.org's site on libinput"

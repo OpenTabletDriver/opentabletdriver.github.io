@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/thomaspark/bootswatch.git
-  revision: 0b64b984923ed0eb373aed9cf1bb8e697c30847a
-  branch: v5
+  revision: 646c94da2c262473c6f73664f4547c046f3a28dd
+  tag: v5.3.3
   specs:
     bootswatch (5.3.3)
 
@@ -10,9 +10,9 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    autoprefixer-rails (10.4.16.0)
+    autoprefixer-rails (10.4.19.0)
       execjs (~> 2)
-    bootstrap (5.3.2)
+    bootstrap (5.3.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
     colorator (1.1.0)
@@ -21,7 +21,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
-    execjs (2.9.1)
+    execjs (2.10.0)
     faraday (2.9.0)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
@@ -141,7 +141,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  bootstrap (~> 5.3.2)
+  bootstrap (~> 5.3.3)
   bootswatch!
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3)

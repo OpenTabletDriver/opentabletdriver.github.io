@@ -221,6 +221,7 @@ YOffset = (Height / 2) + (Top * THeight)
 {: .table .table-dark }
 
 **Formula**:
+
 ```py
 Width   = (GaomonWidth  / THorizontal) * TWidth
 Height  = (GaomonHeight / TVertical)   * THeight

@@ -70,17 +70,18 @@ This has the same properties as the [auxiliary buttons](#auxiliary-buttons)
 Device identifiers are what actually detect the tablet. Anything defined here is used in the detection process to
 pinpoint devices.
 
-|         Property Name         |         Value Type         | Description |
-| :---------------------------: | :------------------------: | :---------- |
-|           Vendor ID           |          `ushort`          | A [USB-IF] defined identifier that defines which vendor the device is produced by. Since this is assigned by the USB-IF it can be quite reliable for determining the manufacturer.
-|          Product ID           |          `ushort`          | A vendor-defined identifier for the device. This can be used to identify a device, however this can be unreliable as it depends on the vendor defining it different for all of their devices.
-|      Input Report Length      |          `ushort`          | The length of input reports from the device. This is always required as report parsers expect a specific report length.
-|     Output Report Length      |          `ushort`          | The length of output reports to the device endpoint. This is not always required, however it does help make the detection more precise.
-|         Report Parser         |          `string`          | The parser that will read and convert all tablet report data into a format that OpenTabletDriver understands. This is the full namespace and the class name. All supported vendor-specific report parsers can be found [here][parsers].
-| Feature Initialization Report |       `List<byte[]>`       | A list of feature reports to be sent to the device to perform the device's initialization sequence.
-| Output Initialization Report  |       `List<byte[]>`       | A list of output reports to be sent to the device to perform the device's initialization sequence.
-|        Device Strings         | `Dictionary<byte, string>` | A list of regular expressions to be matched against specific indexes of strings contained within the device's firmware. They can be retrieved via the device string reader. This is optional, however it is commonly used to improve detection precision.
-| Initialization String Indexes |          `byte[]`          | A list of indexes to be retrieved from the device as part of the device's initialization sequence. This is optional, and very infrequently used.
+|         Property Name         |          Value Type          | Description |
+| :---------------------------: | :--------------------------: | :---------- |
+|           Vendor ID           |           `ushort`           | A [USB-IF] defined identifier that defines which vendor the device is produced by. Since this is assigned by the USB-IF it can be quite reliable for determining the manufacturer.
+|          Product ID           |           `ushort`           | A vendor-defined identifier for the device. This can be used to identify a device, however this can be unreliable as it depends on the vendor defining it different for all of their devices.
+|      Input Report Length      |           `ushort`           | The length of input reports from the device. This is always required as report parsers expect a specific report length.
+|     Output Report Length      |           `ushort`           | The length of output reports to the device endpoint. This is not always required, however it does help make the detection more precise.
+|         Report Parser         |           `string`           | The parser that will read and convert all tablet report data into a format that OpenTabletDriver understands. This is the full namespace and the class name. All supported vendor-specific report parsers can be found [here][parsers].
+| Feature Initialization Report |        `List<byte[]>`        | A list of feature reports to be sent to the device to perform the device's initialization sequence.
+| Output Initialization Report  |        `List<byte[]>`        | A list of output reports to be sent to the device to perform the device's initialization sequence.
+|        Device Strings         |  `Dictionary<byte, string>`  | A list of regular expressions to be matched against specific indexes of strings contained within the device's firmware. They can be retrieved via the device string reader. This is optional, however it is commonly used to improve detection precision.
+| Initialization String Indexes |           `byte[]`           | A list of indexes to be retrieved from the device as part of the device's initialization sequence. This is optional, and very infrequently used.
+|          Attributes           | `Dictionary<string, string>` | See [Attributes](#attributes) table for attributes that can be used in identifiers |
 {: .table .table-dark }
 
 > Byte arrays (`byte[]`) are serialized as Base64 in JSON.NET, the library that serializes and deserializes configurations.
@@ -89,7 +90,7 @@ pinpoint devices.
 [USB-IF]: https://en.wikipedia.org/wiki/USB_Implementers_Forum "USB Implementers Forum"
 [parsers]: https://github.com/OpenTabletDriver/OpenTabletDriver/tree/HEAD/OpenTabletDriver.Configurations/Parsers
 
-### Attributes
+### Attributes {#attributes}
 
 Attributes are used to provide additional optional information, commonly used within utilities or tools, or within OpenTabletDriver to help with device detection.
 
@@ -97,13 +98,13 @@ The type of the object is `Dictionary<string, string>`, e.g. `{ "FeatureInitDela
 
 Some example attributes include:
 
-|       Key Name       |     String Value     | Description |
-| :------------------: | :------------------: | :---------- |
-|  `libinputoverride`  |         `1`          | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
-|    `MacInterface`    | non-negative integer | *(MacOS only)* Specifies the USB device interface to use. For example: `0`
-|    `WinInterface`    |       [00..99]       | *(Windows only)* Similar to `MacInterface`. String must have exactly two digits, (e.g. `"01"`)
-|      `WinUsage`      |       [00..99]       | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
-| `FeatureInitDelayMs` |     milliseconds     | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
+|       Key Name       |     String Value     | Usage in               || Description |
+|                      |                      | Attributes | Identifier |             |
+| :------------------: | :------------------: | :--------: | :--------: | :---------- |
+|      `Interface`     | non-negative integer |         ✅ |         ✅ | Specifies the USB device interface to use. For example: `"0"`. Should be used when the identifiers might be ambiguous, or if the tablet has multiple interfaces matching the used identifiers, but only has one of them usable. We suggest using the digitizer-specific `Interface` attribute instead, if possible.
+|      `WinUsage`      |       [00..99]       |         ✅ |         ✅ | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
+|  `libinputoverride`  |         `1`          |         ✅ |         ❌ | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
+| `FeatureInitDelayMs` |     milliseconds     |         ✅ |         ❌ | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
 {: .table .table-dark }
 
 [libinput]: https://www.freedesktop.org/wiki/Software/libinput/ "freedesktop.org's site on libinput"

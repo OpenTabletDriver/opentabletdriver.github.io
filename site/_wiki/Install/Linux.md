@@ -26,7 +26,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 ## RPM-based distributions {#rpm}
 
-### Fedora {#fedora}
+### Fedora (Upstream package) {#fedora}
 
 1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
 2. Install the package with the following command:
@@ -44,6 +44,23 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
     ```
 
 4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+
+### Fedora (Terra) {#terra}
+
+[Terra]({{ sites.data.links.external.Terra.website }}) also provides RPM builds for Fedora, Ultramarine and RHEL 10-based distributions.
+
+1. Add the Terra repository
+
+    ```bash
+    sudo dnf install --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
+    ```
+2. Install OpenTabletDriver
+
+    ```bash
+    sudo dnf install opentabletdriver
+    ```
+
+3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
 ### openSUSE {#opensuse}
 

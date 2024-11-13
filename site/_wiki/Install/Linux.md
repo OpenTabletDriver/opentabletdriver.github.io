@@ -47,7 +47,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 ### Fedora (Terra) {#terra}
 
-[Terra]({{ sites.data.links.external.Terra.website }}) also provides RPM builds for Fedora, Ultramarine and RHEL 10-based distributions.
+[Terra]({{ site.data.links.external.Terra.website }}) also provides RPM builds for Fedora, Ultramarine and RHEL 10-based distributions.
 
 1. Add the Terra repository
 

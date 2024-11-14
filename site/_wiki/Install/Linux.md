@@ -54,6 +54,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
     ```bash
     sudo dnf install --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
     ```
+
 2. Install OpenTabletDriver
 
     ```bash

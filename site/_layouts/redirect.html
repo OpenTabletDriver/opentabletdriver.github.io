@@ -1,0 +1,24 @@
+{% if page.redirect == "special_discord" %}
+  {% assign redirect = site.data.links.project.DiscordInvite %}
+  {% assign redirect_set = True %}
+{% endif %}
+{% if redirect_set %}
+  {% assign redirect = page.redirect | replace: "@@OTD_VERSION@@", site.latest_otd_version %}
+{% endif %}
+<html>
+  <head>
+    <style>
+      * { background: black; }
+    </style>
+    <meta charset="utf-8"/>
+    <meta http-equiv="refresh" content="1;url={{ redirect }}"/>
+    <link rel="canonical" href="{{ redirect }}"/>
+    <script type="text/javascript">
+      window.location.href = "{{ redirect }}"
+    </script>
+    <title>{{ page.title }} Page Redirection</title>
+  </head>
+  <body>
+    If you are not redirected automatically, follow <a href='{{ redirect }}'>this link</a>.
+  </body>
+</html>

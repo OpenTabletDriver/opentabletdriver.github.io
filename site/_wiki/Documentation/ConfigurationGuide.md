@@ -100,7 +100,7 @@ Some (almost) always correct values include:
 - Pen pressure range
 
 Digitizer dimensions (for both pen and touch digitizer) will be determined as a
-later part of the guide, and is not always correct.
+later part of the guide, and are not always correct.
 
 Note that wheels (rings) are not yet supported, and should not be directly defined
 (even as a button). See [OpenTabletDriver#1367] for more information

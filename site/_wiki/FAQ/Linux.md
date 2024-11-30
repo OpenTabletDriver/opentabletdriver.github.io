@@ -141,6 +141,18 @@ AttrTabletSmoothing=0
 
 You should restart the OpenTabletDriver daemon after updating this file.
 
+## Can I bypass the stock tablet driver block? {#bypass-driver-block}
+
+Yes. Use the `-i` flag when invoking `modprobe` to bypass the block. E.g.:
+
+```sh
+modprobe -i wacom
+```
+
+OpenTabletDriver uses `install /usr/bin/true` rather than `blacklist` as some
+official manufacturer tablet drivers was found to not clean up properly when
+uninstalled.
+
 ## Still have problems? {#discord}
 
 If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.data.links.project.DiscordInvite }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

@@ -13,7 +13,8 @@
     "LatestReleasePage": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest",
     "UpstreamRepo": "https://github.com/OpenTabletDriver/OpenTabletDriver",
     "GitRepo": "https://github.com/OpenTabletDriver/OpenTabletDriver.git",
-    "DiscordInvite": "https://discord.gg/9bcMaPkVAR"
+    "DiscordInvite": "https://discord.gg/9bcMaPkVAR",
+    "WebsiteRepo": "https://github.com/OpenTabletDriver/opentabletdriver.github.io"
   },
   "external": {
     "TabletDriverCleanup": {

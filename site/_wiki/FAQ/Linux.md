@@ -89,7 +89,9 @@ Try disabling your filters one-by-one and see if input finally works.
 
 ## Display mapping behaves unexpectedly on a multi-monitor setup {#DE-mapping-multi-monitor}
 
-Check your desktop environment's tablet settings page and, if OpenTabletDriver device is being detected, make sure it's set to map to all screens.
+OpenTabletDriver's virtual device might be getting picked up by your desktop environment, which could be mapping its area to another monitor.
+
+To fix it, check your desktop environment's tablet settings page and, if possible, make sure the virtual device is mapped to all screens.
 
 ## Tablet is working but there is no pressure {#artist-mode}
 

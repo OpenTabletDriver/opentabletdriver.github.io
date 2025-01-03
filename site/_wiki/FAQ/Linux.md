@@ -87,6 +87,18 @@ Failed to initialize virtual tablet. (error code EACCES)
 
 Try disabling your filters one-by-one and see if input finally works.
 
+## Display mapping behaves unexpectedly on a multi-monitor setup {#DE-mapping-multi-monitor}
+
+OpenTabletDriver's virtual device might be getting picked up by your desktop environment, which could be mapping its area to another monitor.
+
+To fix it, check your desktop environment's tablet settings page and, if possible, make sure the virtual device is mapped to all screens.
+
+If it doesn't let you map the area to more than one screen, you will have to map the area to all screens in OpenTabletDriver:
+
+- `Right click` the area editor
+- Select `Set to display` -> `Virtual Display`
+- Save or apply your settings, and then try mapping your area to the desired monitor in your desktop environment's settings.
+
 ## Tablet is working but there is no pressure {#artist-mode}
 
 Pressure support is available by changing the output mode of OpenTabletDriver to Artist Mode:

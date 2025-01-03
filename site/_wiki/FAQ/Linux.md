@@ -129,9 +129,29 @@ otd-daemon
 
 ## The cursor feels slow on Artist Mode {#libinput-smoothing}
 
-Using Artist Mode will result in some minor smoothing due to libinput's tablet handling.
+If you are using a release version of OpenTabletDriver v0.6.4.0 or older, this
+is expected, and a workaround exists.
 
-To disable this smoothing, add the contents below to `/etc/libinput/local-overrides.quirks`:
+On newer versions, this is fixed in new packaging - please report a bug to your
+packager if the quirks file is not included with your OpenTabletDriver package.
+
+### With OpenTabletDriver Version 0.6.5.0 or newer
+
+Smoothing on the virtual tablet provided by OpenTabletDriver should already be
+disabled via packaging. You can verify that the attribute is set with the
+`liblinput quirks list <path>` command.
+
+Figuring out the path is left as an exercise for the reader, but it is
+typically one of the **newest** (not necessarily highest numbered) `event##`
+device in `/dev/input/`.
+
+### With OpenTabletDriver Version 0.6.4.0 or earlier (and `master`/0.7 branch builds)
+
+With OpenTabletDriver v0.6.4.0 and earlier (and v0.7 builds), using Artist Mode
+will result in some minor smoothing due to libinput's tablet handling, for
+which the quirk is not officially included in packaging.
+
+To disable this smoothing manually, add the contents below to `/etc/libinput/local-overrides.quirks`:
 
 ```ini
 [OpenTabletDriver Virtual Tablet]

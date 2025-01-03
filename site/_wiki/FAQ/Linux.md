@@ -132,8 +132,7 @@ otd-daemon
 If you are using a release version of OpenTabletDriver v0.6.4.0 or older, this
 is expected, and a workaround exists [below](#libinput-smoothing-on-old-versions).
 
-On newer versions, this is fixed in new packaging - please report a bug to your
-packager if the quirks file is not included with your OpenTabletDriver package.
+On newer versions (v0.6.5.0 and up), this is fixed in packaging.
 
 ### With OpenTabletDriver Version 0.6.5.0 or newer
 
@@ -145,11 +144,14 @@ Figuring out the path is left as an exercise for the reader, but it is
 typically one of the **newest** (not necessarily highest numbered) `event##`
 device in `/dev/input/`.
 
-### With OpenTabletDriver Version 0.6.4.0 or earlier (and `master`/0.7 branch builds) {#libinput-smoothing-on-old-versions}
+If this attribute is not set correctly, please report it the person responsible
+for packaging OpenTabletDriver for your Linux distribution.
 
-With OpenTabletDriver v0.6.4.0 and earlier (and v0.7 builds), using Artist Mode
-will result in some minor smoothing due to libinput's tablet handling, for
-which the quirk is not officially included in packaging.
+### With OpenTabletDriver Version 0.6.4.0 or earlier {#libinput-smoothing-on-old-versions}
+
+With OpenTabletDriver v0.6.4.0 and earlier, using Artist Mode will result in
+some minor smoothing due to libinput's tablet handling, for which the quirk is
+not officially included in packaging.
 
 To disable this smoothing manually, add the contents below to `/etc/libinput/local-overrides.quirks`:
 

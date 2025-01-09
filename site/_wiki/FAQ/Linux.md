@@ -95,7 +95,7 @@ To fix it, check your desktop environment's tablet settings page and, if possibl
 
 If it doesn't let you map the area to more than one screen, you will have to map the area to all screens in OpenTabletDriver:
 
-- `Right click` the area editor
+- `Right click` the display area editor
 - Select `Set to display` -> `Virtual Display`
 - Save or apply your settings, and then try mapping your area to the desired monitor in your desktop environment's settings.
 

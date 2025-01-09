@@ -91,13 +91,21 @@ Try disabling your filters one-by-one and see if input finally works.
 
 OpenTabletDriver's virtual device might be getting picked up by your desktop environment, which could be mapping its area to another monitor.
 
-To fix it, check your desktop environment's tablet settings page and, if possible, make sure the virtual device is mapped to all screens.
+In order to avoid the two from conflicting, you will need to map one of the display area editors to all screens:
 
-If it doesn't let you map the area to more than one screen, you will have to map the area to all screens in OpenTabletDriver:
+### In desktop environment
 
-- `Right click` the display area editor
-- Select `Set to display` -> `Virtual Display`
-- Save or apply your settings, and then try mapping your area to the desired monitor in your desktop environment's settings.
+- Find your desktop environment's tablet settings page and, if possible, map the virtual device to all screens,
+- Set your intended area in OpenTabletDriver.
+
+Note that some desktop environments might not allow for such a configuration.
+
+### In OpenTabletDriver
+
+- `Right click` the display area editor,
+- Select `Set to display` -> `Virtual Display`,
+- Save or apply your settings,
+- Set your intended area in your desktop environment's settings.
 
 ## Tablet is working but there is no pressure {#artist-mode}
 

@@ -95,17 +95,17 @@ In order to avoid the two from conflicting, you will need to map one of the disp
 
 ### In desktop environment {#multi-monitor-fix-in-de}
 
-- Find your desktop environment's tablet settings page and, if possible, map the virtual device to all screens,
-- Set your intended area in OpenTabletDriver.
+- Find your desktop environment's tablet settings page and, if possible, map the virtual device to all screens
+- Set your intended area in OpenTabletDriver
 
 Note that some desktop environments might not allow for such a configuration.
 
 ### In OpenTabletDriver {#multi-monitor-fix-in-otd}
 
-- `Right click` the display area editor,
-- Select `Set to display` -> `Virtual Display`,
-- Save or apply your settings,
-- Set your intended area in your desktop environment's settings.
+- `Right click` the display area editor
+- Select `Set to display` -> `Virtual Display`
+- Save or apply your settings
+- Set your intended area in your desktop environment's settings
 
 ## Tablet is working but there is no pressure {#artist-mode}
 

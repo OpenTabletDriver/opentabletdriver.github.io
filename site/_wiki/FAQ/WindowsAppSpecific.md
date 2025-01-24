@@ -93,7 +93,7 @@ UseSystemStylus 1
 
 ### GIMP
 
-Use GIMP 2.99 to have Windows Ink support. GIMP 2.10 and below does not support Windows Ink.
+Use GIMP 3 to have Windows Ink support. GIMP 2.10 and below does not support Windows Ink.
 
 ### FireAlpaca
 

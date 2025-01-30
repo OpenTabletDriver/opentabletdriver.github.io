@@ -3,7 +3,7 @@ runs:
   using: "composite"
   steps:
     - name: Get site artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: github-pages
 

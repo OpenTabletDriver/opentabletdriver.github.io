@@ -1,5 +1,4 @@
-{%- assign filename = include.filename -%}
 {%- assign latest_otd_version = site.data.otd-versions | last -%}
-{%- assign filename = filename | replace: '{{VERSION}}', latest_otd_version -%}
+{%- assign filename = include.filename | replace: '{{VERSION}}', latest_otd_version -%}
 {%- assign urlBasePath = site.data.links.project.latestReleaseBase -%}
 Download the <a href="{{ urlBasePath }}{{ filename }}">latest release</a> <small class="text-muted">({{ filename }})</small>

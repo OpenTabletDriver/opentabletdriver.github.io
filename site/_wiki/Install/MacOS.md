@@ -5,7 +5,7 @@ hide_from_auto_list: true
 
 ## App {#app}
 
-1. Download the [latest release]({{ site.data.links.project.latestRelease.osx-x64 }}) <small class="text-muted">(OpenTabletDriver.osx-x64.tar.gz)</small>
+1. {% include latest-release.html filename=site.data.links.project.latestRelease.osx-x64 %}
 2. Extract it and drag `{% otdexe macos-extractor %}` into your Applications folder
 3. Run the OpenTabletDriver app.
 4. Set up the [required permissions]({% link _wiki/Documentation/RequiredPermissions.md %}#macos).

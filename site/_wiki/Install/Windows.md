@@ -16,7 +16,7 @@ If you are upgrading from an older version of OpenTabletDriver, it is important 
 install it on top of the old version and instead clean up the old directory.
 Alternatively you can install it to a new directory.
 
-1. Download the [latest release]({{ site.data.links.project.latestRelease.win-x64 }}). <small class="text-muted">(OpenTabletDriver.win-x64.zip)</small>
+1. {% include latest-release.html filename=site.data.links.project.latestRelease.win-x64 %}
 2. Extract the downloaded file into a folder of its own. For example:
 
     ```otdlog

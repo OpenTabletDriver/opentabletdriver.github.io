@@ -1,10 +1,11 @@
 {
   "project": {
+    "latestReleaseBase": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/",
     "latestRelease": {
-      "deb": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.deb",
-      "rpm": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm",
-      "osx-x64": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.osx-x64.tar.gz",
-      "win-x64": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.win-x64.zip"
+      "deb":     "OpenTabletDriver-{{VERSION}}-1-x64.deb",
+      "rpm":     "OpenTabletDriver-{{VERSION}}-1.x86_64.rpm",
+      "osx-x64": "OpenTabletDriver-{{VERSION}}.osx-x64.tar.gz",
+      "win-x64": "OpenTabletDriver-{{VERSION}}.win-x64.zip"
     },
     "buildInstructions": {
       "linux": "https://github.com/OpenTabletDriver/OpenTabletDriver#linux"

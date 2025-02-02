@@ -5,7 +5,7 @@ hide_from_auto_list: true
 
 ## Ubuntu / Debian {#debian}
 
-1. Download the [latest release]({{ site.data.links.project.latestRelease.deb }}) <small class="text-muted">(OpenTabletDriver.deb)</small>
+1. {% include latest-release.html filename=site.data.links.project.latestRelease.deb %}
 2. Run the following commands in a terminal
 
     ```bash
@@ -28,7 +28,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 ### Fedora {#fedora}
 
-1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
+1. {% include latest-release.html filename=site.data.links.project.latestRelease.rpm %}
 2. Install the package with the following command:
 
     ```bash
@@ -47,7 +47,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 ### openSUSE {#opensuse}
 
-1. Download the [latest release]({{ site.data.links.project.latestRelease.rpm }}) <small class="text-muted">(OpenTabletDriver.rpm)</small>
+1. {% include latest-release.html filename=site.data.links.project.latestRelease.rpm %}
 2. Run commands from [this guide]({{ site.data.links.external.Microsoft.AddMicrosoftRepoOpenSUSE }}) to add the Microsoft package repository.
 
     > You don't need to install .NET runtime at this point as zypper will install it as a dependency of OpenTabletDriver.

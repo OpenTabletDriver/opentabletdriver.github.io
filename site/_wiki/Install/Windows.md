@@ -5,7 +5,7 @@ hide_from_auto_list: true
 
 ## Dependencies {#dependencies}
 
-1. Install the [.NET 6 Desktop Runtime x64]({% link _sections/Framework.md %})
+1. Install the [.NET 8 Desktop Runtime x64]({% link _sections/Framework.md %})
 
 If you were previously using the standalone installer/updater (before v0.6), switch to the new
 method for installing OpenTabletDriver below.

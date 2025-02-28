@@ -5,7 +5,9 @@ hide_from_auto_list: true
 
 ## Ubuntu / Debian {#debian}
 
-1. {% include latest-release.html filename=site.data.links.project.latestRelease.deb %}
+{% assign deb_filename = site.data.links.project.latestRelease.deb %}
+
+1. {% include latest-release.html filename=deb_filename %}
 2. Run the following commands in a terminal
 
     ```bash
@@ -13,7 +15,7 @@ hide_from_auto_list: true
     sudo apt update
 
     # Install the package
-    sudo apt install ./OpenTabletDriver.deb
+    sudo apt install ./{{ deb_filename }}
     ```
 
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.

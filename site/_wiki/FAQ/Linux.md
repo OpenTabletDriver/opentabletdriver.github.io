@@ -158,7 +158,7 @@ On newer versions (v0.6.5.0 and up), this is fixed in packaging.
 
 Smoothing on the virtual tablet provided by OpenTabletDriver should already be
 disabled via packaging. You can verify that the attribute is set with the
-`liblinput quirks list <path>` command.
+`libinput quirks list <path>` command.
 
 Figuring out the path is left as an exercise for the reader, but it is
 typically one of the **newest** (not necessarily highest numbered) `event##`

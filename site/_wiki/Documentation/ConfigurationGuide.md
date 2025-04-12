@@ -311,7 +311,7 @@ The values below can be validated from entirely within the tablet debugger.
 The tablet debugger will show the values as parsed directly from the tablet,
 before any configuration adjustments (such as button count) take place.
 
-If any of the values seems absent or malfunctioning (overflowing, abrupt jumps), 
+If any of the values seems absent or malfunctioning (overflowing, abrupt jumps),
 you are probably using the wrong parser.
 
 #### Digitizer {#validate-parser-digitizer}

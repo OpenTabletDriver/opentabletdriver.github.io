@@ -104,8 +104,11 @@ Some (almost) always correct values include:
 Digitizer dimensions (for both pen and touch digitizer) will be determined as a
 later part of the guide, and are not always correct.
 
-Note that wheels (rings) are not yet supported, and should not be directly defined
-(even as a button). See [OpenTabletDriver#1367] for more information
+Note that wheels (rings) are not yet supported, and should not be directly defined.
+See [OpenTabletDriver#1367] for more information
+
+If the parser you use picks up wheel buttons as an aux button, make sure to
+take this into consideration when specifying aux button count.
 
 [OpenTabletDriver#1367]: https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1367
 

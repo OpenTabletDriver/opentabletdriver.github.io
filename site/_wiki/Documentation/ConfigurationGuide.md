@@ -152,8 +152,8 @@ if you know what you're doing
 > If you specify report lengths as null, it can be hard to fix any future
   conflicts that may arise without knowing what values your specific tablet
   has. If you do decide to specify them as null, please make sure to include a
-  OpenTabletDriver diagnostics with the pull request, or include the lengths in
-  the commit description.
+  OpenTabletDriver diagnostics with the pull request, and optionally include
+  the lengths in the commit description.
 
 ### Picking the Parser {#parser}
 

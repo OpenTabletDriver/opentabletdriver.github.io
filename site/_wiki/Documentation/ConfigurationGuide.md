@@ -286,11 +286,11 @@ may help some people decode their meaning.
 
 | Index | Value |
 | ----: | :---- |
-|   2   | XP-Pen: Model Name
-|   4   | XP-Pen: Firmware Build ID
-|   5   | XP-Pen: Firmware Build String
-|   23  | VEIKK: Firmware Build Date
-|  201  | Gaomon, Huion, and some other UC-Logic based: Firmware Build ID
+|   2   | **XP-Pen**: Model Name
+|   4   | **XP-Pen**: Firmware Build ID
+|   5   | **XP-Pen**: Firmware Build String
+|   23  | **VEIKK**: Firmware Build Date
+|  201  | **Gaomon**, **Huion**, and some other **UC-Logic** based: Firmware Build ID
 
 Be wary that probing strings can also change behavior in the device, which can
 usually be rectified by replugging the tablet.

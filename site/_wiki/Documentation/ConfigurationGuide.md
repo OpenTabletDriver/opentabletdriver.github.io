@@ -227,6 +227,25 @@ Getting these can be achieved in 2 ways:
 Copying the appropriate init strings from a sibling configuration is usually
 adequate.
 
+##### Common initialization strings
+
+For many UC-Logic based tablets, like Huion and Gaomon, they seem to all share
+almost the same indices to probe across many generations.
+
+Here are some recommended starting points for initialization strings, in order
+of most common to least common
+
+- `200`
+- `100`
+
+If `100` works but you have missing auxiliary buttons, you may need to follow
+it up with an string initialization on `123`
+
+The following 2 initialization strings have only been seen once:
+
+- `109`
+- `100` followed by `110`
+
 #### USB Packet capture
 
 This is usually done with Wireshark (and winpcap). A guide on this is planned

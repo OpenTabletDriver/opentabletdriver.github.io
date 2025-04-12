@@ -19,7 +19,7 @@ on that page.
 It is highly recommended to remove (or unload) your existing tablet drivers
 before proceeding.
 
-### Uninstalling drivers on Windows
+### Uninstalling drivers on Windows {#preparing-windows}
 
 Tablet drivers are often automatically installed by Windows.
 
@@ -28,7 +28,7 @@ OpenTabletDriver has access to the tablet.
 
 [TabletDriverCleanup]: {{ site.data.links.external.TabletDriverCleanup.latest }}
 
-### Unloading drivers on Linux
+### Unloading drivers on Linux {#preparing-linux}
 
 If you've installed OpenTabletDriver from an official package, the stock tablet
 drivers are already blacklisted.
@@ -63,12 +63,12 @@ See `man 7 udev` for systemd udev syntax. If you're not using systemd udev, see
 your distro documentation, or change the appropriate usb and hidraw permissions
 manually.
 
-### MacOS
+### MacOS {#preparing-macos}
 
 All you should need for OpenTabletDriver to initialize and access your tablet,
 is uninstalling the OEM drivers.
 
-## Configuration Template
+## Configuration Template {#config-template-intro}
 
 Getting a configuration template is usually simple if OpenTabletDriver supports
 other tablets from your manufacturer, especially if it's in the same line of
@@ -88,7 +88,7 @@ guide carefully.
 
 [Configuration skeleton]: https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3249
 
-## Setting specifications according to official manufacturer specifications
+## Setting specifications according to official manufacturer specifications {#oem-values}
 
 Setting up some of the specifications now can simplify touching up later values
 if you know what they are. You can also add them as you discover the feature;
@@ -112,7 +112,7 @@ take this into consideration when specifying aux button count.
 
 [OpenTabletDriver#1367]: https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1367
 
-## Configuring the digitizer identifier
+## Configuring the digitizer identifier {#digitizer-identifier}
 
 Configuring a correct digitizer identifier is the bread and butter of tablet
 detection. This section covers how to set all the identifier fields
@@ -137,7 +137,7 @@ Detection, in broad terms, checks in the following order:
 There is more to detection than this (such as attributes), but 99.9% of use
 cases can be covered with the above.
 
-### ID's and report lengths
+### ID's and report lengths {#identifiers-and-report-lengths}
 
 At the very minimum, your configuration should have a non-null `VendorID` and `ProductID`.
 
@@ -219,7 +219,7 @@ accordingly.
 
 A barebones tablet report that only reports an `ITabletReport`
 
-### Init strings (Feature/OutputInitReport, InitializationStrings)
+### Init strings (Feature/OutputInitReport, InitializationStrings) {#init-strings}
 
 These are almost always necessary to use to bring the tablet out of HID mode
 and into a more preferred mode, e.g. vendor mode.
@@ -235,7 +235,7 @@ Getting these can be achieved in 2 ways:
 Copying the appropriate init strings from a sibling configuration is usually
 adequate.
 
-##### Common initialization strings
+##### Common initialization strings {#common-init-strings}
 
 For many UC-Logic based tablets, like Huion and Gaomon, they seem to all share
 almost the same indices to probe across many generations.
@@ -254,14 +254,14 @@ The following 2 initialization strings have only been seen once:
 - `109`
 - `100` followed by `110`
 
-#### USB Packet capture
+#### USB Packet capture {#pcap}
 
 This is usually done with Wireshark (and winpcap). A guide on this is planned
 but not in progress. See [opentabletdriver.github.io#171] for more information.
 
 [opentabletdriver.github.io#171]: https://github.com/OpenTabletDriver/opentabletdriver.github.io/issues/171
 
-### Device strings
+### Device strings {#device-strings}
 
 In some cases, vendors (especially Huion) might release a tablet with different
 specifications that otherwise has the same ID's as another released tablet.
@@ -277,7 +277,7 @@ While they are similar to initialization strings, the difference here is that
 we read the returned output when initializing the string, and as such can match
 tablets based on its contents.
 
-#### Common device strings
+#### Common device strings {#common-device-strings}
 
 Below are some usually common device strings for various vendors.
 
@@ -295,13 +295,13 @@ may help some people decode their meaning.
 Be wary that probing strings can also change behavior in the device, which can
 usually be rectified by replugging the tablet.
 
-## Validating values
+## Validating values {#validation}
 
 Assuming you now have a configuration that correctly identifies your tablet,
 you now have to validate that you're using the correct parser and then the
 correct configuration values.
 
-### Validating the parser
+### Validating the parser {#validation-parser}
 
 This section is **not** for making sure the specifications in the configuration
 is configured correctly, only the parser.
@@ -314,24 +314,24 @@ before any configuration adjustments (such as button count) take place.
 If any of the values seems absent or malfunctioning (overflowing, abrupt jumps),
 you are probably using the wrong parser.
 
-#### Digitizer {#validate-parser-digitizer}
+#### Digitizer {#validation-parser-digitizer}
 
 Verify that the top left of the tablet equals to `[0, 0]` or `[1, 1]`.
 
 Verify that the X and Y values increment monotonically. Critically, the value
 must never wrap around.
 
-#### Pen maximum pressure
+#### Pen maximum pressure {#validation-parser-pen-pressure}
 
 Value must transition somewhat smoothly from around 0 to its maximum value.
 
-#### All pen and auxiliary buttons
+#### All pen and auxiliary buttons {#validation-parser-buttons}
 
 Every button click must cause a distinct state change.
 
 Some tablets may support a separate 'unclick' report.
 
-#### Tool identification
+#### Tool identification {#validation-tool-identification}
 
 This is mostly a Wacom feature, and can be difficult to read manually from the
 tablet debugger. Use the recording feature of the tablet debugger and read the
@@ -348,7 +348,7 @@ and is only partially supported on Linux for now.
 The serial ID is very useful for artists that have multiple of the same tool so
 that their art program can track per-tool settings.
 
-#### Touch
+#### Touch {#validation-touch}
 
 Touch is currently not exposed to the operating system, but some parsers do
 parse touch. If your tablet does parse touch, make sure that it behaves
@@ -358,7 +358,7 @@ See [OpenTabletDriver#1664] for more information on exposing this to the OS.
 
 [OpenTabletDriver#1664]: https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1664
 
-### Correctly determining digitizer dimensions
+### Correctly determining digitizer dimensions {#digitizer-correct-dimensions}
 
 The ideal way to calculate the these values, is to first figure out the `MaxX` and
 `MaxY` values of the digitizer.
@@ -373,7 +373,7 @@ You will need the following values:
   (usually rounded up), so getting this right ensures that users can keep using
   the exact same tablet area between different tablets in OpenTabletDriver
 
-#### Getting maximum X and Y values
+#### Getting maximum X and Y values {#digitizer-max-positional-values}
 
 You can get the X and Y values from OpenTabletDriver's tablet debugger.
 Move your tool (e.g. pen) to the outer edges (usually right side and bottom
@@ -396,14 +396,14 @@ correct parser. See the [Parser](#parser) section for more information.
 
 [OpenTabletDriver#2433]: https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2433
 
-#### Getting the LPMM
+#### Getting the LPMM {#digitizer-lpmm}
 
 This is almost always exactly 100 or exactly 200 for both axises.
 
 > If your tablet only offers an line per inch (LPI) value, you can divide the
   LPI by `25.4` to get the LPMM.
 
-#### Calculating the width and height
+#### Calculating the width and height {#digitizer-dimensions-calculation}
 
 With the LPMM and maximum values reported by the tablet in hand, calculate the
 width and the height using the following formulas:
@@ -422,7 +422,7 @@ out), confirm that both your LPMM and width/height values are correct.
 > If the guessed LPMM seems incorrect, it is better to manually measure the
   width and the height of the digitizers active area.
 
-### Verify functionality
+### Verify functionality {#verify-functionality}
 
 Now that you've checked the values for correctness, you now have to validate
 the exposed functionality as much as possible.
@@ -453,9 +453,9 @@ Now, optionally commit it with `git` and push it to your chosen branch and an op
 
 [pull request]: {{ site.data.links.project.UpstreamRepo }}/pulls
 
-## FAQ
+## FAQ {#faq}
 
-### My cursor is going everywhere
+### My cursor is going everywhere {#faq-cursor-skipping}
 
 Make sure you've uninstalled other drivers.
 

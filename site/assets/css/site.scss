@@ -124,7 +124,8 @@ div.highlighter-rouge {
       counter-reset: h5-section;
     }
     > span::before {
-      content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "." counter(h5-section) ".";
+      content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "."
+          counter(h5-section) ".";
     }
   }
   h6 {
@@ -134,7 +135,8 @@ div.highlighter-rouge {
       counter-reset: h6-section;
     }
     > span::before {
-      content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "." counter(h5-section) "." counter(h6-section) ".";
+      content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "."
+          counter(h5-section) "." counter(h6-section) ".";
     }
   }
 

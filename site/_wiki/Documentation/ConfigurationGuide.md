@@ -273,9 +273,9 @@ The configuration format is a dictionary where the key matches the descriptor
 ID (up to 255) and the value is a regex that the string descriptor's value must
 match with.
 
-While they are similar to initialization strings, the difference here is that
-we read the returned output when initializing the string, and as such can match
-tablets based on its contents.
+While they are similar to [initialization strings](#init-strings), the
+difference here is that we read the returned output when initializing the
+string, and as such can match tablets based on its contents.
 
 #### Common device strings {#common-device-strings}
 

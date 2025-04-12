@@ -265,6 +265,28 @@ The configuration format is a dictionary where the key matches the descriptor
 ID (up to 255) and the value is a regex that the string descriptor's value must
 match with.
 
+While they are similar to initialization strings, the difference here is that
+we read the returned output when initializing the string, and as such can match
+tablets based on its contents.
+
+#### Common device strings
+
+Below are some usually common device strings for various vendors.
+
+These are not guaranteed to be correct across all models for the vendor, but
+may help some people decode their meaning.
+
+| Index | Value |
+| ----: | :---- |
+|   2   | XP-Pen: Model Name
+|   4   | XP-Pen: Firmware Build ID
+|   5   | XP-Pen: Firmware Build String
+|   23  | VEIKK: Firmware Build Date
+|  201  | Gaomon, Huion, and some other UC-Logic based: Firmware Build ID
+
+Be wary that probing strings can also change behavior in the device, which can
+usually be rectified by replugging the tablet.
+
 ## Validating values
 
 Assuming you now have a configuration that correctly identifies your tablet,

@@ -459,7 +459,7 @@ Now, optionally commit it with `git` and push it to your chosen branch and an op
 You should also read the [General FAQ]({% link _wiki/FAQ/General.md %}) and
 your OS-appropriate FAQ ([Windows]({% link _wiki/FAQ/Windows.md %}),
 [Linux]({% link _wiki/FAQ/Linux.md %}),
-[MacOS]({% link _wiki/FAQ/MacOS.md %})
+[MacOS]({% link _wiki/FAQ/MacOS.md %}))
 too for other issues that might not be covered below.
 
 ### My cursor is going everywhere {#faq-cursor-skipping}

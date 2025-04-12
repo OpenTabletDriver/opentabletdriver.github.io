@@ -39,6 +39,7 @@ function injectAnchorLinks() {
     '.markdown-content h3',
     '.markdown-content h4',
     '.markdown-content h5',
+    '.markdown-content h6',
   ]
 
   anchors.options = {

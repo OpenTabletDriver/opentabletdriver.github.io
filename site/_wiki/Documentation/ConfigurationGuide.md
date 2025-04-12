@@ -94,6 +94,7 @@ if you know what they are. You can also add them as you discover the feature;
 we will ensure the specifications are set correctly at the end of the guide.
 
 Some (almost) always correct values include:
+
 - Pen and tablet (aux) button counts
 - Tool support (such as tablet mouse)
 - Touch support
@@ -125,9 +126,9 @@ Detection, in broad terms, checks in the following order:
 
 1. Match VendorID and ProductID
 2. If not null, match InputReportLength and OutputReportLength
-  - This helps select a specific interface of the tablet
+    - This helps select a specific interface of the tablet
 3. If not null, match DeviceStrings
-  - This helps differentiate between firmwares
+    - This helps differentiate between firmwares
 
 There is more to detection than this (such as attributes), but 99.9% of use
 cases can be covered with the above.
@@ -178,7 +179,7 @@ types of reports (not in order)
 Fairly selfdescript, it doesn't actually report any specific values to the
 OS but rather 'resets' the pen out.
 
-##### `XP_PenAuxReport`:
+##### `XP_PenAuxReport`
 
 Reports `IAuxReport`, an aux-buttons-only report, ie. no position coordinates.
 
@@ -187,14 +188,14 @@ Reports `IAuxReport`, an aux-buttons-only report, ie. no position coordinates.
 Reports the following reports:
 
 - `ITabletReport`
-  - The pen's pressure
-  - Pen buttons
-  - It is an `IAbsolutePositionReport` that also reports the following:
-    - The 2-point vector of the pen
+    - The pen's pressure
+    - Pen buttons
+    - It is an `IAbsolutePositionReport` that also reports the following:
+        - The 2-point vector of the pen
 - `ITiltReport`
-  - The 2-point vector of the pen's tilt
+    - The 2-point vector of the pen's tilt
 - `IEraserReport`
-  - Whether the eraser is active or not
+    - Whether the eraser is active or not
 
 ##### `XP_PenTabletOverflowReport`
 
@@ -382,8 +383,8 @@ You now need to double check that the following functionality completely works:
 - All pen buttons works and can be assigned
 - All auxiliary (tablet) buttons works and can be assigned
 - Extra tool functionality, if able:
-  - Tablet mouse
-  - Any other tools your tablet might support
+    - Tablet mouse
+    - Any other tools your tablet might support
 
 If anything is not working to your expectations, you might be using the wrong
 parser, or you specified some values incorrectly.
@@ -398,7 +399,7 @@ Now, optionally commit it with `git` and push it to your chosen branch and an op
 
 ## FAQ
 
-### My cursor is going everywhere!
+### My cursor is going everywhere
 
 Make sure you've uninstalled other drivers.
 
@@ -413,6 +414,6 @@ If you did, and you're on Linux, your tablet might need the `libinputoverride` a
 - Adjust height and widths based off of `MaxX`, `MaxY` and their `LPMM`.
 - Double check that it still works from a replug
 - Double check that all the specifications are correct
-  - Buttons, digitizer area, pressure, touch, etc.
+    - Buttons, digitizer area, pressure, touch, etc.
 - Submit pull request to the appropriate branch and pray that your configuration passes tests
-  - If submitting a PR, don't forget to update `TABLETS.md` to document the support.
+    - If submitting a PR, don't forget to update `TABLETS.md` to document the support.

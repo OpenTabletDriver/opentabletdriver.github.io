@@ -398,7 +398,8 @@ correct parser. See the [Parser](#parser) section for more information.
 
 #### Getting the LPMM {#digitizer-lpmm}
 
-This is almost always exactly 100 or exactly 200 for both axises.
+This is almost always exactly 100 LPMM or exactly 200 LPMM for both axises, or another
+round value, like LPI rounded to nearest thousands, like 4000 LPI.
 
 > If your tablet only offers an line per inch (LPI) value, you can divide the
   LPI by `25.4` to get the LPMM.

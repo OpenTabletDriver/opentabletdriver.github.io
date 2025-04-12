@@ -352,7 +352,7 @@ that their art program can track per-tool settings.
 
 Touch is currently not exposed to the operating system, but some parsers do
 parse touch. If your tablet does parse touch, make sure that it behaves
-similarly to the [pen digitizer](#validate-parser-digitizer).
+similarly to the [pen digitizer](#validation-parser-digitizer).
 
 See [OpenTabletDriver#1664] for more information on exposing this to the OS.
 

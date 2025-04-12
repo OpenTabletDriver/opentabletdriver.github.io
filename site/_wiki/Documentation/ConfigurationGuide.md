@@ -65,7 +65,8 @@ manually.
 
 ### MacOS
 
-TODO, probably just uninstall existing drivers?
+All you should need for OpenTabletDriver to initialize and access your tablet,
+is uninstalling the OEM drivers.
 
 ## Configuration Template
 

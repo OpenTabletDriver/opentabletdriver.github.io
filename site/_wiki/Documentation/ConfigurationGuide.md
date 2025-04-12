@@ -442,6 +442,9 @@ You now need to double check that the following functionality completely works:
 If anything is not working to your expectations, you might be using the wrong
 parser, or you specified some values incorrectly.
 
+If you're stuck, you can visit our [Discord]({{ site.data.links.project.DiscordInvite }}) and
+ask for help in one of the following channels: `#configs` or `#support-misc`
+
 ## Fin
 
 That's it, you've now successfully made a tablet configuration!

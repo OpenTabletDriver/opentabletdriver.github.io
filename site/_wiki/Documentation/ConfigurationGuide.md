@@ -171,6 +171,14 @@ To see which functionality is supported by a parser, please see the code for
 the parsers return paths in its `Parse(byte[])` function. An example is
 provided below.
 
+If you don't know anything about your tablet, or if you're writing your own
+parser, it is recommended to start out with the `PassthroughReportParser`
+parser, as it does not directly parse data but instead just allows the Tablet
+Debugger to display the raw data.
+
+It is important to not get overzealous and pick a too specific parser before
+you've ensured that the tablet is initialized correctly.
+
 #### `XP_PenReportParser` example
 
 At the time of this writing, [`XP_PenReportParser`] can return 5 different

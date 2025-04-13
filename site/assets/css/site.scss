@@ -119,16 +119,32 @@ div.highlighter-rouge {
   }
   h5 {
     font-size: 1.16em;
+    counter-increment: h5-section;
+    ~ h4 {
+      counter-reset: h5-section;
+    }
+    > span::before {
+      content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "."
+          counter(h5-section) ".";
+    }
   }
   h6 {
     font-size: 1em;
+    counter-increment: h6-section;
+    ~ h5 {
+      counter-reset: h6-section;
+    }
+    > span::before {
+      content: counter(h2-section) "." counter(h3-section) "." counter(h4-section) "."
+          counter(h5-section) "." counter(h6-section) ".";
+    }
   }
 
   h2, h3 {
     @include markdown-header;
   }
 
-  h2, h3, h4, h5 {
+  h2, h3, h4, h5, h6 {
     // counter display
     > span::before {
       font-style: italic;

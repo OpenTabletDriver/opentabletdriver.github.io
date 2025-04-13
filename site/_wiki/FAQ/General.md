@@ -134,18 +134,20 @@ You can see the progress on GitHub here:
 
 Use this reference chart for the upcoming formulas:
 
-|  Term   | Definition |
-| :-----: | :--------- |
-|  Width  | The width of the area in millimeters
-| Height  | The height of the area in millimeters
-| TWidth  | The width of the tablet's digitizer in millimeters. Can be found in the tablet's configuration file.
-| THeight | The height of the tablet's digitizer in millimeters. Can be found in the tablet's configuration file.
-| XOffset | The X offset of the center of the area in millimeters
-| YOffset | The Y offset of the center of the area in millimeters
-|   LPI   | Lines per inch, this is commonly 5080 or 2540
+|    Term     | Definition |
+| :---------: | :--------- |
+|    Width    | The width of the area in millimeters
+|   Height    | The height of the area in millimeters
+|   XOffset   | The X offset of the center of the area in millimeters
+|   YOffset   | The Y offset of the center of the area in millimeters
+|     LPI     | Lines per inch, this is commonly 5080 or 2540
+|   TWidth    | The width of the tablet's digitizer in millimeters.
+|   THeight   | The height of the tablet's digitizer in millimeters.
+| THorizontal | The width of the tablet's digitizer in number of lines.
+|  TVertical  | The height of the tablet's digitizer in number of lines.
 {: .table .table-dark }
 
-`TWidth` and `THeight` can be found in the tablet's configuration file.
+`TWidth`, `THeight`, `THorizontal`, and `TVertical` can be found in the tablet's configuration file.
 
 Use the following formulas to get values for OpenTabletDriver's area editor's `Width`, `Height`, `XOffset`, and `YOffset` fields:
 
@@ -187,7 +189,9 @@ XOffset = (Width  / 2) + (XPX / 3.937)
 YOffset = (Height / 2) + (XPY / 3.937)
 ```
 
-#### Huion and Gaomon
+#### Huion and Gaomon {#gaomon-v1}
+
+Newer Gaomon drivers use another formula. Please see [Gaomon 2024 and up](#gaomon-v2) for those.
 
 |  Term  | Definition |
 | :----: | --- |
@@ -204,4 +208,23 @@ Width   = (Right - Left) * TWidth
 Height  = (Bottom - Top) * THeight
 XOffset = (Width  / 2) + (Left * TWidth)
 YOffset = (Height / 2) + (Top * THeight)
+```
+
+#### Gaomon 2024 and up {#gaomon-v2}
+
+|     Term     | Definition |
+| :----------: | --- |
+| GaomonWidth  | The number of horizontal lines set in the Gaomon driver
+| GaomonHeight | The number of vertical lines set in the Gaomon driver
+|   GaomonX    | The X offset of the top left corner of the area in number of horizontal lines
+|   GaomonY    | The Y offset of the top left corner of the area in number of vertical lines
+{: .table .table-dark }
+
+**Formula**:
+
+```py
+Width   = (GaomonWidth  / THorizontal) * TWidth
+Height  = (GaomonHeight / TVertical)   * THeight
+XOffset = (GaomonX / THorizontal) * TWidth  + (Width / 2)
+YOffset = (GaomonY / TVertical)   * THeight + (Height / 2)
 ```

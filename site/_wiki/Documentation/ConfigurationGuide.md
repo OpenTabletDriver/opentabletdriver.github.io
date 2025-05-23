@@ -365,7 +365,7 @@ The ideal way to calculate the these values, is to first figure out the `MaxX` a
 
 You will need the following values:
 
-- The LPMM (lines per millimeter) of the tablet for both axises (horizontal and vertical).
+- The LPMM (lines per millimeter) of the tablet for both axes (horizontal and vertical).
 - The maximum reported **X** (horizontal) value of the tablet
 - The maximum reported **Y** (vertical) value of the tablet
 

@@ -63,8 +63,8 @@ div.highlighter-rouge {
 }
 
 #page-title {
-  @include markdown-header;
   font-size: calc(1.375em + 1.5vw);
+  @include markdown-header;
 }
 
 @media (min-width: 1200px) {

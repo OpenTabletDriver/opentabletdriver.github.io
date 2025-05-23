@@ -321,6 +321,13 @@ Verify that the top left of the tablet equals to `[0, 0]` or `[1, 1]`.
 Verify that the X and Y values increment monotonically. Critically, the value
 must never wrap around.
 
+> If top left shows a different value from `[0, 0]` or `[1, 1]`, make sure you
+  tablet isn't physically rotated.
+
+> If it isn't rotated, and you aren't getting the above values, the parser is
+  incorrect, or you are trying to support a tablet with origin not in the top
+  left. We do not have good support for tablets with origin not in top left yet.
+
 #### Pen maximum pressure {#validation-parser-pen-pressure}
 
 Value must transition somewhat smoothly from around 0 to its maximum value.

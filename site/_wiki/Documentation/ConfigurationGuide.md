@@ -146,12 +146,12 @@ contains the tablet data stream. This is where `InputReportLength` and
 `OutputReportLength` comes in.
 
 Even if your tablet only has a single interface, it is often a good idea to
-specify at least one of the lengths as non-zero, and only define them as `null`
-if you know what you're doing
+specify at least one of the lengths as non-zero, and only define them all as
+`null` (i.e. leaving them out entirely) if you know what you're doing
 
-> If you specify report lengths as null, it can be hard to fix any future
-  conflicts that may arise without knowing what values your specific tablet
-  has. If you do decide to specify them as null, please make sure to include a
+> If you omit report lengths entirely, it can be hard to fix any future
+  conflicts that may arise, without knowing what values your specific tablet
+  has. If you do decide not to specify them, please make sure to include a
   OpenTabletDriver diagnostics with the pull request, and optionally include
   the lengths in the commit description.
 

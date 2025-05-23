@@ -321,7 +321,7 @@ Verify that the top left of the tablet equals to `[0, 0]` or `[1, 1]`.
 Verify that the X and Y values increment monotonically. Critically, the value
 must never wrap around.
 
-> If top left shows a different value from `[0, 0]` or `[1, 1]`, make sure you
+> If top left shows a different value from `[0, 0]` or `[1, 1]`, make sure your
   tablet isn't physically rotated.
 
 > If it isn't rotated, and you aren't getting the above values, the parser is

@@ -162,3 +162,21 @@ MD050:
 MD054:
   autolinks: false # no raw URLs
   url_inline: false # no URLs with same title as URL, instead remove http(s) from your title
+
+###
+# The following implementations are buggy and have been removed in upstream, and some older versions
+# of markdownlintcli are still using these rules. If you're reading this, please test if they've
+# started parsing properly, and enable them as necessary.
+###
+
+# MD055: Table row doesn't begin/end with pipes
+MD055: false
+
+# MD056: Table has inconsistent number of columns
+MD056: false
+
+# MD057: Table has missing or invalid header separation (second row)
+MD057: false
+
+# MD058: Tables should be surrounded by blank lines
+MD058: false

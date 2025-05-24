@@ -21,6 +21,9 @@
     "TabletDriverCleanup": {
       "latest": "https://github.com/X9VoiD/TabletDriverCleanup/releases/latest"
     },
+    "Terra": {
+      "website": "https://terra.fyralabs.com/"
+    },
     "VMultiDriver": {
       "latest": "https://github.com/X9VoiD/vmulti-bin/releases/latest"
     },

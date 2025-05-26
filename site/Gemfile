@@ -18,7 +18,7 @@ group :jekyll_plugins do
 end
 
 gem 'json'
-gem "bootswatch", github: "thomaspark/bootswatch", tag: "v5.3.3"
+gem "bootswatch", github: "thomaspark/bootswatch", tag: "v5.3.6"
 gem "bootstrap", "~> 5.3.3"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

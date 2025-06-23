@@ -12,14 +12,18 @@ source "https://rubygems.org"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 gem 'jekyll', '~> 4.3'
-# If you have any plugins, put them here!
+
 group :jekyll_plugins do
-  gem 'jekyll-github-metadata', '~> 2.16'
+  # If you have any plugins, put them here!
 end
 
 gem 'json'
-gem "bootswatch", github: "thomaspark/bootswatch", tag: "v5.3.3"
-gem "bootstrap", "~> 5.3.3"
+gem "bootswatch", github: "thomaspark/bootswatch", tag: "v5.3.6"
+gem "bootstrap", "~> 5.3.5"
+
+# pinned version of dependency of jekyll-sass-converter, as it emits deprecation warnings until
+# bootstrap v5.5.0 - see https://github.com/OpenTabletDriver/opentabletdriver.github.io/issues/212
+gem 'sass-embedded', "~> 1.78.0"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

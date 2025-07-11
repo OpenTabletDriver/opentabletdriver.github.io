@@ -6,7 +6,7 @@ The next version of OpenTabletDriver.Web
 
 ### Requirements
 
-- [Ruby](https://www.ruby-lang.org/en/downloads/)
+- [Ruby](https://www.ruby-lang.org/en/downloads/) (tested with Ruby 3.4)
 
 ## Steps
 

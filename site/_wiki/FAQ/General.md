@@ -8,7 +8,7 @@ Verify if your tablet is in the list of supported tablets [here]({% link _sectio
 
 - [Create a tablet support request in Github.](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/new?assignees=&labels=configuration&projects=&template=tablet_configuration.yml&title=Add+support+for+)
 - [Create a tablet support thread in #config-creation channel of the Discord server.]({{ site.data.links.project.DiscordInvite }})
-- [Write the tablet configuration.]({% link _wiki/Development/AddingTabletSupport.md %})
+- [Write the tablet configuration.]({% link _wiki/Documentation/ConfigurationGuide.md %})
 
 ## My tablet is supported but not detected? {#tablet-not-detected}
 

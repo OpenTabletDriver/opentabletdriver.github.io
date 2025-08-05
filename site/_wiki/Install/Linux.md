@@ -155,9 +155,9 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 
 Bazzite is based on Fedora Atomic. We recommend using `ujust` to install OpenTabletDriver:
 
-    ```sh
-    ujust install-opentabletdriver
-    ```
+```sh
+ujust install-opentabletdriver
+```
 
 ## Post-Installation {#post-install}
 

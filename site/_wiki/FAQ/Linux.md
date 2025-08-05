@@ -183,6 +183,12 @@ AttrTabletSmoothing=0
 
 You should restart the OpenTabletDriver daemon after updating this file.
 
+## GUI says "Connecting to daemon has timed out" {#timeout-connecting-to-daemon}
+
+If you've just installed the driver, make sure you've followed the [autostart guide]({% link _wiki/FAQ/Linux.md %}#autostart)
+
+Otherwise, make sure the daemon is launched, either by running `systemctl --user start opentabletdriver` or `otd-daemon`
+
 ## Still have problems? {#discord}
 
 If you are still encountering problems with OpenTabletDriver, it will be easier to help you over in our [Discord]({{ site.data.links.project.DiscordInvite }}) server. We will guide you in doing certain debugging steps and will give you different instructions to help resolve your problem.

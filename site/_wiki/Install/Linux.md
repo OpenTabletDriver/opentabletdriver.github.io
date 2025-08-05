@@ -151,6 +151,14 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 
 [NixOS Package Options]: https://search.nixos.org/options?query=opentabletdriver
 
+## Bazzite {#bazzite}
+
+Bazzite is based on Fedora Atomic. We recommend using `ujust` to install OpenTabletDriver:
+
+```sh
+ujust install-opentabletdriver
+```
+
 ## Post-Installation {#post-install}
 
 Take a look at the [FAQ]({% link _wiki/FAQ/Linux.md %}) if you encounter any problems.

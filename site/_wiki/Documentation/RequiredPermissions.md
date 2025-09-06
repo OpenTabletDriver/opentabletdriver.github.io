@@ -167,4 +167,4 @@ OpenTabletDriver requires the following permissions:
 
 To grant this, navigate to <kbd>Settings</kbd> ⇒ <kbd>System Preferences</kbd> ⇒ <kbd>Security and Privacy</kbd> ⇒ <kbd>Privacy</kbd>, then check the permissions required.
 
-If they are already checked and problems persist, try unchecking and then rechecking them again.
+If permissions are already checked and problems persist, select the OpenTabletDriver entry and remove it by clicking the `-` button. Then add it back to the list manually or restart OpenTabletDriver and the permission will be requested again.

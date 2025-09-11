@@ -4,6 +4,11 @@
 {% endif %}
 {% if redirect_set %}
   {% assign redirect = page.redirect | replace: "@@OTD_VERSION@@", site.latest_otd_version %}
+{% else %}
+  {% comment %}
+  TODO: implement generic page.redirect support
+  {% endcomment %}
+  {% assign redirect = layout.redirect %}
 {% endif %}
 <html>
   <head>

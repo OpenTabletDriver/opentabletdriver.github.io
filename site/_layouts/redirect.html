@@ -1,10 +1,13 @@
 {% if page.redirect == "special_discord" %}
   {% assign redirect = site.data.links.project.DiscordInvite %}
-  {% assign redirect_set = True %}
 {% endif %}
-{% if redirect_set %}
-  {% assign redirect = page.redirect | replace: "@@OTD_VERSION@@", site.latest_otd_version %}
-{% endif %}
+{% unless redirect %}
+  {% if page.redirect %}
+    {% assign redirect = page.redirect | replace: "@@OTD_VERSION@@", site.latest_otd_version %}
+  {% else if layout.redirect %}
+    {% assign redirect = layout.redirect %}
+  {% endif %}
+{% endunless %}
 <html>
   <head>
     <style>

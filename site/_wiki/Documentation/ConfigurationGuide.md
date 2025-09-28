@@ -82,10 +82,6 @@ If your manufacturer does not have an existing template, please use the
 [Configuration skeleton] or copy any other tablet configuration and follow the
 guide carefully.
 
-> Note that the configuration format between OpenTabletDriver 0.6 (`0.6.x`) and
-  0.7 (`master`) differs slightly. Make sure that you pick a configuration of
-  the same format as the version of OpenTabletDriver you're using.
-
 [Configuration skeleton]: https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3249
 
 ## Setting specifications according to official manufacturer specifications {#oem-values}

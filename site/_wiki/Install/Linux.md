@@ -3,6 +3,8 @@ title: Linux Installation Guide
 hide_from_auto_list: true
 ---
 
+{% assign latest_otd_version = site.data.otd-versions | last %}
+
 ## Ubuntu / Debian {#debian}
 
 {% assign deb_filename = site.data.links.project.latestRelease.deb %}

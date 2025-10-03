@@ -7,7 +7,7 @@ hide_from_auto_list: true
 
 ## Ubuntu / Debian {#debian}
 
-{% assign deb_filename = site.data.links.project.latestRelease.deb %}
+{% assign deb_filename = site.data.links.project.latestRelease.deb | replace: '{{VERSION}}', latest_otd_version %}
 
 1. {% include latest-release.html filename=deb_filename %}
 2. Run the following commands in a terminal

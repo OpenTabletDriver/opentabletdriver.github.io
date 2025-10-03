@@ -68,6 +68,24 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
+## EndeavoursOS {#endeavouros}
+
+While EndeavourOS is based on Arch Linux, it uses a different initramfs
+generator compared to standard Arch Linux, which means the post-install setup is different.
+
+1. Install the `opentabletdriver` AUR package with either the GUI package utility, Pamac,
+   or the command-line utility, `yay`
+
+    ```sh
+    yay -S opentabletdriver
+    ```
+
+2. Then, run the following commands in a terminal
+
+{% include wiki/arch-install-steps.md ramdisk_update_command="dracut-rebuild" %}
+
+Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
+
 ## Arch Linux {#arch}
 
 You can install OpenTabletDriver from the AUR. There are two ways to do this.
@@ -86,30 +104,13 @@ Then refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instru
 1. Use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers) to install the `opentabletdriver` AUR package.
 2. Run the following commands in a terminal
 
-    ```sh
-    # Regenerate initramfs
-    sudo mkinitcpio -P
-    # Unload kernel modules
-    sudo rmmod wacom hid_uclogic
-    ```
+{% include wiki/arch-install-steps.md %}
 
 ### `makepkg` method {#manual-makepkg-method}
 
 1. Run the following commands in a terminal
 
-    ```sh
-    # Downloads the pkgbuild from the AUR.
-    git clone https://aur.archlinux.org/opentabletdriver.git
-    # Changes into the correct directory, pulls needed dependencies, then installs OpenTabletDriver
-    cd opentabletdriver && makepkg -si
-    # Clean up leftovers
-    cd ..
-    rm -rf opentabletdriver
-    # Regenerate initramfs
-    sudo mkinitcpio -P
-    # Unload kernel modules
-    sudo rmmod wacom hid_uclogic
-    ```
+{% include wiki/arch-install-steps.md makepkg=true %}
 
 ## Gentoo {#gentoo}
 

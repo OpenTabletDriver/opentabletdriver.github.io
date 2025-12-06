@@ -14,7 +14,7 @@ Please note that libinput adds smoothing on top of this output mode by default. 
 
 ### My cursor is stuck (Wayland) {#osu-lazer-broken-input-wayland}
 
-Make sure you set the `SDL_VIDEODRIVER` to `wayland`. Some examples:
+Make sure you set the environment variable `SDL_VIDEODRIVER` to `wayland`. Some examples:
 
 ```bash
 env SDL_VIDEODRIVER=wayland ./osu.AppImage

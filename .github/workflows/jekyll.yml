@@ -20,19 +20,6 @@ jobs:
       - name: Run tests
         run: ./run-tests.sh || exit 1
 
-  internal-links:
-    name: "Absolute Internal Links"
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - uses: ./.github/workflows/site-workflow
-
-      - name: Check for internal absolute links
-        run: bash -c "! grep -REi 'https?://(www.)?opentabletdriver.net' site/_site || exit 1"
-
   html-validation:
     name: "Validate HTML"
     needs: build

@@ -9,6 +9,7 @@
     <title>{{ site.title }}</title>
     {%- endif -%}
     {% include styles.html %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
   </head>
   <body>
     <header class="mb-4">

@@ -3,9 +3,11 @@ title: Linux Installation Guide
 hide_from_auto_list: true
 ---
 
+{% assign latest_otd_version = site.data.otd-versions | last %}
+
 ## Ubuntu / Debian {#debian}
 
-{% assign deb_filename = site.data.links.project.latestRelease.deb %}
+{% assign deb_filename = site.data.links.project.latestRelease.deb | replace: '{{VERSION}}', latest_otd_version %}
 
 1. {% include latest-release.html filename=deb_filename %}
 2. Run the following commands in a terminal
@@ -30,11 +32,13 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 ### Fedora {#fedora}
 
-1. {% include latest-release.html filename=site.data.links.project.latestRelease.rpm %}
+{% assign rpm_filename = site.data.links.project.latestRelease.rpm | replace: '{{VERSION}}', latest_otd_version %}
+
+1. {% include latest-release.html filename=rpm_filename %}
 2. Install the package with the following command:
 
     ```bash
-    sudo dnf install ./OpenTabletDriver.rpm
+    sudo dnf install ./{{ rpm_filename }}
     ```
 
     > This assumes that you are in the directory in which you downloaded OpenTabletDriver to.

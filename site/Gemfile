@@ -18,7 +18,7 @@ group :jekyll_plugins do
 end
 
 gem 'json'
-gem "bootswatch", github: "thomaspark/bootswatch", tag: "v5.3.6"
+gem "bootswatch", github: "thomaspark/bootswatch", tag: "v5.3.8"
 gem "bootstrap", "~> 5.3.5"
 
 # pinned version of dependency of jekyll-sass-converter, as it emits deprecation warnings until

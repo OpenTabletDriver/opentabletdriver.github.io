@@ -19,7 +19,7 @@
   },
   "external": {
     "TabletDriverCleanup": {
-      "latest": "https://github.com/X9VoiD/TabletDriverCleanup/releases/latest"
+      "latest": "https://github.com/OpenTabletDriver/TabletDriverCleanup/releases/latest"
     },
     "VMultiDriver": {
       "latest": "https://github.com/X9VoiD/vmulti-bin/releases/latest"

@@ -87,8 +87,8 @@ However, to make the driver output the pressure to your operating system, you ma
 | Operating System |   Wiki Link   | Notes |
 | :--------------: | :-----------: | :---- |
 |      Windows     | [Windows Ink] | A virtual device driver (VMulti) and the Windows Ink plugin is needed
-|       Linux      | [Artist Mode] | Built-in, simply change the output mode of OpenTabletDriver
-|       MacOS      |  unsupported  | This is a work in progress, and is expected with the 0.7 release of OpenTabletDriver
+|       Linux      | [Artist Mode] | Built-in, enabled by default
+|       MacOS      |   Supported   | Built-in, enabled by default
 {: .table .table-dark }
 
 [Windows Ink]: {% link _wiki/FAQ/Windows.md %}#win-ink

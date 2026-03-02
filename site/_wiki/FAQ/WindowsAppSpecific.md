@@ -71,7 +71,7 @@ No need to restart the application.
 
 If Photoshop CC is not detecting pressure, try the following:
 
-1. Go to `%appdata%\Adobe\Adobe Photoshop 2023\Adobe Photoshop 2023 Settings`
+1. Go to `%appdata%\Adobe\Adobe Photoshop 2026\Adobe Photoshop 2026 Settings`
 2. Check if there is a file called `PSUserConfig.txt`. If there is, open it. If not, create it.
 3. Add the following lines to the file:
 
@@ -80,7 +80,7 @@ If Photoshop CC is not detecting pressure, try the following:
 UseSystemStylus 1
 ```
 
-> Replace `2023` with your version number if you're using a different version of Photoshop CC.
+> Replace `2026` with your version number if you're using a different version of Photoshop CC.
 
 ### Krita
 

@@ -69,6 +69,9 @@ No need to restart the application.
 
 ### Photoshop CC
 
+> Photoshop versions prior to CC 2014 (CS6, CS5, etc) do not support Windows Ink.
+{:.alert-warning}
+
 If Photoshop CC is not detecting pressure, try the following:
 
 1. Go to `%appdata%\Adobe\Adobe Photoshop 2026\Adobe Photoshop 2026 Settings`

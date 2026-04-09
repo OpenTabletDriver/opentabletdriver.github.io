@@ -24,6 +24,8 @@ hide_from_auto_list: true
 
 3. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
+If you run into uninstallable dependency issues with dotnet, you will need to install it through [Microsoft's dotnet repository](https://learn.microsoft.com/en-us/dotnet/core/install/linux-debian).
+
 If you have the Microsoft dotnet repository installed you will have to either make sure you are not using any packages from that repository or use everything dotnet based off that. Mixing packages from different repositories will cause `libhostfxr` issues.
 
 If you're experiencing `libhostfxr` issues, please see the solutions from Microsoft [here]({{ site.data.links.external.Microsoft.DotnetLinuxPackageMixup }}).

@@ -2,7 +2,7 @@
   "project": {
     "latestReleaseBase": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/",
     "latestRelease": {
-      "deb":     "opentabletdriver-{{VERSION}}-1-x64.deb",
+      "deb":     "opentabletdriver_{{VERSION}}-1_x64.deb",
       "rpm":     "opentabletdriver-{{VERSION}}-1.x86_64.rpm",
       "osx-x64": "OpenTabletDriver-{{VERSION}}_osx-x64.tar.gz",
       "win-x64": "OpenTabletDriver-{{VERSION}}_win-x64.zip"

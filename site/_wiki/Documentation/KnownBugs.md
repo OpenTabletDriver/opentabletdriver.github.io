@@ -13,7 +13,33 @@ framework Avalonia.
 
 Many of these bugs have a planned milestone to be fixed in.
 
-## Bugs in GUI caused by Eto {#eto-bugs}
+## Notable OpenTabletDriver bugs {#notable-bugs}
+
+These bugs are likely to affect a sizable portion of users
+
+### Monitor layout changes are not automatically detected {#monitor-layout-changes-not-detected}
+
+If you change your monitor layout (such as resolution, position, rotation, or
+similar) in your system settings, you need to restart the OpenTabletDriver
+daemon completely.
+
+See [OpenTabletDriver issue #1143](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1143)
+for more details.
+
+### Bindings do not accomodate select output mode (Mouse buttons not working in Windows Ink or Linux Artist Mode) {#eto-keyboard-reading-is-weird}
+
+While Adaptive Bindings try to solve this issue, users using specific bindings
+(e.g. Mouse Button Binding on Windows Ink/Linux Artist Mode) will find that
+their bindings are not working.
+
+To help users diagnose this, OpenTabletDriver v0.6.7 logs an error when using
+(built-in) bindings with unsupported output modes.
+
+The primary cause for this is that the output modes are restricted from
+outputting these events to the operating system.
+
+See [OpenTabletDriver issue #2078](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2078)
+for more details.
 
 ### Multikey bindings doesn't respect keyboard layout {#multikey-binding-keyboard-layout}
 
@@ -24,7 +50,8 @@ Eto only allows us to read the processed keyboard layout.
 
 This is planned to be fixed with the migration to Avalonia.
 
-See [OpenTabletDriver issue #1821](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1821) for more details.
+See [OpenTabletDriver issue #1821](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1821)
+for more details.
 
 How to work around this depends on your operating system:
 
@@ -56,11 +83,15 @@ How to do this depends on your software stack:
 
 ##### X11 {#multikey-binding-keyboard-layout-linux-X11}
 
-Unless you're using special configuration (`setxkbmap -device <ID>` / udev rule `ENV{XKBLAYOUT}` / similar), chances are you're using a system-wide keyboard layout.
+Unless you're using special configuration (`setxkbmap -device <ID>` / udev rule
+`ENV{XKBLAYOUT}` / similar), chances are you're using a system-wide keyboard
+layout.
 
-In that case, follow the workaround presented for [Windows/macOS](#multikey-binding-keyboard-layout-win-macos) users.
+In that case, follow the workaround presented for
+[System-wide keyboard layout](#multikey-binding-keyboard-layout-system-wide-layouts) users.
 
-If it turns out that this doesn't work anyway, make sure the virtual keyboard from OpenTabletDriver is assigned the US-American layout.
+If it turns out that this doesn't work anyway, make sure the virtual keyboard
+from OpenTabletDriver is assigned the US-American layout.
 
 ##### Sway window manager {#multikey-binding-keyboard-layout-linux-sway}
 
@@ -72,32 +103,62 @@ input '0:0:OpenTabletDriver_Virtual_Keyboard' {
 }
 ```
 
-## Assorted Bugs {#general-bugs}
+### Some tablets may not work coming out of system sleep/suspend {#sleep-wakeup-is-inconsistent}
 
-### [#3834 - Eraser behavior may be spotty on Linux](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3834)
-### [#3804 - Daemon IPC is not multi-user friendly](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3804)
-### [#3515 - Tablet firmware version featureset variations are difficult to detect](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3515)
-### [#3266 - Flatpak release does not install udev rules or kernel module blacklist](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3266)
-### [#3179 - Setup Wizard will constantly pop up as long as user never saves a config](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3179)
-### [#3171 - Some tablets may not work coming out of systemd sleep/suspend](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3171)
-### [#2964 - (Linux only?) Monitor layouts with negative offsets may confuse GUI quick-settings](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2964)
-### [#2955 - Disconnecting tablets mid-event (e.g. button press) may cause the button to remain pressed](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2957)
-### [#2536 - CLI is unmaintained](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2536)
+Replugging the device always fixes this.
 
-Also [#1952 - Command `setoutputmode` not working](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1952)
+See [OpenTabletDriver issue #3171](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3171)
+for more details.
 
-### [#2510 - Bindings do not accomodate select output mode / Mouse buttons not working in Windows Ink or Artist Mode](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2510)
-### [#2106](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2106)/[#1855](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1855) (Linux/MacOS only) Daemon may misbehave if stdout is lost
-### [#1666 - Similar tablets are not separately addressible](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1666)
-### [#1143 - Monitor layout changes are not detected and require a daemon restart](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1143)
-### [#1071 - Output may be up to 1 pixel off intended pixel on some configurations](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1071)
+### Disconnecting tablets mid-event (e.g. button press) causes the event to remain held (button permanently pressed) {#disconnected-tablets-do-not-reset-pipeline}
 
-## Niche bugs (for plugin developers or similar) {#niche-bugs}
+The only known workaround is to restart the daemon or send the same type of
+event again (e.g. from the reconnected or another device)
 
-### [#3830 - External daemon-interacting applications may desynchronize settings shown in GUI](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3830)
+See [OpenTabletDriver issue #2955](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2957)
+for more details.
 
-## Feature Requests
+### (Linux) Flatpak release does not install udev rules or kernel module blacklist {#flatpak-missing-permissions}
 
-Instead of listing all planned features (which would be a lot of work), look
-for issues with the `enhancement` tag and looking at issues with a set milestone:
-[example search](https://github.com/OpenTabletDriver/OpenTabletDriver/issues?q=is%3Aissue%20state%3Aopen%20label%3Aenhancement%20has%3Amilestone)
+This means that the Flatpak release may show no tablets detected, caused by
+missing permissions or conflicting drivers.
+
+Follow the instructions from the description of the Flatpak package to set these up properly.
+
+See [OpenTabletDriver issue #3266](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3266)
+for more details.
+
+## Assorted OpenTabletDriver Bugs {#general-bugs}
+
+These bugs are unlikely to be encountered by users, but have been seen in the wild
+
+### Similar tablets are not separately addressible {#single-tablet-per-tablet-model}
+
+This means if you have tablets of the same model then only the first iterated
+matching device will work.
+
+There is no known workaround. The driver is fundamentally not prepared for
+multiple models of the same device.
+
+See [OpenTabletDriver issue #1666](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1666)
+for more details.
+
+### Output may be up to 1 pixel off intended pixel on some configurations {#output-one-pixel-off}
+
+This is practically speaking not noticeable and as such is not prioritized at all.
+It is unclear which setups are affected.
+
+See [OpenTabletDriver issue #1071](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1071)
+for more details.
+
+## Niche bugs {#niche-bugs}
+
+These bugs are unlikely to affect any users at all aside from esoteric or unsupported setups
+
+### Daemon and GUI may misbehave if daemon's stdout is lost {#stdout-required}
+
+Backgrounding the daemon without sending its output to a valid file (or pipe)
+is not supported yet.
+
+See OpenTabletDriver issues [#2106](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2106)
+and [#1855](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1855) for more details

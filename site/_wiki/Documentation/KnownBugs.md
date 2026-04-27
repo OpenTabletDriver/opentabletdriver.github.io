@@ -13,7 +13,7 @@ framework Avalonia.
 
 Many of these bugs have a planned milestone to be fixed in.
 
-## Bugs caused by Eto {#eto-bugs}
+## Bugs in GUI caused by Eto {#eto-bugs}
 
 ### Multikey bindings doesn't respect keyboard layout {#multikey-binding-keyboard-layout}
 

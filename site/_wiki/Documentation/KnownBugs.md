@@ -74,7 +74,7 @@ intended keys, despite the resulting button possibly seeming incorrect.
 
 #### Per-keyboard layout: Force Virtual Keyboard to use U.S. English layout {#multikey-binding-keyboard-layout-linux-per-keyboard-layouts}
 
-**This section normally only applies to Linux users**
+> **Note:** This section normally only applies to Linux users
 
 How to do this depends on your software stack:
 
@@ -95,7 +95,7 @@ from OpenTabletDriver is assigned the US-American layout.
 
 ##### Sway window manager {#multikey-binding-keyboard-layout-linux-sway}
 
-Put this _after_ any other keyboard configuration:
+Put this *after* any other keyboard configuration:
 
 ```conf
 input '0:0:OpenTabletDriver_Virtual_Keyboard' {

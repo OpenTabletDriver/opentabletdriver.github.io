@@ -15,7 +15,7 @@ Many of these bugs have a planned milestone to be fixed in.
 
 ## Bugs caused by Eto {#eto-bugs}
 
-### [#1821 - Multikey bindings doesn't respect keyboard layout](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1821) {#multikey-binding-keyboard-layout}
+### Multikey bindings doesn't respect keyboard layout {#multikey-binding-keyboard-layout}
 
 For non-QWERTY users (e.g. AZERTY), you may experience that keyboard bindings
 are read correctly in the GUI, but sent as a QWERTY keycode by the daemon.
@@ -24,19 +24,45 @@ Eto only allows us to read the processed keyboard layout.
 
 This is planned to be fixed with the migration to Avalonia.
 
-There are 2 known workarounds:
+See [OpenTabletDriver issue #1821](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1821) for more details.
 
-#### Workaround 1: Temporarily Use QWERTY when setting up keys {#multikey-binding-keyboard-layout-workaround1}
+How to work around this depends on your operating system:
 
-- Change your keyboard layout to QWERTY
-- Set up the bindings you want to use, clicking your normal keys
-- Change your keyboard layout back to the one you want to use
+#### System-wide keyboard layout: Temporarily use U.S. English layout when setting up keys {#multikey-binding-keyboard-layout-system-wide-layouts}
 
-#### Workaround 2: Force Virtual Keyboard to use U.S. English layout (Linux only) {#multikey-binding-keyboard-layout-workaround2}
+Suitable for:
 
-Keyboard Layouts are system-wide on Windows on MacOS.
+- Windows
+- macOS
+- Linux users with system-wide keyboard layouts (some X11 setups)
 
-##### Sway window manager
+How to apply the workaround:
+
+1. Change your keyboard layout to QWERTY
+2. Set up the bindings you want to use, clicking your normal keys
+3. Change your keyboard layout back to the one you want to use
+
+This way, operating systems with system-wide keyboard layouts will emit the
+intended keys, despite the resulting button possibly seeming incorrect.
+
+#### Per-keyboard layout: Force Virtual Keyboard to use U.S. English layout {#multikey-binding-keyboard-layout-linux-per-keyboard-layouts}
+
+**This section normally only applies to Linux users**
+
+How to do this depends on your software stack:
+
+- Wayland-based stacks must configure this in their Desktop Environment's (KDE/Gnome/sway/etc) settings
+- X11-based display stacks must change X11 `xorg.conf` settings (see `man 5 xorg.conf`), or use `setxkbmap` during runtime.
+
+##### X11 {#multikey-binding-keyboard-layout-linux-X11}
+
+Unless you're using special configuration (`setxkbmap -device <ID>` / udev rule `ENV{XKBLAYOUT}` / similar), chances are you're using a system-wide keyboard layout.
+
+In that case, follow the workaround presented for [Windows/macOS](#multikey-binding-keyboard-layout-win-macos) users.
+
+If it turns out that this doesn't work anyway, make sure the virtual keyboard from OpenTabletDriver is assigned the US-American layout.
+
+##### Sway window manager {#multikey-binding-keyboard-layout-linux-sway}
 
 Put this _after_ any other keyboard configuration:
 
@@ -45,10 +71,6 @@ input '0:0:OpenTabletDriver_Virtual_Keyboard' {
     xkb_layout us
 }
 ```
-
-##### X11 Window Manager
-
-TODO
 
 ## Assorted Bugs {#general-bugs}
 

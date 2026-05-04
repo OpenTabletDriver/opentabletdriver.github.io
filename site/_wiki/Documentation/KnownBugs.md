@@ -132,7 +132,7 @@ for more details.
 
 ## Assorted OpenTabletDriver Bugs {#general-bugs}
 
-These bugs are unlikely to be encountered by users, but have been seen in the wild
+These bugs are unlikely to be encountered by users, but have been seen in the wild.
 
 ### Similar tablets are not separately addressible {#single-tablet-per-tablet-model}
 

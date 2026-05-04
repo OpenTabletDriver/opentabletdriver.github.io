@@ -43,8 +43,10 @@ for more details.
 
 ### Multikey bindings don't respect keyboard layout {#multikey-binding-keyboard-layout}
 
-For non-QWERTY users (e.g. AZERTY), you may experience that keyboard bindings
+For non-QWERTY users (e.g. AZERTY or QWERTZ), you may experience that keyboard bindings
 are read correctly in the GUI, but sent as a QWERTY keycode by the daemon.
+
+This occurs because Eto reads filtered keycodes for setting bindings in the GUI but OpenTabletDriver outputs the raw keycodes associated with these bindings. The operating system then applies your keyboard/language filtering to the raw keycode, transforming it into something unexpected.
 
 Eto only allows us to read the processed keyboard layout.
 

@@ -26,7 +26,7 @@ daemon completely.
 See [OpenTabletDriver issue #1143](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1143)
 for more details.
 
-### Bindings do not accomodate select output mode (Mouse buttons not working in Windows Ink or Linux Artist Mode) {#eto-keyboard-reading-is-weird}
+### Bindings do not accomodate selected output mode (Mouse buttons not working in Windows Ink or Linux Artist Mode) {#eto-keyboard-reading-is-weird}
 
 While Adaptive Bindings try to solve this issue, users using specific bindings
 (e.g. Mouse Button Binding on Windows Ink/Linux Artist Mode) will find that

@@ -41,7 +41,7 @@ outputting these events to the operating system.
 See [OpenTabletDriver issue #2078](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2078)
 for more details.
 
-### Multikey bindings doesn't respect keyboard layout {#multikey-binding-keyboard-layout}
+### Multikey bindings don't respect keyboard layout {#multikey-binding-keyboard-layout}
 
 For non-QWERTY users (e.g. AZERTY), you may experience that keyboard bindings
 are read correctly in the GUI, but sent as a QWERTY keycode by the daemon.

@@ -117,7 +117,7 @@ for more details.
 The only known workaround is to restart the daemon or send the same type of
 event again (e.g. from the reconnected or another device)
 
-See [OpenTabletDriver issue #2955](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2957)
+See [OpenTabletDriver issue #2957](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2957)
 for more details.
 
 ### (Linux) Flatpak release does not install udev rules or kernel module blacklist {#flatpak-missing-permissions}

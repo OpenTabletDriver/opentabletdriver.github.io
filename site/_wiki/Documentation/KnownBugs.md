@@ -120,16 +120,6 @@ event again (e.g. from the reconnected or another device)
 See [OpenTabletDriver issue #2957](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2957)
 for more details.
 
-### (Linux) Flatpak release does not install udev rules or kernel module blacklist {#flatpak-missing-permissions}
-
-This means that the Flatpak release may show no tablets detected, caused by
-missing permissions or conflicting drivers.
-
-Follow the instructions from the description of the Flatpak package to set these up properly.
-
-See [OpenTabletDriver issue #3266](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/3266)
-for more details.
-
 ## Assorted OpenTabletDriver Bugs {#general-bugs}
 
 These bugs are unlikely to be encountered by users, but have been seen in the wild.

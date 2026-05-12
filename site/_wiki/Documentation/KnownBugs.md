@@ -7,9 +7,8 @@ title: Known Bugs
 OpenTabletDriver still has some fundamental and sometimes hard to fix bugs.
 This page tries to document the bigger ones.
 
-The `0.6.x` branch is based on the GUI framework Eto, and the `avalonia`
-branch, which will eventually be migrated into `master`, is based on the GUI
-framework Avalonia.
+The release version of OpenTabletDriver is based on the 0.6.x branch.
+The bugs described here are only relevant for the release version.
 
 Many of these bugs have a planned milestone to be fixed in.
 

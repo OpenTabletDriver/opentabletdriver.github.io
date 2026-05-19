@@ -74,7 +74,7 @@ If you're experiencing `libhostfxr` issues, please see the solutions from Micros
 
 4. Refer to [this section]({% link _wiki/FAQ/Linux.md %}#autostart) for instructions on how to auto-start OpenTabletDriver on boot.
 
-## EndeavoursOS {#endeavouros}
+## EndeavourOS {#endeavouros}
 
 While EndeavourOS is based on Arch Linux, it uses a different initramfs
 generator compared to standard Arch Linux, which means the post-install setup is different.

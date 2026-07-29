@@ -105,6 +105,7 @@ Some example attributes include:
 |      `WinUsage`      |       [00..99]       |         ✅ |         ✅ | *(Windows only)* Specifies the HID usage collection to use. String must have exactly two digits (e.g. `"01"`)
 |  `libinputoverride`  |         `1`          |         ✅ |         ❌ | *(Linux only)* Whether the generic tablet interface should be ignored by [libinput] or not. Used in [udev] rule generation, using the tablets VID and PID.
 | `FeatureInitDelayMs` |     milliseconds     |         ✅ |         ❌ | For tablets with multiple feature initialization reports (e.g. polling rate change), wait this many milliseconds between reports. This can help if later feature initialization reports are sometimes randomly not picked up by the tablet.
+|     `HidReports`     |     regex string     |         ✅ |         ❌ | Matches the formatted device `HID_REPORTS` as shown in the OTD diagnostics. For example, `21:FF00:0005` or `01:0001:0002, 02:000D:0002`. This should only be used if there is no other way to differentiate variants of tablets or endpoints. Although this value is a regex string, in most cases it should probably be treated as a plain string match.
 {: .table .table-dark }
 
 [libinput]: https://www.freedesktop.org/wiki/Software/libinput/ "freedesktop.org's site on libinput"

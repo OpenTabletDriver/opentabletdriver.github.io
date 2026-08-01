@@ -4,7 +4,7 @@ layout: default
 
 {% assign plugins = "" | split: ',' %}
 <div class="container">
-  <div class="d-flex mb-3">
+  <div id="searchblock" class="d-flex mb-3">
     <div class="flex-fill">
       <div class="form-floating me-3">
         <input type="text" class="form-control" id="searchInput" placeholder="Search" onkeyup="filterInput()"/>
@@ -41,8 +41,14 @@ layout: default
       </div>
     </div>
   </div>
+  <noscript>
+    <style>#searchblock { display: none !important; }</style>
+    <div id="noscriptblock" class="d-flex mb-3">
+      {{ content }}
+    </div>
+  </noscript>
 
-  <div id="metadataList">
+  <div id="metadataList" class="fix-fouc">
     {% assign plugins = plugins | sort: "Name" %}
     {%- for metadata in plugins -%}
       {% assign supportedDriverVersionSplit = metadata.SupportedDriverVersion | split: '.' %}

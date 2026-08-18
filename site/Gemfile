@@ -18,6 +18,7 @@ group :jekyll_plugins do
 end
 
 gem 'json'
+gem 'erb'
 gem "bootswatch", github: "thomaspark/bootswatch", tag: "v5.3.8"
 gem "bootstrap", "~> 5.3.8"
 

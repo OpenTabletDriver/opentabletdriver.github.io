@@ -29,11 +29,13 @@ Alternatively you can install it to a new directory.
 
     > You can create a shortcut to this file, just make sure that the working directory points to the extracted directory.
 
-## Installation of WinUSB {#winusb}
+### (Usually not required) Installation of WinUSB {#winusb}
 
 Some tablets require Zadig's WinUSB installed on a device interface to interact with the tablet
 correctly. To figure out if your tablet requires WinUSB, carefully check the notes on
 [the supported list of tablets here]({% link _sections/Tablets.md %}).
+This is a list of ALL tablets supported by OpenTabletDriver, NOT a list of all tablets that need WinUSB.
+If your tablet does not have a note specifically mentioning `Zadig’s WinUSB`, you DO NOT need WinUSB.
 
 Some WinUSB-requiring tablets require a specific interface to be chosen.
 This is also noted in the list of tablets, if relevant.

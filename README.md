@@ -7,6 +7,9 @@ The next version of OpenTabletDriver.Web
 ### Requirements
 
 - [Ruby](https://www.ruby-lang.org/en/downloads/) (tested with Ruby 3.4)
+- Ruby Bundler. This may come preinstalled or require an additional package. Run `bundle --version` to check if you have it installed.
+    - On Linux from your package manager: look for a `ruby-bundler`, `ruby-default-gems`, or similar package.
+    - As a gem: `gem install bundler` (note that it may not be on PATH by default).
 
 ## Steps
 

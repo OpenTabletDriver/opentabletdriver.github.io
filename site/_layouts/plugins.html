@@ -80,8 +80,8 @@ layout: default
             </div>
             <!-- plugin name -->
             <span class="h4" style="margin-bottom: 0px; display: block;">{{ metadata.Name }}</span>
-            <!-- plugin author -->
-            <span class="small" style="margin-top: -2px; display: block">by {{ metadata.Owner }}</span>
+            <!-- plugin author/maintainer and creator -->
+            <span class="small" style="margin-top: -2px; display: block">by {{ metadata.Owner }}{% if metadata.Creator != nil %} and {{ metadata.Creator }}{% endif %}</span>
             <!-- plugin body -->
             <div class="my-2">
               {{ metadata.Description }}

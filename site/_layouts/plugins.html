@@ -26,7 +26,8 @@ layout: default
             {%- endfor -%}
           {%- endfor -%}
 
-          {% assign otdversions = otdversions | sort | uniq | reverse %}
+          {%- assign latestotdversion = site.data.otd-versions | last -%}
+          {%- assign otdversions = otdversions | push: latestotdversion | sort | uniq | reverse -%}
 
           <option value="">All Versions</option>
           {% assign elementAttributes = " selected" %}

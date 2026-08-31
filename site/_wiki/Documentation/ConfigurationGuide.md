@@ -14,6 +14,32 @@ on that page.
 
 [Tablet configuration reference]: {% link _wiki/Development/Configurations.md %}
 
+### Adding custom tablet configurations {#installing-overrides}
+
+To test your new tablet configuration (internally named 'overrides'), you do
+not need to recompile OpenTabletDriver from source.
+
+Instead, you can place them in the designated `Configurations` folder as
+described in [the AppData section of the General FAQ](/Wiki/FAQ/General#appdata).
+
+If successful, you should see a log message similar to this:
+
+| Log Level | Log Group | Log Message |
+| :-------: | :-------: | :---------- |
+| Info      | Detect    | 1 configurations exist in '`<your configurations path>`'. Built-in configurations may be overridden if the Name matches exactly.
+
+Additionally, if you are overriding an existing configuration (by matching the
+`Name` key value of the internal configuration exactly), you should also see
+the following message during the detection loop:
+
+| Log Level | Log Group | Log Message |
+| :-------: | :-------: | :---------- |
+| Debug     | Detect    | Searching for tablet '`<tablet name>`'
+| Info      | Detect    | Overriding tablet configuration '`<tablet name>`'
+
+> **Note:** OpenTabletDriver versions before v0.6.7 has limited logging for
+> configuration overrides
+
 ## Preparing your system for adding support
 
 It is highly recommended to remove (or unload) your existing tablet drivers

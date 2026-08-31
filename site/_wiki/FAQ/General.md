@@ -122,7 +122,7 @@ This is a bug that is planned to be fixed.
 You can see the progress on GitHub here:
 [OpenTabletDriver#1143](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1143)
 
-## Why does my tablet stop responding when I close the OpenTabletDriver user interface? {#gui-is-almost-always-the-driver}
+## My tablet stop responding when I close the OpenTabletDriver user interface {#gui-is-almost-always-the-driver}
 
 Compared to most other device drivers, OpenTabletDriver is a user-mode driver,
 which means it needs to run an active application to be able to process data

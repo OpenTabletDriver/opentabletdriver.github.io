@@ -136,7 +136,7 @@ That means if you start the daemon before starting the GUI, then the GUI no
 longer manages the daemon process, and you can open and close the GUI
 separately as needed.
 
-> **Note:** The Linux version of the OpenTabletDriver GUI does _not_ manage the
+> **Note:** The Linux version of the OpenTabletDriver GUI does *not* manage the
   daemon for you, yet.
 >
 > For more details, see OpenTabletDriver issue

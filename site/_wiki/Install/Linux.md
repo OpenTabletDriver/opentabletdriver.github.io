@@ -183,7 +183,8 @@ installed the Flatpak version.
 
 1. Follow the prerequisites instructions as outlined in the associated README for the Flatpak
    [here](https://github.com/flathub/net.opentabletdriver.OpenTabletDriver/blob/master/README.md)
-1. Install OpenTabletDriver from Flathub:
+2. Install OpenTabletDriver from Flathub:
+
     ```sh
     flatpak install flathub net.opentabletdriver.OpenTabletDriver
     ```

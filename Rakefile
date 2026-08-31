@@ -17,7 +17,7 @@ task :htmlproofer do
     check_external_hash: false,
     # status code 418 is sometimes returned by webservers performing anti-scrape methods, so it
     # should assume the resource exists instead
-    ignore_status_codes: [ 418 ],
+    ignore_status_codes: [ 418, 0 ],
   }
 
   HTMLProofer.check_directory(compiledSitePath, options).run

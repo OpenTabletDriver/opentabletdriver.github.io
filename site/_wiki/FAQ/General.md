@@ -46,7 +46,10 @@ The application data directory contents are as follows:
 |       Cache       | Folder | Contains cached metadata for the Plugin Manager
 |      Plugins      | Folder | Contains installed plugins (`.dll` files). This folder should not be modified manually.
 |      Presets      | Folder | Contains saved presets
+|   Configurations  | Folder | (optional) Contains user-defined tablet configuration overrides or additions
 {: .table .table-dark }
+
+> **Linux users:** Tablet configuration overrides can also be placed in `~/.local/share/OpenTabletDriver/Configurations/`
 
 ## My cursor is going crazy! It teleports everywhere! {#emi-interference}
 

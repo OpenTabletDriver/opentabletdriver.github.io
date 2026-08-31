@@ -122,6 +122,20 @@ This is a bug that is planned to be fixed.
 You can see the progress on GitHub here:
 [OpenTabletDriver#1143](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1143)
 
+## Why does my tablet stop responding when I close the OpenTabletDriver user interface? {#gui-is-almost-always-the-driver}
+
+Compared to most other device drivers, OpenTabletDriver is a user-mode driver,
+which means it needs to run an active application to be able to process data
+from your tablet.
+
+OpenTabletDriver is split into 2 parts: the daemon and the GUI. If you launch
+the GUI without the daemon running, the GUI starts an internal daemon process
+and manages the daemon for you.
+
+That means if you start the daemon before starting the GUI, then the GUI no
+longer manages the daemon process, and you can open and close the GUI
+separately as needed.
+
 ## How to convert areas to and from OpenTabletDriver? {#area-conversion}
 
 ### Conversion through the OpenTabletDriver UI

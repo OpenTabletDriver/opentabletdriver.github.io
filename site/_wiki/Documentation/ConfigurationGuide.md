@@ -37,7 +37,7 @@ the following message during the detection loop:
 | Debug     | Detect    | Searching for tablet '`<tablet name>`'
 | Info      | Detect    | Overriding tablet configuration '`<tablet name>`'
 
-> **Note:** OpenTabletDriver versions before v0.6.7 has limited logging for
+> **Note:** OpenTabletDriver versions before v0.6.7 have limited logging for
 > configuration overrides
 
 ## Preparing your system for adding support

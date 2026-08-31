@@ -166,6 +166,29 @@ Bazzite is based on Fedora Atomic. We recommend using `ujust` to install OpenTab
 ujust install-opentabletdriver
 ```
 
+## Flatpak {#flatpak}
+
+Many desktop environments have a built-in package discovery platform, often
+connected to Flatpak. GNOME Software Center, KDE Discover both connect to
+Flatpak. If you've installed OpenTabletDriver via one of these, you've likely
+installed the Flatpak version.
+
+> The Flatpak installation method requires additional steps over
+  any above distribution-specific installation, and updating associated files
+  must be manually repeated on OpenTabletDriver updates, when necessary.
+>
+> **It is recommended that you refer to your specific Linux distribution above
+  instead of using the Flatpak installation method.**
+{:.alert-primary}
+
+1. Follow the prerequisites instructions as outlined in the associated README for the Flatpak
+   [here](https://github.com/flathub/net.opentabletdriver.OpenTabletDriver/blob/master/README.md)
+2. Install OpenTabletDriver from Flathub:
+
+    ```sh
+    flatpak install flathub net.opentabletdriver.OpenTabletDriver
+    ```
+
 ## Post-Installation {#post-install}
 
 Take a look at the [FAQ]({% link _wiki/FAQ/Linux.md %}) if you encounter any problems.

@@ -1,1 +1,5 @@
+# FIXME: Issue #126, markdowncli checks markdown before Liquid tags are rendered
+#        https://github.com/OpenTabletDriver/opentabletdriver.github.io/issues/126
+#        This file shouldn't be necessary once the above issue is solved
 site/_includes/
+site/_sections/Framework.md

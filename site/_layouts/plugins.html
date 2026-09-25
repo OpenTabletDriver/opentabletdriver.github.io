@@ -27,7 +27,13 @@ layout: default
           {%- endfor -%}
 
           {%- assign latestotdversion = site.data.otd-versions | last -%}
-          {%- assign otdversions = otdversions | push: latestotdversion | sort | uniq | reverse -%}
+          {%- assign latestotdversionext = site.data.otd-versions | last | append: ".0" -%}
+
+          {% unless otdversions contains latestotdversion or otdversions contains latestotdversionext %}
+            {%- assign otdversions = otdversions | push: latestotdversion -%}
+          {% endunless %}
+
+          {%- assign otdversions = otdversions | sort | uniq | reverse -%}
 
           <option value="">All Versions</option>
           {% assign elementAttributes = " selected" %}

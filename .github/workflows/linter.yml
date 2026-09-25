@@ -14,7 +14,7 @@ jobs:
 
       - name: Linting with editorconfig-checker
         run: |
-          docker run --rm --volume=${{ github.workspace }}:/check mstruebing/editorconfig-checker
+          docker run --rm --volume=${{ github.workspace }}:/check mstruebing/editorconfig-checker:4
 
   markdown:
     runs-on: ubuntu-latest

@@ -25,7 +25,7 @@ daemon completely.
 See [OpenTabletDriver issue #1143](https://github.com/OpenTabletDriver/OpenTabletDriver/issues/1143)
 for more details.
 
-### Bindings do not accomodate selected output mode (Mouse buttons not working in Windows Ink or Linux Artist Mode) {#eto-keyboard-reading-is-weird}
+### Bindings do not accommodate selected output mode (Mouse buttons not working in Windows Ink or Linux Artist Mode) {#eto-keyboard-reading-is-weird}
 
 While Adaptive Bindings try to solve this issue, users using specific bindings
 (e.g. Mouse Button Binding on Windows Ink/Linux Artist Mode) will find that
@@ -123,7 +123,7 @@ for more details.
 
 These bugs are unlikely to be encountered by users, but have been seen in the wild.
 
-### Similar tablets are not separately addressible {#single-tablet-per-tablet-model}
+### Similar tablets are not separately addressable {#single-tablet-per-tablet-model}
 
 This means if you have tablets of the same model then only the first iterated
 matching device will work.

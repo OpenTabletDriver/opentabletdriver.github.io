@@ -16,7 +16,7 @@
 | Gaomon PD1560                      |     Supported     |
 | Gaomon PD1561                      |     Supported     |
 | Gaomon PD2200                      |     Supported     |
-| Gaomon S620                        |     Supported     |
+| Gaomon S620                        |     Supported     | **16384 max pressure variant is not supported in v0.6.7.** You need to [override the configuration](/Wiki/Documentation/ConfigurationGuide#installing-overrides) with [this file](https://raw.githubusercontent.com/OpenTabletDriver/OpenTabletDriver/cbbcfec825f88c490373bffdba9d1fb49ae35f0d/OpenTabletDriver.Configurations/Configurations/Gaomon/S620%20(16K).json), or wait for v0.6.8.
 | Genius G-Pen 560                   |     Supported     | Soft-buttons are bindable as aux buttons.
 | Huion 1060 Plus                    |     Supported     |
 | Huion G930L                        |     Supported     |

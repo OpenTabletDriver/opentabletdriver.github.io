@@ -39,6 +39,7 @@
         let card = cards[i];
         let name = card.getAttribute('data-name').toUpperCase();
         let version = card.getAttribute('data-version');
+        let maxVersion = card.getAttribute('data-max-version');
 
         if (!isCompatible(version, targetVersion))
           continue;
@@ -57,9 +58,10 @@
       let card = cards[i];
       let name = card.getAttribute('data-name').toUpperCase();
       let version = card.getAttribute('data-version');
+      let maxVersion = card.getAttribute('data-max-version');
 
       let searchMatches = name.indexOf(searchFilter) >= 0;
-      let versionMatches = targetVersion == '' || isCompatible(version, targetVersion);
+      let versionMatches = targetVersion == '' || isCompatible(version, targetVersion, maxVersion);
       let isNewest = true;
       if (name in versions) {
         isNewest = versions[name] == version;
@@ -69,7 +71,7 @@
     }
   }
 
-  function isCompatible(pluginVersion, driverVersion) {
+  function isCompatible(pluginVersion, driverVersion, maxPluginVersion) {
     // support truth table:
     //  plugin  /  driver
     // 0.5.3.3 and 0.6.0.0: false
@@ -78,6 +80,7 @@
     // 0.5.3.3 and 0.5.2.0: false
 
     let pluginSplit = pluginVersion.split('.');
+    let maxPluginSplit = !!maxPluginVersion ? maxPluginVersion.split('.') : null;
     let driverSplit = driverVersion.split('.');
 
     if (pluginSplit[0] != driverSplit[0])
@@ -88,6 +91,14 @@
 
     if (pluginSplit[2] > driverSplit[2])
       return false;
+
+    if (maxPluginSplit != null) {
+      if (maxPluginSplit[2] < driverSplit[2])
+        return false;
+
+      if (maxPluginSplit[2] == driverSplit[2] && maxPluginSplit[3] < driverSplit[3])
+        return false;
+    }
 
     return true;
   }

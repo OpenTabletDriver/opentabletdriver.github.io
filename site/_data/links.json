@@ -5,6 +5,7 @@
       "deb":     "opentabletdriver_{{VERSION}}-1_x64.deb",
       "rpm":     "opentabletdriver-{{VERSION}}-1.x86_64.rpm",
       "osx-x64": "OpenTabletDriver-{{VERSION}}_osx-x64.tar.gz",
+      "osx-arm64": "OpenTabletDriver-{{VERSION}}_osx-arm64.tar.gz",
       "win-x64": "OpenTabletDriver-{{VERSION}}_win-x64.zip"
     },
     "buildInstructions": {

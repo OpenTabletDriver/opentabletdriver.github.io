@@ -73,7 +73,7 @@ layout: default
         {% endif %}
       {%- endcapture -%}
       <div class="card mb-2 plugin-metadata-card"
-          data-name="{{ metadata.Name }}" data-version="{{ metadata.SupportedDriverVersion }}">
+          data-name="{{ metadata.Name }}" data-version="{{ metadata.SupportedDriverVersion }}" data-max-version="{{ metadata.MaxSupportedDriverVersion }}">
         <div class="card-body d-flex flex-lg-row flex-column flex-wrap p-4 justify-content-end">
           <div class="flex-fill">
             <!-- version badges -->

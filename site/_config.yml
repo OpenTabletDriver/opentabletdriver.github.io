@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # webserver path, blank for GitHub pages
 url: https://opentabletdriver.net # full URI to website
 # the .NET runtime version used by OpenTabletDriver. Used for user-facing content and download links
-otd_dotnet_version: 8.0
+otd_dotnet_version: 10.0
 
 sass:
   sass_dir: _sass

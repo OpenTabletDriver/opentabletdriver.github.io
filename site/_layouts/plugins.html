@@ -38,7 +38,7 @@ layout: default
           <option value="">All Versions</option>
           {% assign elementAttributes = " selected" %}
           {%- for version in otdversions -%}
-            {% if version == latestotdversionext or version == latestotdversionext %}
+            {% if version == latestotdversion or version == latestotdversionext %}
               <option value="{{version}}" {{elementAttributes}} selected>{{version}}</option>
             {% else %}
               <option value="{{version}}" {{elementAttributes}}>{{version}}</option>

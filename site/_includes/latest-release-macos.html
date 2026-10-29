@@ -1,0 +1,5 @@
+{%- assign latest_otd_version = site.data.otd-versions | last -%}
+{%- assign filename-x64 = include.filename-x64 | replace: '{{VERSION}}', latest_otd_version -%}
+{%- assign filename-arm64 = include.filename-arm64 | replace: '{{VERSION}}', latest_otd_version -%}
+{%- assign urlBasePath = site.data.links.project.latestReleaseBase -%}
+Download the <a href="{{ urlBasePath }}{{ filename-arm64 }}">latest Apple Silicon release</a> <small class="text-muted">({{ filename-arm64 }})</small> or the <a href="{{ urlBasePath }}{{ filename-x64 }}">latest Intel release</a>  <small class="text-muted">({{ filename-x64 }})</small>.

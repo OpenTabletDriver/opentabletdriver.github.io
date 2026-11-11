@@ -62,7 +62,7 @@ drivers are already blacklisted.
 Still, run the following command to ensure that the upstream drivers are unloaded:
 
 ```sh
-sudo rmmod hid_uclogic wacom 2>/dev/null
+sudo rmmod hid_uclogic hid_digimend_uclogic wacom 2>/dev/null
 ```
 
 You likely need to set up udev rules so that your user can access the raw

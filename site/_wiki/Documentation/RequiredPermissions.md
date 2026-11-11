@@ -23,8 +23,9 @@ granted to the user. There is no official support for non-systemd distros, but p
 
 Currently, two kernel modules are also unloaded as they interfere with OpenTabletDriver. These are:
 
-- `wacom`
 - `hid_uclogic`
+- `hid_digimend_uclogic`
+- `wacom`
 
 A kernel module blacklist is used to prevent these modules from loading on boot.
 
@@ -32,7 +33,7 @@ If you've just installed OpenTabletDriver, make sure these
 modules aren't loaded by running the following command:
 
 ```sh
-sudo rmmod wacom hid_uclogic
+sudo rmmod hid_uclogic hid_digimend_uclogic wacom
 ```
 
 ### Set up udev rules and kernel module blacklist {#setup-linux}
@@ -72,7 +73,7 @@ if [ -f /etc/modprobe.d/blacklist.conf ]; then
 fi
 
 sudo modprobe uinput
-sudo rmmod wacom hid_uclogic > /dev/null 2>&1
+sudo rmmod hid_uclogic hid_digimend_uclogic wacom > /dev/null 2>&1
 
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
@@ -122,7 +123,7 @@ cd ..
 rm -rf OpenTabletDriver
 
 sudo modprobe uinput
-sudo rmmod wacom hid_uclogic > /dev/null 2>&1
+sudo rmmod hid_uclogic hid_digimend_uclogic wacom > /dev/null 2>&1
 
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
@@ -144,8 +145,9 @@ Refer to your distro's documentation on how to remove udev rules of the name
 `blacklist.conf` containing:
 
 ```conf
-blacklist wacom
 blacklist hid_uclogic
+blacklist hid_digimend_uclogic
+blacklist wacom
 ```
 
 If there is no updated package available for your distro, you may try building from source. Consult

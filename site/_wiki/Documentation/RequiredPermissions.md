@@ -23,9 +23,9 @@ granted to the user. There is no official support for non-systemd distros, but p
 
 Currently, two kernel modules are also unloaded as they interfere with OpenTabletDriver. These are:
 
-- `wacom`
 - `hid_uclogic`
 - `hid_digimend_uclogic`
+- `wacom`
 
 A kernel module blacklist is used to prevent these modules from loading on boot.
 

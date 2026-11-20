@@ -21,7 +21,7 @@ OpenTabletDriver needs to be able to access `/dev/uinput` and several other sys 
 your tablet. On systemd-based distros, this is done via udev rules that defines the access level
 granted to the user. There is no official support for non-systemd distros, but patches are welcome.
 
-Currently, two kernel modules are also unloaded as they interfere with OpenTabletDriver. These are:
+Currently, three kernel modules are also unloaded as they interfere with OpenTabletDriver. These are:
 
 - `hid_uclogic`
 - `hid_digimend_uclogic`
